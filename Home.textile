@@ -1,3 +1,0 @@
-This is a forked repository. Have a look at
-        "mazur's Nancy wiki":/mazur/Nancy
-        for more information.
