@@ -7,3 +7,11 @@ For discussion about the Nancy project, please use our Google Group at [https://
 
 * [[Hosting Nancy with ASP.NET]]
 * [[Hosting Nancy with WCF]]
+
+## Routing
+
+
+## View Engines
+
+
+## Response Formatters
