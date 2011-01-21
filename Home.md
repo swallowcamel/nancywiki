@@ -17,7 +17,7 @@ For discussion about the Nancy project, please use our Google Group at [https://
 ## Response Formatters
 
 
-## BootStrappers / Container Support
+## Bootstrappers / Container Support
 
-* [[BootStrapping Nancy]]
-* [[Writing a Nancy BootStrapper]]
+* [[Bootstrapping Nancy]]
+* [[Writing a Nancy Bootstrapper]]
