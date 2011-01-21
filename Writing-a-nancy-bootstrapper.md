@@ -10,9 +10,9 @@ It is recommended that any virtual/abstract methods from NancyBootStrapperBase a
 
 If you are implementing everything there are several "stages" to initialising the container. Firstly, the stuff that happens at application startup:
 
+* **ConfigureApplicationContainer** - this is where users register their bits at the application level - they're free to choose whatever lifetime they want.
 * **RegisterDefaults** - gets passed a list of types that Nancy itself needs. These should be registered as application lifetime singletons.
 * **RegisterModules** - gets passed a list of modules. These should be registered as multi-instance OR per-request lifetime (see below).
-* **ConfigureApplicationContainer** - this is where users register their bits at the application level - they're free to choose whatever lifetime they want.
 * **GetAllModules** - this is only called on application startup, but if you're implementing child containers for per-request lifetimes (see below), then this should also configure the child container before resolving using it.
 
 The following is called per-request:
