@@ -15,14 +15,13 @@ For example, if you add this module to your project:
 
     public class MyModule : NancyModule
     {
-      private IMyDependency _dependency;
+      private IMyDependency dependency;
       
       public MyModule(IMyDependency dependency)
       {
-          _dependency = dependency;
+          this.dependency = dependency;
           
-          Get["/"] = x =>
-          {
+          Get["/"] = x => {
           };
           
           // Register other routes
