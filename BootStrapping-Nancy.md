@@ -69,7 +69,7 @@ Although they don't form part of the "core" Nancy project, Nancy's BootStrapper 
 
 For a list of alternative container implementations please see [Alternative Containers].
 
-### Part 4 - Barebones ###
+### Part 4 - Barebones Hardcore Ninja Mode / Being Flippin' Awkward ###
 
 Although Nancy provides the BootStrapper base classes to provide a simple, customisable and consistent interface the only requirement for a BootStrapper is that it implements INancyBootStrapper:
 
