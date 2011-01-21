@@ -39,13 +39,13 @@ We did say it was a Super-Duper-Happy-Path!
 
 Nancy ships with a "default bootstrapper" that takes care of all the magic in the above example. If you add your own BootStrapper to your project, derived from DefaultNancyBootStrapper, Nancy will automatically detect it and use it in place of the default one. 
 
-_ Note: Depending on your hosting choice you may also be able to override the BootStrapper in alternative ways such as via the Web.Config in ASP.Net applications. _
+_Note: Depending on your hosting choice you may also be able to override the BootStrapper in alternative ways such as via the Web.Config in ASP.Net applications._
 
 Once you have your own BootStrapper class you can replace some or all of the default behaviour by overriding properties and methods. The following overrides are available:
 
-* Default... Properties - These properties define the implementations of Nancy's internal interfaces that Nancy registeres into the container. There shouldn't be a need to switch any of these out, but the option is there should you want it :-)
-* GetModuleTypes - The default implementation of this scans the application domain for NancyModules for registration into the container. Each module that is discovered is given a unique "key" so they can be retrieved individually from the container when satisfying a request.
-* ConfigureApplicationContainer / ConfigureRequestContainer - manually register dependencies - see Part 2 below for more details. 
+* _**Default... Properties**_ - These properties define the implementations of Nancy's internal interfaces that Nancy registeres into the container. There shouldn't be a need to switch any of these out, but the option is there should you want it :-)
+* _**GetModuleTypes**_ - The default implementation of this scans the application domain for NancyModules for registration into the container. Each module that is discovered is given a unique "key" so they can be retrieved individually from the container when satisfying a request.
+* _**ConfigureApplicationContainer**_ / **_ConfigureRequestContainer_** - manually register dependencies - see Part 2 below for more details. 
 
 ### Part 2 - Manually Registering Dependencies ###
 
@@ -53,8 +53,8 @@ By default Nancy uses an embedded Inversion of Control container called "TinyIoC
 
 If you don't want to take advantage of the "AutoRegister" feature you can take control of adding dependencies into the container by overriding one or both of the following methods:
 
-* ConfigureApplicationContainer - This is called once, when the BootStrapper is executed, and is used to register dependencies that you either wish to have application scope lifetimes (application singletons), or be registered as multi-instance:
-* ConfigureRequestContainer - This is called once per request, before the module matching the route is resolved, and is used to register singletons that will have request lifetime. 
+* _**ConfigureApplicationContainer**_ - This is called once, when the BootStrapper is executed, and is used to register dependencies that you either wish to have application scope lifetimes (application singletons), or be registered as multi-instance:
+* _**ConfigureRequestContainer**_ - This is called once per request, before the module matching the route is resolved, and is used to register singletons that will have request lifetime. 
 
 Both of these methods are passed the container instance as a parameter:
 
