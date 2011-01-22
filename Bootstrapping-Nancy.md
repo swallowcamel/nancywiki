@@ -9,7 +9,7 @@ Although you can happily construct NancyEngine yourself, and inject dependencies
 
 ## The Super-Duper-Happy-Path ##
 
-Although the exact instructions may vary slightly depending on your choice of [Hosting], all you generally have to do is add a NancyModule to your project. That's it. No configuration, no registering dependencies, just 100% pure Nancy goodness - if your module has dependencies Nancy will even wire those up too!
+Although the exact instructions may vary slightly depending on your choice of [[Hosting]], all you generally have to do is add a NancyModule to your project. That's it. No configuration, no registering dependencies, just 100% pure Nancy goodness - if your module has dependencies Nancy will even wire those up too!
 
 For example, if you add this module to your project:
 
@@ -48,7 +48,7 @@ Once you have your own Bootstrapper class you can replace some or all of the def
 
 ### Part 2 - Manually Registering Dependencies ###
 
-By default Nancy uses an embedded Inversion of Control container called "TinyIoC" ( see http://hg.grumpydev.com/tinyioc for more information ). The built in Bootstrapper uses TinyIoC to scan types on application startup and registers them into the container to automatically resolve dependencies.
+By default Nancy uses an embedded Inversion of Control container called "TinyIoC" ( see <http://hg.grumpydev.com/tinyioc> for more information ). The built in Bootstrapper uses TinyIoC to scan types on application startup and registers them into the container to automatically resolve dependencies.
 
 If you don't want to take advantage of the "AutoRegister" feature you can take control of adding dependencies into the container by overriding one or both of the following methods:
 
@@ -60,13 +60,13 @@ Both of these methods are passed the container instance as a parameter:
     container.Register<IMyInterface, MyImplementation>().AsSingleton();
     container.Register<IMyInterfaceToo, MyOtherThing>().AsMultiInstance();
     
-For more information on the various registration options available, please take a look at the [TinyIoC Wiki](http://hg.grumpydev.com/tinyioc).
+For more information on the various registration options available, please take a look at the [TinyIoC Wiki](<http://hg.grumpydev.com/tinyioc>).
 
 ### Part 3 - Alternative Containers ###
 
 Although they don't form part of the "core" Nancy project, Nancy's Bootstrapper architecture is designed to be easily adapted to other IoC containers. To use an alternative Bootstrapper simply derive from the replacement Bootstrapper, rather than the default Nancy one, and Nancy will take care of the rest.
 
-For a list of alternative container implementations please see [Alternative Containers].
+For a list of alternative container implementations please see [[Container Support]].
 
 ### Part 4 - Barebones Hardcore Ninja Mode / Being Flippin' Awkward ###
 
