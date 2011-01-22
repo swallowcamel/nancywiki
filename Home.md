@@ -23,3 +23,15 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 
 * [[Bootstrapping Nancy]]
 * [[Writing a Nancy Bootstrapper]]
+
+## Contributing
+
+* Getting the source code
+* xunit, mspec, fakeiteasy
+* Auto crlf settings in git
+* Workflow
+* Coding styles (+ ReSharper file and test naming)
+* SharedAssemblyInfo.cs
+* Info on how to work with 3rd party dependencies
+* Info on 3rd party dependency licensing
+* Super-duper-happy-path coding
