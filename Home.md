@@ -31,7 +31,7 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 * Auto crlf settings in git
 * Workflow
 * Coding styles (+ ReSharper file and test naming)
-* SharedAssemblyInfo.cs
+* SharedAssemblyInfo.cs / Breaking all your projects on commit ;-)
 * Info on how to work with 3rd party dependencies
 * Info on 3rd party dependency licensing
 * Super-duper-happy-path coding
