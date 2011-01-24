@@ -70,7 +70,7 @@ For a list of alternative container implementations please see [[Container Suppo
 
 ### Part 4 - Barebones Hardcore Ninja Mode / Being Flippin' Awkward ###
 
-Although Nancy provides the Bootstrapper base classes to provide a simple, customisable and consistent interface the only requirement for a Bootstrapper is that it implements INancyBootstrapper:
+Although Nancy provides the Bootstrapper base classes to provide a simple, customisable, and consistent interface; the only requirement for a Bootstrapper is that it implements INancyBootstrapper:
 
     /// <summary>
     /// Bootstrapper for the Nancy Engine
