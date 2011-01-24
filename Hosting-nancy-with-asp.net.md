@@ -19,6 +19,8 @@ Nancy under ASP.Net is handled through a HTTP Handler, which is setup through th
       </handlers>
     </system.webServer>
 
+That's all you need to do to get up and running.
+
 ## BootStrapping
 
 By default, the Nancy HTTP Handler will use the built in "BootStrapper Locator" for identifying the best BootStrapper to kick-start Nancy. This behaviour should be fine for most scenarios; but if you want to take control over which BootStrapper is used, you can do so using the Web.Config:
