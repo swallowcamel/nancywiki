@@ -21,9 +21,9 @@ Nancy under ASP.Net is handled through a HTTP Handler, which is setup through th
 
 That's all you need to do to get up and running.
 
-## BootStrapping
+## Bootstrapping
 
-By default, the Nancy HTTP Handler will use the built in "BootStrapper Locator" for identifying the best BootStrapper to kick-start Nancy. This behaviour should be fine for most scenarios; but if you want to take control over which BootStrapper is used, you can do so using the Web.Config:
+By default, the Nancy HTTP Handler will use the built in "Bootstrapper Locator" for identifying the best bootstrapper to kick-start Nancy. This behaviour should be fine for most scenarios; but if you want to take control over which bootstrapper is used, you can do so using the Web.Config:
 
     <configSections>
       <section name="nancyFx" type="Nancy.Hosting.NancyFxSection" />
@@ -32,6 +32,6 @@ By default, the Nancy HTTP Handler will use the built in "BootStrapper Locator" 
       <bootstrapper assembly="Nancy.Demo" type="Nancy.Demo.DemoBootStrapper"/>
     </nancyFx>
 
-Here we define a NancyFx configuration section and a bootstrapper entry that specified the type of the BootStrapper, and the assembly it's located in. If this configuration setting is specified then the locator is bypassed completely and Nancy will use the specified type instead.
+Here we define a NancyFx configuration section and a bootstrapper entry that specified the type of the bootstrapper, and the assembly it's located in. If this configuration setting is specified then the locator is bypassed completely and Nancy will use the specified type instead.
 
-For more information on Nancy BootStrapping please see [[Bootstrapping-Nancy]].
+For more information on Nancy Bootstrapping please see [[Bootstrapping-Nancy]].
