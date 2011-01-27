@@ -1,0 +1,3 @@
+## All good things must come to an end.. 
+
+Before you begin working with Nancy, be sure to set your [AutoCRLF](http://help.github.com/dealing-with-lineendings/) option correctly. This tells your git client how it should treat line-endings in your local copy of a repository and prevents you from ending up with Git informing you that every single file have changes in it, when you are pretty damn sure you never touched any of them. Do yourself (and us - we don't want your screwed up line ending commits if we can avoid it!) a favor and make sure this is configured correctly.
