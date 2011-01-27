@@ -14,16 +14,6 @@ The general process for working with Nancy is:
 
 You should **never** work on a clone of master, and you should **never** send a pull request from master - always from a branch. The reasons for this are detailed below.
 
-## Sending a Pull Request
-
-While working on your feature you may well create several branches, which is fine, but before you send a pull request you should ensure that you have rebased back to a single "Feature branch" - we care about your commits, and we care about your feature branch; but we don't care about how many or which branches you created while you were working on it :-)
-
-When you're ready to go you should confirm that you are up to date and rebased with upstream/master (see "Handling Updates from Upstream/Master" below), and then:
-
-1. `git push origin myBranch`
-1. Send a descriptive [Pull Request](http://help.github.com/pull-requests/) on GitHub - making sure you have selected the correct branch in the GitHub UI!
-1. Wait for TheCodeJunkie to merge your changes in and reformat all of your code because he has StyleCop OCD ;-)
-
 ## Spiking / Prototyping
 
 It's quite normal, and encouraged, that during design/development of your feature you create several [spikes](http://www.extremeprogramming.org/rules/spike.html)/prototypes, which you share with the other developers (\*cough\* via the [Google Group](https://groups.google.com/forum/?pli=1#!forum/nancy-web-framework) \*cough\*) for feedback. Due to the fact that rebasing public commits is [pure evil](http://progit.org/book/ch3-6.html), and that we require you to rebase any updates from upstream/master, it is recommended that you:
@@ -51,4 +41,15 @@ This ensures that your history is "clean" i.e. you have one branch off from mast
 
 If you're working on a long running feature then you may want to do this quite often, rather than run the risk of potential merge issues further down the line.
 
+## Sending a Pull Request
+
+While working on your feature you may well create several branches, which is fine, but before you send a pull request you should ensure that you have rebased back to a single "Feature branch" - we care about your commits, and we care about your feature branch; but we don't care about how many or which branches you created while you were working on it :-)
+
+When you're ready to go you should confirm that you are up to date and rebased with upstream/master (see "Handling Updates from Upstream/Master" above), and then:
+
+1. `git push origin myBranch`
+1. Send a descriptive [Pull Request](http://help.github.com/pull-requests/) on GitHub - making sure you have selected the correct branch in the GitHub UI!
+1. Wait for TheCodeJunkie to merge your changes in and reformat all of your code because he has StyleCop OCD ;-)
+
 For more information on the merits of this workflow please see RobertTheGrey's [excellent post](https://groups.google.com/forum/#!msg/fubumvc-devel/olH11f_mbk4/pGV6MqFfBSQJ) on the [Fubu MVC Development Group](https://groups.google.com/forum/#!msg/fubumvc-devel/olH11f_mbk4/pGV6MqFfBSQJ).
+
