@@ -37,7 +37,7 @@ While you're working away in your branch it's quite possible that your upstream 
 1. Stash any un-committed changes you need to
 1. `git checkout master`
 1. `git pull upstream master`
-1. `git push origin master`
+1. `git push origin master` (optional, but stops git from telling you you are ahead of origin)
 1. `git checkout myBranch`
 1. `git rebase master myBranch`
 
