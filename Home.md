@@ -30,7 +30,7 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 * Getting the source code
 * xunit, mspec, fakeiteasy
 * Auto crlf settings in git
-* [[Workflow]]
+* [[Git Workflow]]
 * Coding styles (+ ReSharper file and test naming)
 * SharedAssemblyInfo.cs / Breaking all your projects on commit ;-)
 * Info on how to work with 3rd party dependencies
