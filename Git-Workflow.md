@@ -20,9 +20,9 @@ While working on your feature you may well create several branches, which is fin
 
 When you're ready to go you should confirm that you are up to date and rebased with upstream/master (see "Handling Updates from Upstream/Master" below), and then:
 
-1 `git push origin myBranch`
-1 Send a descriptive Pull Request on GitHub
-1 Wait for TheCodeJunkie to merge your changes in and reformat all of your code because he has StyleCop OCD ;-)
+1. `git push origin myBranch`
+1. Send a descriptive Pull Request on GitHub
+1. Wait for TheCodeJunkie to merge your changes in and reformat all of your code because he has StyleCop OCD ;-)
 
 ## Spiking / Prototyping
 
