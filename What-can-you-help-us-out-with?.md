@@ -1,3 +1,5 @@
+## Where there is a will, there is a way
+
 You may be asking yourself “How could someone like me make a difference in a project such as Nancy?” Well, the answer is easy; if you have the time and will to help out, then we sure have places where it could be spent. Not all contributions to an open-source project have to be new features, there are many other places were help is needed.
 
 * **Documentation**; both of the source code and contents on our [wiki](http://github.com/thecodejunkie/nancy/wiki)
