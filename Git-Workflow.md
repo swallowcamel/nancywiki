@@ -34,7 +34,7 @@ It's quite normal, and encouraged, that during design/development of your featur
 
 While you're working away in your branch it's quite possible that your upstream master (most likely the canonical TheCodeJunkie version) may be updated. If this happens you should:
 
-1. Stash any un-staged changes you need to
+1. Stash any un-committed changes you need to
 1. `git checkout master`
 1. `git pull upstream master`
 1. `git push origin master`
