@@ -24,6 +24,7 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 
 * [[Bootstrapping Nancy]]
 * [[Writing a Nancy Bootstrapper]]
+* [[Container Support]]
 
 ## Contributing
 
