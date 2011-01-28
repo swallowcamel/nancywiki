@@ -6,6 +6,6 @@ To set AutoCRLF for just the Nancy repository, make sure you are in the correct 
 
 `git config core.autocrlf false`
 
-To make it the default setting for all repositories execute
+To make it the default setting for all repositories execute (this might very well introduce the issue in other repositories, if they rely on another setting)
 
 `git config --global core.autocrlf false`
