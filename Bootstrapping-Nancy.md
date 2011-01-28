@@ -9,7 +9,7 @@ Although you can happily construct NancyEngine yourself, and inject dependencies
 
 ## The Super-Duper-Happy-Path ##
 
-Although the exact instructions may vary slightly depending on your choice of [[Hosting]], all you generally have to do is add a NancyModule to your project. That's it. No configuration, no registering dependencies, just 100% pure Nancy goodness - if your module has dependencies Nancy will even wire those up too!
+Although the exact instructions may vary slightly depending on your choice of hosting (see the Hosting section on [[Home]]), all you generally have to do is add a NancyModule to your project. That's it. No configuration, no registering dependencies, just 100% pure Nancy goodness - if your module has dependencies Nancy will even wire those up too!
 
 For example, if you add this module to your project:
 
