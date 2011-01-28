@@ -27,12 +27,13 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 
 ## Contributing
 
-* Getting the source code
-* xunit, mspec, fakeiteasy
-* Auto crlf settings in git
+* [[What can you help us out with?]]
+* [[Working with Nancy on Mono]]
+* [[Getting the source code]]
+* [[Make sure line endings doesn't bite you (or us)]]
+* [[There are a couple of frameworks you should know about]]
+* [[Managing dependencies the right way]]
 * [[Git Workflow]]
 * Coding styles (+ ReSharper file and test naming)
 * SharedAssemblyInfo.cs / Breaking all your projects on commit ;-)
-* Info on how to work with 3rd party dependencies
-* Info on 3rd party dependency licensing
 * Super-duper-happy-path coding
