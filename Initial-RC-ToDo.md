@@ -40,5 +40,6 @@
 * Add ViewData support (*)
 * Make sure performance and memory profiles are ok
 * Add support for multipart/form-data
+* Set content-length on responses
 
 _* this may be a joke ;-)_
