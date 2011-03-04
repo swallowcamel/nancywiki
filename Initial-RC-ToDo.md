@@ -46,7 +46,7 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 * Make sure performance and memory profiles are ok
 * Add support for multipart/form-data **_(TheCodeJunkie)_**
 * Set content-length on responses
-* Add Nancy version response header (X-Nancy-Version?)
+* Add Nancy version response header (Nancy-Version?)
 * Create "Empty Nancy Web Application" project template (no binaries included, default view engine template conventions and so on)
 * Automate NuGet generation and publishing
 
