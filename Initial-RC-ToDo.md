@@ -21,6 +21,7 @@
 * List discovered modules
 * List routes in a module
 * Query a route and see which routes that are matched using the configured IRoutePatternMatcher
+* View default registrations
 * .. add lots more stuff
 
 ## Mono
