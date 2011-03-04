@@ -47,5 +47,6 @@
 * Set content-length on responses
 * Add Nancy version response header (X-Nancy-Version?)
 * Create "Empty Nancy Web Application" project template (no binaries included, default view engine template conventions and so on)
+* Automate NuGet generation and publishing
 
 _* this may be a joke ;-)_
