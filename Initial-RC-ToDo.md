@@ -3,6 +3,7 @@
 * Caching support for caching intermediary representations, rather than rebuilding the view from the template each time. _**(TheCodeJunkie, RobertTheGrey, Grumpydev)**_
 * Partial view support - potentially need to inject an "IViewHelper" object that allows access to render a partial view and utility functions like html encode. _**(TheCodeJunkie, RobertTheGrey, Grumpydev)**_
 * Check to see which view engines play nicely in client profile.
+* Support conventions for looking up views, layouts and so on
 
 ## Bootstrappers
 * Add a default ASP.Net bootstrapper using the HttpContext for per-request lifetime. **_(Grumpydev)_**
@@ -20,7 +21,6 @@
 * Custom error pages post request hook
 
 ## Diagnostics
-
 * List discovered modules **_(TheCodeJunkie)_**
 * List routes in a module **_(TheCodeJunkie)_**
 * Query a route and see which routes that are matched using the configured IRoutePatternMatcher **_(TheCodeJunkie)_**
@@ -46,5 +46,6 @@
 * Add support for multipart/form-data **_(TheCodeJunkie)_**
 * Set content-length on responses
 * Add Nancy version response header (X-Nancy-Version?)
+* Create "Empty Nancy Web Application" project template (no binaries included, default view engine template conventions and so on)
 
 _* this may be a joke ;-)_
