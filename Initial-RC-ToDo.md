@@ -1,10 +1,11 @@
-## View Engines
-* Caching support for caching intermediary representations, rather than rebuilding the view from the template each time.
-* Partial view support - potentially need to inject an "IViewHelper" object that allows access to render a partial view and utility functions like html encode.
+## View Engines 
+
+* Caching support for caching intermediary representations, rather than rebuilding the view from the template each time. _**(TheCodeJunkie, RobertTheGrey, Grumpydev)**_
+* Partial view support - potentially need to inject an "IViewHelper" object that allows access to render a partial view and utility functions like html encode. _**(TheCodeJunkie, RobertTheGrey, Grumpydev)**_
 * Check to see which view engines play nicely in client profile.
 
 ## Bootstrappers
-* Add a default ASP.Net bootstrapper using the HttpContext for per-request lifetime.
+* Add a default ASP.Net bootstrapper using the HttpContext for per-request lifetime. **_(Grumpydev)_**
 * Check to see which containers play nicely in client profile.
 
 ## Hosting
@@ -12,17 +13,19 @@
 * Stop the ASP.Net hosting spinning up multiple bootstrappers in some scenarios (otherwise known "doing a @lucisferre" ;-))
 
 ## OOTB Pipeline Helpers
-* Conventions based authentication/claims based module hooks (similar to the security demo)
-* Static file app level pre request hook
-* Automatic conditional GET support app level post request hook (ETag and Modified)
+
+* Conventions based authentication/claims based module hooks (similar to the security demo) **_(Grumpydev)_**
+* Static file app level pre request hook **_(Grumpydev)_**
+* Automatic conditional GET support app level post request hook (ETag and Modified) **_(Grumpydev)_**
 * Custom error pages post request hook
 
 ## Diagnostics
-* List discovered modules
-* List routes in a module
-* Query a route and see which routes that are matched using the configured IRoutePatternMatcher
-* View default registrations
-* .. add lots more stuff
+
+* List discovered modules **_(TheCodeJunkie)_**
+* List routes in a module **_(TheCodeJunkie)_**
+* Query a route and see which routes that are matched using the configured IRoutePatternMatcher **_(TheCodeJunkie)_**
+* View default registrations **_(TheCodeJunkie)_**
+* .. add lots more stuff **_(TheCodeJunkie)_**
 
 ## Mono
 * Work on official support for Nancy on Mono 2.10
@@ -40,7 +43,7 @@
 * Make NuGet packages for the core, hosting options etc.
 * Add ViewData support (*)
 * Make sure performance and memory profiles are ok
-* Add support for multipart/form-data
+* Add support for multipart/form-data **_(TheCodeJunkie)_**
 * Set content-length on responses
 
 _* this may be a joke ;-)_
