@@ -45,5 +45,6 @@
 * Make sure performance and memory profiles are ok
 * Add support for multipart/form-data **_(TheCodeJunkie)_**
 * Set content-length on responses
+* Add Nancy version response header (X-Nancy-Version?)
 
 _* this may be a joke ;-)_
