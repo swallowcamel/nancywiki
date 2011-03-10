@@ -16,7 +16,7 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 
 ## OOTB Pipeline Helpers
 
-* Conventions based authentication/claims based module hooks (similar to the security demo) **_(Grumpydev)_** (Done)
+* <del>Conventions based authentication/claims based module hooks (similar to the security demo) **_(Grumpydev)_**</del>
 * Forms based authentication **_(Grumpydev)_** (Done)
 * Static file app level pre request hook **_(Grumpydev)_**
 * Automatic conditional GET support app level post request hook (ETag and Modified) **_(Grumpydev)_**
@@ -31,6 +31,7 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 
 ## Mono
 * Work on official support for Nancy on Mono 2.10
+* Make sure xunit, fakeiteasy and mspec runs on Mono 2.10
 * Setup CI environment for mono builds
 
 ## Documentation
@@ -42,13 +43,15 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 * Cleanup the cookies so request and response have the same structure.
 * Migrate session to DynamicDictionary (while maintaining current "is dirty" features).
 * Remove bootstrapper projects and move them into the "accessories" project.
-* Make NuGet packages for the core, hosting options etc.
+* <del>Make NuGet packages for the core, hosting options etc.</del>
 * Add ViewData support (*)
 * Make sure performance and memory profiles are ok
-* Add support for multipart/form-data **_(TheCodeJunkie)_**
-* Set content-length on responses
-* Add Nancy version response header (Nancy-Version?)
-* Create "Empty Nancy Web Application" project template (no binaries included, default view engine template conventions and so on)
+* <del>Add support for multipart/form-data **_(TheCodeJunkie)_**</del>
+* Add support for header continuations in multipart/form-data encoded data **_(TheCodeJunkie)_**
+* Add support for encoded filenames in multipart/form-data encoded data **_(TheCodeJunkie)_**
+* Set content-length on responses (?)
+* <del>Add Nancy version response header (Nancy-Version?)</del>
+* <del>Create "Empty Nancy Web Application" project template (no binaries included, default view engine template conventions and so on)</del>
 * Automate NuGet generation and publishing
 
 _* this may be a joke ;-)_
