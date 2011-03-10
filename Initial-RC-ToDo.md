@@ -39,6 +39,10 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 * Write documentation for all existing features
 * Write documentation on how to extend Nancy
 
+## Testing
+* Look into simplifying unit testing of Nancy modules
+* Possibly create a test harness for Nancy applications that you can use in your tests
+
 ## Misc
 * Cleanup the cookies so request and response have the same structure.
 * Migrate session to DynamicDictionary (while maintaining current "is dirty" features).
