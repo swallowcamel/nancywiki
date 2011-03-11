@@ -57,5 +57,7 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 * <del>Add Nancy version response header (Nancy-Version?)</del>
 * <del>Create "Empty Nancy Web Application" project template (no binaries included, default view engine template conventions and so on)</del>
 * Automate NuGet generation and publishing
+* Add request.body helpers, for formats such as json and xml (Request.Body.Json())
+* Add model-binding
 
 _* this may be a joke ;-)_
