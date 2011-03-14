@@ -7,7 +7,7 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 * Support conventions for looking up views, layouts and so on
 
 ## Bootstrappers
-* Add a default ASP.Net bootstrapper using the HttpContext for per-request lifetime. **_(Grumpydev)_**
+* <del>Add a default ASP.Net bootstrapper using the HttpContext for per-request lifetime. **_(Grumpydev)_**</del>
 * Check to see which containers play nicely in client profile.
 
 ## Hosting
