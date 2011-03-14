@@ -38,6 +38,7 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 * Make sure all public types and members are documented
 * Write documentation for all existing features
 * Write documentation on how to extend Nancy
+* Bring wiki up to date
 
 ## Testing
 * Look into simplifying unit testing of Nancy modules
@@ -53,6 +54,7 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 * <del>Add support for multipart/form-data **_(TheCodeJunkie)_**</del>
 * Add support for header continuations in multipart/form-data encoded data **_(TheCodeJunkie)_**
 * Add support for encoded filenames in multipart/form-data encoded data **_(TheCodeJunkie)_**
+* Support large file uploads by storing stream on disk and swap out Request.Body **_(TheCodeJunkie)_**
 * Set content-length on responses (?)
 * <del>Add Nancy version response header (Nancy-Version?)</del>
 * <del>Create "Empty Nancy Web Application" project template (no binaries included, default view engine template conventions and so on)</del>
