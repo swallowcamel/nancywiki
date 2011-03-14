@@ -12,7 +12,7 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 
 ## Hosting
 * Make sure the context is disposed correctly in WCF and standalone hosts.
-* Stop the ASP.Net hosting spinning up multiple bootstrappers in some scenarios (otherwise known "doing a @lucisferre" ;-))
+* <del>Stop the ASP.Net hosting spinning up multiple bootstrappers in some scenarios (otherwise known "doing a @lucisferre" ;-))</del>
 
 ## OOTB Pipeline Helpers
 
