@@ -13,6 +13,7 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 ## Hosting
 * Make sure the context is disposed correctly in WCF and standalone hosts.
 * <del>Stop the ASP.Net hosting spinning up multiple bootstrappers in some scenarios (otherwise known "doing a @lucisferre" ;-))</del>
+* Introduce RequestStream in the Nancy hosts and engine
 
 ## OOTB Pipeline Helpers
 
