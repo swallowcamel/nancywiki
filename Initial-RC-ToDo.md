@@ -13,10 +13,9 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 ## Hosting
 * Make sure the context is disposed correctly in WCF and standalone hosts.
 * <del>Stop the ASP.Net hosting spinning up multiple bootstrappers in some scenarios (otherwise known "doing a @lucisferre" ;-))</del>
-* Introduce RequestStream in the Nancy hosts and engine
+* Introduce RequestStream in the Nancy hosts and engine **_(TheCodeJunkie)_**
 
 ## OOTB Pipeline Helpers
-
 * <del>Conventions based authentication/claims based module hooks (similar to the security demo) **_(Grumpydev)_**</del>
 * <del>Forms based authentication **_(Grumpydev)_**</del>
 * Static file app level pre request hook (should support embedded resources!) **_(Grumpydev)_**
