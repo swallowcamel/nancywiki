@@ -4,7 +4,7 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 * Caching support for caching intermediary representations, rather than rebuilding the view from the template each time. _**(TheCodeJunkie, RobertTheGrey, Grumpydev)**_
 * Partial view support - potentially need to inject an "IViewHelper" object that allows access to render a partial view and utility functions like html encode. _**(TheCodeJunkie, RobertTheGrey, Grumpydev)**_
 * Check to see which view engines play nicely in client profile.
-* Support conventions for looking up views, layouts and so on
+* Support conventions for looking up views, layouts and so on **_(TheCodeJunkie)_**
 
 ## Bootstrappers
 * <del>Add a default ASP.Net bootstrapper using the HttpContext for per-request lifetime. **_(Grumpydev)_**</del>
@@ -13,7 +13,7 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 ## Hosting
 * Make sure the context is disposed correctly in WCF and standalone hosts.
 * <del>Stop the ASP.Net hosting spinning up multiple bootstrappers in some scenarios (otherwise known "doing a @lucisferre" ;-))</del>
-* Introduce RequestStream in the Nancy hosts and engine **_(TheCodeJunkie)_**
+* <del>Introduce RequestStream in the Nancy hosts and engine **_(TheCodeJunkie)_**</del>
 
 ## OOTB Pipeline Helpers
 * <del>Conventions based authentication/claims based module hooks (similar to the security demo) **_(Grumpydev)_**</del>
@@ -45,6 +45,10 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 * <del>Look into simplifying unit testing of Nancy modules **_(TheCodeJunkie)_**</del>
 * <del>Possibly create a test harness for Nancy applications that you can use in your tests **_(TheCodeJunkie)_**</del>
 
+## Repositories
+* Create origanisation
+* Split out bootstrappers for third party containers
+
 ## Misc
 * Cleanup the cookies so request and response have the same structure.
 * Migrate session to DynamicDictionary (while maintaining current "is dirty" features).
@@ -55,12 +59,12 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 * <del>Add support for multipart/form-data **_(TheCodeJunkie)_**</del>
 * Add support for header continuations in multipart/form-data encoded data **_(TheCodeJunkie)_**
 * Add support for encoded filenames in multipart/form-data encoded data **_(TheCodeJunkie)_**
-* Support large file uploads by storing stream on disk and swap out Request.Body **_(TheCodeJunkie)_**
+* <del>Support large file uploads by storing stream on disk and swap out Request.Body **_(TheCodeJunkie)_**</del>
 * Set content-length on responses (?)
 * <del>Add Nancy version response header (Nancy-Version?)</del>
 * <del>Create "Empty Nancy Web Application" project template (no binaries included, default view engine template conventions and so on)</del>
 * Automate NuGet generation and publishing
 * Add request.body helpers, for formats such as json and xml (Request.Body.Json())
-* Add model-binding
+* <del>Add model-binding **_(Grumpydev)_**</del>
 
 _* this may be a joke ;-)_
