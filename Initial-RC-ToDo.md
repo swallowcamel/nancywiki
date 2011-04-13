@@ -41,8 +41,9 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 * Bring wiki up to date
 
 ## Testing
-* Look into simplifying unit testing of Nancy modules
-* Possibly create a test harness for Nancy applications that you can use in your tests
+* Move ShouldExtensions from Nancy.Tests to Nancy.Testing
+* <del>Look into simplifying unit testing of Nancy modules **_(TheCodeJunkie)_**</del>
+* <del>Possibly create a test harness for Nancy applications that you can use in your tests **_(TheCodeJunkie)_**</del>
 
 ## Misc
 * Cleanup the cookies so request and response have the same structure.
