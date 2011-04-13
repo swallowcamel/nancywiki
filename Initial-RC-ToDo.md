@@ -52,7 +52,6 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 ## Misc
 * Cleanup the cookies so request and response have the same structure.
 * Migrate session to DynamicDictionary (while maintaining current "is dirty" features).
-* Remove bootstrapper projects and move them into the "accessories" project.
 * <del>Make NuGet packages for the core, hosting options etc.</del>
 * Add ViewData support (*)
 * Make sure performance and memory profiles are ok
