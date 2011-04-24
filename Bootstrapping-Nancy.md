@@ -60,7 +60,7 @@ Both of these methods are passed the container instance as a parameter:
     container.Register<IMyInterface, MyImplementation>().AsSingleton();
     container.Register<IMyInterfaceToo, MyOtherThing>().AsMultiInstance();
     
-For more information on the various registration options available, please take a look at the [TinyIoC Wiki](<http://hg.grumpydev.com/tinyioc>).
+For more information on the various registration options available, please take a look at the [TinyIoC Wiki](<https://github.com/grumpydev/tinyioc>).
 
 ### Part 3 - Alternative Containers ###
 
