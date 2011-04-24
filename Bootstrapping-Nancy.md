@@ -1,4 +1,4 @@
-# Bootstrapping Nancy # 
+# Bootstrapping Nancy #
 
 ## These Boots Are Made For Walkin'.. ##
 
