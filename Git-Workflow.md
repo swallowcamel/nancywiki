@@ -28,7 +28,7 @@ It's quite normal, and encouraged, that during design/development of your featur
 
 ## Handling Updates from Upstream/Master
 
-While you're working away in your branch it's quite possible that your upstream master (most likely the canonical TheCodeJunkie version) may be updated. If this happens you should:
+While you're working away in your branch it's quite possible that your upstream master (most likely the canonical NancyFx version) may be updated. If this happens you should:
 
 1. [Stash](http://progit.org/book/ch6-3.html) any un-committed changes you need to
 1. `git checkout master`
