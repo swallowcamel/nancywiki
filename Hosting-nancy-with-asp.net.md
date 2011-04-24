@@ -32,6 +32,6 @@ By default, the Nancy HTTP Handler will use the built in "Bootstrapper Locator" 
       <bootstrapper assembly="Nancy.Demo" type="Nancy.Demo.DemoBootStrapper"/>
     </nancyFx>
 
-Here we define a NancyFx configuration section and a bootstrapper entry that specified the type of the bootstrapper, and the assembly it's located in. If this configuration setting is specified then the locator is bypassed completely and Nancy will use the specified type instead.
+Here we define a NancyFx configuration section and a bootstrapper entry that specified the type of the bootstrapper, and the assembly it's located in. If this configuration setting is specified then the locator is bypassed completely and Nancy will use the specified type instead. 
 
 For more information on Nancy Bootstrapping please see [[Bootstrapping-Nancy]].
