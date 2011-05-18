@@ -35,3 +35,16 @@ By default, the Nancy HTTP Handler will use the built in "Bootstrapper Locator" 
 Here we define a NancyFx configuration section and a bootstrapper entry that specified the type of the bootstrapper, and the assembly it's located in. If this configuration setting is specified then the locator is bypassed completely and Nancy will use the specified type instead. 
 
 For more information on Nancy Bootstrapping please see [[Bootstrapping-Nancy]].
+
+## Adding Nancy to an existing site
+
+Sometimes you have an existing ASP.NET site and you want to configure Nancy to handle requests to a particular path. To do this, follow the instructions above but set `path="nancypath/*"` on the `NancyHttpRequestHandler` handlers. You will also need to add a project folder to represent the path, and in that folder you would add the following Web.config:
+
+    <?xml version="1.0"?>
+    <configuration>
+        <system.web>
+          <httpHandlers>
+            <add verb="*" type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" path="*"/>
+          </httpHandlers>
+        </system.web>
+    </configuration>
