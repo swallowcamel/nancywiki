@@ -1,6 +1,6 @@
 ## We're getting there
 
-We have a goal and that is to make Nancy run as smoothly as possible on Mono and to be able to use MonoDevelop. There are a couple of other things we want to get out of the way first, but we have started to iron out the existing issues with mono compatibility. Right now we are recommending you use **Mono 2.10** (currently in beta) since it has improved support for the _dynamic_ keyword, something we make extensive use of.
+We have a goal and that is to make Nancy run as smoothly as possible on Mono and to be able to use MonoDevelop. There are a couple of other things we want to get out of the way first, but we have started to iron out the existing issues with mono compatibility. Right now we are recommending you use **Mono 2.10** since it has improved support for the _dynamic_ keyword, something we make extensive use of.
 
 So a couple of quick facts about Nancy on mono, or as I like to call the branch; Moncy!
 
