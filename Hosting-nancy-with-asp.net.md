@@ -7,7 +7,7 @@ Nancy under ASP.Net is handled through a HTTP Handler, which is setup through th
     <system.web>
       <compilation debug="true" targetFramework="4.0" />
       <httpHandlers>
-        <add verb="*" type="Nancy.Hosting.NancyHttpRequestHandler" path="*"/>
+        <add verb="*" type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" path="*"/>
       </httpHandlers>
     </system.web>
 
@@ -15,9 +15,11 @@ Nancy under ASP.Net is handled through a HTTP Handler, which is setup through th
        <modules runAllManagedModulesForAllRequests="true"/>
       <validation validateIntegratedModeConfiguration="false"/>
       <handlers>
-        <add name="Nancy" verb="*" type="Nancy.Hosting.NancyHttpRequestHandler" path="*"/>
+        <add name="Nancy" verb="*" type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" path="*"/>
       </handlers>
     </system.webServer>
+
+Also make sure you have referenced not only the Nancy project/assembly, but also the Nancy.Hosting.Aspnet project/assembly.
 
 That's all you need to do to get up and running.
 
