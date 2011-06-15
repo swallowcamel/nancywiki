@@ -35,13 +35,14 @@ Pretty self explanatory except `disableAutoIncludeModelNamespace` which by defau
 
 Step 3: Use Razor!
 
-Inside NancyModule Constructor
-     `...`
-`     Get["/Home/Index"] = param =>`
-`                          {`
-`                              var model = repo.GetSomeModel();`
-`                              return View["/MyViewPath/Index.cshtml",model]`
-`                          };`
+Inside NancyModule Constructor  
+
+     ...
+    Get["/Home/Index"] = param =>
+    {
+        var model = repo.GetSomeModel();
+        return View["/MyViewPath/Index.cshtml",model]
+    };
  
 Note that the path for the razor view is relative to the root of your project.
 
