@@ -33,3 +33,16 @@ Step 2: Configure Razor!
 
 Pretty self explanatory except `disableAutoIncludeModelNamespace` which by default auto references the assembly of the model you pass into the view.
 
+Step 3: Use Razor!
+
+Inside NancyModule Constructor
+     ...
+     Get["/Home/Index"] = param =>
+                          {
+                              var model = repo.GetSomeModel();
+                              return View["/MyViewPath/Index.cshtml",model]
+                          };
+ 
+Note that the path for the razor view is relative to the root of your project.
+
+
