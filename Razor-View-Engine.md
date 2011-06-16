@@ -7,7 +7,7 @@ at the top of your view.
 
 **Configuring Razor.**
 
-You can specify assemblies and default namespaces that razor needs to use whilst compiling the views by bootstrapping your own IRazorConfiguration implementation. 
+You can specify assemblies and default namespaces that razor needs to use whilst compiling the views by bootstrapping your own IRazorConfiguration implementation. _This step is totally optional_ if you don't require additional references or namespaces in your view.
 
 The default RazorConfiguration looks in app or web.config in the razor section.
 
@@ -33,7 +33,7 @@ Step 2: Configure Razor!
 
 Pretty self explanatory except `disableAutoIncludeModelNamespace` which by default auto references the assembly of the model you pass into the view.
 
-Step 3: Use Razor!
+** Use Razor! **
 
 Inside NancyModule Constructor  
 
