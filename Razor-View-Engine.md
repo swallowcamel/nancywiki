@@ -33,7 +33,7 @@ Step 2: Configure Razor!
 
 Pretty self explanatory except `disableAutoIncludeModelNamespace` which by default auto references the assembly of the model you pass into the view.
 
-** Use Razor! **
+**Use Razor!**
 
 Inside NancyModule Constructor  
 
