@@ -31,7 +31,7 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 
 ## Contributing
 
-* [[What can you help us out with?]]
+* [[What can you help us out with]]
 * [[Working with Nancy on Mono]]
 * [[Getting the source code]]
 * [[Make sure line endings doesn't bite you (or us)]]
