@@ -19,6 +19,8 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 
 ## View Engines
 * [[Implementing a View Engine]]
+* [[View Conventions]]
+* [[Razor View Engine]]
 
 ## Response Formatters
 
