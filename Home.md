@@ -13,6 +13,7 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 * [[Hosting Nancy with ASP.NET]]
 * [[Hosting Nancy with WCF]]
 * [[Hosting Nancy with Azure]]
+* [[Hosting Nancy with OWIN]]
 
 ## Routing
 
