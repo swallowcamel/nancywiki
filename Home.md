@@ -3,6 +3,9 @@ There should be some contents here - contribute to make it possible :)
 ## Getting Started
 [[Presentation By Nicholas Cloud|http://www.nicholascloud.com/2011/05/nancy-net-micro-web-frameworks-part-1/]]
 
+## Media
+[[Hanselminutes Podcast 270 - Nancy, Sinatra and the Explosion of .NET Micro Web Frameworks with Andreas Håkansson|http://www.hanselminutes.com/default.aspx?showID=290]]
+
 ## Discussion
 For discussion about the Nancy project, please use our Google Group at [https://groups.google.com/forum/?fromgroups#forum/nancy-web-framework](https://groups.google.com/forum/?fromgroups#forum/nancy-web-framework "Visit the Nancy Google Group")
 
