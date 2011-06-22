@@ -1,5 +1,5 @@
 **Installing Razor**
-Simply reference `Nancy.ViewEngines.Razor.dll` and return views ending in `cshtml` or `vbhtml` it's that simple. Please note that as of yet certain feautures you might be used to from MVC/ASP.NET are unavailable such as strongly typed views, layouts and renderpartial. You can sorta mock strongly typing views, for those of us who have complex object graphs, by specifing 
+Simply reference `Nancy.ViewEngines.Razor.dll` and return views ending in `cshtml`it's that simple. Please note that as of yet certain feautures you might be used to from MVC/ASP.NET are unavailable such as strongly typed views. You can sorta mock strongly typing views, for those of us who have complex object graphs, by specifing 
 
 	@MyType model = (MyType)Model;
 
@@ -41,9 +41,5 @@ Inside NancyModule Constructor
     Get["/Home/Index"] = param =>
     {
         var model = repo.GetSomeModel();
-        return View["/MyViewPath/Index.cshtml",model]
+        return View["index.cshtml", model]
     };
- 
-Note that the path for the razor view is relative to the root of your project.
-
-
