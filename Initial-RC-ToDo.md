@@ -21,6 +21,7 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 * Static file app level pre request hook (should support embedded resources!) **_(Grumpydev)_**
 * Automatic conditional GET support app level post request hook (ETag and Modified) **_(Grumpydev)_**
 * Custom error pages post request hook
+* CSRF token insertion / validation
 
 ## Diagnostics
 * List discovered modules **_(TheCodeJunkie)_**
