@@ -1,10 +1,10 @@
 _Please do not edit this list directly. Features should be discussed at [the Nancy User Group](https://groups.google.com/forum/?pli=1#!topic/nancy-web-framework/-u73fTImRCk) before they are selected for the release candidate target. This does not mean that contributions for features that are not on the list will be rejected - they are, as always, welcome at all times!_
 
 ## View Engines 
-* Caching support for caching intermediary representations, rather than rebuilding the view from the template each time. _**(TheCodeJunkie, RobertTheGrey, Grumpydev)**_
-* Partial view support - potentially need to inject an "IViewHelper" object that allows access to render a partial view and utility functions like html encode. _**(TheCodeJunkie, RobertTheGrey, Grumpydev)**_
+* <del>Caching support for caching intermediary representations, rather than rebuilding the view from the template each time. _**(TheCodeJunkie, RobertTheGrey, Grumpydev)**_</del>
+* <del>Partial view support - potentially need to inject an "IViewHelper" object that allows access to render a partial view and utility functions like html encode. _**(TheCodeJunkie, RobertTheGrey, Grumpydev)**_</del>
 * Check to see which view engines play nicely in client profile.
-* Support conventions for looking up views, layouts and so on **_(TheCodeJunkie)_**
+* <del>Support conventions for looking up views, layouts and so on **_(TheCodeJunkie)_**</del>
 
 ## Bootstrappers
 * <del>Add a default ASP.Net bootstrapper using the HttpContext for per-request lifetime. **_(Grumpydev)_**</del>
