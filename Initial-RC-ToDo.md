@@ -47,14 +47,13 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 
 ## Repositories
 * <del>Create origanisation</del>
-* Split out bootstrappers for third party containers
+* <del>Split out bootstrappers for third party containers</del>
 
 ## Misc
 * Cleanup the cookies so request and response have the same structure.
 * Migrate session to DynamicDictionary (while maintaining current "is dirty" features).
 * <del>Make NuGet packages for the core, hosting options etc.</del>
-* Add ViewData support (*)
-* Make sure performance and memory profiles are ok
+* Make sure <del>performance</del> and memory profiles are ok
 * <del>Add support for multipart/form-data **_(TheCodeJunkie)_**</del>
 * Add support for header continuations in multipart/form-data encoded data **_(TheCodeJunkie)_**
 * Add support for encoded filenames in multipart/form-data encoded data **_(TheCodeJunkie)_**
@@ -63,7 +62,5 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 * <del>Add Nancy version response header (Nancy-Version?)</del>
 * <del>Create "Empty Nancy Web Application" project template (no binaries included, default view engine template conventions and so on)</del>
 * Automate NuGet generation and publishing
-* Add request.body helpers, for formats such as json and xml (Request.Body.Json())
+* Add request.body helpers, for formats such as <del>json</del> and xml (Request.Body.Json())
 * <del>Add model-binding **_(Grumpydev)_**</del>
-
-_* this may be a joke ;-)_
