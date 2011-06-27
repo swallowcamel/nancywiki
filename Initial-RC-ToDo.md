@@ -46,7 +46,7 @@ _Please do not edit this list directly. Features should be discussed at [the Nan
 * <del>Possibly create a test harness for Nancy applications that you can use in your tests **_(TheCodeJunkie)_**</del>
 
 ## Repositories
-* Create origanisation
+* <del>Create origanisation</del>
 * Split out bootstrappers for third party containers
 
 ## Misc
