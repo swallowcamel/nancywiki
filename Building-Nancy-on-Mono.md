@@ -28,3 +28,6 @@ To verify that the installation was successful run the following commands
 	> #r "FSharp.PowerPack.dll";;
 	
 	--> Referenced '/opt/FSharpPowerPack-2.0.0.0/bin/FSharp.PowerPack.dll'
+
+## Build configurations
+The _Nancy.sln_ file contains two build configurations, called _MonoDebug_ and _MonoRelease_, that should be build when building Nancy on Mono. These ensures that windows-only features (such as the WCF host) will not produce build errors when you compile the source.
