@@ -1,5 +1,5 @@
 ## Setting up the development environment
-We have been using Mono 2.10.2 and MonoDevelop 2.6 Beta 3
+We have been using Mono 2.10.2, anything earlier produces build errors. The version of MonoDevelop that we have been using is the 2.6 Beta 3 build. 
 
 ## Third-party dependencies
 The NDjango engine in Nancy was built with FSharp, so in order to build it you are going to have to install the latest FSharp package. Once you have installed it, you will also have to download the zip of the latest version of [FSharp PowerPack](http://fsharppowerpack.codeplex.com/releases/view/45593#DownloadId=122711)
