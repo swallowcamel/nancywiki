@@ -6,15 +6,15 @@ The NDjango engine in Nancy was built with FSharp, so in order to build it you a
 
 Once downloaded you need to unzip and install it into the GAC
 
-	$ sudo unzip FSharpPowerPack.zip -d /opt
-	$ cd /opt/FSharpPowerPack-2.0.0.0/bin
-	$ sudo gacutil /i FSharp.Compiler.CodeDom.dll
-	$ sudo gacutil /i FSharp.PowerPack.Build.Tasks.dll
-	$ sudo gacutil /i FSharp.PowerPack.Compatibility.dll
-	$ sudo gacutil /i FSharp.PowerPack.dll
-	$ sudo gacutil /i FSharp.PowerPack.Linq.dll
-	$ sudo gacutil /i FSharp.PowerPack.Metadata.dll
-	$ sudo gacutil /i FSharp.PowerPack.Parallel.Seq.dll
+	sudo unzip FSharpPowerPack.zip -d /opt
+	cd /opt/FSharpPowerPack-2.0.0.0/bin
+	sudo gacutil /i FSharp.Compiler.CodeDom.dll
+	sudo gacutil /i FSharp.PowerPack.Build.Tasks.dll
+	sudo gacutil /i FSharp.PowerPack.Compatibility.dll
+	sudo gacutil /i FSharp.PowerPack.dll
+	sudo gacutil /i FSharp.PowerPack.Linq.dll
+	sudo gacutil /i FSharp.PowerPack.Metadata.dll
+	sudo gacutil /i FSharp.PowerPack.Parallel.Seq.dll
 
 To verify that the installation was successful run the following commands
 
