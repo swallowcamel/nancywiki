@@ -35,3 +35,7 @@ To verify that the installation was successful run the following commands
 
 ## Build configurations
 The _Nancy.sln_ file contains two, Mono specific, build configurations, called _MonoDebug_ and _MonoRelease_, that should be build when building Nancy on Mono. These ensures that windows-only features (such as the WCF host) will not produce build errors when you compile the source.
+
+## Debugging xUnit Tests Using MonoDevelop
+If you ever find yourself in a position where you need to debug one of the xUnit tests in Nancy on Mono you should read 
+[Debugging xUnit Tests Using MonoDevelop](http://www.grumpydev.com/2011/06/30/debugging-xunit-tests-using-monodevelop) by our very own [Steven Robbins](http://twitter.com/#!/Grumpydev).
