@@ -4,6 +4,8 @@ We have been using Mono 2.10.2, anything earlier produces build errors. The vers
 ## Third-party dependencies
 NDjango is built using F#, so in order to compile and execute the NDjango engine you will need to have F# and the [FSharp PowerPack](http://fsharppowerpack.codeplex.com) installed. Starting with Mono 2.10, F# comes bundled with the installation, so what is left to do is [download the latest version](http://fsharppowerpack.codeplex.com/releases/view/45593#DownloadId=122711) of the FSharp PowerPack and get it installed.
 
+_Note: If you are installing Mono on Linux you need to install the mono-complete package, or you will not get the F# bundle. If you install the mono-core package you will also have to install the fsharp package yourself._
+
 Once downloaded you need to unzip and install it into the GAC
 
 	sudo unzip FSharpPowerPack.zip -d /opt
