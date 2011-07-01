@@ -6,7 +6,7 @@ If you make use of 3rd party dependencies, in your contributions, make sure they
 
 Not only should all needed dependencies be included in the dependency folder, but _make sure you read the license_ for the dependency you are about to include in Nancy. Make sure you are not violating anything in it! There are plenty of [sites](http://www.opensource.org/licenses/alphabetical) that explain the hoard of different licenses out there.
 
-We'd rather avoid getting a nice letter from a man in a suite because we are shipping their library x in a way that is not conforming to their choice of license. Nancy is distributed under an [MIT license](http://www.opensource.org/licenses/mit-license.php) which makes it _very_ open to how it is used, not everyone thinks their stuff should be used in such a liberal way and might not be compatible with MIT.
+We'd rather avoid getting a nice letter from a man in a suit because we are shipping their library x in a way that is not conforming to their choice of license. Nancy is distributed under an [MIT license](http://www.opensource.org/licenses/mit-license.php) which makes it _very_ open to how it is used, not everyone thinks their stuff should be used in such a liberal way and might not be compatible with MIT.
 
 
 
