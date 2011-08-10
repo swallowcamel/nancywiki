@@ -44,7 +44,7 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 * [[There are a couple of frameworks you should know about]]
 * [[Managing dependencies the right way]]
 * [[Git Workflow]]
-* [[Fixing Problems with Rake]]
+* [[Having trouble with rake?]]
 * Coding styles (+ ReSharper file and test naming)
 * SharedAssemblyInfo.cs / Breaking all your projects on commit ;-)
 * Super-duper-happy-path coding
