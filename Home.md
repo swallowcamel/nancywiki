@@ -2,26 +2,15 @@ There should be some contents here - contribute to make it possible :)
 
 [[Documentation]]
 
-## Media
-* [[Presentation By Nicholas Cloud|http://www.nicholascloud.com/2011/05/nancy-net-micro-web-frameworks-part-1/]]
-* [[Hanselminutes Podcast 270 - Nancy, Sinatra and the Explosion of .NET Micro Web Frameworks with Andreas 
-Håkansson|http://www.hanselminutes.com/default.aspx?showID=290]]
-
-## Discussion
+## Community
 For discussion about the Nancy project, please use our Google Group at [https://groups.google.com/forum/?fromgroups#forum/nancy-web-framework](https://groups.google.com/forum/?fromgroups#forum/nancy-web-framework "Visit the Nancy Google Group")
 
 You can also follow the discussion on Twitter using the [#NancyFx](http://search.twitter.com/search?q=%23Nancyfx) hashtag.
 
-## View Engines
-* [[Implementing a View Engine]]
-* [[View Conventions]]
-* [[Razor View Engine]]
-
-## Bootstrappers / Container Support
-
-* [[Bootstrapping Nancy]]
-* [[Writing a Nancy Bootstrapper]]
-* [[Container Support]]
+## Media
+* [[Presentation By Nicholas Cloud|http://www.nicholascloud.com/2011/05/nancy-net-micro-web-frameworks-part-1/]]
+* [[Hanselminutes Podcast 270 - Nancy, Sinatra and the Explosion of .NET Micro Web Frameworks with Andreas 
+Håkansson|http://www.hanselminutes.com/default.aspx?showID=290]]
 
 ## Contributing
 
