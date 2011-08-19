@@ -13,7 +13,7 @@ A Browser instance is created by instantiating it with the bootstrapper, you wan
         
         // When
         var result = browser.Get(“/”, with => {
-	    with.HttpRequest();
+            with.HttpRequest();
         });
         
         // Then
