@@ -49,3 +49,5 @@ The HelloModule.cs code
             Get["/"] = parameters => "Hello World";
         }
     }
+
+[Documentation overview](Documentation) - [Part 2. Exploring the Nancy module >>](Exploring the Nancy module)
