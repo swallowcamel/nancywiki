@@ -22,4 +22,3 @@ Håkansson|http://www.hanselminutes.com/default.aspx?showID=290]]
 * [[Having trouble with rake?]]
 * Coding styles (+ ReSharper file and test naming)
 * SharedAssemblyInfo.cs / Breaking all your projects on commit ;-)
-* Super-duper-happy-path coding
