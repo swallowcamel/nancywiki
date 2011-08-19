@@ -52,7 +52,7 @@ For example:
         {
             this.Conventions.ViewLocationConventions.Add((viewName, model, context) =>
             {
-                return string.Concat(“custom/”, viewName);
+                return string.Concat("custom/", viewName);
             });
         }
     }
