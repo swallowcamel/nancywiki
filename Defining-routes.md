@@ -49,16 +49,16 @@ Turns out it’s not complicated after all, you just need to remember a couple o
 Below are some samples of what routes in Nancy can look like. They cover some of the possible usages, but not all of them. 
 
     // would capture routes like /hello/nancy sent as a GET request
-    Get[“/hello/{name}”] = parameters => {
-        return “Hello “ + parameters.name;
+    Get["/hello/{name}"] = parameters => {
+        return "Hello " + parameters.name;
     };
 
     // would capture routes like /products/1034 sent as a DELETE request
-    Delete[“/product/(?<id>[\d]{1,7})”] = parameters => {
+    Delete["/product/(?<id>[\d]{1,7})"] = parameters => {
         return 200;
     };
 
     // would capture routes like /users/192/add/moderator sent as a POST request
-    Post[“/users/{id}/add/{category}”] = parameters => {
+    Post["/users/{id}/add/{category}"] = parameters => {
         return HttpStatusCode.Ok;
     };
