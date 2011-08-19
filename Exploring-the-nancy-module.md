@@ -28,3 +28,5 @@ One of the small, yet neat, features of a module is the ability to define a modu
             };
         }
     }
+
+[<< Part 1. Introduction](Introduction) - [Documentation overview](Documentation) - [Part 3. Defining routes >>](Defining routes)
