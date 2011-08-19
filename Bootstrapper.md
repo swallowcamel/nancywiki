@@ -17,3 +17,5 @@ When you want to change the runtime behavior of Nancy you are going to be doing 
             // your customizations goes here
         }
     }
+
+[<< Part 6. Model binding](Model binding) - [Documentation overview](Documentation) - [Part 8. View engines >>](View engines)
