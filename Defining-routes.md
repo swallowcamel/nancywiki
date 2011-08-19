@@ -62,3 +62,5 @@ Below are some samples of what routes in Nancy can look like. They cover some of
     Post["/users/{id}/add/{category}"] = parameters => {
         return HttpStatusCode.Ok;
     };
+
+[<< Part 2. Exploring the Nancy module](Exploring the Nancy module) - [Documentation overview](Documentation) - [Part 4. Taking a look at the DynamicDictionary >>](Taking a look at the DynamicDictionary)
