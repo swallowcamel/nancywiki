@@ -2,12 +2,12 @@ The `DynamicDictionary` is a dynamic type with dictionary-like behaviors, but th
 
 With the DynamicDictionary you are able to access the values using a standard indexer approach or by using the name, of the captured, value just as a normal property. Both produce the same result, it all comes down to personal preference.
 
-    Get[“/hello/{name}”] = parameters => {
-        return “Hello “ + parameters.name;
+    Get["/hello/{name}"] = parameters => {
+        return "Hello " + parameters.name;
     };
 
-    Get[“/goodbye/{name}”] = parameters => {
-        return “Goodbye “ + parameters[“name”];
+    Get["/goodbye/{name}"] = parameters => {
+        return "Goodbye " + parameters["name"];
     };
 	
 The stored values can explicitly or implicitly be cast to most of the primitive types and a special property, called `HasValue` can be checked to determine if a value has been assigned or not. The values also implement the `IEquatable<>` and `IConvertible` interfaces.
