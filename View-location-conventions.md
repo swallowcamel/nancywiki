@@ -60,3 +60,5 @@ For example:
 This would add a view location convention which would look for the view inside of a folder called custom that should be located at the root of the application.
 
 The `ViewLocationConventions` collection is a standard list that can be modified, using the normal operators it provides. This enables you to do things such as deleting the default conventions or changing the order in which conventions are invoked.
+
+[<< Part 8. View engines](View engines) - [Documentation overview](Documentation) - [Part 10. Testing your application >>](Testing your application)
