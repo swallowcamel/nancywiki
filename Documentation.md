@@ -16,3 +16,15 @@
 * [[Hosting Nancy with WCF]]
 * [[Hosting Nancy with Azure]]
 * [[Hosting Nancy with OWIN]]
+
+
+## View Engines
+* [[Implementing a View Engine]]
+* [[View Conventions]]
+* [[Razor View Engine]]
+
+## Bootstrappers / Container Support
+
+* [[Bootstrapping Nancy]]
+* [[Writing a Nancy Bootstrapper]]
+* [[Container Support]]
