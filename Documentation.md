@@ -1,7 +1,7 @@
 1. Getting Started
     1. [[Introduction]]
     2. [[Exploring the Nancy module]]
-    3. [[Taking a look at routes]]
+    3. [[Defining routes]]
     4. [[Taking a look at the DynamicDictionary]]
     5. [[The Before and After of route invocation]]
     6. [[Model binding]]
