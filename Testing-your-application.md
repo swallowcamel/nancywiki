@@ -89,3 +89,5 @@ To do this what we want to do is make sure a certain element with an id of “er
 In this test we use the browser object to create a request that’s equal to the url we are sent to in error (the same one we verified earlier), then verify the existence and properties of the errorBox element.
 
 This particular sample shows a very simple selector, but you can use the full power of CSS3 selectors ([http://www.w3.org/TR/css3-selectors/](http://www.w3.org/TR/css3-selectors/)) to grab elements from the HTML and run asserts against them.
+
+[<< Part 9. View location conventions](View location conventions) - [Documentation overview](Documentation)
