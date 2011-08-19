@@ -46,6 +46,6 @@ The HelloModule.cs code
     {
         public HelloModule()
         {
-            Get["/"] = parameters => “Hello World”;
+            Get["/"] = parameters => "Hello World";
         }
     }
