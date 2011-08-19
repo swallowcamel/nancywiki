@@ -50,3 +50,5 @@ In the following route, Nancy will try to locate a view called Products with a f
     Get["/products"] = parameters => {
         return View[new ProductsModel()];
     };
+
+[<< Part 7. Bootstrapper](Bootstrapper) - [Documentation overview](Documentation) - [Part 9. View location conventions >>](View location conventions)
