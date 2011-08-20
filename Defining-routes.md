@@ -1,4 +1,4 @@
-Routes are defined in the constructor of a module in the constructor of the module. In order to define a route in Nancy, you need to specify a `Method` + `Pattern` + `Action` + (optional) `Condition`.
+Routes are defined in the constructor of a module. In order to define a route in Nancy, you need to specify a `Method` + `Pattern` + `Action` + (optional) `Condition`.
 
 ##Method
 
