@@ -1,5 +1,5 @@
 **Installing Razor**
-Simply reference `Nancy.ViewEngines.Razor.dll` and return views ending in `cshtml`it's that simple. Please note that as of yet certain feautures you might be used to from MVC/ASP.NET are unavailable such as strongly typed views. You can sorta mock strongly typing views, for those of us who have complex object graphs, by specifing 
+Simply reference `Nancy.ViewEngines.Razor.dll` and return views ending in `cshtml`it's that simple. Please note that as of yet certain feautures you might be used to from MVC/ASP.NET are unavailable such as strongly typed views. You can sort of mock strongly typing views, for those of us who have complex object graphs, by specifing 
 
 	@MyType model = (MyType)Model;
 
