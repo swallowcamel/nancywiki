@@ -1,8 +1,7 @@
-
 # Writing a Nancy BootStrapper
 ## General Information
 
-Bootstrappers should be implemented as abstract classes - the idea being that the end users inherit from a specific bootstrapper implementation and override whatever they need to (if anything) to get things configured as they want.
+Bootstrappers should be implemented as **abstract classes** - the idea being that the end users inherit from a specific bootstrapper implementation and override whatever they need to (if anything) to get things configured as they want.
 
 It is recommended that any virtual/abstract methods from NancyBootStrapperBase are sealed in the bootstrapper implementation where it doesn't make sense for the user to override them. This is simply to cut down on clutter and to try and give us the largest opening to the pit of success :-) The DefaultNancyBootStrapper does this.
 
