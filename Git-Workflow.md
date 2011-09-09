@@ -6,6 +6,7 @@ The general process for working with Nancy is:
 
 1. [Fork](http://help.github.com/forking/) on GitHub
 1. Clone your fork locally
+1. Configure the remote repo (`git remote add upstream git://github.com/NancyFx/Nancy`)
 1. Create a local branch (`git checkout -b myBranch`)
 1. Work on your feature, spiking/prototyping as required (see below)
 1. Rebase if required (see below)
