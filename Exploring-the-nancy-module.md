@@ -20,7 +20,7 @@ One of the small, yet neat, features of a module is the ability to define a modu
 
     public class ResouceModule : NancyModule
     {
-        public ResourceModule : base("/products")
+        public ResourceModule() : base("/products")
         {
             // would capture routes to /products/list sent as a GET request
             Get["/list"] = parameters => {
