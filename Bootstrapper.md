@@ -10,9 +10,9 @@ The default implementation that is shipped with Nancy sits on top of the [TinyIo
 
 When you want to change the runtime behavior of Nancy you are going to be doing this though a custom bootstrapper. Fortunately this doesn’t mean you have to implement a bootstrapper from scratch each time, but instead you derive from the “base” bootstrapper you are using and override one of the methods / properties. In this example the InitialiseInternal method is overridden:
 
-    public class CustomBootstrapper : DefaultNancyBoostrapper
+    public class CustomBootstrapper : DefaultNancyBootstrapper
     {
-        public void InitialiseInternal(TinyIoCContainer container)
+        public override void InitialiseInternal(TinyIoCContainer container)
         {
             // your customizations goes here
         }
