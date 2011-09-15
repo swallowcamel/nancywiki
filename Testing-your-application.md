@@ -8,7 +8,7 @@ A Browser instance is created by instantiating it with the bootstrapper, you wan
     public void Should_return_status_ok_when_route_exists()
     {
         // Given
-        var bootstrapper = new DefaultNancyBoostrapper();
+        var bootstrapper = new DefaultNancyBootstrapper();
         var browser = new Browser(bootstrapper);
         
         // When
@@ -20,7 +20,7 @@ A Browser instance is created by instantiating it with the bootstrapper, you wan
         Assert.Equal(result.StatusCode, HttpStatusCode.Ok);
     }
 
-The test will send a `GET` request to your application, running in the configuration provided by the `DefaultNancyBoostrapper` and return the actual result, wrapped in an instance of the `BrowserResult` type.
+The test will send a `GET` request to your application, running in the configuration provided by the `DefaultNancyBootstrapper` and return the actual result, wrapped in an instance of the `BrowserResult` type.
 
 You can send all supported request types with the Browser class, and the configuration lets you specify things as request protocol, headers, form values, uploaded files and much more. The configuration can easily be extended with the use of extension methods.
 
@@ -44,7 +44,7 @@ For example - if you were testing a login page and wanted to verify that the use
     public void Should_redirect_to_login_with_error_details_incorrect()
     {
         // Given
-        var bootstrapper = new DefaultNancyBoostrapper();
+        var bootstrapper = new DefaultNancyBootstrapper();
         var browser = new Browser(bootstrapper);
         
         // When
@@ -68,7 +68,7 @@ To do this what we want to do is make sure a certain element with an id of “er
     public void Should_display_error_message_when_error_passed()
     {
         // Given
-        var bootstrapper = new DefaultNancyBoostrapper();
+        var bootstrapper = new DefaultNancyBootstrapper();
         var browser = new Browser(bootstrapper);
         
         // When
