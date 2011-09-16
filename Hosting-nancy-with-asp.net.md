@@ -23,6 +23,10 @@ Also make sure you have referenced not only the Nancy project/assembly, but also
 
 That's all you need to do to get up and running.
 
+**Special note about IIS 6 and PUT/DELETE requests:** By default IIS 6 does not support PUT and DELETE verbs. To enable this, you need to add a wildcard mapping to the virtual directory of your Nancy application - read the "IIS6 Extension-less URLs" section in this document: http://haacked.com/archive/2008/11/26/asp.net-mvc-on-iis-6-walkthrough.aspx
+
+
+
 ## Bootstrapping
 
 By default, the Nancy HTTP Handler will use the built in "Bootstrapper Locator" for identifying the best bootstrapper to kick-start Nancy. This behaviour should be fine for most scenarios; but if you want to take control over which bootstrapper is used, you can do so using the Web.Config:
