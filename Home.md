@@ -15,7 +15,7 @@ Håkansson|http://www.hanselminutes.com/default.aspx?showID=290]]
 ## Contributing
 
 * [[What can you help us out with]]
-* [[Working with Nancy on Mono]]
+* [[Building Nancy on Mono]]
 * [[Getting the source code]]
 * [[Make sure line endings doesn't bite you (or us)]]
 * [[There are a couple of frameworks you should know about]]
