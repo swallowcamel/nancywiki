@@ -38,6 +38,22 @@ This convention looks a bit more complicated, but it’s really still quite simp
 
 This convention looks for the view inside of a folder with the same name as the modulePath that is located in the root of the application.
 
+### Module Name Convention
+
+    (viewName, model, viewLocationContext) => {
+        return string.Concat(viewLocationContext.ModuleName, "/", viewName);
+    }
+
+This convention looks for the view inside of a folder with the name of the module, but with the suffix _Module_ trimmed of, that is located in the root of the application.
+
+### Views and Module Name Convention
+
+    (viewName, model, viewLocationContext) => {
+        return string.Concat("views/", viewLocationContext.ModuleName, "/", viewName);
+    }
+
+This convention looks for the view inside of a folder with the name of the module, but with the suffix _Module_ trimmed of, that is located in the views folder of the application.
+
 ## Defining custom conventions
 
 The default conventions definitely won’t suite the need of all applications, or perhaps not always suit your personal preference on where views should be stored. For these scenarios the view conventions, as with everything else in Nancy, are overridable.
