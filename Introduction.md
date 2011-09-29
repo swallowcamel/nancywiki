@@ -35,7 +35,7 @@ Above all, creating an application with Nancy should be a pleasure, and hopefull
 
 Enough talk, let’s see some code! We are going to assume that you have [Nuget](http://nuget.org) installed and are using Visual Studio 2010, however, this works equally as well on [Mono](http://mono-project.com) (using version 2.10.2 or later) and [MonoDevelop](http://monodevelop.com). We’re going to build the ubiquitous “hello world” application using Nancy and Nancy’s ASP.NET hosting.
 
-1. Create a new `ASP.NET Empty Web Project`
+1. Create a new `Empty ASP.NET Web Application`
 2. Grab the ASP.NET host for Nancy `install-package Nancy.Hosting.Aspnet` (this will also install the `Nancy` nuget and update the `web.config` file so that Nancy is made the handler of any request)
 3. Add a `Nancy module`, which is a standard C# class, and define a route handler for the root URL of the web application, by adding a small amount of code to the constructor:
 4. Compile and run to see the result!
