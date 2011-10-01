@@ -1,5 +1,5 @@
 ## Setting up the development environment
-We have been using Mono 2.10.2, anything earlier produces build errors. The version of MonoDevelop that we have been using is the 2.6 Beta 3 build. The instructions are the same for both Linux and OS X installations.
+We have been using Mono 2.10.2, anything earlier produces build errors. The version of MonoDevelop that we have been using is the 2.6 build. The instructions are the same for both Linux and OS X installations.
 
 ## Third-party dependencies
 NDjango is built using F#, so in order to compile and execute the NDjango engine you will need to have F# and the [FSharp PowerPack](http://fsharppowerpack.codeplex.com) installed. If you are running Mono on Linux, you will have to also install the _fsharp_ package, but if you are running on OSX no extra step is needed because F# is bundled in the Mono 2.10.2 installation package for OSX.
