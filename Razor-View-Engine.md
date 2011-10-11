@@ -17,7 +17,7 @@ Step 1: Create a custom configSection
 		<section name="razor" type="Nancy.ViewEngines.Razor.RazorConfigurationSection, Nancy.ViewEngines.Razor" />
 	</configSections>
 
-Step 2: Configure Razor!
+Step 2: Configure Razor! _(note! this is just a sample configuration)_
 
 	<razor disableAutoIncludeModelNamespace="false">
 		<assemblies>
