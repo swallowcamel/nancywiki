@@ -17,7 +17,7 @@ A Browser instance is created by instantiating it with the bootstrapper, you wan
         });
         
         // Then
-        Assert.Equal(result.StatusCode, HttpStatusCode.Ok);
+        Assert.Equal(result.StatusCode, HttpStatusCode.OK);
     }
 
 The test will send a `GET` request to your application, running in the configuration provided by the `DefaultNancyBootstrapper` and return the actual result, wrapped in an instance of the `BrowserResult` type.
