@@ -16,6 +16,7 @@
 * [[Hosting Nancy with WCF]]
 * [[Hosting Nancy with Azure]]
 * [[Hosting Nancy with OWIN]]
+* [[Implementing a Host]]
 
 ## View Engines
 * [[Implementing a View Engine]]
