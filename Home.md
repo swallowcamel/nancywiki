@@ -11,6 +11,7 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 * [[Presentation By Nicholas Cloud|http://www.nicholascloud.com/2011/05/nancy-net-micro-web-frameworks-part-1/]]
 * [[Hanselminutes Podcast 270 - Nancy, Sinatra and the Explosion of .NET Micro Web Frameworks with Andreas 
 Håkansson|http://www.hanselminutes.com/default.aspx?showID=290]]
+* [[Herding Code Podcast 123 - Andreas Håkansson and Steven Robbins on NancyFx|http://herdingcode.com/?p=350]]
 
 ## Contributing
 
