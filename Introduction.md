@@ -38,7 +38,8 @@ Enough talk, let’s see some code! We are going to assume that you have [Nuget]
 1. Create a new `Empty ASP.NET Web Application`
 2. Grab the ASP.NET host for Nancy `install-package Nancy.Hosting.Aspnet` (this will also install the `Nancy` nuget and update the `web.config` file so that Nancy is made the handler of any request)
 3. Add a `Nancy module`, which is a standard C# class, and define a route handler for the root URL of the web application, by adding a small amount of code to the constructor:
-4. Compile and run to see the result!
+4. Delete the Global.asax file
+5. Compile and run to see the result!
 
 The HelloModule.cs code
 
