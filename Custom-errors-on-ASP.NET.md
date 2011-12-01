@@ -33,7 +33,7 @@ public static Response AsError(this IResponseFormatter formatter, HttpStatusCode
 Now in your route handlers you can simply
 
 ```c#
-Get["/"] = parameters => Response.AsError(HttpStatusCode.PaymentRequired, "pony up the dough");
+Get["/"] = parameters => Response.AsError(HttpStatusCode.NotFound, "all gone");
 ```
 
 But you'll still see the default Nancy error page! One more thing...
@@ -61,5 +61,5 @@ Now you'll see
 
 ```bash
 % curl http://localhost/
-pony up the dough
+all gone
 ```
