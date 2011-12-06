@@ -54,7 +54,7 @@ Below are some samples of what routes in Nancy can look like. They cover some of
     };
 
     // would capture routes like /products/1034 sent as a DELETE request
-    Delete[@"/product/(?<id>[\d]{1,7})"] = parameters => {
+    Delete[@"/products/(?<id>[\d]{1,7})"] = parameters => {
         return 200;
     };
 
