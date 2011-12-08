@@ -18,7 +18,7 @@ If you think that the scanning sounds expensive, don’t worry. This does not ha
 
 One of the small, yet neat, features of a module is the ability to define a module path. You can think of this as a root namespace for all the routes that are defined in the module. Each route will be subordinate to the path of the module. This saves you from having to repeat the common parts of the route patterns and also to nicely group you routes together based on their relationship
 
-    public class ResouceModule : NancyModule
+    public class ResourceModule : NancyModule
     {
         public ResourceModule() : base("/products")
         {
