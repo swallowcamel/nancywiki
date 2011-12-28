@@ -1,8 +1,8 @@
-# BootStrapping Nancy #
+# Bootstrapping Nancy #
 
 ## These Boots Are Made For Walkin'.. ##
 
-Although you can happily construct NancyEngine yourself, and inject dependencies however you see fit, in normal use you will be taking advantage of a BootStrapper that will:
+Although you can happily construct NancyEngine yourself, and inject dependencies however you see fit, in normal use you will be taking advantage of a Bootstrapper that will:
 
 * Wireup Nancy's internal dependencies for you.
 * Allow you to customise just about everything - how much control you want is entirely up to you.
