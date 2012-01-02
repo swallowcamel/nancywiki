@@ -9,7 +9,8 @@
 8. [[View engines]]
 9. [[View location conventions]]
 10. [[Testing your application]]
-11. More to come
+11. [[The root path]]
+12. More to come
 
 ## Hosting
 * [[Hosting Nancy with ASP.NET]]
