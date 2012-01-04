@@ -30,4 +30,4 @@ To let Nancy know it should use your implementation, you simply create a new boo
 When your application runs, the bootstrapper will register this implementation in the current container and will be used when dependencies on the _IRootPathProvider_ are resolved.
 
 
-[<< Part 10. Testing your application](Testing your application) - [Documentation overview](Documentation) - [Part 11. Managing static content](Managing static content) >>
+[<< Part 10. Testing your application](Testing your application) - [Documentation overview](Documentation) - [Part 12. Managing static content](Managing static content) >>
