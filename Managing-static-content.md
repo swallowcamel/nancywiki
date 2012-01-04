@@ -53,3 +53,5 @@ The advantage of using a module to server static content is that you can leverag
 However, there are disadvantages to using modules for static content management. Because it is a module, the request, for the static content, is subjected to the same request life-cycle as any other request.
 
 This means that the request needs to go through things such as route resolving which can have a performance impact on your application.
+
+[<< Part 11. The root path](The root path) - [Documentation overview](Documentation)
