@@ -31,4 +31,4 @@ By default, the standard JSON deserializer will be used to deserialize any "json
 
 As with the other model binders, you can author your own body deserializers and Nancy will automatically detect them and any user defined binders take priority over the built in ones.
 
-[<< Part 5. The Before and After of route invocation](The Before and After of route invocation) - [Documentation overview](Documentation) - [Part 7. Bootstrapper >>](Bootstrapper)
+[<< Part 5. The before and after module hooks](The before and after module hooks) - [Documentation overview](Documentation) - [Part 7. Bootstrapper >>](Bootstrapper)
