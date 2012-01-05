@@ -12,4 +12,4 @@ With the DynamicDictionary you are able to access the values using a standard in
 	
 The stored values can explicitly or implicitly be cast to most of the primitive types and a special property, called `HasValue` can be checked to determine if a value has been assigned or not. The values also implement the `IEquatable<>` and `IConvertible` interfaces.
 
-[<< Part 3. Defining routes](Defining routes) - [Documentation overview](Documentation) - [Part 5. The Before and After of route invocation >>](The Before and After of route invocation)
+[<< Part 3. Defining routes](Defining routes) - [Documentation overview](Documentation) - [Part 5. The before and after module hooks >>](The before and after module hooks)
