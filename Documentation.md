@@ -3,7 +3,7 @@
 2. [[Exploring the Nancy module]]
 3. [[Defining routes]]
 4. [[Taking a look at the DynamicDictionary]]
-5. [[The Before and After of route invocation]]
+5. [[The before and after module hooks]]
 6. [[Model binding]]
 7. [[Bootstrapper]]
 8. [[View engines]]
