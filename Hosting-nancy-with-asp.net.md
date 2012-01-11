@@ -2,7 +2,7 @@
 
 ## Quick Start
 
-Nancy under ASP.Net is handled through a HTTP Handler, which is setup through the Web.Config. If you're using one of Nancy's Visual Studio templates then the configuration is handler for you, if not then you'll need to add the following to configuration section of your Web.Config:
+Nancy under ASP.Net is handled through a HTTP Handler, which is setup through the Web.Config. If you're using one of Nancy's Visual Studio templates then the configuration is handled for you, if not then you'll need to add the following to the configuration section of your Web.Config:
 
     <system.web>
       <compilation debug="true" targetFramework="4.0" />
