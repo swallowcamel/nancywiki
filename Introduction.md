@@ -2,7 +2,7 @@ First of all, welcome to Nancy! These guides will give you a quick tour of some 
 
 Nancy is a lightweight, low-ceremony, framework for building HTTP based services on .Net and [Mono](http://mono-project.com). The goal of the framework is to stay out of the way as much as possible and provide a super-duper-happy-path to all interactions.
 
-This means that everything in Nancy is setup to have sensible defaults and conventions, instead of making you jump though hoops and go though configuration hell just to get up and running. With Nancy you can go from zero to website in a matter of minutes. Literally.
+This means that everything in Nancy is setup to have sensible defaults and conventions, instead of making you jump through hoops and go through configuration hell just to get up and running. With Nancy you can go from zero to website in a matter of minutes. Literally.
 
 Nancy is designed to handle `DELETE`, `GET`, `HEAD`, `OPTIONS`, `POST`, `PUT` and `PATCH` requests and provides a simple, elegant, [Domain Specific Language (DSL)](http://en.wikipedia.org/wiki/Domain-specific_language) for returning a response with just a couple of keystrokes, leaving you with more time to focus on the important bits.. **your** code and **your** application.
 
