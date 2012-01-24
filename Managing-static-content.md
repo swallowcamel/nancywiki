@@ -44,6 +44,20 @@ The resulting convention provides the following features:
 * Protects against “leaving” the content folder and requesting files that are stored outside the folder and the application itself. Only files in the content folder, or a sub-folder, will be considered valid to return
 * Uses the `MimeTypes` list to automatically detect and set the correct content-type of the file response
 
+Using the `StaticContentConventionBuilder`, to create a new convention is really easy
+
+    public class CustomBoostrapper : DefaultNancyBootstrapper
+    {
+        protected override void ConfigureConventions(NancyConventions conventions)
+        {
+            base.ConfigureConventions(conventions);
+    
+            conventions.StaticContentsConventions.Add(
+                StaticContentConventionBuilder.AddDirectory("/assets", "/contentFolder");
+            );
+        }
+    }
+
 ## Alternative approaches..
 
 If, for some reason, you don't want to use the methods above, you can also create conventions using the IConventions interface, or bypass the static content conventions completely and just serve your content from a module.
