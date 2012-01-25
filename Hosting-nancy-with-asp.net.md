@@ -55,7 +55,7 @@ Sometimes you have an existing ASP.NET site and you want to configure Nancy to h
         </system.web>
     </configuration>
 
-Alternatively, enclose the setting within ´<location>´ in your root web.config:
+Alternatively, enclose the setting within `<location>` in your root web.config:
 
     <location path="nancy">
       <system.web>
