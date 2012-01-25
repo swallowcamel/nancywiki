@@ -74,4 +74,4 @@ Alternatively, enclose the setting within `<location>` in your root web.config:
       </system.webServer>
     </location>
 
-Note that your models will still respond to the full path including the location, ie ["/nancy/.."]
+Note that your modules will still respond to the full path including the location, ie ["/nancy/.."]
