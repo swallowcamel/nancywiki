@@ -54,3 +54,24 @@ Sometimes you have an existing ASP.NET site and you want to configure Nancy to h
           </httpHandlers>
         </system.web>
     </configuration>
+
+Alternatively, enclose the setting within <location> in your root web.config:
+
+  <location path="nancy">
+    <system.web>
+      <compilation debug="true" targetFramework="4.0" />
+      <httpHandlers>
+        <add verb="*" type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" path="*"/>
+      </httpHandlers>
+    </system.web>
+
+    <system.webServer>
+      <modules runAllManagedModulesForAllRequests="true"/>
+      <validation validateIntegratedModeConfiguration="false"/>
+      <handlers>
+        <add name="Nancy" verb="*" type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" path="*"/>
+      </handlers>
+    </system.webServer>
+  </location>
+
+Note that your models will still respond to the full path including the location, ie ["/nancy/.."]
