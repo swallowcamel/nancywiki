@@ -1,4 +1,4 @@
-## Hey! Watch were you put that thing
+## Hey! Watch where you put that thing
 
 If you make use of 3rd party dependencies, in your contributions, make sure they are places in the `/dependencies/name` folder. Do not include any version numbers in the folder name for the dependencies, it doesn't make any sense and it's just going to be a nightmare to maintain. Also make sure you include all needed dependencies, there is nothing (ok, maybe a slight exaggeration) worse than having to be forced to chase around all over the web for downloads, just to be able to build source code you downloaded from some random project. Nancy should build, out of the box, once you've pulled down the source code.
 
