@@ -10,6 +10,8 @@ With the DynamicDictionary you are able to access the values using a standard in
         return "Goodbye " + parameters["name"];
     };
 	
+It is worth noting that if you prefer accessing captured properties via a normal property you must assign the capture group a valid C# identifier (i.e.: one that starts with an alphabetic character).
+
 The stored values can explicitly or implicitly be cast to most of the primitive types and a special property, called `HasValue` can be checked to determine if a value has been assigned or not. The values also implement the `IEquatable<>` and `IConvertible` interfaces.
 
 [<< Part 3. Defining routes](Defining routes) - [Documentation overview](Documentation) - [Part 5. The before and after module hooks >>](The before and after module hooks)
