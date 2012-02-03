@@ -9,7 +9,7 @@ The Method is the [HTTP method](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9
 A route also needs a Pattern which declares the application-relative URL that the route answers to. The syntax of the Pattern is customizable but the default implementation that ships with Nancy supports capturing combinations of the following
 
 1. Literal segments `/some/literal/segments` which require an exact match
-2. Capture segments `/{name}` which captures whatever is passed into the given segment of the requested URL and then passed into the Action of the route
+2. Capture segments `/{name}` which captures whatever is passed into the given segment of the requested URL and then passes it into the Action of the route.  Capture segments must use only alphanumeric characters.
 3. Regular expression segments `/(?<age>[\d]{1,2})` which uses [named capture groups](http://www.regular-expressions.info/named.html) to provide the same behavior as capture segments, but with much greater control over what will be matched
 
 The three kinds of pattern segments can be combined, in any order, to create a complex Pattern for a route. It’s worth noting that capture segments are greedy, meaning they will match anything in the requested URL until another segment matches or until the end of the URL is reached.
