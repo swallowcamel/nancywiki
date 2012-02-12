@@ -2,7 +2,7 @@ The super-duper-happy-path (see [[Introduction]]) is just not something that we 
 
 Because Nancy is a self-composing framework (see [[Bootstrapper]]), the runtime composition of the framework can have impact on the results of your routes. To help you test your routes in the right runtime context, we provide a helper class called `Browser`.
 
-A Browser instance is created by instantiating it with the bootstrapper, you want to be used when the request is processed, and then you fire off requests and inspect the result.
+You instantiate the Browser with the bootstrapper you want to use when the request is processed, and then fire off requests and inspect the results.
 
     [Fact]
     public void Should_return_status_ok_when_route_exists()
