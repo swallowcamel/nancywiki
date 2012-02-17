@@ -23,9 +23,18 @@ Also make sure you have referenced not only the Nancy project/assembly, but also
 
 That's all you need to do to get up and running.
 
-**Special note about IIS 6 and PUT/DELETE requests:** By default IIS 6 does not support PUT and DELETE verbs. To enable this, you need to add a wildcard mapping to the virtual directory of your Nancy application - read the "IIS6 Extension-less URLs" section in this document: http://haacked.com/archive/2008/11/26/asp.net-mvc-on-iis-6-walkthrough.aspx
+**Special note about PUT/DELETE requests:** 
 
+By default IIS 6 does not support PUT and DELETE verbs. To enable this, you need to add a wildcard mapping to the virtual directory of your Nancy application - read the "IIS6 Extension-less URLs" section in this document: http://haacked.com/archive/2008/11/26/asp.net-mvc-on-iis-6-walkthrough.aspx
 
+You might receive "405 Not allowed" pages while trying to make PUT/DELETE requests on IIS 7/7.5.
+One way to fix it is to remove the WebDAVModule in the web.config. 
+
+    <system.webServer>
+        <modules runAllManagedModulesForAllRequests="true">
+          <remove name="WebDAVModule" />
+        </modules>  
+    </system.webserver>
 
 ## Bootstrapping
 
