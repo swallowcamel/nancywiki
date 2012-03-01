@@ -20,7 +20,7 @@ Once that is done, the next thing you need to do is to let Nancy know that it sh
 
 To let Nancy know it should use your implementation, you simply create a new bootstrapper (by inheriting from the bootstrapper you are using) and override the _RootPathProivider_ property and return the _type_ of your own root path provider.
 
-    public class CustomBoostrapper : DefaultNancyBootstrapper
+    public class CustomBootstrapper : DefaultNancyBootstrapper
     {
         protected override Type RootPathProvider
         {
