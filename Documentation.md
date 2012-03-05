@@ -18,6 +18,7 @@
 * [[Hosting Nancy with WCF]]
 * [[Hosting Nancy with Azure]]
 * [[Hosting Nancy with OWIN]]
+* [[Hosting Nancy with Umbraco]]
 * [[Implementing a Host]]
 
 ## View Engines
