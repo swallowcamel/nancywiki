@@ -1,4 +1,4 @@
-The concept of a view engine is quite simple - it takes a “template” and an optional “model” (the data) and outputs (usually) HTML to be rendered into the browser. By default, Nancy ships with a built in view engine known as the `SuperSimpleViewEngine`, which supports all the necessities such as layouts, partials, models, conditions and iterations. You can use this without any additional dependencies and it serves up `.html` and `.sshtml` files.
+The concept of a view engine is quite simple - it takes a “template” and an optional “model” (the data) and outputs (usually) HTML to be rendered into the browser. By default, Nancy ships with a built in view engine known as the [`SuperSimpleViewEngine`](https://github.com/grumpydev/SuperSimpleViewEngine), which supports all the necessities such as layouts, partials, models, conditions and iterations. You can use this without any additional dependencies and it serves up `.html` and `.sshtml` files.
 
 The following is an example of what a `.sshtml` file can look like
 
