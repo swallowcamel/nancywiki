@@ -5,7 +5,7 @@ We have a goal and that is to make Nancy run as smoothly as possible on Mono and
 So a couple of quick facts about Nancy on mono, or as I like to call the branch; Moncy!
 
 * We're very much at an alpha stage with Nancy on mono - _keep that in mind while you read this list_
-* There are separate build configurations for mono, not all projects in the solution will compile under mono, so just build the ones you need (eg WCF Hosting).
+* There are separate build configurations for mono, not all projects in the solution will compile under mono (eg WCF Hosting), so just build the ones you need.
 * We currently do not build the mono version with our build script
 * We've successfully ran Nancy on Mono 2.10 on both Linux and Mac OSX
 * You'll need F# installed to use the NDjango view engine
