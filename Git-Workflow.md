@@ -5,6 +5,7 @@
 The general process for working with Nancy is:
 
 1. [Fork](http://help.github.com/forking/) on GitHub
+1. Make sure your line-endings are [configured correctly](Make sure line endings doesn't bite you)
 1. Clone your fork locally
 1. Configure the upstream repo (`git remote add upstream git://github.com/NancyFx/Nancy`)
 1. Create a local branch (`git checkout -b myBranch`)
@@ -53,4 +54,3 @@ When you're ready to go you should confirm that you are up to date and rebased w
 1. Wait for TheCodeJunkie to merge your changes in and reformat all of your code because he has StyleCop OCD ;-)
 
 For more information on the merits of this workflow please see RobertTheGrey's [excellent post](https://groups.google.com/forum/#!msg/fubumvc-devel/olH11f_mbk4/pGV6MqFfBSQJ) on the [Fubu MVC Development Group](https://groups.google.com/forum/#!msg/fubumvc-devel/olH11f_mbk4/pGV6MqFfBSQJ).
-
