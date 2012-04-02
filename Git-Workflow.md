@@ -28,6 +28,9 @@ It's quite normal, and encouraged, that during design/development of your featur
 
 * When you're happy with the approach, create your real feature branch and start working on that. It is suggested that you effectively "throw away" your spike branch and start afresh with a test-first approach, but as long as you end up with good quality, well tested code this isn't enforced.
 
+## Basic Git workflow
+For an introduction to Git and the basic Git commands, please head over to the [Learn.GitHub - Introduction To Git](http://learn.github.com/p/intro.html) tutorial, by the awesome people at GitHub.
+
 ## Handling Updates from Upstream/Master
 
 While you're working away in your branch it's quite possible that your upstream master (most likely the canonical NancyFx version) may be updated. If this happens you should:
