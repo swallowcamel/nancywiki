@@ -53,7 +53,7 @@ Using the `StaticContentConventionBuilder`, to create a new convention is really
             base.ConfigureConventions(conventions);
     
             conventions.StaticContentsConventions.Add(
-                StaticContentConventionBuilder.AddDirectory("assets", @"contentFolder\subFolder");
+                StaticContentConventionBuilder.AddDirectory("assets", @"contentFolder\subFolder")
             );
         }
     }
