@@ -84,3 +84,11 @@ Alternatively, enclose the setting within `<location>` in your root web.config:
     </location>
 
 Note that your modules will still respond to the full path including the location, ie ["/nancy/.."]
+
+## Adding Nancy to an existing ASP.Net MVC site
+
+Follow all the instructions above but make sure to remove the "nancy" path from the RoutingTable (full story [read here](http://igorshare.wordpress.com/2012/04/08/adding-nancy-to-the-existing-asp-net-mvc-site/)).
+Add the following instruction to the Global.asax.cs file inside the MvcApplication.RegisterRoutes:
+
+    routes.IgnoreRoute("nancy/{*pathInfo}");
+
