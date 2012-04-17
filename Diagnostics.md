@@ -14,7 +14,7 @@ To configure a password for your diagnostics dashboard, you need to override the
     {
         protected override DiagnosticsConfiguration DiagnosticsConfiguration
         {
-            get { return new DiagnosticsConfiguration { Password = "password"}; }
+            get { return new DiagnosticsConfiguration { Password = @"A2\6mVtH/XRT\p,B"}; }
         }
     }
 
