@@ -78,4 +78,4 @@ However, there are disadvantages to using modules for static content management.
 
 This means that the request needs to go through things such as route resolving which can have a performance impact on your application.
 
-[<< Part 11. The root path](The root path) - [Documentation overview](Documentation)
+[<< Part 11. The root path](The root path) - [Documentation overview](Documentation) - [Part 13. Diagnostics](Diagnostics) >>
