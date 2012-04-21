@@ -31,4 +31,19 @@ By default, the standard JSON deserializer will be used to deserialize any "json
 
 As with the other model binders, you can author your own body deserializers and Nancy will automatically detect them and any user defined binders take priority over the built in ones.
 
+## Model binding Checkbox
+
+For auto model binding checkbox to boolean value, make sure to set the `value="true"` in the checkbox.
+
+```html
+<input type="checkbox" name="rememberMe" value="true"/>
+```
+
+```csharp
+public class LoginModel
+{
+    public bool RememberMe { get; set; }
+}
+```
+
 [<< Part 5. The before and after module hooks](The before and after module hooks) - [Documentation overview](Documentation) - [Part 7. Bootstrapper >>](Bootstrapper)
