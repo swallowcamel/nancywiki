@@ -92,7 +92,7 @@ This enables you to use the full capabilities of the language, platform and Nanc
 
 #### The IDiagnosticsProvider interface
 
-Anything that implements this type lets Nancy know that is it is capable of providing interactive diagnostics tools for the dashboard. The interface it self is very basic and provides mostly metadata about the provider
+Anything that implements this type lets Nancy know that it is capable of providing interactive diagnostics tools for the dashboard. The interface it self is very basic and provides mostly metadata about the provider
 
     /// <summary>
     /// Defines the functionality a diagnostics provider.
