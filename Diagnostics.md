@@ -122,7 +122,7 @@ The most important member, of the `IDiagnosticsProvider` interface, is the `Diag
 
 #### So what does the diagnostics object look like?
 
-There is nothing special about a diagnostics object. It does not have to be the same type as the one that implement the `IDiagnosticsProvider` interface, not does it have to implement any other interfaces. The thing to understand is that any public method on the object are going to be exposed on the iteractive diagnostics dashboard.
+There is nothing special about a diagnostics object. It does not have to be the same type as the one that implement the `IDiagnosticsProvider` interface, nor does it have to implement any other interfaces. The thing to understand is that any public method on the object are going to be exposed on the iteractive diagnostics dashboard.
 
 These methods can have primitive (string, int and so on) parameters and return any object, as long as it is possible to JSON serialize it. This means that method invocation will be strongly-typed and no need to perform cast or type checks.
 
