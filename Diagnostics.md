@@ -1,4 +1,4 @@
-Nancy has a built in diagnostics dashboard that enabled you to inspect the state and behavior of your application at runtime. The dashboard can easily be extended with custom functionality and can be tailored to suite the needs of your application.
+Nancy has a built in diagnostics dashboard that enables you to inspect the state and behavior of your application at runtime. The dashboard can easily be extended with custom functionality and can be tailored to suite the needs of your application.
 
 The diagnostics dashboard is embedded in the main Nancy assembly. The back-end is a Nancy application that is serving a backbone.js front-end. It also makes use of the `SuperSimpleViewEngine` to render out views. It is built to be fast, extendible and cross-browser compliant.
 
