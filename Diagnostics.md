@@ -24,7 +24,7 @@ Each access to the dashboard will extend the lifetime, of the cookie, for anothe
 
 ## Removing diagnostics
 
-As mentioned earlier, the diagnostics dashboard is automatically wired up for your application. However, should you wish to completley remove the dashboard you can do so by performing a call to `DiagnosticsHook.Disable()` and it will no longer be accessible.
+As mentioned earlier, the diagnostics dashboard is automatically wired up for your application. However, should you wish to completely remove the dashboard you can do so by performing a call to `DiagnosticsHook.Disable()` and it will no longer be accessible.
 
 It is recommended that the call to `DiagnosticsHook.Disable()` is performed from the `ApplicationStartup` method in your bootstrapper. This will ensure that the dashboard is disabled as soon as your application starts up.
 
@@ -58,7 +58,7 @@ To configure these behaviors permanently you should still alter their value by s
 
 As you would expect, request tracing, provided a window for inspecting the behavior of individual requests as they are processed by Nancy.
 
-For performance reasons, request tracing is diasabled by default and can either be turned on using the `Configuration` page on the dashboard or by setting the `StaticConfiguration.EnableRequestTracing` property to `true` 
+For performance reasons, request tracing is disabled by default and can either be turned on using the `Configuration` page on the dashboard or by setting the `StaticConfiguration.EnableRequestTracing` property to `true` 
 
     public class CustomBootstrapper : DefaultNancyBootstrapper
     {
