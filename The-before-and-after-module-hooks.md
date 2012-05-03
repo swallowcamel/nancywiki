@@ -12,7 +12,7 @@ When defining a Before interceptor you use a slightly different syntax than you 
 
 The parameter that is passed into the interceptor is an instance of the current NancyContext, from which you get access to things like context variables and the request.
 
-The last difference is the return value of the interceptor. A return value of `null` means that no action is taken by the interceptor and that the request should process to be processed by the matching route. However, if the interceptor returns a `Response` of it’s own, the route will never be processed by the route and the response will be sent back to the client.
+The last difference is the return value of the interceptor. A return value of `null` means that no action is taken by the interceptor and that the request should process to be processed by the matching route. However, if the interceptor returns a `Response` of its own, the route will never be processed by the route and the response will be sent back to the client.
 
 ## Intercepting the request after the route was invoked
 
