@@ -1,6 +1,6 @@
-While rendering a view is as simple as invoking the View indexer on the `NancyModule` class; there is quite a lot going on “under the hood” to attempt to locate the correct view template, based on the information provided. This “under the hood” work is actually achieved using a series of “view location conventions”.
+While rendering a view is as simple as invoking the View indexer on the `NancyModule` class, there is quite a lot going on “under the hood” to attempt to locate the correct view template, based on the information provided. This “under the hood” work is actually achieved using a series of “view location conventions”.
 
-The conventions themselves are quite simple. Each convention uses the available “hints”, such as view name, model type and view location context, and produces a series of potential view template names/locations. Nancy will iterate over the conventions, in the order they have been defined, until a view template was located, or until there are no more conventions to use.
+The conventions themselves are quite simple. Each convention uses the available “hints”, such as view name, model type and view location context, and produces a series of potential view template names/locations. Nancy will iterate over the conventions, in the order they have been defined, until a view template is located, or until there are no more conventions to use.
 
 ## Taking a look at the default conventions
 
@@ -56,7 +56,7 @@ This convention looks for the view inside of a folder with the name of the modul
 
 ## Defining custom conventions
 
-The default conventions definitely won’t suite the need of all applications, or perhaps not always suit your personal preference on where views should be stored. For these scenarios the view conventions, as with everything else in Nancy, are overridable.
+The default conventions definitely won’t suit the need of all applications, or perhaps not always suit your personal preference on where views should be stored. For these scenarios the view conventions, as with everything else in Nancy, are overridable.
 
 To do this, you will need to create a custom bootstrapper and add your conventions (using the function signature described earlier) to the `Conventions.ViewLocationConventions` collection.
 
