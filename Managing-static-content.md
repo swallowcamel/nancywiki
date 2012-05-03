@@ -72,7 +72,7 @@ Nancy will locate all implementation of the interface and wire up the convention
 
 You can also use an ordinary `NancyModule` to return static content, by returning responses with the correct body and content-type. Nancy even provide a couple of _response formatters_, to help you out, called `AsJs` and `AsCss`.
 
-The advantage of using a module to server static content is that you can leverage the full power of a module to implement logic around your static content management, such as making use of module _dependencies_. This can be used when more complex logic is required (such as adding a security layer on top).
+The advantage of using a module to serve static content is that you can leverage the full power of a module to implement logic around your static content management, such as making use of module _dependencies_. This can be used when more complex logic is required (such as adding a security layer on top).
 
 However, there are disadvantages to using modules for static content management. Because it is a module, the request, for the static content, is subjected to the same request life-cycle as any other request.
 
