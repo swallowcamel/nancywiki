@@ -1,12 +1,12 @@
 Nancy has a built in diagnostics dashboard that enables you to inspect the state and behavior of your application at runtime. The dashboard can easily be extended with custom functionality and can be tailored to suit the needs of your application.
 
-The diagnostics dashboard is embedded in the main Nancy assembly. The back-end is a Nancy application that is serving a backbone.js front-end. It also makes use of the `SuperSimpleViewEngine` to render out views. It is built to be fast, extendible and cross-browser compliant.
+The diagnostics dashboard is embedded in the main Nancy assembly. The back-end is a Nancy application that is serving a backbone.js front-end. It also makes use of the `SuperSimpleViewEngine` to render out views. It is built to be fast, extensible and cross-browser compliant.
 
 You reach the dashboard by pointing your browser to `http://<address-of-your-application>/_Nancy/`. However before being able to use the dashboard, you first need to configure it.
 
 ## Configuring access to the dashboard
 
-The dashboard is automatically available to you, in you application, however in order to gain access you need to configure a password. Without the password you will be presented with a page telling you that the dashboard needs to be configured inorder for you to use it, along with instructions on how to perform the configuration.
+The dashboard is automatically available to you, in your application. However in order to gain access, you need to configure a password. Without the password you will be presented with a page telling you that the dashboard needs to be configured in order for you to use it, along with instructions on how to perform the configuration.
 
 To configure a password for your diagnostics dashboard, you need to override the `DiagnosticsConfiguration` property of your [[Bootstrapper]]. Once overriden, you should return an instance of the `DiagnosticsConfiguration` that has had a password assigned to the `Password` property.
 
@@ -18,7 +18,7 @@ To configure a password for your diagnostics dashboard, you need to override the
         }
     }
 
-When this has been done, you will be presented with a login screen instead of a configuration notification, the next time your browse the dashboard. A valid login will produce a login cookie that has a sliding expiration set to 15 minutes. 
+When this has been done, you will be presented with a login screen instead of a configuration notification, the next time you browse the dashboard. A valid login will produce a login cookie that has a sliding expiration set to 15 minutes. 
 
 Each access to the dashboard will extend the lifetime, of the cookie, for another 15 minutes. If the cookie expires, before you revisit the dashboard, you will be redirected back to the login form.
 
@@ -38,25 +38,25 @@ It is recommended that the call to `DiagnosticsHook.Disable()` is performed from
 
 ## So what kind of tools are there?
 
-The dashboard presents you with four options when you access it; `Information`, `Interactive Diagnostics`, `Request Tracing` and `Configuration`. These are the main section of the dashboard and your gateway to taking a peek under the hood of your application at runtime.
+The dashboard presents you with four options when you access it; `Information`, `Interactive Diagnostics`, `Request Tracing` and `Configuration`. These are the main sections of the dashboard and your gateway to taking a peek under the hood of your application at runtime.
 
 ### Information
 
-The information page provides information about the setup of the Nancy environment, such as assembly version, which components that are being used by Nancy, what view engines that are availalble, what host is being used and so on.
+The information page provides information about the setup of the Nancy environment, such as assembly version, which components are being used by Nancy, what view engines are availalble, what host is being used and so on.
 
 ### Configuration
 
 In Nancy the `StaticConfiguration` type can be used to control the behavior of your application, for example controlling the case-sensitivity, if caching should be used and so on.
 
-The configuration page provides access to the `StaticConfiguration` though a user interface, so that the behavior of the application can be altered at runtime.
+The configuration page provides access to the `StaticConfiguration` through a user interface, so that the behavior of the application can be altered at runtime.
 
-It should be noted that any changes that are applied though the configuration page are not persisted and will be reset, to their configured value, when the application is restarted.
+It should be noted that any changes that are applied through the configuration page are not persisted and will be reset, to their configured value, when the application is restarted.
 
 To configure these behaviors permanently you should still alter their value by setting them from the `ApplicationStartup` method in your bootstrapper.
 
 ### Request tracing
 
-As you would expect, request tracing, provided a window for inspecting the behavior of individual requests as they are processed by Nancy.
+As you would expect, request tracing, provides a window for inspecting the behavior of individual requests as they are processed by Nancy.
 
 For performance reasons, request tracing is disabled by default and can either be turned on using the `Configuration` page on the dashboard or by setting the `StaticConfiguration.EnableRequestTracing` property to `true` 
 
@@ -68,7 +68,7 @@ For performance reasons, request tracing is disabled by default and can either b
         }
     }
 
-The trace log is accessible though the `NancyContext` and it is easy to add your own information, in order to provider an even richer experience for your application.
+The trace log is accessible though the `NancyContext` and it is easy to add your own information, in order to provide an even richer experience for your application.
 
     public class HomeModule : NancyModule
     {
@@ -82,7 +82,7 @@ The trace log is accessible though the `NancyContext` and it is easy to add your
         }
     }
 
-The `WriteLog` method takes a function that will be passed an instance of a `StringBuilder` at runtime. The reason it is take a function is that when diagnostics is disabled, Nancy will simply not invoke the function so there will be no performance penalties for leaving the trace code in your application. 
+The `WriteLog` method takes a function that will be passed an instance of a `StringBuilder` at runtime. The reason it is taking a function is that when diagnostics is disabled, Nancy will simply not invoke the function so there will be no performance penalties for leaving the trace code in your application. 
 
 ### Interactive diagnostics
 
@@ -92,7 +92,7 @@ This enables you to use the full capabilities of the language, platform and Nanc
 
 #### The IDiagnosticsProvider interface
 
-Anything that implements this type lets Nancy know that it is capable of providing interactive diagnostics tools for the dashboard. The interface it self is very basic and provides mostly metadata about the provider
+Anything that implements this type lets Nancy know that it is capable of providing interactive diagnostics tools for the dashboard. The interface itself is very basic and provides mostly metadata about the provider
 
     /// <summary>
     /// Defines the functionality a diagnostics provider.
@@ -122,11 +122,11 @@ The most important member, of the `IDiagnosticsProvider` interface, is the `Diag
 
 #### So what does the diagnostics object look like?
 
-There is nothing special about a diagnostics object. It does not have to be the same type as the one that implement the `IDiagnosticsProvider` interface, nor does it have to implement any other interfaces. The thing to understand is that any public method on the object are going to be exposed on the iteractive diagnostics dashboard.
+There is nothing special about a diagnostics object. It does not have to be the same type as the one that implements the `IDiagnosticsProvider` interface, nor does it have to implement any other interfaces. The thing to understand is that any public method on the object are going to be exposed on the interactive diagnostics dashboard.
 
 These methods can have primitive (string, int and so on) parameters and return any object, as long as it is possible to JSON serialize it. This means that method invocation will be strongly-typed and no need to perform cast or type checks.
 
-When you want to invoke one of these methods, from the diagnostics dashboard, Nancy present you with a form that contains input fields that will be used to provide values to the methods parameter once it is invoked. The input fields contains information about the parameter name and type.
+When you want to invoke one of these methods, from the diagnostics dashboard, Nancy presents you with a form that contains input fields that will be used to provide values to the methods parameter once it is invoked. The input fields contains information about the parameter name and type.
 
 The output of the method will then be rendered using the [JSON Report Format](http://www.servicestack.net/docs/framework/json-report-format) script, created by [ServiceStack](http://servicestack.net).
 
@@ -134,21 +134,21 @@ The output of the method will then be rendered using the [JSON Report Format](ht
 
 It is possible to provide a description for a diagnostics method that will be included in the form that is used to invoke the method. 
 
-There are two ways you can provide the description; by using an attribute on the method or by providing a property that will return the desciption. 
+There are two ways you can provide the description; by using an attribute on the method or by providing a property that will return the description. 
 
-To use the attribute you simply add the `Nancy.Diagnostics.DescriptionAttribute` to the method and provide a description and that is all there is to it. However sometimes you may find yourself requiring a bit more control of the description string, for example of you want to provide localized strings.
+To use the attribute you simply add the `Nancy.Diagnostics.DescriptionAttribute` to the method and provide a description and that is all there is to it. However sometimes you may find yourself requiring a bit more control of the description string, for example if you want to provide localized strings.
 
-When you find yourself in these situations you can use the property approach. Nancy use a convention where it tries to find a property that as the same name as the method, but with an added `Description` suffix appended to it. An example of this would be a `NameOfYourMethodDescription` property for the `NameOfYourMethod` method.
+When you find yourself in these situations you can use the property approach. Nancy uses a convention whereby it tries to find a property that has the same name as the method, but with an added `Description` suffix appended to it. An example of this would be a `NameOfYourMethodDescription` property for the `NameOfYourMethod` method.
 
-If your method has been decorated with the `DescriptionAttribute` and you also have a description property declared, then the propery will take presedence over the attribute.
+If your method has been decorated with the `DescriptionAttribute` and you also have a description property declared, then the property will take precedence over the attribute.
 
 #### Customizing the output with templates
 
-As previously mentioned, the output of your diagnostics method will be rendered using the [JSON Report Format](http://www.servicestack.net/docs/framework/json-report-format) and will use the formatting templates that it declares. However, Nancy provides you with the option use custom output templates.
+As previously mentioned, the output of your diagnostics method will be rendered using the [JSON Report Format](http://www.servicestack.net/docs/framework/json-report-format) and will use the formatting templates that it declares. However, Nancy provides you with the option to use custom output templates.
 
 An output template is a `Mustache` template and you can specify a unique template for each of your diagnostics method. Just like with method descriptions, you have the possibility, to provide the template, using either an attribute or a property.
 
-For templates the attribute that is used is the `Nancy.Diagnostics.TemplateAttribute` and the naming convention for the property is name of the property with a `Template` suffix.
+For templates, the attribute that is used is the `Nancy.Diagnostics.TemplateAttribute` and the naming convention for the property is name of the property with a `Template` suffix.
 
 #### Creating a simple diagnostics provider
 
@@ -179,7 +179,7 @@ Let's create a simple diagnostics provider with a method that will greet someone
         }
     }
 
-The provided exposes a single method, the `Greet`method. The method takes a single string parameter which is the name of the person to greet. In addition the method has been given a description, using the `DescriptionAttribute`, that will be displayed in the form that will be used to invoke the method from the dashboard.
+The provider exposes a single method, the `Greet`method. The method takes a single string parameter which is the name of the person to greet. In addition the method has been given a description, using the `DescriptionAttribute`, that will be displayed in the form that will be used to invoke the method from the dashboard.
 
 Instead of using the default output format, the method also provides a custom `Mustache` template that will be used to format the output.
 
