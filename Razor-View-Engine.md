@@ -44,18 +44,19 @@ ASP.NET MVC has built its own abstraction on top of this sub-system, which is in
 To do this you need to add the following to your `app\web.config` file
 
 ```xml
-    <configSections>
-        <sectionGroup name="system.web.webPages.razor" type="System.Web.WebPages.Razor.Configuration.RazorWebSectionGroup, System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
-            <section name="host" type="System.Web.WebPages.Razor.Configuration.HostSection, System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" />
-            <section name="pages" type="System.Web.WebPages.Razor.Configuration.RazorPagesSection, System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" />
-        </sectionGroup>
-    </configSections>
-    <system.web.webPages.razor>
-        <pages pageBaseType="Nancy.ViewEngines.Razor.NancyRazorViewBase`1[[System.Object]]">
-            <namespaces>
-                <add namespace="Nancy.ViewEngines.Razor" />
-            </namespaces>
-        </pages>
-    </system.web.webPages.razor>
+<configSections>
+    <sectionGroup name="system.web.webPages.razor" type="System.Web.WebPages.Razor.Configuration.RazorWebSectionGroup, System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+        <section name="host" type="System.Web.WebPages.Razor.Configuration.HostSection, System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" />
+        <section name="pages" type="System.Web.WebPages.Razor.Configuration.RazorPagesSection, System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" />
+    </sectionGroup>
+</configSections>
+<system.web.webPages.razor>
+    <pages pageBaseType="Nancy.ViewEngines.Razor.NancyRazorViewBase`1[[System.Object]]">
+        <namespaces>
+            <add namespace="Nancy.ViewEngines.Razor" />
+        </namespaces>
+    </pages>
+</system.web.webPages.razor>
+```
 
 Not that the `Nancy.ViewEngines.Razor.NancyRazorViewBase`1[[System.Object]]` part is a generic type name of `NancyRazorViewBase<object>` and you can swap out the generic type for what ever type your model is. It's also worth noting that the `Version` and `PublicKeyToken`, of the ASP.NET MVC assembly references, will be different depending on which version of ASP.NET MVC you have installed (these are for ASP.NET MVC 3).
