@@ -8,50 +8,53 @@ A view location convention is defined by a function of the type `Func<string, dy
 
 ### Root Convention
 
-    (viewName, model, viewLocationContext) => {
-        return viewName;
-    }
+```c#
+(viewName, model, viewLocationContext) => {
+    return viewName;
+}
+```
 
 This convention will basically look for the view in the root of your application. However, if the view name does contain a relative path, the view name will actually point to that path, relative the root of the application, e.g for view `admin/index` it will look for the view in `admin/index`.
 
 ### Views Folder Convention
-
-    (viewName, model, viewLocationContext) => {
-        return string.Concat("views/", viewName);
-    }
-
+```c#
+(viewName, model, viewLocationContext) => {
+    return string.Concat("views/", viewName);
+}
+```
 This should be pretty self explanatory; Nancy will look for the view in a views folder located in the root of the application. Again, if you have specified a relative path in your view name, Nancy will look for the view in the path, relative to the views folder, e.g for view `admin/index` it will look for the view in `views/admin/index`. **Note:** do not be alarmed by the use of the hard coded “/” path separator; these are a kind of “virtual” path, rather than physical file system paths, and they always use “/” as a separator.
 
 ### Views and Module Path Convention
-
-    (viewName, model, viewLocationContext) => {
-        return string.Concat("views/", viewLocationContext.ModulePath, "/", viewName);
-    }
-
+```c#
+(viewName, model, viewLocationContext) => {
+    return string.Concat("views/", viewLocationContext.ModulePath, "/", viewName);
+}
+```
 This convention looks a bit more complicated, but it’s really still quite simple. What this is doing is looking for the view, inside a sub-folder of the views folder, where the sub-folder has the same name as the `modulePath` of the module that is being used to execute the current request. So for the view index in a module with a path products it will look for the view in `views/products/index`. Again, if the view name contains a relative path, Nancy will look in the path relative to the `views/modulePath folder`, e.g for view `admin/index`, in a module with a path products, it will look for the view in `views/products/admin/index`.
 
 ### Module Path Convention
 
-    (viewName, model, viewLocationContext) => {
-        return string.Concat(viewLocationContext.ModulePath, "/", viewName);
-    }
-
+```c#
+(viewName, model, viewLocationContext) => {
+    return string.Concat(viewLocationContext.ModulePath, "/", viewName);
+}
+```
 This convention looks for the view inside of a folder with the same name as the modulePath that is located in the root of the application.
 
 ### Module Name Convention
-
-    (viewName, model, viewLocationContext) => {
-        return string.Concat(viewLocationContext.ModuleName, "/", viewName);
-    }
-
+```c#
+(viewName, model, viewLocationContext) => {
+    return string.Concat(viewLocationContext.ModuleName, "/", viewName);
+}
+```
 This convention looks for the view inside of a folder with the name of the module, but with the suffix _Module_ trimmed of, that is located in the root of the application.
 
 ### Views and Module Name Convention
-
-    (viewName, model, viewLocationContext) => {
-        return string.Concat("views/", viewLocationContext.ModuleName, "/", viewName);
-    }
-
+```c#
+(viewName, model, viewLocationContext) => {
+    return string.Concat("views/", viewLocationContext.ModuleName, "/", viewName);
+}
+```
 This convention looks for the view inside of a folder with the name of the module, but with the suffix _Module_ trimmed of, that is located in the views folder of the application.
 
 ## Defining custom conventions
@@ -62,17 +65,18 @@ To do this, you will need to create a custom bootstrapper and add your conventio
 
 For example:
 
-    public class CustomConventionsBootstrapper : DefaultNancyBootstrapper
+```c#
+public class CustomConventionsBootstrapper : DefaultNancyBootstrapper
+{
+    protected override void ApplicationStartup(TinyIoCContainer container, Nancy.Bootstrapper.IPipelines pipelines)
     {
-        protected override void ApplicationStartup(TinyIoCContainer container, Nancy.Bootstrapper.IPipelines pipelines)
+        this.Conventions.ViewLocationConventions.Add((viewName, model, context) =>
         {
-            this.Conventions.ViewLocationConventions.Add((viewName, model, context) =>
-            {
-                return string.Concat("custom/", viewName);
-            });
-        }
+            return string.Concat("custom/", viewName);
+        });
     }
-
+}
+```
 This would add a view location convention which would look for the view inside of a folder called custom that should be located at the root of the application.
 
 The `ViewLocationConventions` collection is a standard list that can be modified, using the normal operators it provides. This enables you to do things such as deleting the default conventions or changing the order in which conventions are invoked.
