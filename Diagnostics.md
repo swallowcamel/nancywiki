@@ -9,15 +9,15 @@ You reach the dashboard by pointing your browser to `http://<address-of-your-app
 The dashboard is automatically available to you, in your application. However in order to gain access, you need to configure a password. Without the password you will be presented with a page telling you that the dashboard needs to be configured in order for you to use it, along with instructions on how to perform the configuration.
 
 To configure a password for your diagnostics dashboard, you need to override the `DiagnosticsConfiguration` property of your [[Bootstrapper]]. Once overriden, you should return an instance of the `DiagnosticsConfiguration` that has had a password assigned to the `Password` property.
-
-    public class CustomBootstrapper : DefaultNancyBootstrapper
+```c#
+public class CustomBootstrapper : DefaultNancyBootstrapper
+{
+    protected override DiagnosticsConfiguration DiagnosticsConfiguration
     {
-        protected override DiagnosticsConfiguration DiagnosticsConfiguration
-        {
-            get { return new DiagnosticsConfiguration { Password = @"A2\6mVtH/XRT\p,B"}; }
-        }
+        get { return new DiagnosticsConfiguration { Password = @"A2\6mVtH/XRT\p,B"}; }
     }
-
+}
+```
 When this has been done, you will be presented with a login screen instead of a configuration notification, the next time you browse the dashboard. A valid login will produce a login cookie that has a sliding expiration set to 15 minutes. 
 
 Each access to the dashboard will extend the lifetime, of the cookie, for another 15 minutes. If the cookie expires, before you revisit the dashboard, you will be redirected back to the login form.
@@ -28,14 +28,15 @@ As mentioned earlier, the diagnostics dashboard is automatically wired up for yo
 
 It is recommended that the call to `DiagnosticsHook.Disable()` is performed from the `ApplicationStartup` method in your bootstrapper. This will ensure that the dashboard is disabled as soon as your application starts up.
 
-    public class CustomBootstrapper : DefaultNancyBootstrapper
+```c#
+public class CustomBootstrapper : DefaultNancyBootstrapper
+{
+    protected override void ApplicationStartup(TinyIoC.TinyIoCContainer container, IPipelines pipelines)
     {
-        protected override void ApplicationStartup(TinyIoC.TinyIoCContainer container, IPipelines pipelines)
-        {
-            DiagnosticsHook.Disable();
-        }
+        DiagnosticsHook.Disable();
     }
-
+}
+```
 ## So what kind of tools are there?
 
 The dashboard presents you with four options when you access it; `Information`, `Interactive Diagnostics`, `Request Tracing` and `Configuration`. These are the main sections of the dashboard and your gateway to taking a peek under the hood of your application at runtime.
@@ -59,29 +60,29 @@ To configure these behaviors permanently you should still alter their value by s
 As you would expect, request tracing, provides a window for inspecting the behavior of individual requests as they are processed by Nancy.
 
 For performance reasons, request tracing is disabled by default and can either be turned on using the `Configuration` page on the dashboard or by setting the `StaticConfiguration.EnableRequestTracing` property to `true` 
-
-    public class CustomBootstrapper : DefaultNancyBootstrapper
+```c#
+public class CustomBootstrapper : DefaultNancyBootstrapper
+{
+    protected override void ApplicationStartup(TinyIoC.TinyIoCContainer container, IPipelines pipelines)
     {
-        protected override void ApplicationStartup(TinyIoC.TinyIoCContainer container, IPipelines pipelines)
-        {
-            StaticConfiguration.EnableRequestTracing = true;
-        }
+        StaticConfiguration.EnableRequestTracing = true;
     }
-
+}
+```
 The trace log is accessible though the `NancyContext` and it is easy to add your own information, in order to provide an even richer experience for your application.
 
-    public class HomeModule : NancyModule
+```c#
+public class HomeModule : NancyModule
+{
+    public HomeModule()
     {
-        public HomeModule()
-        {
-            Get[“/“] = parameters => {
-                this.Context.Trace.TraceLog.WriteLog(s => s.AppendLine(“Root path was called”));
-
-                return HttpStatusCode.Ok;
-            };
-        }
+        Get[“/“] = parameters => {
+            this.Context.Trace.TraceLog.WriteLog(s => s.AppendLine(“Root path was called”));
+            return HttpStatusCode.Ok;
+        };
     }
-
+}
+```
 The `WriteLog` method takes a function that will be passed an instance of a `StringBuilder` at runtime. The reason it is taking a function is that when diagnostics is disabled, Nancy will simply not invoke the function so there will be no performance penalties for leaving the trace code in your application. 
 
 ### Interactive diagnostics
@@ -94,30 +95,31 @@ This enables you to use the full capabilities of the language, platform and Nanc
 
 Anything that implements this type lets Nancy know that it is capable of providing interactive diagnostics tools for the dashboard. The interface itself is very basic and provides mostly metadata about the provider
 
+```c#
+/// <summary>
+/// Defines the functionality a diagnostics provider.
+/// </summary>
+public interface IDiagnosticsProvider
+{
     /// <summary>
-    /// Defines the functionality a diagnostics provider.
+    /// Gets the name of the provider.
     /// </summary>
-    public interface IDiagnosticsProvider
-    {
-        /// <summary>
-        /// Gets the name of the provider.
-        /// </summary>
-        /// <value>A <see cref="string"/> containing the name of the provider.</value>
-        string Name { get; }
+    /// <value>A <see cref="string"/> containing the name of the provider.</value>
+   string Name { get; }
 
-        /// <summary>
-        /// Gets the description of the provider.
-        /// </summary>
-        /// <value>A <see cref="string"/> containing the description of the provider.</value>
-        string Description { get; }
+   /// <summary>
+   /// Gets the description of the provider.
+   /// </summary>
+   /// <value>A <see cref="string"/> containing the description of the provider.</value>
+   string Description { get; }
 
-        /// <summary>
-        /// Gets the object that contains the interactive diagnostics methods.
-        /// </summary>
-        /// <value>An instance of the interactive diagnostics object.</value>
-        object DiagnosticObject { get; }
-    }
-
+   /// <summary>
+   /// Gets the object that contains the interactive diagnostics methods.
+   /// </summary>
+   /// <value>An instance of the interactive diagnostics object.</value>
+   object DiagnosticObject { get; }
+}
+```
 The most important member, of the `IDiagnosticsProvider` interface, is the `DiagnosticObject` property. The object returned by this property is the one that will be wired up on the dashboard. 
 
 #### So what does the diagnostics object look like?
@@ -154,30 +156,32 @@ For templates, the attribute that is used is the `Nancy.Diagnostics.TemplateAttr
 
 Let's create a simple diagnostics provider with a method that will greet someone by their name. Not really a real scenario but it is a basic enough sample to show the anatomy of a diagnostics provider without getting distored by the implementation.
 
-    public class CustomDiagnosticsProvider : IDiagnosticsProvider
+```c#
+public class CustomDiagnosticsProvider : IDiagnosticsProvider
+{
+    public string Name
     {
-        public string Name
-        {
-            get { return "Custom diagnostics provider"; }
-        }
-
-        public string Description
-        {
-            get { return "Provides custom diagnostics capabilities"; }
-        }
-
-        public object DiagnosticObject
-        {
-            get { return this; }
-        }
-
-        [Description("Greets a person using their name")]
-        [Template("<h1>{{model.Result}}</h1>")]
-		public string Greet(string name)
-        {
-            return string.Concat("Hi, ", name);
-        }
+        get { return "Custom diagnostics provider"; }
     }
+
+    public string Description
+    {
+        get { return "Provides custom diagnostics capabilities"; }
+    }
+
+    public object DiagnosticObject
+    {
+        get { return this; }
+    }
+
+    [Description("Greets a person using their name")]
+    [Template("<h1>{{model.Result}}</h1>")]
+    public string Greet(string name)
+    {
+        return string.Concat("Hi, ", name);
+    }
+}
+```
 
 The provider exposes a single method, the `Greet`method. The method takes a single string parameter which is the name of the person to greet. In addition the method has been given a description, using the `DescriptionAttribute`, that will be displayed in the form that will be used to invoke the method from the dashboard.
 
