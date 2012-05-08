@@ -31,7 +31,9 @@ The `StaticContentConventionBuilder` is a helper class that is shipped with Nanc
 There is only one method, `AddDirectory`, on the class with the following signature
 
 ```c#
-public static Func<NancyContext, string, Response> AddDirectory(string requestedPath, string contentPath = null, params string[] allowedExtensions)
+public static Func<NancyContext, string, Response> AddDirectory(string requestedPath, 
+                                                                string contentPath = null, 
+                                                                params string[] allowedExtensions)
 ```
 
 * requestedPath - the path that is actually requested by the client, relative to the application root e.g. /scripts
