@@ -10,17 +10,18 @@ To define your own static content conventions, using the bootstrapper, you simpl
 
 The `ConfigureConventions` gives you the opportunity to modify the `StaticContentsConventions` property, which is a list of conventions
 
-    public class CustomBoostrapper : DefaultNancyBootstrapper
+```c#
+public class CustomBoostrapper : DefaultNancyBootstrapper
+{
+    protected override void ConfigureConventions(NancyConventions conventions)
     {
-        protected override void ConfigureConventions(NancyConventions conventions)
-        {
-            base.ConfigureConventions(conventions);
-    
-            conventions.StaticContentsConventions.Add((context, path) => {
-                // Return your response here or null
-            });
-        }
+        base.ConfigureConventions(conventions);
+ 
+        conventions.StaticContentsConventions.Add((context, path) => {
+            // Return your response here or null
+        });
     }
+}
 
 If that looks a little icky, don't worry, Nancy has a helper that will take care of (hopefully!) the vast majority of any static content convention tweaks.. the StaticContentConventionBuilder:
 
@@ -29,7 +30,9 @@ The `StaticContentConventionBuilder` is a helper class that is shipped with Nanc
 
 There is only one method, `AddDirectory`, on the class with the following signature
 
-`public static Func<NancyContext, string, Response> AddDirectory(string requestedPath, string contentPath = null, params string[] allowedExtensions)`
+```c#
+public static Func<NancyContext, string, Response> AddDirectory(string requestedPath, string contentPath = null, params string[] allowedExtensions)
+```
 
 * requestedPath - the path that is actually requested by the client, relative to the application root e.g. /scripts
 * contentPath - optional path that contains the content, again, relative the application root. With this parameter it's possible to "map" requests to /scripts to the /javascript folder in your physical directory structure on disk
@@ -46,18 +49,19 @@ The resulting convention provides the following features:
 
 Using the `StaticContentConventionBuilder`, to create a new convention is really easy
 
-    public class CustomBoostrapper : DefaultNancyBootstrapper
+```c#
+public class CustomBoostrapper : DefaultNancyBootstrapper
+{
+    protected override void ConfigureConventions(NancyConventions conventions)
     {
-        protected override void ConfigureConventions(NancyConventions conventions)
-        {
-            base.ConfigureConventions(conventions);
-    
-            conventions.StaticContentsConventions.Add(
-                StaticContentConventionBuilder.AddDirectory("assets", @"contentFolder\subFolder")
-            );
-        }
+        base.ConfigureConventions(conventions);
+  
+        conventions.StaticContentsConventions.Add(
+            StaticContentConventionBuilder.AddDirectory("assets", @"contentFolder\subFolder")
+        );
     }
-
+}
+```
 ## Alternative approaches..
 
 If, for some reason, you don't want to use the methods above, you can also create conventions using the IConventions interface, or bypass the static content conventions completely and just serve your content from a module.
