@@ -12,7 +12,8 @@
 11. [[The root path]]
 12. [[Managing static content]]
 13. [[Diagnostics]]
-14. More to come
+14. [[Adding a custom FavIcon]]
+15. More to come
 
 ## Hosting
 * [[Hosting Nancy with ASP.NET]]
