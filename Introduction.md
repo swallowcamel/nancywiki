@@ -42,12 +42,13 @@ Enough talk, let’s see some code! We are going to assume that you have [Nuget]
 
 The HelloModule.cs code
 
-    public class HelloModule : NancyModule
+```c#
+public class HelloModule : NancyModule
+{
+    public HelloModule()
     {
-        public HelloModule()
-        {
-            Get["/"] = parameters => "Hello World";
-        }
+        Get["/"] = parameters => "Hello World";
     }
-
+}
+```
 [Documentation overview](Documentation) - [Part 2. Exploring the Nancy module >>](Exploring the Nancy module)
