@@ -186,4 +186,4 @@ Instead of using the default output format, the method also provides a custom `M
 A proper diagnostics provider would probably take a couple of contstructor dependencies in order to be able to access the various pieces of the application.
 
 
-[<< Part 12. Managing static content](Managing static content) - [Documentation overview](Documentation)
+[<< Part 12. Managing static content](Managing static content) - [Documentation overview](Documentation) - [Part 14. Adding a custom favicon >>](Adding a custom favicon)
