@@ -10,32 +10,35 @@ The default implementation that is shipped with Nancy sits on top of the [TinyIo
 
 When you want to change the runtime behavior of Nancy you are going to be doing this though a custom bootstrapper. Fortunately this doesn’t mean you have to implement a bootstrapper from scratch each time, but instead you derive from the “base” bootstrapper you are using and override one of the methods / properties. In this example the ApplicationStartup method is overridden:
 
-    public class CustomBootstrapper : DefaultNancyBootstrapper
+```c#
+public class CustomBootstrapper : DefaultNancyBootstrapper
+{
+    public override void ApplicationStartup(TContainer container, IPipelines pipelines)
     {
-        public override void ApplicationStartup(TContainer container, IPipelines pipelines)
-        {
-            // your customizations goes here
-        }
+         // your customizations goes here
     }
+}
+```
 
 ## Ignoring assemblies when using AutoRegister.
 
 Part of the [SDHP](https://github.com/NancyFx/Nancy/wiki/Introduction), when you use TinyIOC, is `AutoRegister`. Which allows you to piggyback on the IOC-Container, letting you define your own dependencies, that live next to Nancy's. For example injecting your own dependencies into a NancyModule. Though when applications have many references it will take TinyIOC longer and longer to scan through them to find implementations of the dependencies. To prevent this you can specify which assemblies Nancy can ignore. 
 
-    public class CustomBootstrapper : DefaultNancyBootstrapper
+```c#
+public class CustomBootstrapper : DefaultNancyBootstrapper
+{
+    protected override NancyInternalConfiguration InternalConfiguration
     {
-        protected override NancyInternalConfiguration InternalConfiguration
+        get
         {
-            get
-            {
-                //This will tell Nancy it won't have to look in the Nhibernate assembly for implementations of your
-                //interfaces.
-                return NancyInternalConfiguration.WithIgnoredAssembly (asm => asm.FullName.StartsWith ("NHibernate", StringComparison.InvariantCulture))
-                                                 .WithIgnoredAssembly (asm => asm.FullName.StartsWith ("Lucene", StringComparison.InvariantCulture));
-            }
+            //This will tell Nancy it won't have to look in the Nhibernate assembly for implementations of your
+            //interfaces.
+            return NancyInternalConfiguration.WithIgnoredAssembly (asm => asm.FullName.StartsWith ("NHibernate", StringComparison.InvariantCulture))
+                                             .WithIgnoredAssembly (asm => asm.FullName.StartsWith ("Lucene", StringComparison.InvariantCulture));
         }
     }
-
+}
+```
 When you do not use `AutoRegister` and do not plan to use it either you can also turn it off like this:
 
 ```c#
