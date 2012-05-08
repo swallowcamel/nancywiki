@@ -59,4 +59,4 @@ To do this you need to add the following to your `app\web.config` file
 </system.web.webPages.razor>
 ```
 
-Not that the `Nancy.ViewEngines.Razor.NancyRazorViewBase`1[[System.Object]]` part is a generic type name of `NancyRazorViewBase<object>` and you can swap out the generic type for what ever type your model is. It's also worth noting that the `Version` and `PublicKeyToken`, of the ASP.NET MVC assembly references, will be different depending on which version of ASP.NET MVC you have installed (these are for ASP.NET MVC 3).
+It is worth noting that the `Version` and `PublicKeyToken`, of the ASP.NET MVC assembly references, will be different depending on which version of ASP.NET MVC you have installed (these are for ASP.NET MVC 3).
