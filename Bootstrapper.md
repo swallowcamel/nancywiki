@@ -18,34 +18,4 @@ When you want to change the runtime behavior of Nancy you are going to be doing 
         }
     }
 
-## Adding a Custom Favicon
-
-See http://en.wikipedia.org/wiki/Favicon for information on favicons.
-
-To add a custom favicon embed a favicon.ico in your assembly and then override the NancyBootstrapperBase<TContainer>.DefaultFavIcon: 
-
-    public class Bootstrapper:DefaultNancyBootstrapper
-    {
-        byte[] favicon;
-
-        protected override byte[] DefaultFavIcon
-        {
-            get
-            {
-                if (favicon == null)
-                {
-                    //TODO: remember to replace 'AssemblyName' with the prefix of the resource
-                    using (var resourceStream = GetType().Assembly.GetManifestResourceStream("AssemblyName.favicon.ico"))
-                    {
-                        var tempFavicon = new byte[resourceStream.Length];
-                        resourceStream.Read(tempFavicon, 0, (int)resourceStream.Length);
-                        favicon = tempFavicon;
-                    }
-                }
-                return favicon;
-            }
-        }
-    }
-
-
 [<< Part 6. Model binding](Model binding) - [Documentation overview](Documentation) - [Part 8. View engines >>](View engines)
