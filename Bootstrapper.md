@@ -33,8 +33,9 @@ public class CustomBootstrapper : DefaultNancyBootstrapper
         {
             //This will tell Nancy it won't have to look in the Nhibernate or Lucene assemblies for implementations of your
             //interfaces.
-            return NancyInternalConfiguration.WithIgnoredAssembly (asm => asm.FullName.StartsWith ("NHibernate", StringComparison.InvariantCulture))
-                                             .WithIgnoredAssembly (asm => asm.FullName.StartsWith ("Lucene", StringComparison.InvariantCulture));
+            return NancyInternalConfiguration
+                .WithIgnoredAssembly (asm => asm.FullName.StartsWith ("NHibernate", StringComparison.InvariantCulture))
+                .WithIgnoredAssembly (asm => asm.FullName.StartsWith ("Lucene", StringComparison.InvariantCulture));
         }
     }
 }
