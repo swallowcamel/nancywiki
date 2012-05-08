@@ -2,13 +2,15 @@ The `DynamicDictionary` is a dynamic type with dictionary-like behaviors, but th
 
 With the DynamicDictionary you are able to access the values using a standard indexer approach or by using the name, of the captured, value just as a normal property. Both produce the same result, it all comes down to personal preference.
 
-    Get["/hello/{name}"] = parameters => {
-        return "Hello " + parameters.name;
-    };
+```c#
+Get["/hello/{name}"] = parameters => {
+    return "Hello " + parameters.name;
+};
 
-    Get["/goodbye/{name}"] = parameters => {
-        return "Goodbye " + parameters["name"];
-    };
+Get["/goodbye/{name}"] = parameters => {
+    return "Goodbye " + parameters["name"];
+};
+```
 	
 It is worth noting that if you prefer accessing captured properties via a normal property you must assign the capture group a valid C# identifier (i.e.: one that starts with an alphabetic character).
 
