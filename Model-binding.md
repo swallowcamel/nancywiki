@@ -7,17 +7,20 @@ It’s as easy as including a namespace
 
 Literally. Nancy’s model binding is defined as a single extension method on the `NancyModule` type. The extensions are located in the `Nancy.ModelBinding` namespace and adds a Bind() method, with two overloads:
 
-    Foo f = this.Bind();
+```c#
+Foo f = this.Bind();
     
-    var f = this.Bind<Foo>();
-
+var f = this.Bind<Foo>();
+```
 Both overloads have the exact same functionality, they just provide different ways of doing the same thing and it comes down to personal preference which one you choose to use.
 
 ## Keeping unwanted information out by blacklisting it
 
 Sometimes you want the model binder to ignore certain information when populating the model from all the various sources (to prevent ‘over posting’ attacks for example). To accommodate this, the model binder can be called with an optional list of blacklisted properties on the model:
 
+```c#
     var f = this.Bind<Foo>("id", "creator", "createddate");
+```
 
 The blacklist is a “params” array of strings, where the strings represents the name of the model properties that should be ignored by the model binder.
 
@@ -39,7 +42,7 @@ For auto model binding checkbox to boolean value, make sure to set the `value="t
 <input type="checkbox" name="rememberMe" value="true"/>
 ```
 
-```csharp
+```c#
 public class LoginModel
 {
     public bool RememberMe { get; set; }
