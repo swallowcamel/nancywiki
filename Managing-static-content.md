@@ -22,7 +22,7 @@ public class CustomBoostrapper : DefaultNancyBootstrapper
         });
     }
 }
-
+```
 If that looks a little icky, don't worry, Nancy has a helper that will take care of (hopefully!) the vast majority of any static content convention tweaks.. the StaticContentConventionBuilder:
 
 ## Using the StaticContentConventionBuilder
