@@ -1,18 +1,16 @@
-**Installing Razor**
-Simply reference `Nancy.ViewEngines.Razor.dll` and return views ending in `cshtml`it's that simple. Please note that as of yet certain features you might be used to from MVC/ASP.NET are unavailable such as strongly typed views. You can sort of mock strongly typing views, for those of us who have complex object graphs, by specifying
+The Razor engine in Nancy is a custom implementation built around the Razor syntax parser. Please note that the implementation may have differences to implementation used by ASP.NET MVC.
 
-```c#
-@MyType model = (MyType)Model;
-```
-at the top of your view. 
+## Installing Razor
 
-**Configuring Razor.**
+Simply reference `Nancy.ViewEngines.Razor.dll` (preferbly by installing the `Nancy.ViewEngines.Razor` nuget) and return views ending in `cshtml` or `vbhtml` it's that simple.
 
-You can specify assemblies and default namespaces that razor needs to use whilst compiling the views by bootstrapping your own IRazorConfiguration implementation. _This step is totally optional_ if you don't require additional references or namespaces in your view.
+## Configuring Razor ##
 
-The default RazorConfiguration looks in app or web.config in the razor section.
+You can specify assemblies and default namespaces that Razor needs to use whilst compiling the views by bootstrapping your own `IRazorConfiguration` implementationm thus removing the need to add the `@using` statements to each view. _This step is totally optional_ if you don't require additional references or namespaces in your view.
 
-Step 1: Create a custom configSection
+The default `IRazorConfiguration` implementation (automatically used by Nancy unless explicitly overridden in the bootstrapper) looks in `app\web.config` in the razor section.
+
+Step 1: Create a custom configuration section
 
 ```xml
 <configSections>
@@ -36,14 +34,28 @@ Step 2: Configure Razor! _(note! this is just a sample configuration)_
 ```
 Pretty self explanatory except `disableAutoIncludeModelNamespace` which by default auto references the assembly of the model you pass into the view.
 
-**Use Razor!**
+## Letting Razor know what base type your views use
+You can let Razor know which base type your views are using, thus gaining intellisense access to the members of the base type at design-time, by using the `@inherits` statement in your views. For example you could specify `@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>` to use the `NancyRazorViewBase` base type with a `dynamic` model. You need to do this in each of the views where you want the design-time candy.
 
-Inside NancyModule Constructor  
-```c#
-...
-Get["/Home/Index"] = param =>
-{
-    var model = repo.GetSomeModel();
-    return View["index.cshtml", model]
-};
-```
+However there is another way if you have ASP.NET MVC installed. Visual Studio has an intellisense sub-system that can be used to teach Visual Studio about different syntaxes. This sub-system is a bit cumbersome to beat into submission and using it would require us to provide an install for a Nancy toolkit. 
+
+ASP.NET MVC has built its own abstraction on top of this sub-system, which is installed as a visual studio extension when you run the ASP.NET MVC installer (it's installed in a different folder than the default extensions folder, thus is not shown in the extension manager. Sneaky). If you have ASP.NET MVC installed on the same machine as you are doing Nancy development, you can tap into this abstraction and work for you and your Nancy application. 
+
+To do this you need to add the following to your `app\web.config` file
+
+```xml
+    <configSections>
+        <sectionGroup name="system.web.webPages.razor" type="System.Web.WebPages.Razor.Configuration.RazorWebSectionGroup, System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+            <section name="host" type="System.Web.WebPages.Razor.Configuration.HostSection, System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" />
+            <section name="pages" type="System.Web.WebPages.Razor.Configuration.RazorPagesSection, System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <system.web.webPages.razor>
+        <pages pageBaseType="Nancy.ViewEngines.Razor.NancyRazorViewBase`1[[System.Object]]">
+            <namespaces>
+                <add namespace="Nancy.ViewEngines.Razor" />
+            </namespaces>
+        </pages>
+    </system.web.webPages.razor>
+
+Not that the `Nancy.ViewEngines.Razor.NancyRazorViewBase`1[[System.Object]]` part is a generic type name of `NancyRazorViewBase<object>` and you can swap out the generic type for what ever type your model is. It's also worth noting that the `Version` and `PublicKeyToken`, of the ASP.NET MVC assembly references, will be different depending on which version of ASP.NET MVC you have installed (these are for ASP.NET MVC 3).
