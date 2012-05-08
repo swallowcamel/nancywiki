@@ -4,21 +4,22 @@
 
 Nancy under ASP.Net is handled through a HTTP Handler, which is setup through the Web.Config. If you're using one of Nancy's Visual Studio templates then the configuration is handled for you, if not then you'll need to add the following to the configuration section of your Web.Config:
 
-    <system.web>
-      <compilation debug="true" targetFramework="4.0" />
-      <httpHandlers>
-        <add verb="*" type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" path="*"/>
-      </httpHandlers>
-    </system.web>
+```xml
+<system.web>
+  <compilation debug="true" targetFramework="4.0" />
+  <httpHandlers>
+    <add verb="*" type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" path="*"/>
+  </httpHandlers>
+</system.web>
 
-    <system.webServer>
-       <modules runAllManagedModulesForAllRequests="true"/>
-      <validation validateIntegratedModeConfiguration="false"/>
-      <handlers>
-        <add name="Nancy" verb="*" type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" path="*"/>
-      </handlers>
-    </system.webServer>
-
+<system.webServer>
+  <modules runAllManagedModulesForAllRequests="true"/>
+  <validation validateIntegratedModeConfiguration="false"/>
+  <handlers>
+    <add name="Nancy" verb="*" type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" path="*"/>
+  </handlers>
+</system.webServer>
+```
 Also make sure you have referenced not only the Nancy project/assembly, but also the Nancy.Hosting.Aspnet project/assembly.
 
 That's all you need to do to get up and running.
@@ -30,23 +31,25 @@ By default IIS 6 does not support PUT and DELETE verbs. To enable this, you need
 You might receive "405 Not allowed" pages while trying to make PUT/DELETE requests on IIS 7/7.5.
 One way to fix it is to remove the WebDAVModule in the web.config. 
 
-    <system.webServer>
-        <modules runAllManagedModulesForAllRequests="true">
-          <remove name="WebDAVModule" />
-        </modules>  
-    </system.webserver>
-
+```xml
+<system.webServer>
+  <modules runAllManagedModulesForAllRequests="true">
+    <remove name="WebDAVModule" />
+  </modules>  
+</system.webserver>
+```
 ## Bootstrapping
 
 By default, the Nancy HTTP Handler will use the built in "Bootstrapper Locator" for identifying the best bootstrapper to kick-start Nancy. This behaviour should be fine for most scenarios; but if you want to take control over which bootstrapper is used, you can do so using the Web.Config:
 
-    <configSections>
-      <section name="nancyFx" type="Nancy.Hosting.Aspnet.NancyFxSection" />
-    </configSections>
-    <nancyFx>
-      <bootstrapper assembly="Nancy.Demo" type="Nancy.Demo.DemoBootStrapper"/>
-    </nancyFx>
-
+```c#
+<configSections>
+  <section name="nancyFx" type="Nancy.Hosting.Aspnet.NancyFxSection" />
+</configSections>
+<nancyFx>
+  <bootstrapper assembly="Nancy.Demo" type="Nancy.Demo.DemoBootStrapper"/>
+</nancyFx>
+```
 Here we define a NancyFx configuration section and a bootstrapper entry that specified the type of the bootstrapper, and the assembly it's located in. If this configuration setting is specified then the locator is bypassed completely and Nancy will use the specified type instead. 
 
 For more information on Nancy Bootstrapping please see [[Bootstrapping-Nancy]].
@@ -55,34 +58,36 @@ For more information on Nancy Bootstrapping please see [[Bootstrapping-Nancy]].
 
 Sometimes you have an existing ASP.NET site and you want to configure Nancy to handle requests to a particular path. To do this, follow the instructions above but set `path="nancypath/*"` on the `NancyHttpRequestHandler` handlers. You will also need to add a project folder to represent the path, and in that folder you would add the following Web.config:
 
-    <?xml version="1.0"?>
-    <configuration>
-        <system.web>
-          <httpHandlers>
-            <add verb="*" type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" path="*"/>
-          </httpHandlers>
-        </system.web>
-    </configuration>
-
+```xml
+<?xml version="1.0"?>
+<configuration>
+  <system.web>
+    <httpHandlers>
+      <add verb="*" type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" path="*"/>
+    </httpHandlers>
+  </system.web>
+</configuration>
+```
 Alternatively, enclose the setting within `<location>` in your root web.config:
 
-    <location path="nancy">
-      <system.web>
-        <compilation debug="true" targetFramework="4.0" />
-        <httpHandlers>
-          <add verb="*" type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" path="*"/>
-        </httpHandlers>
-      </system.web>
+```xml
+<location path="nancy">
+  <system.web>
+    <compilation debug="true" targetFramework="4.0" />
+    <httpHandlers>
+      <add verb="*" type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" path="*"/>
+    </httpHandlers>
+  </system.web>
 
-      <system.webServer>
-        <modules runAllManagedModulesForAllRequests="true"/>
-        <validation validateIntegratedModeConfiguration="false"/>
-        <handlers>
-          <add name="Nancy" verb="*" type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" path="*"/>
-        </handlers>
-      </system.webServer>
-    </location>
-
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true"/>
+    <validation validateIntegratedModeConfiguration="false"/>
+    <handlers>
+      <add name="Nancy" verb="*" type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" path="*"/>
+    </handlers>
+  </system.webServer>
+</location>
+```
 Note that your modules will still respond to the full path including the location, ie ["/nancy/.."]
 
 ## Adding Nancy to an existing ASP.Net MVC site
@@ -90,4 +95,6 @@ Note that your modules will still respond to the full path including the locatio
 Follow all the instructions above but make sure to remove the "nancy" path from the RoutingTable (full story [read here](http://igorshare.wordpress.com/2012/04/08/adding-nancy-to-the-existing-asp-net-mvc-site/)).
 Add the following instruction to the Global.asax.cs file inside the MvcApplication.RegisterRoutes:
 
-    routes.IgnoreRoute("nancy/{*pathInfo}");
+```c#
+routes.IgnoreRoute("nancy/{*pathInfo}");
+```
