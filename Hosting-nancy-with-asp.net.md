@@ -42,7 +42,7 @@ One way to fix it is to remove the WebDAVModule in the web.config.
 
 By default, the Nancy HTTP Handler will use the built in "Bootstrapper Locator" for identifying the best bootstrapper to kick-start Nancy. This behaviour should be fine for most scenarios; but if you want to take control over which bootstrapper is used, you can do so using the Web.Config:
 
-```c#
+```xml
 <configSections>
   <section name="nancyFx" type="Nancy.Hosting.Aspnet.NancyFxSection" />
 </configSections>
