@@ -38,14 +38,15 @@ Part of the [SDHP](https://github.com/NancyFx/Nancy/wiki/Introduction), when you
 
 When you do not use `AutoRegister` and do not plan to use it either you can also turn it off like this:
 
-    public class CustomBootstrapper : DefaultNancyBootstrapper
+```c#
+public class CustomBootstrapper : DefaultNancyBootstrapper
+{
+    protected override void ConfigureApplicationContainer (TinyIoCContainer container)
     {
-        protected override void ConfigureApplicationContainer (TinyIoCContainer container)
-        {
-            //This can be achieved by not calling the "ConfigureApplicationContainer" base,
-            //thus not configuring it to use AutoRegister.
-            //base.ConfigureApplicationContainer (container);
-        }
+        //This can be achieved by not calling the "ConfigureApplicationContainer" base,
+        //thus not configuring it to use AutoRegister.
+        //base.ConfigureApplicationContainer (container);
     }
-
+}
+```
 [<< Part 6. Model binding](Model binding) - [Documentation overview](Documentation) - [Part 8. View engines >>](View engines)
