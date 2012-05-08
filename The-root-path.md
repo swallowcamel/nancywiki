@@ -6,28 +6,31 @@ Nancy will automatically use the first implementation, of the _IRootPathProvider
 
 ## Changing the root path
 
-Providing a custom root path is a two part process. First you need to create your own implementation of the _IRootPathProvider_ interface.
-
-    public class CustomRootPathProvider : IRootPathProvider
+Providing a custom root path is a two part process. First you need to create your own implementation of the `IRootPathProvider` interface.
+```c#
+public class CustomRootPathProvider : IRootPathProvider
+{
+    public string GetRootPath()
     {
-        public string GetRootPath()
-        {
-            return "What ever path you want to use as your application root";
-        }
+        return "What ever path you want to use as your application root";
     }
+}
+```
 
 Once that is done, the next thing you need to do is to let Nancy know that it should be using your own implementation, instead of going of and try to locate one for you (remember there are implementations in each host, so if you provide a second one, the result will be non-deterministic).
 
 To let Nancy know it should use your implementation, you simply create a new bootstrapper (by inheriting from the bootstrapper you are using) and override the _RootPathProivider_ property and return the _type_ of your own root path provider.
 
-    public class CustomBootstrapper : DefaultNancyBootstrapper
+```c#
+public class CustomBootstrapper : DefaultNancyBootstrapper
+{
+    protected override Type RootPathProvider
     {
-        protected override Type RootPathProvider
-        {
-            get { return typeof(CustomRootPathProvider); }
-        }
+        get { return typeof(CustomRootPathProvider); }
     }
-When your application runs, the bootstrapper will register this implementation in the current container and will be used when dependencies on the _IRootPathProvider_ are resolved.
+}
+```
+When your application runs, the bootstrapper will register this implementation in the current container and will be used when dependencies on the `IRootPathProvider` are resolved.
 
 
 [<< Part 10. Testing your application](Testing your application) - [Documentation overview](Documentation) - [Part 12. Managing static content](Managing static content) >>
