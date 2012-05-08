@@ -18,4 +18,34 @@ When you want to change the runtime behavior of Nancy you are going to be doing 
         }
     }
 
+## Ignoring assemblies when using `Autoregister`.
+
+Part of the [SDHP](https://github.com/NancyFx/Nancy/wiki/Introduction) is, when you use TinyIOC, `AutoRegister`. Which allows you to piggyback on the IOC-Container, letting you define your own dependencies, that live next to Nancy's. Like injecting your own dependencies into a NancyModule. Though when applications have many references it will take TinyIOC longer and longer to scan through them to find implementations of the dependencies. To prevent this you can specify which assemblies Nancy can ignore. 
+
+    public class CustomBootstrapper : DefaultNancyBootstrapper
+    {
+        protected override NancyInternalConfiguration InternalConfiguration
+        {
+            get
+            {
+                //This will tell Nancy it won't have to look in the Nhibernate assembly for implementations of your
+                //interfaces.
+                return NancyInternalConfiguration.WithIgnoredAssembly (asm => asm.FullName.StartsWith ("NHibernate", StringComparison.InvariantCulture))
+                                                 .WithIgnoredAssembly (asm => asm.FullName.StartsWith ("Lucene", StringComparison.InvariantCulture));
+            }
+        }
+    }
+
+When you do not use `AutoRegister` and do not plan to use it either you can also turn it off like this:
+
+   public class CustomBootstrapper : DefaultNancyBootstrapper
+   {
+        protected override void ConfigureApplicationContainer (TinyIoCContainer container)
+        {
+            //This can be achieved by not calling the "ConfigureApplicationContainer" base,
+            //thus not configuring it to use AutoRegister.
+            //base.ConfigureApplicationContainer (container);
+        }
+   }
+
 [<< Part 6. Model binding](Model binding) - [Documentation overview](Documentation) - [Part 8. View engines >>](View engines)
