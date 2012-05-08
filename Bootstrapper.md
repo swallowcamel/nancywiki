@@ -39,7 +39,7 @@ public class CustomBootstrapper : DefaultNancyBootstrapper
     }
 }
 ```
-When you do not use `AutoRegister` and do not plan to use it either you can also turn it off like this:
+When you do not use `AutoRegister` and do not plan to use it either you can also turn it off:
 
 ```c#
 public class CustomBootstrapper : DefaultNancyBootstrapper
