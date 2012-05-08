@@ -3,11 +3,11 @@ Besides defining handlers for specific routes, a module can also intercept reque
 ## Intercepting the request before the route is invoked
 
 The Before interceptor enables you to intercept the request before it is passed to the appropriate route handler. This gives you a couple of possibilities such as modifying parts of the request or even prematurely aborting the request by returning a response that will be sent back to the caller.
-
-    Before += ctx => {
-        return <null or a Response object>;
-    };
-
+```c#
+Before += ctx => {
+    return <null or a Response object>;
+};
+```
 When defining a Before interceptor you use a slightly different syntax than you would do with a route handler. Since the interceptor will be invoked for all routes in the module, there is no need to define a pattern to match.
 
 The parameter that is passed into the interceptor is an instance of the current NancyContext, from which you get access to things like context variables and the request.
@@ -17,11 +17,11 @@ The last difference is the return value of the interceptor. A return value of `n
 ## Intercepting the request after the route was invoked
 
 The After interceptor is defined using the same syntax as the Before interceptor, and the passed in parameter is also the current `NancyContext`. The difference is that the interceptor does not return a value. 
-
+```c#
     After += ctx => {
         // Modify ctx.Response
     };
-
+```
 If you think about it for a moment, it makes sense. A `Before` interceptor is called before the route handler and it gives you the option to abort the request by sending back a response. With an After interceptor the route has already been handled and a response has been generated. Instead you can modify the existing response by accessing it on the context.
 
 The interceptors are very useful when you want to perform tasks, per-request, on a module level for things like security, caching and rewriting requests and responses.
