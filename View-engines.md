@@ -2,6 +2,7 @@ The concept of a view engine is quite simple - it takes a “template” and an 
 
 The following is an example of what a `.sshtml` file can look like
 
+```html
     @Master['MasterPage']
     
     @Section['Content']
@@ -20,7 +21,7 @@ The following is an example of what a `.sshtml` file can look like
         <p>Model output can also be encoded:</p>
         <p>@!Model.NaughtyStuff</p>
     @EndSection
-
+```
 In addition to the built in engine, Nancy also supports Razor, Spark, NDjango and the dotLiquid view engines as separate packages. By adding a reference to them from your project Nancy will automatically be able to render views using their supported file extensions.
 
 ## Rendering a view from a route action
