@@ -28,7 +28,7 @@ public class MyModule : NancyModule
         // Register other routes
     }
 }
-
+```
 Nancy will automatically discover your module and, assuming you have something that implements IMyDependency, it will automatically be constructed and injected into your module - all without you lifing a finger!
 
 We did say it was a Super-Duper-Happy-Path!
