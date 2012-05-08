@@ -62,6 +62,7 @@ Both of these methods are passed the container instance as a parameter:
 container.Register<IMyInterface, MyImplementation>().AsSingleton();
 container.Register<IMyInterfaceToo, MyOtherThing>().AsMultiInstance();
 ```
+
 For more information on the various registration options available, please take a look at the [TinyIoC Wiki](http://hg.grumpydev.com/tinyioc).
 
 ### Part 3 - Alternative Containers ###
@@ -73,6 +74,7 @@ For a list of alternative container implementations please see [Alternative Cont
 ### Part 4 - Barebones ###
 
 Although Nancy provides the Bootstrapper base classes to provide a simple, customisable and consistent interface the only requirement for a BootStrapper is that it implements INancyBootstrapper:
+
 ```c#
 /// <summary>
 /// Bootstrapper for the Nancy Engine
@@ -85,4 +87,4 @@ public interface INancyBootstrapper
     /// <returns>Configured INancyEngine</returns>
     INancyEngine GetEngine();
 }
-```   
+```
