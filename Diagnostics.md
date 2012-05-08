@@ -76,7 +76,7 @@ public class HomeModule : NancyModule
 {
     public HomeModule()
     {
-        Get[“/“] = parameters => {
+        Get["/"] = parameters => {
             this.Context.Trace.TraceLog.WriteLog(s => s.AppendLine(“Root path was called”));
             return HttpStatusCode.Ok;
         };
