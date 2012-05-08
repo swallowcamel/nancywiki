@@ -18,15 +18,17 @@ If you think that the scanning sounds expensive, don’t worry. This does not ha
 
 One of the small, yet neat, features of a module is the ability to define a module path. You can think of this as a root namespace for all the routes that are defined in the module. Each route will be subordinate to the path of the module. This saves you from having to repeat the common parts of the route patterns and also to nicely group you routes together based on their relationship
 
-    public class ResourceModule : NancyModule
+```c#
+public class ResourceModule : NancyModule
+{
+    public ResourceModule() : base("/products")
     {
-        public ResourceModule() : base("/products")
-        {
-            // would capture routes to /products/list sent as a GET request
-            Get["/list"] = parameters => {
-                return "The list of products";
-            };
-        }
+        // would capture routes to /products/list sent as a GET request
+        Get["/list"] = parameters => {
+            return "The list of products";
+        };
     }
+}
+```
 
 [<< Part 1. Introduction](Introduction) - [Documentation overview](Documentation) - [Part 3. Defining routes >>](Defining routes)
