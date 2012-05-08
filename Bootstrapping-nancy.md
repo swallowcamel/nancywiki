@@ -12,22 +12,22 @@ Although you can happily construct NancyEngine yourself, and inject dependencies
 Although the exact instructions may vary slightly depending on your choice of [Hosting], all you generally have to do is add a NancyModule to your project. That's it. No configuration, no registering dependencies, just 100% pure Nancy goodness - if your module has dependencies Nancy will even wire those up too!
 
 For example, if you add this module to your project:
-
-    public class MyModule : NancyModule
+```c#
+public class MyModule : NancyModule
+{
+    private IMyDependency _dependency;
+     
+    public MyModule(IMyDependency dependency)
     {
-      private IMyDependency _dependency;
-      
-      public MyModule(IMyDependency dependency)
-      {
-          _dependency = dependency;
+        _dependency = dependency;
           
-          Get["/"] = x =>
-          {
-          };
-          
-          // Register other routes
-      }
+        Get["/"] = x =>
+        {
+        };
+         
+        // Register other routes
     }
+}
 
 Nancy will automatically discover your module and, assuming you have something that implements IMyDependency, it will automatically be constructed and injected into your module - all without you lifing a finger!
 
@@ -58,9 +58,10 @@ If you don't want to take advantage of the "AutoRegister" feature you can take c
 
 Both of these methods are passed the container instance as a parameter:
 
-    container.Register<IMyInterface, MyImplementation>().AsSingleton();
-    container.Register<IMyInterfaceToo, MyOtherThing>().AsMultiInstance();
-    
+```c#
+container.Register<IMyInterface, MyImplementation>().AsSingleton();
+container.Register<IMyInterfaceToo, MyOtherThing>().AsMultiInstance();
+```
 For more information on the various registration options available, please take a look at the [TinyIoC Wiki](http://hg.grumpydev.com/tinyioc).
 
 ### Part 3 - Alternative Containers ###
@@ -72,16 +73,16 @@ For a list of alternative container implementations please see [Alternative Cont
 ### Part 4 - Barebones ###
 
 Although Nancy provides the Bootstrapper base classes to provide a simple, customisable and consistent interface the only requirement for a BootStrapper is that it implements INancyBootstrapper:
-
+```c#
+/// <summary>
+/// Bootstrapper for the Nancy Engine
+/// </summary>
+public interface INancyBootstrapper
+{
     /// <summary>
-    /// Bootstrapper for the Nancy Engine
+    /// Gets the configured INancyEngine
     /// </summary>
-    public interface INancyBootstrapper
-    {
-        /// <summary>
-        /// Gets the configured INancyEngine
-        /// </summary>
-        /// <returns>Configured INancyEngine</returns>
-        INancyEngine GetEngine();
-    }
-    
+    /// <returns>Configured INancyEngine</returns>
+    INancyEngine GetEngine();
+}
+```   
