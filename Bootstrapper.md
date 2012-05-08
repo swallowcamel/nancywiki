@@ -22,7 +22,7 @@ public class CustomBootstrapper : DefaultNancyBootstrapper
 
 ## Ignoring assemblies when using AutoRegister.
 
-Part of the [SDHP](https://github.com/NancyFx/Nancy/wiki/Introduction), when you use TinyIOC, is `AutoRegister`. Which allows you to piggyback on the IOC-Container, letting you define your own dependencies, that live next to Nancy's. For example injecting your own dependencies into a NancyModule. Though when applications have many references it will take TinyIOC longer and longer to scan through them to find implementations of the dependencies. To prevent this you can specify which assemblies Nancy can ignore. 
+Part of the [Super-Duper-Happy-Path](https://github.com/NancyFx/Nancy/wiki/Introduction), when you use TinyIOC, is `AutoRegister`. Which allows you to piggyback on the IOC-Container, letting you define your own dependencies, that live next to Nancy's. For example injecting your own dependencies into a NancyModule. Though when applications have many references it will take TinyIOC longer and longer to scan through them to find implementations of the dependencies. To prevent this you can specify which assemblies Nancy can ignore. 
 
 ```c#
 public class CustomBootstrapper : DefaultNancyBootstrapper
