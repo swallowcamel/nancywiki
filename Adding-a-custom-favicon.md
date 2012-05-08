@@ -8,26 +8,27 @@ If you have more then one favicon in your application, the first one it finds wi
 ### Using an embedded icon
 You can also embed a favicon in your application assembly. To make Nancy use the embedded icon, simply override the `DefaultFavIcon` property, of your bootstrapper, and add the following code 
 
-    public class Bootstrapper : DefaultNancyBootstrapper
+```c#
+public class Bootstrapper : DefaultNancyBootstrapper
+{
+    private byte[] favicon;
+
+    protected override byte[] DefaultFavIcon
     {
-        private byte[] favicon;
-
-        protected override byte[] DefaultFavIcon
-        {
-            get { return this.favicon?? (this.favicon= LoadFavIcon()); }
-        }
+        get { return this.favicon?? (this.favicon= LoadFavIcon()); }
     }
+}
 
-    private static byte[] LoadFavIcon()
+private static byte[] LoadFavIcon()
+{
+    //TODO: remember to replace 'AssemblyName' with the prefix of the resource
+    using (var resourceStream = GetType().Assembly.GetManifestResourceStream("AssemblyName.favicon.ico"))
     {
-        //TODO: remember to replace 'AssemblyName' with the prefix of the resource
-        using (var resourceStream = GetType().Assembly.GetManifestResourceStream("AssemblyName.favicon.ico"))
-        {
-            var tempFavicon = new byte[resourceStream.Length];
-            resourceStream.Read(tempFavicon, 0, (int)resourceStream.Length);
-            return tempFavicon;
-        }
+        var tempFavicon = new byte[resourceStream.Length];
+        resourceStream.Read(tempFavicon, 0, (int)resourceStream.Length);
+        return tempFavicon;
     }
-
+}
+```
 
 [<< Part 13. Diagnostics](Diagnostics) - [Documentation overview](Documentation)
