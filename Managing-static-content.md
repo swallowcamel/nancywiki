@@ -38,7 +38,7 @@ When using `AddDirectory` you are creating a mapping between a virtual and a phy
 
 Forward slashes should _always_ be used as the path separator, no matter on which platform the application is run. Nancy will ensure that, during run-time, these paths will be converted to valid paths for the platform that the application is running on.
 
-It is important to be aware that you are mapping to a static content root folder and that it is valid to request resources from any sub-folder in that folder. For example of you map _/public_ to _/assets_, you can then add a _javascript_ sub-folder, in _/assets_ which can then be requested using _/public/javascript/_ 
+It is important to be aware that you are mapping to a static content root folder and that it is valid to request resources from any sub-folder in that folder. For example if you map _/public_ to _/assets_, you can then add a _javascript_ sub-folder, in _/assets_ which can then be requested using _/public/javascript/_ 
 
 It is not permitted to map to the root of your application. Any attempt at doing so will result in an _ArgumentException_ being thrown. The reason for this is that it would make it possible to request **any** file in your application if you are not careful.
 
