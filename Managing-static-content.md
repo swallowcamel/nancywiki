@@ -28,7 +28,21 @@ If that looks a little icky, don't worry, Nancy has a helper that will take care
 ## Using the StaticContentConventionBuilder
 The `StaticContentConventionBuilder` is a helper class that is shipped with Nancy. It produces static content conventions for file system based files (e.g. files on the file system, if you want to embed files in an assembly then see the previous section). It encapsulates a lot of the leg work that you would have to write yourself if you wanted to provide an efficient and secure way of letting clients request files of the file system.
 
-There is only one method, `AddDirectory`, on the class with the following signature
+There are two method that produces static content conventions
+* `AddDirectory` - For mapping directories
+* `AddFile` - For mapping individual files
+
+### Mapping a directory using AddDirectory
+
+When using `AddDirectory` you are creating a mapping between a virtual and a physical folder on the filesystem. For instance you may store your static content in _ /assets_ on the file system, but wish for all requests, for that content, to be sent to _/public_
+
+Forward slashes should _always_ be used as the path separator, no matter on which platform the application is run. Nancy will ensure that, during run-time, these paths will be converted to valid paths for the platform that the application is running on.
+
+It is important to be aware that you are mapping to a static content root folder and that it is valid to request resources from any sub-folder in that folder. For example of you map _/public_ to _/assets_, you can then add a _javascript_ sub-folder, in _/assets_ which can then be requested using _/public/javascript/_ 
+
+It is not permitted to map to the root of your application. Any attempt at doing so will result in an _ArgumentException_ being thrown. The reason for this is that it would make it possible to request **any** file in your application if you are not careful.
+
+The `AddDirectory` method has the following signature
 
 ```c#
 public static Func<NancyContext, string, Response> AddDirectory(string requestedPath, 
@@ -36,9 +50,9 @@ public static Func<NancyContext, string, Response> AddDirectory(string requested
                                                                 params string[] allowedExtensions)
 ```
 
-* requestedPath - the path that is actually requested by the client, relative to the application root e.g. /scripts
-* contentPath - optional path that contains the content, again, relative the application root. With this parameter it's possible to "map" requests to /scripts to the /javascript folder in your physical directory structure on disk
-* allowedExtentions - optional list of extensions that are allowed to be served, so in the above example, you may want to just specify that "js" files are allowed and nothing else.
+* `requestedPath` - the path that is actually requested by the client, relative to the application root e.g. /scripts. 
+* `contentPath` - optional path that contains the content, again, relative the application root. With this parameter it's possible to "map" requests to /scripts to the /javascript folder in your physical directory structure on disk.
+* `allowedExtentions` - optional list of extensions that are allowed to be served, so in the above example, you may want to just specify that "js" files are allowed and nothing else.
 
 The resulting convention provides the following features:
 
@@ -49,7 +63,30 @@ The resulting convention provides the following features:
 * Protects against “leaving” the content folder and requesting files that are stored outside the folder and the application itself. Only files in the content folder, or a sub-folder, will be considered valid to return
 * Uses the `MimeTypes` list to automatically detect and set the correct content-type of the file response
 
-Using the `StaticContentConventionBuilder`, to create a new convention is really easy
+### Mapping individual files with AddFile
+
+The `AddFile` method enables you to map individual file names and locations. For example if you do not wish to store your _robots.txt_ file in the root of your application, but instead store it in your _/asserts_ folder, you could map the location of the file and Nancy would forward incoming requests, for that file, to the right location.
+
+It is also possible to map extensionless files to physical files, for example _ /style_ could be mapped to _/assets/style.css_. If a file request is then sent to _/style_, then the _/assets/style.css_ file will be returned in its place.
+
+The `AddFile` method has the following signature
+
+```c#
+public static Func<NancyContext, string, Response> AddFile(string requestedFile, string contentFile)
+```
+
+* `requestedFile` - The name, including path, of the file that is requested by the client
+* `contentFile` - The name, including path, of the file that will be returned in place of the requested file
+
+The resulting convention provides the following features:
+
+* Caches all file system path evaluations, such as making sure the folder and file actually exists, for improved performance on multiple requests
+* Protects against “leaving” the content folder and requesting files that are stored outside the folder and the application itself
+* Uses the `MimeTypes` list to automatically detect and set the correct content-type of the file response
+
+### Defining the new conventions for your application
+
+Using the `StaticContentConventionBuilder`, to create new conventions is really easy
 
 ```c#
 public class CustomBoostrapper : DefaultNancyBootstrapper
@@ -59,7 +96,7 @@ public class CustomBoostrapper : DefaultNancyBootstrapper
         base.ConfigureConventions(conventions);
   
         conventions.StaticContentsConventions.Add(
-            StaticContentConventionBuilder.AddDirectory("assets", @"contentFolder\subFolder")
+            StaticContentConventionBuilder.AddDirectory("assets", @"contentFolder/subFolder")
         );
     }
 }
