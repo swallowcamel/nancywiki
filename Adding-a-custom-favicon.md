@@ -31,4 +31,9 @@ private static byte[] LoadFavIcon()
 }
 ```
 
+### Help! I can't see my icon
+
+I bet if you clear your browsers cache you will see it!
+
+
 [<< Part 13. Diagnostics](Diagnostics) - [Documentation overview](Documentation)
