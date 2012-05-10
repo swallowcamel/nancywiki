@@ -1,7 +1,7 @@
 As a default, Nancy will use an icon, of the Nancy logo, as the favicon for any Nancy application unless you provider you own. Overriding this behavior, to provide your own custom icon, is very simple
 
 ## Replacing the default FavIcon
-Simple take place a `.ico` or `.png` file, called _favicon_ anywhere in your application path (to learn more about the application root path, please consult the [[The Root Path]] section) and Nancy will recursively scan your application, at start up, for the file.
+Simple place a `.ico` or `.png` file, called _favicon_ anywhere in your application path (to learn more about the application root path, please consult the [[The Root Path]] section) and Nancy will recursively scan your application, at start up, for the file.
 
 If you have more then one favicon in your application, the first one it finds will be used.
 
@@ -13,7 +13,7 @@ public class Bootstrapper : DefaultNancyBootstrapper
 {
     private byte[] favicon;
 
-    protected override byte[] DefaultFavIcon
+    protected override byte[] FavIcon
     {
         get { return this.favicon?? (this.favicon= LoadFavIcon()); }
     }
