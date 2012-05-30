@@ -61,7 +61,7 @@ Delete[@"/products/(?<id>[\d]{1,7})"] = parameters => {
 
 // would capture routes like /users/192/add/moderator sent as a POST request
 Post["/users/{id}/add/{category}"] = parameters => {
-    return HttpStatusCode.Ok;
+    return HttpStatusCode.OK;
 };
 ```
 
