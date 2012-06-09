@@ -20,9 +20,24 @@ public class CustomBootstrapper : DefaultNancyBootstrapper
 }
 ```
 
+## Using AutoRegister
+
+Part of the [Super-Duper-Happy-Path](https://github.com/NancyFx/Nancy/wiki/Introduction), when you use TinyIoC, is `AutoRegister`. Which allows you to piggyback on the IoC-Container, letting you define your own dependencies, that live next to Nancy's. For example injecting your own dependencies into a NancyModule.
+
+```c#
+public class Home : NancyModule
+    {
+        public Home(IMessageService service)
+        {
+            //If there is only one implementation of IMessageService in the application,
+            // TinyIoC will resolve the dependency on its own and inject it in the module.
+        }
+    }
+```
+
 ## Ignoring assemblies when using AutoRegister.
 
-Part of the [Super-Duper-Happy-Path](https://github.com/NancyFx/Nancy/wiki/Introduction), when you use TinyIoC, is `AutoRegister`. Which allows you to piggyback on the IoC-Container, letting you define your own dependencies, that live next to Nancy's. For example injecting your own dependencies into a NancyModule. Though when applications have many references it will take TinyIoC longer and longer to scan through them to find implementations of the dependencies. To prevent this you can specify which assemblies Nancy can ignore. 
+Though when applications have many references it will take TinyIoC longer and longer to scan through them to find implementations of the dependencies. To prevent this you can specify which assemblies Nancy can ignore. 
 
 ```c#
 public class CustomBootstrapper : DefaultNancyBootstrapper
