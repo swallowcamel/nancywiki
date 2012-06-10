@@ -5,14 +5,17 @@ Nancy, with a single line of code, can collect information from all of the above
 Although Nancy ships with quite a lot of default binders out of the box, the binding system is easily extensible if you need to support different content types or more complex binding scenarios.
 It’s as easy as including a namespace
 
-Literally. Nancy’s model binding is defined as a single extension method on the `NancyModule` type. The extensions are located in the `Nancy.ModelBinding` namespace and adds a Bind() method, with two overloads:
+Literally. Nancy’s model binding is defined as a single extension method on the `NancyModule` type. The extensions are located in the `Nancy.ModelBinding` namespace and adds a Bind() method, with three overloads:
 
 ```c#
 Foo f = this.Bind();
     
 var f = this.Bind<Foo>();
+
+var f = this.Bind(instance);
+
 ```
-Both overloads have the exact same functionality, they just provide different ways of doing the same thing and it comes down to personal preference which one you choose to use.
+Both all three overloads have the exact same functionality, they just provide different ways of doing the same thing. The first two will create a new instance of the `Foo` type and bind to that, while the last one will bind to an existing instance.
 
 ## Keeping unwanted information out by blacklisting it
 
