@@ -15,7 +15,7 @@ var f = this.Bind<Foo>();
 var f = this.Bind(instance);
 
 ```
-Both all three overloads have the exact same functionality, they just provide different ways of doing the same thing. The first two will create a new instance of the `Foo` type and bind to that, while the last one will bind to an existing instance.
+All three overloads have the exact same functionality, they just provide different ways of doing the same thing. The first two will create a new instance of the `Foo` type and bind to that, while the last one will bind to an existing instance.
 
 ## Keeping unwanted information out by blacklisting it
 
