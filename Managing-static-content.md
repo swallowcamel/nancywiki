@@ -11,7 +11,7 @@ To define your own static content conventions, using the bootstrapper, you simpl
 The `ConfigureConventions` gives you the opportunity to modify the `StaticContentsConventions` property, which is a list of conventions
 
 ```c#
-public class CustomBoostrapper : DefaultNancyBootstrapper
+public class CustomBootstrapper : DefaultNancyBootstrapper
 {
     protected override void ConfigureConventions(NancyConventions conventions)
     {
