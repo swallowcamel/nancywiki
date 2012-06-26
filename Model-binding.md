@@ -31,7 +31,7 @@ The blacklist is a “params” array of strings, where the strings represents t
 
 Sometimes you want to send structured data, such as `JSON` and `XML`; in the request body and bind it to your model. The model binder in Nancy supports the notion of body deserializers that provide the functionality required for this.
 
-Out of the box, Nancy ships with two body deserializes, one for JSON and one for XML. The model binder will use the `Content-Type` HTTP header to determine which deserializer should be used for the attached request body.
+Out of the box, Nancy ships with two body deserializers, one for JSON and one for XML. The model binder will use the `Content-Type` HTTP header to determine which deserializer should be used for the attached request body.
 
 By default, the standard JSON deserializer will be used to deserialize any "json based" content types such as `application/json`, `text/json` and `application/vnd....+json`. Similarly, the standard XML deserializer will be used for “XML based” content types: `application/xml`, `text/xml` and `application/vnd....+xml`.
 
