@@ -1,6 +1,6 @@
 All paths that are used in Nancy are relative something that is known the _root path_. This is the path that tells Nancy where its resources are stored on the file system. The root path is provided to Nancy through an interface called the _IRootPathProvider_, which defines a single method _GetRootPath_.
 
-The various hosting options are all shipped with their own implementation of this interface, because the process of figuring out where the application is located on the file system varies form host to host.
+The various hosting options are all shipped with their own implementation of this interface, because the process of figuring out where the application is located on the file system varies from host to host.
 
 Nancy will automatically use the first implementation, of the _IRootPathProvider_, that it comes across so if you provide multiple implementations the end result will be non-deterministic. Care should be taken to ensure that only one implementation exists in the application domain of the running Nancy application.
 
