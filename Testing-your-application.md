@@ -17,7 +17,7 @@ public void Should_return_status_ok_when_route_exists()
     });
         
     // Then
-    Assert.Equal(result.StatusCode, HttpStatusCode.OK);
+    Assert.Equal(HttpStatusCode.OK, result.StatusCode);
 }
 ```
 The test will send a `GET` request to your application, running in the configuration provided by the `DefaultNancyBootstrapper` and return the actual result, wrapped in an instance of the `BrowserResult` type.
