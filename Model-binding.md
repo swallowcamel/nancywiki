@@ -3,9 +3,9 @@ Data can be sent to your Nancy application in many ways, for instance as part of
 Nancy, with a single line of code, can collect information from all of the above sources, including richer request bodies such as `JSON` and `XML`, and convert them into an instance of a type of your model.
 
 Although Nancy ships with quite a lot of default binders out of the box, the binding system is easily extensible if you need to support different content types or more complex binding scenarios.
-It’s as easy as including a namespace
+It’s as easy as including a namespace.
 
-Literally. Nancy’s model binding is defined as a single extension method on the `NancyModule` type. The extensions are located in the `Nancy.ModelBinding` namespace and adds Bind() and BindTo() methods:
+Nancy’s model binding is defined as a single extension method on the `NancyModule` type. The extensions are located in the `Nancy.ModelBinding` namespace and adds Bind() and BindTo() methods:
 
 ```c#
 Foo f = this.Bind();
