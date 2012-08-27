@@ -113,7 +113,7 @@ Nancy will locate all implementation of the interface and wire up the convention
 
 ## Serving content from a module
 
-You can also use an ordinary `NancyModule` to return static content, by returning responses with the correct body and content-type. Nancy even provide a couple of _response formatters_, to help you out, called `AsJs` and `AsCss`.
+You can also use an ordinary `NancyModule` to return static content, by returning responses with the correct body and content-type. Nancy even provide a couple of _response formatters_, to help you out, called `AsFile`, `AsImage`, `AsJson`, `AsText`, `AsXml` and `AsRedirect`.
 
 The advantage of using a module to serve static content is that you can leverage the full power of a module to implement logic around your static content management, such as making use of module _dependencies_. This can be used when more complex logic is required (such as adding a security layer on top).
 
