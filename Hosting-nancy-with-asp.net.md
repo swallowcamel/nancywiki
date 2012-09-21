@@ -98,3 +98,11 @@ Add the following instruction to the Global.asax.cs file inside the MvcApplicati
 ```c#
 routes.IgnoreRoute("nancy/{*pathInfo}");
 ```
+
+## Prevent IIS from taking over errors
+
+```c#
+<system.webServer>
+    <httpErrors existingResponse="PassThrough"/>
+</system.webServer>
+```
