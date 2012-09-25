@@ -10,6 +10,7 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 ## Media
 
 ### Video
+* [[Presentation By Christian Horsdal at aspConf (July 17, 2012)|http://channel9.msdn.com/Events/aspConf/aspConf/The-Lightweight-Approach-to-Building-Web-Based-APIs-with-Net]]
 * [[Presentation By Nicholas Cloud (May 1, 2011)|http://www.nicholascloud.com/2011/05/nancy-net-micro-web-frameworks-part-1/]]
 * [[Progressive .NET Tutorials 2011: Mark Rendle & Steven Robbins on Introduction to Nancy and Simple.Data (Jul 9, 2011)|http://skillsmatter.com/podcast/open-source-dot-net/introduction-to-nancy-and-simple-data]]
 
