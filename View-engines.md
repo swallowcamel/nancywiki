@@ -55,4 +55,7 @@ Get["/products"] = parameters => {
     return View[new ProductsModel()];
 };
 ```
+
+As part of the new content negotiation features in 0.12, if Nancy could not find your view, the server will return 406 Not Acceptable instead.
+
 [<< Part 7. Bootstrapper](Bootstrapper) - [Documentation overview](Documentation) - [Part 9. View location conventions >>](View location conventions)
