@@ -36,4 +36,4 @@ private static byte[] LoadFavIcon()
 I bet if you clear your browsers cache you will see it!
 
 
-[<< Part 13. Diagnostics](Diagnostics) - [Documentation overview](Documentation) - [Part 14. The Application Before, After and OnError pipelines >>](The Application Before, After and OnError pipelines)
+[<< Part 13. Diagnostics](Diagnostics) - [Documentation overview](Documentation) - [Part 15. The Application Before, After and OnError pipelines >>](The Application Before, After and OnError pipelines)
