@@ -97,3 +97,6 @@ These properties are
 
 - `Default` - Uses the `RijndaelEncryptionProvider` and `DefaultHmacProvider`, both with the `RandomKeyGenerator`. This should only be used as a default `CryptographyConfiguration` in places where you accept one as a parameter but have it as optional.
 - `NoEncryption` - Uses the `NoEncryption` provider and the `DefaultHmacProvider` with a `RandomKeyGenerator`
+
+
+[<< Part 17. Forms authentication](Forms authentication) - [Documentation overview](Documentation)
