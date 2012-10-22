@@ -144,3 +144,6 @@ The actual implementation of an authentication provider is going to vary dependi
 3. An `After` hook on the [Application pipeline] will check for a request that was aborted due to failed authentication, such as keeping an eye out for a response with the `HttpStatusCode.Unauthorized` (401) status code. If detected it will take steps to help the user get authenticated, such as redirecting to a login form or perhaps signal to the client with help of headers
 
 Your mileage may vary but that is the basic flow of an authentication provider.
+
+
+[<< Part 15. The Application Before, After and OnError pipelines](The Application Before, After and OnError pipelines) - [Documentation overview](Documentation) - [Part 17. Forms authentication >>](Forms authentication)
