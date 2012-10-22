@@ -135,3 +135,6 @@ this.config =
         UserMapper = container.Resolve<IUserMapper>(),
     };
 ```
+
+
+[<< Part 16. Authentication overview](Authentication overview) - [Documentation overview](Documentation) - [Part 18. The cryptography helpers >>](The cryptography helpers)
