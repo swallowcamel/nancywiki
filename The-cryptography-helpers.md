@@ -98,5 +98,16 @@ These properties are
 - `Default` - Uses the `RijndaelEncryptionProvider` and `DefaultHmacProvider`, both with the `RandomKeyGenerator`. This should only be used as a default `CryptographyConfiguration` in places where you accept one as a parameter but have it as optional.
 - `NoEncryption` - Uses the `NoEncryption` provider and the `DefaultHmacProvider` with a `RandomKeyGenerator`
 
+You can take a dependency on `CryptographyConfiguration` if you want to use the instance that is configured for your application. In order to configure an instance you can override the `CryptographyConfiguration` property on your boostrapper.
+
+```c#
+/// <summary>
+/// Gets the cryptography configuration
+/// </summary>
+protected virtual CryptographyConfiguration CryptographyConfiguration
+{
+    get { return CryptographyConfiguration.Default; }
+}
+```
 
 [<< Part 17. Forms authentication](Forms authentication) - [Documentation overview](Documentation)
