@@ -57,6 +57,13 @@ This convention looks for the view inside of a folder with the name of the modul
 ```
 This convention looks for the view inside of a folder with the name of the module, but with the suffix _Module_ trimmed of, that is located in the views folder of the application.
 
+## Deriving view name from the model type
+
+If you do not provide a view name and only send in the model, then Nancy will derive the view name from the name of the model type. If the name of the model ends with `Module` then it will be stripped of. 
+
+* `Customer` model type name -> `Customer` view name
+* `CustomerModel` model type name -> `Customer` view name
+
 ## Defining custom conventions
 
 The default conventions definitely won’t suit the need of all applications, or perhaps not always suit your personal preference on where views should be stored. For these scenarios the view conventions, as with everything else in Nancy, are overridable.
