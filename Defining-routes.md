@@ -16,11 +16,11 @@ The three kinds of pattern segments can be combined, in any order, to create a c
 
 ## Action
 
-A route Action is the behavior which is invoked when a request is matched to a route. It is represented by a lambda expression of type `Func<dynamic, Response>` where the dynamic input is a `DynamicDictionary`, a special dynamic type that is defined in Nancy and is covered in [[Taking a look at the DynamicDictionary]]
+A route Action is the behavior which is invoked when a request is matched to a route. It is represented by a lambda expression of type `Func<dynamic, dynamic>` where the dynamic input is a `DynamicDictionary`, a special dynamic type that is defined in Nancy and is covered in [[Taking a look at the DynamicDictionary]]
 
-The response part of the lambda is a Nancy Response object, which enables you to define things like headers and response body. 
+The response can be any model and the final result will be determined by [[Content Negotiation]]. However, if it is of the type `Response` then content negotiation will be ignored and the response will be sent straight back to the host.
 
-The Response object declares several implicit cast operators which enables an action to also return, instead of a Response object, any of the following
+The `Response` object declares several implicit cast operators which enables an action to also return, instead of a `Response` object, any of the following
 
 1. `int` which will be interpreted as a HTTP status code of the response
 2. `HttpStatusCode` enumerable value
