@@ -81,4 +81,10 @@ This would add a view location convention which would look for the view inside o
 
 The `ViewLocationConventions` collection is a standard list that can be modified, using the normal operators it provides. This enables you to do things such as deleting the default conventions or changing the order in which conventions are invoked.
 
+## Defining your own conventions using IConventions
+
+You can also create a class that implements the `IConventions` interface and in the `Initialise` method you add you conventions to the `ViewLocationConventions` property of the conventions that are passed in.
+
+Nancy will locate all implementation of the interface and wire up the conventions, before they are passed onto the `ConfigureConventions` method of the bootstrapper.
+
 [<< Part 8. View engines](View engines) - [Documentation overview](Documentation) - [Part 10. Testing your application >>](Testing your application)
