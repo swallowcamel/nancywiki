@@ -17,6 +17,7 @@
 1. [[Authentication overview]]
 1. [[Forms authentication]]
 1. [[The cryptography helpers]]
+1. [[Content Negotiation]]
 1. More to come
 
 ## Hosting
