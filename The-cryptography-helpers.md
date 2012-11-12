@@ -110,4 +110,4 @@ protected virtual CryptographyConfiguration CryptographyConfiguration
 }
 ```
 
-[<< Part 17. Forms authentication](Forms authentication) - [Documentation overview](Documentation)
+[<< Part 17. Forms authentication](Forms authentication) - [Documentation overview](Documentation) - [Part 19. Content negotiation >>](Content negotiation)
