@@ -2,7 +2,7 @@ The Razor engine in Nancy is a custom implementation built around the Razor synt
 
 ## Installing Razor
 
-Simply reference `Nancy.ViewEngines.Razor.dll` (preferbly by installing the `Nancy.ViewEngines.Razor` nuget) and return views ending in `cshtml` or `vbhtml` it's that simple.
+Simply reference `Nancy.ViewEngines.Razor.dll` (preferably by installing the `Nancy.ViewEngines.Razor` nuget) and return views ending in `cshtml` or `vbhtml` it's that simple.
 
 ## Configuring Razor ##
 
