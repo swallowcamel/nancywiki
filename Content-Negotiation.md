@@ -178,6 +178,8 @@ Func<
    IEnumerable<Tuple<string, decimal>>>
 ```
 
+Essentially this is a function that takes the `NancyContext` and the current accept headers (name and quality pairs) and expects you to return the modified list of accept headers.
+
 By default Nancy ships with the following conventions, in the  `Nancy.Conventions.BuiltInAcceptHeaderCoercions class`,  with those marked with (*) switched on by default:
 
 - `BoostHtml` (*) - boosts the priority of text/html if it’s specified by has a lower priority than other content types.
