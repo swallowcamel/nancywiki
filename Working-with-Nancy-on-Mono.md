@@ -11,6 +11,6 @@ So a couple of quick facts about Nancy on mono, or as I like to call the branch;
 * You'll need F# installed to use the NDjango view engine
 * Neither of the view engines are really that well tested on mono yet
 * We've not had time to try out the various bootstrappers on Nancy, though the integrated on ([TinyIoC](https://github.com/grumpydev/TinyIoC)) runs like a champ on mono
-* You can use our (Google User Group)[https://groups.google.com/forum/#!forum/nancy-web-framework] to post questions about Nancy and Mono
+* You can use our [Google User Group](https://groups.google.com/forum/#!forum/nancy-web-framework) to post questions about Nancy and Mono
 * We've not gotten around to setting up the different test runners on mono yet, so tests are excluded right now
 * We could (nearly) **desperatly** do with a couple of more contributors that would like to help out with this!
