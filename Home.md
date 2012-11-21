@@ -7,6 +7,9 @@ For discussion about the Nancy project, please use our Google Group at [https://
 
 You can also follow the discussion on Twitter using the [#NancyFx](http://search.twitter.com/search?q=%23Nancyfx) hashtag.
 
+### Extensions
+- [[Nancy and New Relic]]
+
 [[Community-Resources]] (Blog Posts, Articles, etc...)
 
 ## Media
