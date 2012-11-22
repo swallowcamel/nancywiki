@@ -99,6 +99,30 @@ Add the following instruction to the Global.asax.cs file inside the MvcApplicati
 routes.IgnoreRoute("nancy/{*pathInfo}");
 ```
 
+It is worth noting that the path that you setup for Nancy, in the routing table, will be part of the requested path to your Nancy module. Using the route above, that means if you wanted to access a `/products` resource, the route would have to be declared for `/nancy/products`
+
+```c#
+public class Home : NancyModule
+{
+   public Home()
+   {
+      Get["/nancy/products"] = x => "The products!";
+   }
+}
+```
+
+You can make use of the base path, of the module, to make it cleaner
+
+```c#
+public class Home : NancyModule
+{
+   public Home() : base("/nancy")
+   {
+      Get["/products"] = x => "The products!";
+   }
+}
+```
+
 ## Prevent IIS from taking over errors
 
 ```c#
