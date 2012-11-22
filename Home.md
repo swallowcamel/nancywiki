@@ -12,11 +12,11 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 ### Extensions
 #####Logging Extensions
 - [[Nancy and New Relic]]
-- [Nancy Elmah](https://github.com/creamdog/Nancy.Elmah)
+- [Nancy Elmah](https://github.com/creamdog/Nancy.Elmah) (Exception logging and viewing using [Elmah](https://code.google.com/p/elmah/))
 
 #####Caching Extensions
 
-- [Nancy LightningCache](https://github.com/creamdog/Nancy.LightningCache)
+- [Nancy LightningCache](https://github.com/creamdog/Nancy.LightningCache) (Asynchronous route-specific caching)
 
 
 
