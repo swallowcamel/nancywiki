@@ -121,4 +121,20 @@ However, there are disadvantages to using modules for static content management.
 
 This means that the request needs to go through things such as route resolving which can have a performance impact on your application.
 
+## Letting IIS handle static content
+
+Sometimes you may want to allow IIS to handle static content for you rather than letting Nancy do it, maybe for performance reasons or possibly something gets miss-configured and it's not working. You can tell IIS to not use Nancy for static content by removing the handler for a specific path:
+
+```xml
+<location path="images">
+  <system.webServer>
+    <handlers>
+      <remove name="Nancy"/>
+    </handlers>
+  </system.webServer>
+</location>
+```
+
+You can change the path to be 'images', 'scripts', 'content, or what ever you need, just be sure you don't have any routes defined which need to use this path, they will no longer work since you're basically telling IIS to not pass any of those requests to the Nancy Handler.
+
 [<< Part 11. The root path](The root path) - [Documentation overview](Documentation) - [Part 13. Diagnostics](Diagnostics) >>
