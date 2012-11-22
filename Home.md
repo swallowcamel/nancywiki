@@ -10,15 +10,15 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 [[Community-Resources]] (Blog Posts, Articles, etc...)
 
 ### Extensions
-#####Logging Extensions
+#####Logging 
 - [[Nancy and New Relic]]
 - [Nancy Elmah](https://github.com/creamdog/Nancy.Elmah) (Exception logging and viewing using [Elmah](https://code.google.com/p/elmah/))
 
-#####Caching Extensions
+#####Caching 
 
 - [Nancy LightningCache](https://github.com/creamdog/Nancy.LightningCache) (Asynchronous route-specific caching)
 
-#####Web performance Extensions
+#####Web performance 
 
 - [Nancy.AspNetSprites.Razor](https://github.com/JefClaes/Nancy.AspNetSprites.Razor) 
 - [Cassette.Nancy](https://github.com/ChrisMH/Cassette.Nancy)
