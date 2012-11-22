@@ -18,7 +18,10 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 
 - [Nancy LightningCache](https://github.com/creamdog/Nancy.LightningCache) (Asynchronous route-specific caching)
 
+#####Web performance Extensions
 
+- [Nancy.AspNetSprites.Razor](https://github.com/JefClaes/Nancy.AspNetSprites.Razor) 
+- [Cassette.Nancy](https://github.com/ChrisMH/Cassette.Nancy)
 
 ## Media
 
