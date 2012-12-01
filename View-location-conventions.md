@@ -88,7 +88,8 @@ This would add a view location convention which would look for the view inside o
 
 The `ViewLocationConventions` collection is a standard list that can be modified, using the normal operators it provides. This enables you to do things such as deleting the default conventions or changing the order in which conventions are invoked.
 
-### Note: You can also call `.Insert(0, *convention*)` as well so that it is evaluated first, before all others. Then the existing View Conventions can be used as fall-backs. 
+### Note: 
+You can also call `.Insert(0, *convention*)` as well so that it is evaluated first, before all others. Then the existing View Conventions can be used as fall-backs. 
 
 ## Defining your own conventions using IConventions
 
