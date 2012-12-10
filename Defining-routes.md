@@ -101,7 +101,7 @@ The following parameters are provided
 
 The `Match` method is expected to return a [RoutePatternMatchResult](https://github.com/NancyFx/Nancy/blob/master/src/Nancy/Routing/RoutePatternMatchResult.cs), which indicates if there was a match, or not, and the parameters that were captured
 
-## The IRouteSegmentExtractor interface
+### The IRouteSegmentExtractor interface
 
 This interface is responsible for breaking up a route pattern into parts, which is then passed in to the `IRoutePatternMatcher` and can be used to easier work with the route when trying to deterring if it is a match or not.
 
@@ -122,7 +122,7 @@ public interface IRouteSegmentExtractor
 
 What a segment means can vary between implementations. For the default implementation, the `DefaultRouteSegmentExtractor`, it will split the route pattern on every occurance of a forward slash and return the parts as the segments, so `/foo/{bar}/(?<id>[\d]*)` would be split up into `foo`, `{bar}` and `(?<id>[\d]*)`.
 
-## Wiring it all up
+### Wiring it all up
 
 Once you have implemented your own route pattern matcher, the last thing you need to do is to tell Nancy to use it. You do this by overriding the `NancyInternalConfiguration` property, on your [[Bootstrapper]] and point the `RoutePatternMatcher` to your implementation.
 
