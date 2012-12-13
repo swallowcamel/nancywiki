@@ -71,7 +71,7 @@ If you ever find yourself in a place where the default capture functionality doe
 
 ### The IRoutePatternMatcher interface
 
-This interface is responsible for telling Nancy if the incoming request matches the route that is passed in. by providing your own implementation you can support what ever syntax and/or functionality that you wish
+This interface is responsible for telling Nancy if the incoming request matches the route that is passed in. By providing your own implementation, you can support what ever syntax and/or functionality that you wish.
 
 ```c#
 /// <summary>
@@ -99,7 +99,7 @@ The following parameters are provided
 - `segments` - A split version of the `routePath` value. More about this below
 - `context` - An instance of the `NancyContext` type, for the incoming request
 
-The `Match` method is expected to return a [RoutePatternMatchResult](https://github.com/NancyFx/Nancy/blob/master/src/Nancy/Routing/RoutePatternMatchResult.cs), which indicates if there was a match, or not, and the parameters that were captured
+The `Match` method is expected to return a [RoutePatternMatchResult](https://github.com/NancyFx/Nancy/blob/master/src/Nancy/Routing/RoutePatternMatchResult.cs), which indicates if there was a match, or not, and the parameters that were captured.
 
 ### The IRouteSegmentExtractor interface
 
