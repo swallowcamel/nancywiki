@@ -103,7 +103,7 @@ The `Match` method is expected to return a [RoutePatternMatchResult](https://git
 
 ### The IRouteSegmentExtractor interface
 
-This interface is responsible for breaking up a route pattern into parts, which is then passed in to the `IRoutePatternMatcher` and can be used to easier work with the route when trying to deterring if it is a match or not.
+This interface is responsible for breaking a route pattern into parts which can then be passed in to the `IRoutePatternMatcher`. This can simplify working with the route when determining if it is a match.
 
 ```c#
 /// <summary>
@@ -120,7 +120,7 @@ public interface IRouteSegmentExtractor
 }
 ```
 
-What a segment means can vary between implementations. For the default implementation, the `DefaultRouteSegmentExtractor`, it will split the route pattern on every occurance of a forward slash and return the parts as the segments, so `/foo/{bar}/(?<id>[\d]*)` would be split up into `foo`, `{bar}` and `(?<id>[\d]*)`.
+What a segment means can vary between implementations. For the default implementation, the `DefaultRouteSegmentExtractor`, it will split the route pattern on every occurrence of a forward slash and return the parts as the segments, so `/foo/{bar}/(?<id>[\d]*)` would be split up into `foo`, `{bar}` and `(?<id>[\d]*)`.
 
 ### Wiring it all up
 
