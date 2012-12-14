@@ -32,5 +32,33 @@ public class CustomBootstrapper : DefaultNancyBootstrapper
 ```
 When your application runs, the bootstrapper will register this implementation in the current container and will be used when dependencies on the `IRootPathProvider` are resolved.
 
+##Uploading Files
+
+To upload a file in Nancy you need to take the content stream of the uploaded file, create a file on disk and write that stream to disk.
+
+    var uploadDirectory = pathProvider.GetRootPath() + "\\Content\\uploads";
+    
+    if (!Directory.Exists(uploadDirectory))
+    {
+      Directory.CreateDirectory(uploadDirectory);
+    }
+    
+    foreach (var file in Request.Files)
+    {
+      using (FileStream fileStream = System.IO.File.Create(uploadDirectory + "\\" + file.Name, (int)file.Value.Length))
+      {
+         // Fill the bytes[] array with the stream data
+         byte[] bytesInStream = new byte[file.Value.Length];
+         file.Value.Read(bytesInStream, 0, (int)bytesInStream.Length);
+    
+         // Use FileStream object to write to the specified file
+         fileStream.Write(bytesInStream, 0, bytesInStream.Length);
+      }
+    }
+
+However, you may be wondering what is pathProvider. This variable is passed into our module constructor which gives us access to the root path of our application by calling `GetRootPath()` and then you can save to a folder within your application.
+
+    public HomeModule(IRootPathProvider pathProvider)
+
 
 [<< Part 10. Testing your application](Testing your application) - [Documentation overview](Documentation) - [Part 12. Managing static content](Managing static content) >>
