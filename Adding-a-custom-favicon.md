@@ -31,6 +31,10 @@ private static byte[] LoadFavIcon()
 }
 ```
 
+### Removing the icon
+
+If you do not wish to use a favicon, at all, then simply override the `FavIcon` property, on your [[Bootstrapper]] and return `null`
+
 ### Help! I can't see my icon
 
 I bet if you clear your browsers cache you will see it!
