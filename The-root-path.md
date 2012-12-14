@@ -45,7 +45,7 @@ To upload a file in Nancy you need to take the content stream of the uploaded fi
     
     foreach (var file in Request.Files)
     {
-      using (FileStream fileStream = System.IO.File.Create(uploadDirectory + "\\" + file.Name, (int)file.Value.Length))
+      using (FileStream fileStream = System.IO.File.Create(Path.Combine(uploadDirectory, file.Name), (int)file.Value.Length))
       {
          // Fill the bytes[] array with the stream data
          byte[] bytesInStream = new byte[file.Value.Length];
