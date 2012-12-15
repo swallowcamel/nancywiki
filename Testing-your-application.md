@@ -1,5 +1,7 @@
 The super-duper-happy-path (see [[Introduction]]) is not just something that we want to be the ethos for writing Nancy applications, but also for testing them. For that reason we provide a special assembly called `Nancy.Testing`, available via [Nuget](http://nuget.org), [our TeamCity server](http://teamcity.codebetter.com/project.html?projectId=project112&tab=projectOverview&guest=true) (for latest builds) or from the [GitHub repository](https://github.com/NancyFx/Nancy/tree/master/src/Nancy.Testing), and it contains some nice helpers.
 
+_Note!_ You should always keep your tests in a separate assembly than that of your application. The reason for this is the auto-discoverability that is used by Nancy to find and wire up a lot of things, including the [[Bootstrapper]]. If you keep your tests in the same assembly then isolation is going to be a lot more difficult. 
+
 Because Nancy is a self-composing framework (see [[Bootstrapper]]), the runtime composition of the framework can have impact on the results of your routes. To help you test your routes in the right runtime context, we provide a helper class called `Browser`.
 
 You instantiate the Browser with the bootstrapper you want to use when the request is processed, and then fire off requests and inspect the results.
