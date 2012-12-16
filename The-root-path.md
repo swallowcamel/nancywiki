@@ -36,7 +36,8 @@ When your application runs, the bootstrapper will register this implementation i
 
 To upload a file in Nancy you need to take the content stream of the uploaded file, create a file on disk and write that stream to disk.
 
-    var uploadDirectory = pathProvider.GetRootPath() + "\\Content\\uploads";
+    var uploadDirectory =
+       Path.Combine(pathProvider.GetRootPath(), "Content", "uploads");
     
     if (!Directory.Exists(uploadDirectory))
     {
