@@ -8,6 +8,8 @@ All commands have an optional semi-colon delimiter which can be used to remove a
 
 As SSVE is a regular expression based view engine there is no “code execution”, so you cannot specify an arbitrary chunk of your own code to execute. The built in syntax/commands that you can use are as follows.
 
+Please note that all quotes should be _single-quotes_ in the expressions
+
 ### Standard variable substitution
 Replaces with the string representation of the parameter, or the model itself if a parameter is not specified. If the substitution can not be performed, for instance if you specify an invalid model property, it will be substituted with `[Err!]`
 
