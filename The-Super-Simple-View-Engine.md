@@ -166,3 +166,6 @@ Example
 ```
 @Path['~/relative/url/image.png']
 ```
+
+
+[<< Part 19. Content Negotiation](Content Negotiation) - [Documentation overview](Documentation)
