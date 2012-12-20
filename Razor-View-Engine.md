@@ -1,4 +1,4 @@
-The Razor engine in Nancy is a custom implementation built around the Razor syntax parser. Please note that the implementation may have differences to implementation used by ASP.NET MVC.
+The Razor engine in Nancy is a custom implementation built around the Razor syntax parser. Please note that the implementation may have differences to the implementation used by ASP.NET MVC.
 
 ## Installing Razor
 
