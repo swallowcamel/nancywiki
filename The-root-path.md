@@ -36,8 +36,7 @@ When your application runs, the bootstrapper will register this implementation i
 
 To upload a file in Nancy you need to take the content stream of the uploaded file, create a file on disk and write that stream to disk.
 
-    var uploadDirectory =
-       Path.Combine(pathProvider.GetRootPath(), "Content", "uploads");
+    var uploadDirectory =  Path.Combine(pathProvider.GetRootPath(), "Content", "uploads");
     
     if (!Directory.Exists(uploadDirectory))
     {
@@ -46,14 +45,10 @@ To upload a file in Nancy you need to take the content stream of the uploaded fi
     
     foreach (var file in Request.Files)
     {
-      using (FileStream fileStream = System.IO.File.Create(Path.Combine(uploadDirectory, file.Name), (int)file.Value.Length))
+      var filename = Path.Combine(uploadDirectory, file.Name);
+      using (FileStream fileStream = new FileStream(filename, FileMode.Create))
       {
-         // Fill the bytes[] array with the stream data
-         byte[] bytesInStream = new byte[file.Value.Length];
-         file.Value.Read(bytesInStream, 0, (int)bytesInStream.Length);
-    
-         // Use FileStream object to write to the specified file
-         fileStream.Write(bytesInStream, 0, bytesInStream.Length);
+         file.Value.CopyTo(fileStream);
       }
     }
 
