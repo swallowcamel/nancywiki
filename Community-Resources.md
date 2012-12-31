@@ -1,10 +1,18 @@
-###Blog posts
+### Blog posts
 
+* [[Building a simple Nancy app from scratch using Mono and MonoDevelop in OSX|http://littlegists.blogspot.co.uk/2012/12/building-simple-nancy-app-from-scratch.html]]
+* [[Nancy and C# uploading and showing an image|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-c-uploading-and]]
+* [[Nancy and returning a pdf|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-returning-a-pdf]]
+* [[Configuring multiple Forms Authentication sections with NancyFX|http://www.philliphaydon.com/2012/12/configuring-multiple-forms-authentication-sections-with-nancyfx/]]
 * [[Forms Authentication with NancyFX|http://www.philliphaydon.com/2012/12/forms-authentication-with-nancyfx/]]
-* [[Nancy and Content Negotiation|http://www.philliphaydon.com/2012/11/nancy-and-content-negotiation/]]
-* [[Nancy and Areas|http://www.philliphaydon.com/2012/09/nancy-and-areas/]]
+* [[NancyFX and Content Negotiation|http://www.philliphaydon.com/2012/11/nancy-and-content-negotiation/]]
+* [[NancyFX and Areas|http://www.philliphaydon.com/2012/09/nancy-and-areas/]]
 * [[NancyFX, RavenDB, NerdDinner and Me|http://blog.jonathanchannon.com/2012/09/21/nancyfx-ravendb-nerddinner-and-me/]]
 * [[Compile Nancy applications on a Raspberry Pi|http://techny.tumblr.com/post/36438641616/compile-nancy-applications-on-a-raspberry-pi]]
+* [[From ASP.NET MVC to Nancy - Part 1|http://jhovgaard.net/from-aspnet-mvc-to-nancy-part-1]]
+* [[From ASP.NET MVC to Nancy - Part 2|http://jhovgaard.net/from-aspnet-mvc-to-nancy-part-2]]
+* [[From ASP.NET MVC to Nancy - Part 3|http://jhovgaard.net/from-aspnet-mvc-to-nancy-part-3]]
+* [[Lightweight Development in .Net: Nancy|http://theothersideofcode.com/lightweight-development-in-dot-net-nancy]]
 
 ### VB.NET Blog Posts
 * [[Nancy and VB.Net|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/ASPNET/nancy-and-vb-net]]
@@ -12,3 +20,6 @@
 * [[Nancy and VB.Net: the razor view engine|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-vb-net-the]]
 * [[Nancy and VB.Net: testing your modules.|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-vb-net-testing]]
 * [[Nancy and VB.Net: The bootstrapper|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-vb-net-the-1]]
+* [[Nancy and VB.Net: the login/logout thing|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-vb-net-the-2]]
+* [[Nancy and VB.Net: Using easyhttp as our client|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-vb-net-using]]
+* [[Nancy and VB.Net: Forms authentication|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-vb-net-forms]]
