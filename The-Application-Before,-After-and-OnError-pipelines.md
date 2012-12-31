@@ -43,7 +43,7 @@ pipelines.OnError += (ctx, ex) => {
 ```
 
 Wiring up your hooks
-To create application level hooks you define them in your [Bootstrapper]. They can defined either in the `ApplicationStartup` or `RequestStartup` methods. This is because you might need to use something from the container, in your hook, and the different methods lets you resolve from the right container depending on your scoping requirements.
+To create application level hooks you define them in your [Bootstrapper](Bootstrapper). They can defined either in the `ApplicationStartup` or `RequestStartup` methods. This is because you might need to use something from the container, in your hook, and the different methods lets you resolve from the right container depending on your scoping requirements.
 
 ```c#
 protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
