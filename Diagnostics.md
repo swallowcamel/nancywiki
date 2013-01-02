@@ -31,7 +31,7 @@ It is recommended that the call to `DiagnosticsHook.Disable()` is performed from
 ```c#
 public class CustomBootstrapper : DefaultNancyBootstrapper
 {
-    protected override void ApplicationStartup(TinyIoC.TinyIoCContainer container, IPipelines pipelines)
+    protected override void ApplicationStartup(TinyIoc.TinyIoCContainer container, IPipelines pipelines)
     {
         DiagnosticsHook.Disable();
     }
