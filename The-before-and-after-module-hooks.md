@@ -1,4 +1,4 @@
-Besides defining handlers for specific routes, a module can also intercept requests that match one of its routes, both before and after the route is invoked. It is important to understand that these interceptors will only be invoked if the incoming request `matches one of the routes in the module`.
+Besides defining handlers for specific routes, a module can also intercept requests that match one of its routes, both before and after the route is invoked. It is important to understand that these interceptors will only be invoked if the incoming request matches one of the routes in the module.
 
 ## Intercepting the request before the route is invoked
 
