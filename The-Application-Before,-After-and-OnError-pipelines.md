@@ -1,4 +1,4 @@
-The application pipelines enables you to perform tasks before and after routes are executed, and in the event of an error in any of the routes in the application. They behave the same way as the module pipelines] but they are executed for all invoked routes, not just for the ones that are the module of the route that is being invoked.
+The application pipelines enables you to perform tasks before and after routes are executed, and in the event of an error in any of the routes in the application. They behave the same way as the module pipelines but they are executed for all invoked routes, not just for the ones that are the module of the route that is being invoked.
 
 ## Intercepting the request before the route is invoked
 
