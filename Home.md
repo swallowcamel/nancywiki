@@ -31,6 +31,7 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 * [[Progressive .NET Tutorials 2011: Mark Rendle & Steven Robbins on Introduction to Nancy and Simple.Data (Jul 9, 2011)|http://skillsmatter.com/podcast/open-source-dot-net/introduction-to-nancy-and-simple-data]]
 
 ### Audio
+* [[Hanselminutes Podcast 351 - Understanding NancyFx with Richard Cirerol (Dec 27, 2012)|http://hanselminutes.com/351/understanding-nancyfx-with-richard-cirerol]]
 * [[Hanselminutes Podcast 270 - Nancy, Sinatra and the Explosion of .NET Micro Web Frameworks with Andreas 
 Håkansson (Jun 9, 2011)|http://www.hanselminutes.com/default.aspx?showID=290]]
 * [[Herding Code Podcast 123 - Andreas Håkansson and Steven Robbins on NancyFx (Oct 17, 2011)|http://herdingcode.com/?p=350]]
