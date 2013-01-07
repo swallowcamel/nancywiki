@@ -18,6 +18,7 @@
 1. [[Forms authentication]]
 1. [[The cryptography helpers]]
 1. [[Content negotiation]]
+1. [[The Super Simple View Engine]]
 1. More to come
 
 ## Hosting
