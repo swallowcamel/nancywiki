@@ -26,7 +26,7 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 ## Media
 
 ### Video
-* [[NancyFx Tutorial by Dan Swain - January 8, 2013|http://www.youtube.com/watch?v=SJm7chCfaDs]]
+* [[NancyFx Tutorial by Dan Swain (Jan 8, 2013)|http://www.youtube.com/watch?v=SJm7chCfaDs]]
 * [[aspConf 2012: Christian Horsdal on The Lightweight Approach to Building Web Based APIs with .Net (July 17, 2012)|http://channel9.msdn.com/Events/aspConf/aspConf/The-Lightweight-Approach-to-Building-Web-Based-APIs-with-Net]]
 * [[Presentation By Nicholas Cloud (May 1, 2011)|http://www.nicholascloud.com/2011/05/nancy-net-micro-web-frameworks-part-1/]]
 * [[Progressive .NET Tutorials 2011: Mark Rendle & Steven Robbins on Introduction to Nancy and Simple.Data (Jul 9, 2011)|http://skillsmatter.com/podcast/open-source-dot-net/introduction-to-nancy-and-simple-data]]
