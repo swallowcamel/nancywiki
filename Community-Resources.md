@@ -1,5 +1,6 @@
 ### Blog posts
 
+* [[Why use NancyFX?|http://blog.jonathanchannon.com/2012/12/19/why-use-nancyfx/]]
 * [[Building a simple Nancy app from scratch using Mono and MonoDevelop in OSX|http://littlegists.blogspot.co.uk/2012/12/building-simple-nancy-app-from-scratch.html]]
 * [[Nancy and C# uploading and showing an image|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-c-uploading-and]]
 * [[Nancy and returning a pdf|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-returning-a-pdf]]
