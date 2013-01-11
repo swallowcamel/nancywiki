@@ -20,5 +20,25 @@ The `statelessAuthConfiguration` variable, that is passed into `FormsAuthenticat
 
 When creating an instance of the `StatelessAuthenticationConfiguration` type, it expects a single parameter of type `Func<NancyContext, IUserIdentity>`. The function is what is used to inspect the request (or anything else in the context for that matter) and return `null` if the request should not be treated as authenticated, or the appropriate [IUserIdentity](https://github.com/NancyFx/Nancy/wiki/Authentication-overview) if it should.
 
+## Sample configuration
+
+```c#
+var configuration =
+    new StatelessAuthenticationConfiguration(ctx =>
+    {
+        if (!ctx.Request.Query.apikey.HasValue)
+        {
+            return null;
+        }
+
+        // This would where you authenticated the request. IUserApiMapper is
+        // not a Nancy type.
+        var userValidator = 
+            container.Resolve<IUserApiMapper>();
+
+        return userValidator.GetUserFromAccessToken(ctx.Request.Query.apikey);
+    });
+```
+
 
 [<< Part 20. The Super Simple View Engine](The Super Simple View Engine) - [Documentation overview](Documentation)
