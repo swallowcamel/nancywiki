@@ -1,4 +1,3 @@
-## Hosting NancyFx with Nginx on Ubuntu
 This tutorial describes how to install and run a NancyFx powered website on [Ubuntu 12.04][ubuntu]
 
 # Install mono on your ubunu machine
