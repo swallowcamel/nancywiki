@@ -18,6 +18,10 @@ You create "bundles" of your asset files, as per the above introduction blog pos
 
 Rather than create a Global.asax file in your project you do your wiring up of bundles in the ApplicationStart of your Nancy Bootstrapper.
 
+### Advanced
+
+The following sections (with the last being a full code example) cover advanced scenarios and topics of SquishIt. The specific code around asset location in unit testing is specific to Nancy on .NET and Windows and will most likely not work on Mono.
+
 ### Advanced - Diskless caching
 
 In release mode, SquishIt will write your minified files to disk. In shared hosting or in production this can cause problems or additional steps to your deployment scripts to assign folder permissions.
