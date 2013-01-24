@@ -28,6 +28,7 @@ You can create an asset module to handle serving files from memory:
 
 http://blogs.lessthandot.com/index.php/WebDev/UIDevelopment/AJAX/squishit-and-nancy
 
+```c#
     public class AssetModule : NancyModule
     {
         public AssetModule() : base("/assets")
@@ -44,11 +45,13 @@ http://blogs.lessthandot.com/index.php/WebDev/UIDevelopment/AJAX/squishit-and-na
                 .WithHeader("Cache-Control", "max-age=45");
         }
     }
+```
 
 ### Advanced - Protecting your assets
 
 In certain scenarios you don't want unauthenticated users to get access to all your assets. You would construct your asset module like:
 
+```c#
     Get["/admin/js/{name}"] = parameters =>
     {
         this.RequiresAuthentication();
@@ -64,17 +67,21 @@ In certain scenarios you don't want unauthenticated users to get access to all y
 
         return CreateResponse(Bundle.Css().RenderCached((string)parameters.name), Configuration.Instance.CssMimeType);
     };  
+```
 
 ### Advanced - Testing with SquishIt
 
 If you want to run tests against views with SquishIt used, you will most likely encounter:
 
-`System.Collections.Generic.KeyNotFoundException : The given key was not present in the dictionary.`
+```c#
+System.Collections.Generic.KeyNotFoundException : The given key was not present in the dictionary.
+```
 
 With a stack trace that hints that something went bang in SquishIt. This is down to SquishIt not being able to find your asset files.
 
 You can work around this by telling SquishIt to look in your full project rather than the bin of test project, for example:
 
+```c#
 	var fullProjectPath = "";
 
 	var directoryName = Path.GetDirectoryName(typeof (Bootstrapper).Assembly.CodeBase);
@@ -87,18 +94,22 @@ You can work around this by telling SquishIt to look in your full project rather
 	}
 
 	bundle.Add(fullProjectPath + "/static/js/foo.js");
+```
 
 ### Advanced - Only minifying certain files
 
 If you are using something like AngularJS that relies on proper variable names for say dependancy injection, you can choose not to minify that particular file in SquishIt using:
 
-`bundle.AddMinified("~/static/js/angular/controllers.js");`
+```c#
+bundle.AddMinified("~/static/js/angular/controllers.js");
+```
 
 ### Advanced - The Full Monty
 
 If you want to know how I've configured my application with SquishIt, here's how.
 
 I defined a custom class to hold the url and if it should be minified or not (AngularJS doesn't like it so much):
+
 ```c#
     public class SquishItFile
     {
@@ -263,7 +274,7 @@ And in my custom Nancy testing Bootstrapper so SquishIt can find my asset files:
 ```c#
     public class TestingNancyBootstrapper : Bootstrapper
     {
-        protected string PathToEscapeWebRoot()
+        protected string PathToProjectWebRoot()
         {
             var directoryName = Path.GetDirectoryName(typeof (Bootstrapper).Assembly.CodeBase);
 
@@ -280,7 +291,7 @@ And in my custom Nancy testing Bootstrapper so SquishIt can find my asset files:
         protected override void ApplicationStartup(TinyIoCContainer container, Nancy.Bootstrapper.IPipelines pipelines)
         {
             // Setup SquishIt bundles
-            SquishItStartup.Setup(PathToEscapeWebRoot());
+            SquishItStartup.Setup(PathToProjectWebRoot());
         }
     }
 ```
