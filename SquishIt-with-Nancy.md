@@ -66,3 +66,9 @@ In certain scenarios you don't want unauthenticated users to get access to all y
             };
 
 ### Advanced - Testing with SquishIt
+
+### Advanced - Only minifying certain files
+
+If you are using something like AngularJS that relies on proper variable names for say dependancy injection, you can choose not to minify that particular file in SquishIt using:
+
+`bundle.AddMinified("~/static/js/angular/controllers.js");`
