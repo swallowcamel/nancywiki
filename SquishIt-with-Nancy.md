@@ -218,3 +218,69 @@ I have a "startup" class that handles building the bundles from my lists of file
         }
     }
 ```
+
+This is then used in my custom Nancy Boostrapper like so:
+
+```c#
+   public class Bootstrapper : DefaultNancyBootstrapper
+    {
+        protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
+        {
+            base.ApplicationStartup(container, pipelines);
+
+            // Setup SquishIt bundles
+            SquishItStartup.Setup();
+        }
+    }
+```
+
+Then in my Razor layout view file I can call SquishIt like:
+
+```c#
+    @if (StaticConfiguration.IsRunningDebug)
+    {
+        @Html.Raw(Bundle.Css().RenderNamed("public-css-debug"))
+    }
+    else
+    {
+        @Html.Raw(Bundle.Css().RenderCachedAssetTag("public-css"))
+    }
+
+    @if (StaticConfiguration.IsRunningDebug)
+    {
+        @Html.Raw(Bundle.JavaScript().RenderNamed("public-js-debug"))
+    }
+    else
+    {
+        @Html.Raw(Bundle.JavaScript().RenderCachedAssetTag("public-js"))
+    }
+```
+
+This enabled me to have faster debugging as it doesn't process files but get the benefits when I publish my website.
+
+And in my custom Nancy testing Bootstrapper so SquishIt can find my asset files:
+
+```c#
+    public class TestingNancyBootstrapper : Bootstrapper
+    {
+        protected string PathToEscapeWebRoot()
+        {
+            var directoryName = Path.GetDirectoryName(typeof (Bootstrapper).Assembly.CodeBase);
+
+            if (directoryName != null)
+            {
+                var assemblyPath = directoryName.Replace(@"file:\", string.Empty);
+
+                return Path.Combine(assemblyPath, "..", "..", "..", "MyProject.Web");
+            }
+
+            return "";
+        }
+
+        protected override void ApplicationStartup(TinyIoCContainer container, Nancy.Bootstrapper.IPipelines pipelines)
+        {
+            // Setup SquishIt bundles
+            SquishItStartup.Setup(PathToEscapeWebRoot());
+        }
+    }
+```
