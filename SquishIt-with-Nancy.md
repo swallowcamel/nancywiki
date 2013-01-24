@@ -20,7 +20,9 @@ Rather than create a Global.asax file in your project you do your wiring up of b
 
 ### Advanced
 
-The following sections (with the last being a full code example) cover advanced scenarios and topics of SquishIt. The specific code around asset location in unit testing is specific to Nancy on .NET and Windows and will most likely not work on Mono.
+The following sections (with the last being a full code example) cover advanced scenarios and topics of SquishIt. 
+
+The code around asset location in unit testing is specific to Nancy on .NET and Windows and will most likely not work on Mono.
 
 ### Advanced - Diskless caching
 
