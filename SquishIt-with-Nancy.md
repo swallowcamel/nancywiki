@@ -26,9 +26,28 @@ Following the approach listed here:
 
 You can create an asset module to handle serving files from memory:
 
+http://blogs.lessthandot.com/index.php/WebDev/UIDevelopment/AJAX/squishit-and-nancy
+
+    public class AssetModule : NancyModule
+    {
+        public AssetModule() : base("/assets")
+        {
+            Get["/js/{name}"] = parameters => CreateResponse(Bundle.JavaScript().RenderCached((string)parameters.name), Configuration.Instance.JavascriptMimeType);
+
+            Get["/css/{name}"] = parameters => CreateResponse(Bundle.Css().RenderCached((string)parameters.name), Configuration.Instance.CssMimeType);
+        }
+
+        Response CreateResponse(string content, string contentType)
+        {
+            return Response
+                .FromStream(() => new MemoryStream(Encoding.UTF8.GetBytes(content)), contentType)
+                .WithHeader("Cache-Control", "max-age=45");
+        }
+    }
+
 ### Advanced - Protecting your assets
 
-In certain scenarios you don't want un-authenticated users to get access to all your assets. You would construct your asset module like:
+In certain scenarios you don't want unauthenticated users to get access to all your assets. You would construct your asset module like:
 
             Get["/admin/js/{name}"] = parameters =>
             {
@@ -46,3 +65,4 @@ In certain scenarios you don't want un-authenticated users to get access to all 
                 return CreateResponse(Bundle.Css().RenderCached((string)parameters.name), Configuration.Instance.CssMimeType);
             };
 
+### Advanced - Testing with SquishIt
