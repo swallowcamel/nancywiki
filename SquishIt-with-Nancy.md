@@ -137,3 +137,84 @@ I have a static class listing all my "to be bundles" assets:
         };
     }
 ```
+
+I have a "startup" class that handles building the bundles from my lists of files
+
+```c#
+    public class SquishItStartup
+    {
+        protected static string BasePathForTesting = "";
+
+        protected static JavaScriptBundle BuildJavaScriptBundle(List<SquishItFile> files)
+        {
+            var bundle = Bundle.JavaScript();
+
+            foreach (var item in files)
+            {
+                var url = item.Url;
+
+                if (!string.IsNullOrWhiteSpace(BasePathForTesting))
+                {
+                    url = BasePathForTesting + item.Url.Replace("~", "");
+                }
+
+                if (item.Minify)
+                {
+                    bundle.Add(url);
+                }
+                else
+                {
+                    bundle.AddMinified(url);
+                }
+            }
+
+            return bundle;
+        }
+
+        protected static CSSBundle BuildCssBundle(List<SquishItFile> files)
+        {
+            var bundle = Bundle.Css();
+
+            foreach (var item in files)
+            {
+                var url = item.Url;
+
+                if (!string.IsNullOrWhiteSpace(BasePathForTesting))
+                {
+                    url = BasePathForTesting + item.Url.Replace("~", "");
+                }
+
+                if (item.Minify)
+                {
+                    bundle.Add(url);
+                }
+                else
+                {
+                    bundle.AddMinified(url);
+                }
+            }
+
+            return bundle;
+        }
+
+        public static void Setup(string basePathForTesting = "")
+        {
+            BasePathForTesting = basePathForTesting;
+
+            // CSS
+            BuildCssBundle(Bundles.PublicCss).ForceRelease().AsCached("public-css", "~/assets/css/public-css");
+            BuildCssBundle(Bundles.PublicCss).ForceDebug().AsNamed("public-css-debug", "");
+
+            BuildCssBundle(Bundles.AdminCss).ForceRelease().AsCached("admin-css", "~/assets/admin/css/admin-css");
+            BuildCssBundle(Bundles.AdminCss).ForceDebug().AsNamed("admin-css-debug", "");
+
+            // JS
+            BuildJavaScriptBundle(Bundles.PublicJavaScript).ForceRelease().AsCached("public-js", "~/assets/js/public-js");
+            BuildJavaScriptBundle(Bundles.PublicJavaScript).ForceDebug().AsNamed("public-js-debug", "");
+
+            BuildJavaScriptBundle(Bundles.AdminJavaScript).ForceRelease().AsCached("admin-js", "~/assets/admin/js/admin-js");
+
+            BuildJavaScriptBundle(Bundles.AdminJavaScript).ForceDebug().AsNamed("admin-js-debug", "");
+        }
+    }
+```
