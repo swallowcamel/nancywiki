@@ -88,7 +88,7 @@ You can work around this by telling SquishIt to look in your full project rather
 
 	if (directoryName != null)
 	{
-	    var assemblyPath = directoryName.Replace(@"file:\", string.Empty);
+	    var assemblyPath = directoryName.Replace(@"file:\\", string.Empty);
 
 	    fullProjectPath = Path.Combine(assemblyPath, "..", "..", "..", "Escape.Web");
 	}
@@ -280,7 +280,7 @@ And in my custom Nancy testing Bootstrapper so SquishIt can find my asset files:
 
             if (directoryName != null)
             {
-                var assemblyPath = directoryName.Replace(@"file:\", string.Empty);
+                var assemblyPath = directoryName.Replace(@"file:\\", string.Empty);
 
                 return Path.Combine(assemblyPath, "..", "..", "..", "MyProject.Web");
             }
