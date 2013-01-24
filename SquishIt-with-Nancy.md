@@ -93,3 +93,47 @@ You can work around this by telling SquishIt to look in your full project rather
 If you are using something like AngularJS that relies on proper variable names for say dependancy injection, you can choose not to minify that particular file in SquishIt using:
 
 `bundle.AddMinified("~/static/js/angular/controllers.js");`
+
+### Advanced - The Full Monty
+
+If you want to know how I've configured my application with SquishIt, here's how.
+
+I defined a custom class to hold the url and if it should be minified or not (AngularJS doesn't like it so much):
+```c#
+    public class SquishItFile
+    {
+        public string Url { get; set; }
+
+        public bool Minify { get; set; }
+    }
+```
+
+I have a static class listing all my "to be bundles" assets:
+
+```c#
+    public static class Bundles
+    {
+        public static List<SquishItFile> PublicJavaScript = new List<SquishItFile>
+        {
+            new SquishItFile { Url = "~/public/static/js/jquery-1.6.4.js", Minify = true },
+            new SquishItFile { Url = "~/public/static/js/startup.js", Minify = true }
+        };
+
+        public static List<SquishItFile> AdminJavaScript = new List<SquishItFile>
+        {
+            new SquishItFile { Url = "~/admin/static/js/lib/angular.js", Minify = true },
+            new SquishItFile { Url = "~/admin/static/js/app/app.js", Minify = false }
+        };
+
+        public static List<SquishItFile> PublicCss = new List<SquishItFile>
+        {
+            new SquishItFile { Url = "~/public/static/css/site.css", Minify = true }
+        };
+
+        public static List<SquishItFile> AdminCss = new List<SquishItFile>
+        {
+            new SquishItFile { Url = "~/admin/static/less/bootstrap/bootstrap.less", Minify = true },
+            new SquishItFile { Url = "~/admin/static/less/theme/theme.less", Minify = true }
+        };
+    }
+```
