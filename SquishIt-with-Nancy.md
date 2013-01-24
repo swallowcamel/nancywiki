@@ -49,21 +49,21 @@ http://blogs.lessthandot.com/index.php/WebDev/UIDevelopment/AJAX/squishit-and-na
 
 In certain scenarios you don't want unauthenticated users to get access to all your assets. You would construct your asset module like:
 
-            Get["/admin/js/{name}"] = parameters =>
-            {
-                this.RequiresAuthentication();
-                this.RequiresClaims(new[] {"Admin"});
+    Get["/admin/js/{name}"] = parameters =>
+    {
+        this.RequiresAuthentication();
+        this.RequiresClaims(new[] {"Admin"});
 
-                return CreateResponse(Bundle.JavaScript().RenderCached((string) parameters.name), Configuration.Instance.JavascriptMimeType);
-            };
+        return CreateResponse(Bundle.JavaScript().RenderCached((string) parameters.name), Configuration.Instance.JavascriptMimeType);
+    };
 
-            Get["/admin/css/{name}"] = parameters =>
-            {
-                this.RequiresAuthentication();
-                this.RequiresClaims(new[] { "Admin" });
+    Get["/admin/css/{name}"] = parameters =>
+    {
+        this.RequiresAuthentication();
+        this.RequiresClaims(new[] { "Admin" });
 
-                return CreateResponse(Bundle.Css().RenderCached((string)parameters.name), Configuration.Instance.CssMimeType);
-            };
+        return CreateResponse(Bundle.Css().RenderCached((string)parameters.name), Configuration.Instance.CssMimeType);
+    };  
 
 ### Advanced - Testing with SquishIt
 
