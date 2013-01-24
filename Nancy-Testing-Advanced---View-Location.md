@@ -4,31 +4,27 @@ By default Nancy unit tests will struggle to find view files when you run your t
 
 You can create the following file in your test project to help Nancy out.
 
-`
-
-public class TestingRootPathProvider : IRootPathProvider
-{
-    private static readonly string RootPath;
-
-    static TestingRootPathProvider()
+    public class TestingRootPathProvider : IRootPathProvider
     {
-        var directoryName = Path.GetDirectoryName(typeof (Bootstrapper).Assembly.CodeBase);
+        private static readonly string RootPath;
 
-        if (directoryName != null)
+        static TestingRootPathProvider()
         {
-            var assemblyPath = directoryName.Replace(@"file:\", string.Empty);
+            var directoryName = Path.GetDirectoryName(typeof (Bootstrapper).Assembly.CodeBase);
 
-            RootPath = Path.Combine(assemblyPath, "..", "..", "..", "MyProject.Web");
+            if (directoryName != null)
+            {
+                var assemblyPath = directoryName.Replace(@"file:\", string.Empty);
+
+                RootPath = Path.Combine(assemblyPath, "..", "..", "..", "Escape.Web");
+            }
+        }
+
+        public string GetRootPath()
+        {
+            return RootPath;
         }
     }
-
-    public string GetRootPath()
-    {
-        return RootPath;
-    }
-}
-
-`
 
 You may have to play around with the RootPath setting, the basic ideas is you want your view engine to not look in bin/debug but instead look in your target project for the views.
 
