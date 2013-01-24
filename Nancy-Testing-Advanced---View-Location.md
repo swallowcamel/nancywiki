@@ -1,4 +1,4 @@
-# Nancy Testing Advanced - View Location
+# Nancy Testing Advanced: View Location
 
 By default Nancy unit tests will struggle to find view files when you run your tests.
 
@@ -26,6 +26,6 @@ You can create the following file in your test project to help Nancy out.
         }
     }
 
-You may have to play around with the RootPath setting, the basic ideas is you want your view engine to not look in bin/debug but instead look in your target project for the views.
+You will have to alter RootPath to match your solutions layout and target project's folder name. The idea is you want your view engine to not look in "bin/debug" for views but instead look in your target project for the views.
 
 This is accomplished by using ".." to go up a folder level until you can then go into your target project.
