@@ -67,6 +67,27 @@ In certain scenarios you don't want unauthenticated users to get access to all y
 
 ### Advanced - Testing with SquishIt
 
+If you want to run tests against views with SquishIt used, you will most likely encounter:
+
+`System.Collections.Generic.KeyNotFoundException : The given key was not present in the dictionary.`
+
+With a stack trace that hints that something went bang in SquishIt. This is down to SquishIt not being able to find your asset files.
+
+You can work around this by telling SquishIt to look in your full project rather than the bin of test project, for example:
+
+	var fullProjectPath = "";
+
+	var directoryName = Path.GetDirectoryName(typeof (Bootstrapper).Assembly.CodeBase);
+
+	if (directoryName != null)
+	{
+	    var assemblyPath = directoryName.Replace(@"file:\", string.Empty);
+
+	    fullProjectPath = Path.Combine(assemblyPath, "..", "..", "..", "Escape.Web");
+	}
+
+	bundle.Add(fullProjectPath + "/static/js/foo.js");
+
 ### Advanced - Only minifying certain files
 
 If you are using something like AngularJS that relies on proper variable names for say dependancy injection, you can choose not to minify that particular file in SquishIt using:
