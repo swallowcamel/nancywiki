@@ -33,7 +33,7 @@ public class CustomBootstrapper : DefaultNancyBootstrapper
 {
     protected override void ApplicationStartup(TinyIoc.TinyIoCContainer container, IPipelines pipelines)
     {
-        DiagnosticsHook.Disable();
+        DiagnosticsHook.Disable(piplelines);
     }
 }
 ```
