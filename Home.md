@@ -13,6 +13,7 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 #####Logging 
 - [[Nancy and New Relic]]
 - [Nancy Elmah](https://github.com/creamdog/Nancy.Elmah) (Exception logging and viewing using [Elmah](https://code.google.com/p/elmah/))
+- [Nancy.Raygun](http://nuget.org/packages/Nancy.Raygun/) [raygun.io](http://www.raygun.io) provider.
 
 #####Caching 
 
@@ -22,6 +23,10 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 
 - [Nancy.AspNetSprites.Razor](https://github.com/JefClaes/Nancy.AspNetSprites.Razor) 
 - [Cassette.Nancy](https://github.com/ChrisMH/Cassette.Nancy)
+
+#####Authentication
+- [WorldDomination Web Authentication (Manual Setup)](https://github.com/PureKrome/WorldDomination.Web.Authentication/wiki/NancyFX-Manual-Setup)
+
 
 ## Media
 
