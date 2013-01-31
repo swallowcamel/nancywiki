@@ -23,6 +23,7 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 
 - [Nancy.AspNetSprites.Razor](https://github.com/JefClaes/Nancy.AspNetSprites.Razor) 
 - [Cassette.Nancy](https://github.com/ChrisMH/Cassette.Nancy)
+- [Squishit with Nancy](https://github.com/NancyFx/Nancy/wiki/SquishIt-with-Nancy)
 
 #####Authentication
 - [WorldDomination Web Authentication (Manual Setup)](https://github.com/PureKrome/WorldDomination.Web.Authentication/wiki/NancyFX-Manual-Setup)
