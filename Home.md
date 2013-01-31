@@ -13,7 +13,7 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 #####Logging 
 - [[Nancy and New Relic]]
 - [Nancy Elmah](https://github.com/creamdog/Nancy.Elmah) (Exception logging and viewing using [Elmah](https://code.google.com/p/elmah/))
-- [Nancy.Raygun](http://nuget.org/packages/Nancy.Raygun/) [raygun.io](http://www.raygun.io) provider.
+- [Nancy.Raygun](http://nuget.org/packages/Nancy.Raygun/) ([raygun.io](http://www.raygun.io) provider)
 
 #####Caching 
 
