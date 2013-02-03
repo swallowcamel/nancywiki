@@ -14,6 +14,9 @@
 * [[From ASP.NET MVC to Nancy - Part 2|http://jhovgaard.net/from-aspnet-mvc-to-nancy-part-2]]
 * [[From ASP.NET MVC to Nancy - Part 3|http://jhovgaard.net/from-aspnet-mvc-to-nancy-part-3]]
 * [[Lightweight Development in .Net: Nancy|http://theothersideofcode.com/lightweight-development-in-dot-net-nancy]]
+* [[Using Partial Renders with Nancy rather than Render Actions like MVC|http://www.philliphaydon.com/2012/11/using-partial-renders-with-nancy-rather-than-render-actions-like-mvc]]
+* [[Introducing Raygun.io and Nancy.Raygun|http://www.philliphaydon.com/2013/01/introducing-raygun-and-nancy-raygun]]
+* [[OAuth with NancyFX and WorldDomination.Web.Authentication|http://www.philliphaydon.com/2013/01/oauth-with-nancyfx-and-world-domination-authentication]]
 
 ### VB.NET Blog Posts
 * [[Nancy and VB.Net|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/ASPNET/nancy-and-vb-net]]
