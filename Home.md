@@ -27,6 +27,7 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 
 #####Authentication
 - [WorldDomination Web Authentication (Manual Setup)](https://github.com/PureKrome/WorldDomination.Web.Authentication/wiki/NancyFX-Manual-Setup)
+- [WorldDomination Web Authentication (Automatic Setup)](https://github.com/PureKrome/WorldDomination.Web.Authentication/wiki/NancyFX-Automatic-Setup)
 
 
 ## Media
