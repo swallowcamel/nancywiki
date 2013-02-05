@@ -27,3 +27,12 @@
 * [[Nancy and VB.Net: the login/logout thing|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-vb-net-the-2]]
 * [[Nancy and VB.Net: Using easyhttp as our client|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-vb-net-using]]
 * [[Nancy and VB.Net: Forms authentication|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-vb-net-forms]]
+
+### Testing Related Blog Posts
+* [[Nancy and VB.Net: testing your modules.|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-vb-net-testing]]
+* [[Testing Modules in Nancy|http://devghost.com/testing-modules-in-nancy]]
+* [[1.  Intro to testing with Nancy|http://http://www.marcusoft.net/2013/01/NancyTesting1.html]]
+* [[2.  The Configurable bootstrapper|http://www.marcusoft.net/2013/01/NancyTesting2.html]]
+* [[3.  The Browser and Response objects|http://www.marcusoft.net/2013/01/NancyTesting3.html]]
+* [[Testing (razor) views|http://www.marcusoft.net/2013/02/NancyViewTesting.html]]
+* [[4.  Hat and shoeless testing with Simple.Data|http://www.marcusoft.net/2013/02/NancyTesting4.html]]
