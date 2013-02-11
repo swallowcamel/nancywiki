@@ -28,25 +28,6 @@ You can send all supported request types with the Browser class, and the configu
 
 The `BrowserResult` type will give you full access to the `NancyContext`, that was used during the processing of the request and also give you access to the actual request and response objects as well.
 
-_Note!_ Under some edge conditions and when tests are in a different assembly than the module being tested the `Browser` constructor may fail with a null reference exception. This is a known issue. A temporary fix is to instantiate the browser in a different way:
-
-```C#
-[Fact]
-public void Should_return_status_ok_when_route_exists()
-{
-    // Given
-    var browser = new Browser(x => x.RootPathProvider(new DefaultRootPathProvider()));
-     
-    // When
-    var result = browser.Get("/", with => {
-        with.HttpRequest();
-    });
-        
-    // Then
-    Assert.Equal(HttpStatusCode.OK, result.StatusCode);
-}
-```
-
 ## Controlling the execution environment
 
 Sometimes you are going to want more fine grained control over the composition of Nancy that is being used to execute the test. In these situations, using the `DefaultNancyBootstrapper`, or sub class of it, won’t give you the control you are going to need.
