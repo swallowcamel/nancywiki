@@ -10,7 +10,7 @@ You instantiate the Browser with the bootstrapper you want to use when the reque
 public void Should_return_status_ok_when_route_exists()
 {
     // Given
-    var bootstrapper = new DefaultNancyBootstrapper();
+    var bootstrapper = new ConfigurableBootstrapper();
     var browser = new Browser(bootstrapper);
      
     // When
@@ -27,25 +27,6 @@ The test will send a `GET` request to your application, running in the configura
 You can send all supported request types with the Browser class, and the configuration lets you specify things as request protocol, headers, form values, uploaded files and much more. The configuration can easily be extended with the use of extension methods.
 
 The `BrowserResult` type will give you full access to the `NancyContext`, that was used during the processing of the request and also give you access to the actual request and response objects as well.
-
-_Note!_ Under some edge conditions and when tests are in a different assembly than the module being tested the `Browser` constructor may fail with a null reference exception. This is a known issue. A temporary fix is to instantiate the browser in a different way:
-
-```C#
-[Fact]
-public void Should_return_status_ok_when_route_exists()
-{
-    // Given
-    var browser = new Browser(x => x.RootPathProvider(new DefaultRootPathProvider()));
-     
-    // When
-    var result = browser.Get("/", with => {
-        with.HttpRequest();
-    });
-        
-    // Then
-    Assert.Equal(HttpStatusCode.OK, result.StatusCode);
-}
-```
 
 ## Controlling the execution environment
 
@@ -65,7 +46,7 @@ For example - if you were testing a login page and wanted to verify that the use
 public void Should_redirect_to_login_with_error_details_incorrect()
 {
     // Given
-    var bootstrapper = new DefaultNancyBootstrapper();
+    var bootstrapper = new ConfigurableBootstrapper();
     var browser = new Browser(bootstrapper);
         
     // When
@@ -89,7 +70,7 @@ To do this what we want to do is make sure a certain element with an id of “er
 public void Should_display_error_message_when_error_passed()
 {
     // Given
-    var bootstrapper = new DefaultNancyBootstrapper();
+    var bootstrapper = new ConfigurableBootstrapper();
     var browser = new Browser(bootstrapper);
      
     // When
