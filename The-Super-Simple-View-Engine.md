@@ -144,7 +144,7 @@ Example
 ```
 
 ### Anti-forgery token
-Renders our an anti-forgery token, on the page, in an hidden input to prevent cross-site request forgery attacks. The token will automatically be validated when a new request is posted to the server (assuming CSRF protection hasn’t been turned off).
+Renders an anti-forgery token, on the page, in an hidden input to prevent cross-site request forgery attacks. The token will automatically be validated when a new request is posted to the server (assuming CSRF protection hasn’t been turned off).
 
 Syntax
 ```
