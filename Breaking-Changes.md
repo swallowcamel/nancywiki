@@ -1,6 +1,9 @@
 We try to keep the number of breaking changes down to an absolute minimum, but sometimes we feel the change is so important that we decide to perform it. Many time these changes will not directly have an effect on users that upgrade their Nancy version, but since they are changes to public types and behaviors, we still list them here in case you should run into issues after an update.
 
-## 0.16 ([View](https://github.com/NancyFx/Nancy/issues?labels=&milestone=16&state=closed))
+## 0.16.1 ([View](https://github.com/NancyFx/Nancy/issues?milestone=23&state=closed))
+- None
+
+## 0.16 ([View](https://github.com/NancyFx/Nancy/issues&milestone=16&state=closed))
 - [Changed RootPathProvider to return an instance](https://github.com/NancyFx/Nancy/pull/963)
 - [Should be able to provide a root path provider instance]()
 - [Changed scanning order](https://github.com/NancyFx/Nancy/pull/952)
