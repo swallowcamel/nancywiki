@@ -1,6 +1,7 @@
 ## Documentation
 
 [[Documentation]]
+
 [[Breaking Changes]]
 
 ## Community
