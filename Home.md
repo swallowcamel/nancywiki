@@ -1,6 +1,7 @@
 ## Documentation
 
 [[Documentation]]
+[[Breaking Changes]]
 
 ## Community
 For discussion about the Nancy project, please use our Google Group at [https://groups.google.com/forum/?fromgroups#forum/nancy-web-framework](https://groups.google.com/forum/?fromgroups#forum/nancy-web-framework "Visit the Nancy Google Group")
