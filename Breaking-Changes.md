@@ -1,5 +1,8 @@
 We try to keep the number of breaking changes down to an absolute minimum, but sometimes we feel the change is so important that we decide to perform it. Many time these changes will not directly have an effect on users that upgrade their Nancy version, but since they are changes to public types and behaviors, we still list them here in case you should run into issues after an update.
 
+## 0.17.0 ([View](https://github.com/NancyFx/Nancy/issues?milestone=22&state=closed))
+- [First class static content] (https://github.com/NancyFx/Nancy/pull/982)
+
 ## 0.16.1 ([View](https://github.com/NancyFx/Nancy/issues?milestone=23&state=closed))
 - None
 
