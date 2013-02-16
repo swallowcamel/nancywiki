@@ -3,6 +3,7 @@ We try to keep the number of breaking changes down to an absolute minimum, but s
 ## 0.17.0 ([View](https://github.com/NancyFx/Nancy/issues?milestone=22&state=closed))
 - [First class static content] (https://github.com/NancyFx/Nancy/pull/982)
 - [New route resolution engine] (https://github.com/NancyFx/Nancy/pull/988)
+- [Disable CSRF hook by default] (https://github.com/NancyFx/Nancy/pull/989)
 
 ## 0.16.1 ([View](https://github.com/NancyFx/Nancy/issues?milestone=23&state=closed))
 - None
