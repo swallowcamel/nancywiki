@@ -12,7 +12,7 @@ You can get Nancy from [Nuget](http://nuget.org), [our TeamCity server](http://t
 
 ## Built to run anywhere
 
-Nancy is built to run anywhere and we mean it. Right from the start, Nancy was designed to not have any dependencies on existing frameworks. Built with the [.NET framework client profile](http://msdn.microsoft.com/en-us/library/cc656912.aspx), Nancy can be used pretty much wherever you want to, since it’s completely self contained with it’s own request and response objects.
+Nancy is built to run anywhere and we mean it. Right from the start, Nancy was designed to not have any dependencies on existing frameworks. Built with the [.NET framework client profile](http://msdn.microsoft.com/en-us/library/cc656912.aspx), Nancy can be used pretty much wherever you want to, since it’s completely self contained with its own request and response objects.
 
 One of the core concepts in Nancy is hosts. A host acts as an adaptor for a hosting environment and Nancy, thus enabling Nancy to run on existing technologies such as ASP.NET, WCF and [OWIN](http://owin.org), or integrated in any given application.
 
