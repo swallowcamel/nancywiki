@@ -5,7 +5,7 @@ We try to keep the number of breaking changes down to an absolute minimum, but s
 - [New route resolution engine] (https://github.com/NancyFx/Nancy/pull/988)
 - [Disable CSRF hook by default] (https://github.com/NancyFx/Nancy/pull/989)
 - [Scanning changes] (https://github.com/NancyFx/Nancy/pull/953)
-- [Make IUserIdentity immutable] (https://github.com/NancyFx/Nancy/pull/974
+- [Make IUserIdentity immutable] (https://github.com/NancyFx/Nancy/pull/974)
 
 ## 0.16.1 ([View](https://github.com/NancyFx/Nancy/issues?milestone=23&state=closed))
 - None
