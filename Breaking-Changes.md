@@ -8,6 +8,7 @@ We try to keep the number of breaking changes down to an absolute minimum, but s
 - [Make IUserIdentity immutable] (https://github.com/NancyFx/Nancy/pull/974)
 - [Module registration changes] (https://github.com/NancyFx/Nancy/pull/998)
 - [Various SDHP improvements] (https://github.com/NancyFx/Nancy/pull/1001)
+- [Excluded Nancy assemblies from resource scanning] (https://github.com/NancyFx/Nancy/pull/1004)
 
 ## 0.16.1 ([View](https://github.com/NancyFx/Nancy/issues?milestone=23&state=closed))
 - None
