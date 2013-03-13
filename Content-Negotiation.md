@@ -1,4 +1,4 @@
-Content negotiation is a way of determining what content type to return to the client based on what the client can handle, and what the server can provide. Whenever you return something from a route, that is not a `Response` object (or anything that can implicitly be cast to a `Response` object) then that will be passed though the content negotiation pipeline before being sent back in the response.
+Content negotiation is a way of determining what content type to return to the client based on what the client can handle, and what the server can provide. Whenever you return something from a route, that is not a `Response` object (or anything that can implicitly be cast to a `Response` object) then that will be passed through the content negotiation pipeline before being sent back in the response.
 
 ```c#
 Get["/"] = parameters => {
