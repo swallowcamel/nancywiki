@@ -49,7 +49,7 @@ Once you have your own Bootstrapper class you can replace some or all of the def
 
 ### Part 2 - Manually Registering Dependencies ###
 
-By default Nancy uses an embedded Inversion of Control container called "TinyIoC" ( see http://hg.grumpydev.com/tinyioc for more information ). The built in Bootstrapper uses TinyIoC to scan types on application startup and registers them into the container to automatically resolve dependencies.
+By default Nancy uses an embedded Inversion of Control container called "TinyIoC" ([see its repository](https://github.com/grumpydev/TinyIoC) for more information). The built in Bootstrapper uses TinyIoC to scan types on application startup and registers them into the container to automatically resolve dependencies.
 
 If you don't want to take advantage of the "AutoRegister" feature you can take control of adding dependencies into the container by overriding one or both of the following methods:
 
