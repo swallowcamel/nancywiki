@@ -16,7 +16,7 @@ To enable Stateless Authentication, all you have to do it add a line like this t
 StatelessAuthentication.Enable(pipelines, statelessAuthConfiguration);
 ```
 
-The `statelessAuthConfiguration` variable, that is passed into `FormsAuthentication.Enable` method, is an instance of the `StatelessAuthenticationConfiguration` type, which enables you to customize the behavior of the stateless authentication provid
+The `statelessAuthConfiguration` variable, that is passed into `StatelessAuthentication.Enable` method, is an instance of the `StatelessAuthenticationConfiguration` type, which enables you to customize the behavior of the stateless authentication provid
 
 When creating an instance of the `StatelessAuthenticationConfiguration` type, it expects a single parameter of type `Func<NancyContext, IUserIdentity>`. The function is what is used to inspect the request (or anything else in the context for that matter) and return `null` if the request should not be treated as authenticated, or the appropriate [IUserIdentity](https://github.com/NancyFx/Nancy/wiki/Authentication-overview) if it should.
 
