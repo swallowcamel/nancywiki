@@ -97,4 +97,4 @@ netsh http add sslcert ipport=0.0.0.0:1234 certhash=303b4adb5aeb17eeac00d8576693
 ##OWIN
 It'll just be there if the host sends it on.
 
-If you use IIS as a host. You'll need to do the same config as with Aspnet. And you'll need an OWIN Aspnet host that supports the ClientCertificate. The [one](https://github.com/NancyFx/Nancy/blob/master/src/Nancy.Demo.Hosting.Owin/SimpleOwinAspNetHost.cs) in the OWIN demo in Nancy does. The [one](https://github.com/prabirshrestha/simple-owin) by Prabir Shrestha also will when [this](https://github.com/prabirshrestha/simple-owin/pull/2) will be pulled.
+If you use IIS as a host. You'll need to do the same config as with Aspnet. And you'll need an OWIN Aspnet host that supports the ClientCertificate. The [one](https://github.com/NancyFx/Nancy/blob/master/src/Nancy.Demo.Hosting.Owin/SimpleOwinAspNetHost.cs) in the OWIN demo in Nancy does. The [one](https://github.com/prabirshrestha/simple-owin) by @prabirshrestha also will when [this](https://github.com/prabirshrestha/simple-owin/pull/2) will be pulled.
