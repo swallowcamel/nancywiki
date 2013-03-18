@@ -34,7 +34,7 @@ Nothing is ever easy with `WCF` configuration, this is no exception.
 
 Lets start with the basic host:
 
-```c#
+```csharp
 var host = new WebServiceHost(
     new NancyWcfGenericService(new DefaultNancyBootstrapper()),
     BaseUri);
@@ -44,7 +44,7 @@ We need to tell the binding we want to use `Transport Security` and we need to t
 
 ###Binding
 
-```C#
+```csharp
 var binding = new WebHttpBinding();
 binding.Security.Mode = WebHttpSecurityMode.Transport;
 binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Certificate;
@@ -52,7 +52,7 @@ binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Certi
 
 ###Custom validation of the certificate.
 
-```C#
+```csharp
 public class Auth : X509CertificateValidator
 {
     public override void Validate(System.Security.Cryptography.X509Certificates.X509Certificate2 certificate)
@@ -64,19 +64,28 @@ public class Auth : X509CertificateValidator
 
 Tell the host where to find the `Validator`
 
-```C#
+```csharp
 host.Credentials.ClientCertificate.Authentication.CertificateValidationMode = System.ServiceModel.Security.X509CertificateValidationMode.Custom;
 host.Credentials.ClientCertificate.Authentication.CustomCertificateValidator = new Auth();
 ```
 
 ###Endpoint
-
-```C#
+Add the endpoint:
+```csharp
 host.AddServiceEndpoint(typeof(NancyWcfGenericService),binding,"");
 ```
+
 Tell the host where to find the server certificate:
-```C#
+```csharp
 host.Credentials.ServiceCertificate.SetCertificate(StoreLocation.LocalMachine, StoreName.My, X509FindType.FindByThumbprint, "30 3b 4a db 5a eb 17 ee ac 00 d8 57 66 93 a9 08 c0 1e 0b 71");
 ```
 
+Open it:
+```csharp
+host.Open();
+```
 
+###Command line configuration
+But this wont work you need to run a `netsh` command like this:
+where certhash is the thumbprint of the server certificate without spaces.
+`netsh http add sslcert ipport=0.0.0.0:1234 certhash=303b4adb5aeb17eeac00d8576693a908c01e0b71 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable`
