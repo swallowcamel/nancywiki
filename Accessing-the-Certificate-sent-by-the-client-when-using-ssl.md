@@ -20,7 +20,7 @@ You may get an error telling you this:
 This is solved by editing your applicationhost.config and setting the `overrideModeDefault` to `Allow` for the following elements.
 
 ```xml
-<section name="access" overrideModeDefault="Deny" />
+<section name="access" overrideModeDefault="Allow" />
 <section name="clientCertificateMappingAuthentication" overrideModeDefault="Allow" />
 ```
 
