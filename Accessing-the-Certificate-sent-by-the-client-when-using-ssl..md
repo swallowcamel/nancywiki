@@ -88,5 +88,6 @@ host.Open();
 ###Command line configuration
 But this wont work you need to run a `netsh` command like this:
 where certhash is the thumbprint of the server certificate without spaces.
-`netsh http add sslcert ipport=0.0.0.0:1234 certhash=303b4adb5aeb17eeac00d8576693a908c01e0b71 
-appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable`
+```sh
+netsh http add sslcert ipport=0.0.0.0:1234 certhash=303b4adb5aeb17eeac00d8576693a908c01e0b71 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable
+```
