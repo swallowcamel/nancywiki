@@ -94,7 +94,17 @@ where certhash is the thumbprint of the server certificate without spaces.
 netsh http add sslcert ipport=0.0.0.0:1234 certhash=303b4adb5aeb17eeac00d8576693a908c01e0b71 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable
 ```
 
-##OWIN
+##Configuration of `OWIN`
 It'll just be there if the host sends it on.
 
 If you use IIS as a host. You'll need to do the same config as with Aspnet. And you'll need an OWIN Aspnet host that supports the ClientCertificate. The [one](https://github.com/NancyFx/Nancy/blob/master/src/Nancy.Demo.Hosting.Owin/SimpleOwinAspNetHost.cs) in the OWIN demo in Nancy does. The [one](https://github.com/prabirshrestha/simple-owin) by @prabirshrestha also will when [this](https://github.com/prabirshrestha/simple-owin/pull/2) will be pulled.
+
+
+##Configuration of `Hosting.Self`
+
+It starts with a commandline command like the one in wcf: (remember the certhash is the thumbprint without spaces)
+```sh
+netsh http add sslcert ipport=0.0.0.0:1234 certhash=303b4adb5aeb17eeac00d8576693a908c01e0b71 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable
+```
+
+Then you can just set the url of the selfhost to `https://localhost:1234` and it'll work. The selfhost will automatically rewrite `localhost` to `+` if it has administrative rights. Allowing the selfhost to listen on all ipaddresses. 
