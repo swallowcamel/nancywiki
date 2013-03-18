@@ -35,6 +35,8 @@ Nothing is ever easy with `WCF` configuration, this is no exception.
 Lets start with the basic host:
 
 ```csharp
+private static readonly Uri BaseUri = new Uri("https://192.168.123.126:1234/Nancy/");
+
 var host = new WebServiceHost(
     new NancyWcfGenericService(new DefaultNancyBootstrapper()),
     BaseUri);
@@ -91,3 +93,8 @@ where certhash is the thumbprint of the server certificate without spaces.
 ```sh
 netsh http add sslcert ipport=0.0.0.0:1234 certhash=303b4adb5aeb17eeac00d8576693a908c01e0b71 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable
 ```
+
+##OWIN
+It'll just be there if the host sends it on.
+
+If you use IIS as a host. You'll need to do the same config as with Aspnet. And you'll need an OWIN Aspnet host that supports the ClientCertificate. The [one](https://github.com/NancyFx/Nancy/blob/master/src/Nancy.Demo.Hosting.Owin/SimpleOwinAspNetHost.cs) in the OWIN demo in Nancy does. The [one](https://github.com/prabirshrestha/simple-owin) by Prabir Shrestha also will when [this](https://github.com/prabirshrestha/simple-owin/pull/2) will be pulled.
