@@ -2,7 +2,7 @@ This document provides an overview on how to enable forms authentication in your
 
 To enable forms authentication, in your application, you need to complete the following steps
 
-1. Install the Nancy.Authentication.Forms package
+1. Install the `Nancy.Authentication.Forms` package
 1. Implement an `IUserMapper`
 1. Implement routes to handle login and logout
 1. Configure and enable Forms Authentication
@@ -32,7 +32,7 @@ public interface IUserMapper
 }
 ```
 
-A single method whose sole responsibility is to take the GUID identifier and return the corresponding user. If the identifier could not be mapped to a user then `null` should be returned. For more information about the `IUserIdentity` interface, refer to the [Authentication overview].
+A single method whose sole responsibility is to take the GUID identifier and return the corresponding user. If the identifier could not be mapped to a user then `null` should be returned. For more information about the `IUserIdentity` interface, refer to the [Authentication overview](Authentication overview).
 
 ## Modifying your application to handle forms authentication
 
