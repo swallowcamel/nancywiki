@@ -96,7 +96,7 @@ public class SecureModule : NancyModule
     {
         this.RequiresHttps();
         this.RequiresAuthentication();
-        this.RequiresClaims(new [] { “Admin” });
+        this.RequiresClaims(new [] { "Admin" });
     }
         
     // Your routes here
