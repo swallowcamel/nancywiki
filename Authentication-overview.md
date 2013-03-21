@@ -139,9 +139,9 @@ It make sure that the `CurrentUser` has been set and that it has a valid `UserNa
 
 The actual implementation of an authentication provider is going to vary depending on your requirements but the basic pattern goes as follows
 
-1. A `Before` hook on the [Application pipeline] is used to check for the existence of valid credentials for the incoming request (such as a cookie, headers and so on). If found it will authenticate the user and assign it to the `CurrentUser` property on `NancyContext`
+1. A `Before` hook on the [application pipeline](The Application Before, After and OnError pipelines) is used to check for the existence of valid credentials for the incoming request (such as a cookie, headers and so on). If found it will authenticate the user and assign it to the `CurrentUser` property on `NancyContext`
 2. A `Before` hook on the [Module pipeline] is used to establish that the current request is being performed by an authenticated user. If not then it should deny access and return something like `HttpStatusCode.Unauthorized`
-3. An `After` hook on the [Application pipeline] will check for a request that was aborted due to failed authentication, such as keeping an eye out for a response with the `HttpStatusCode.Unauthorized` (401) status code. If detected it will take steps to help the user get authenticated, such as redirecting to a login form or perhaps signal to the client with help of headers
+3. An `After` hook on the [application pipeline](The Application Before, After and OnError pipelines) will check for a request that was aborted due to failed authentication, such as keeping an eye out for a response with the `HttpStatusCode.Unauthorized` (401) status code. If detected it will take steps to help the user get authenticated, such as redirecting to a login form or perhaps signal to the client with help of headers
 
 Your mileage may vary but that is the basic flow of an authentication provider.
 
