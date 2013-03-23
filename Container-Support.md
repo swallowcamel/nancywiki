@@ -1,4 +1,4 @@
-# Ninject
+## Ninject
 
 First, download the Nancy.Bootstrappers.Ninject package. Then, make your custom bootstrapper inherit from `NinjectNancyBootstrapper` instead of `DefaultNancyBootstrapper`. And finally, override the `ConfigureRequestContainer` method, and bind your dependencies.
 
@@ -11,4 +11,6 @@ First, download the Nancy.Bootstrappers.Ninject package. Then, make your custom 
         }    
     }
 
-# More to come
+## More to come
+
+...
