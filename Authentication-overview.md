@@ -41,7 +41,7 @@ Establishing the identity of the current user is only half of the equation. You 
 
 Resources are secured at a module level (of course, you could secure all resources by creating an [Application pipeline] if you have the need) by inspecting the `NancyContext.CurrentUser` property and making sure that it is not null.
 
-This task can be performed in a `Before` hook on the `Module pipeline`, which ensures it executed before any route in the module is invoked. The hook also gives us the ability to prematurely terminate the execution of the request and return another response, as is required when an unauthenticated user is trying to access a secure resource.
+This task can be performed in a `Before` hook on the [module pipeline](The before and after module hooks), which ensures it executed before any route in the module is invoked. The hook also gives us the ability to prematurely terminate the execution of the request and return another response, as is required when an unauthenticated user is trying to access a secure resource.
 
 ```c#
 public class SecureModule : NancyModule
@@ -140,7 +140,7 @@ It make sure that the `CurrentUser` has been set and that it has a valid `UserNa
 The actual implementation of an authentication provider is going to vary depending on your requirements but the basic pattern goes as follows
 
 1. A `Before` hook on the [application pipeline](The Application Before, After and OnError pipelines) is used to check for the existence of valid credentials for the incoming request (such as a cookie, headers and so on). If found it will authenticate the user and assign it to the `CurrentUser` property on `NancyContext`
-2. A `Before` hook on the [Module pipeline] is used to establish that the current request is being performed by an authenticated user. If not then it should deny access and return something like `HttpStatusCode.Unauthorized`
+2. A `Before` hook on the [module pipeline](The before and after module hooks) is used to establish that the current request is being performed by an authenticated user. If not then it should deny access and return something like `HttpStatusCode.Unauthorized`
 3. An `After` hook on the [application pipeline](The Application Before, After and OnError pipelines) will check for a request that was aborted due to failed authentication, such as keeping an eye out for a response with the `HttpStatusCode.Unauthorized` (401) status code. If detected it will take steps to help the user get authenticated, such as redirecting to a login form or perhaps signal to the client with help of headers
 
 Your mileage may vary but that is the basic flow of an authentication provider.
