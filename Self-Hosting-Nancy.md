@@ -1,4 +1,4 @@
-# Hosting Nancy with Console
+# Self Hosting Nancy
 
 You can use a console app to host Nancy.  Simply use the code below to host Nancy.
 
