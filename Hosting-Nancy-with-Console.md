@@ -1,3 +1,5 @@
+# Hosting Nancy with Console
+
 You can use a console app to host Nancy.  Simply use the code below to host Nancy.
 
     var nancyHost = new Nancy.Hosting.Self.NancyHost(new Uri("http://localhost:1234"));
