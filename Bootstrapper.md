@@ -15,7 +15,7 @@ public class CustomBootstrapper : DefaultNancyBootstrapper
 {
     protected override void ApplicationStartup(TContainer container, IPipelines pipelines)
     {
-         // your customizations goes here
+         // your customization goes here
     }
 }
 ```
