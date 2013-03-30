@@ -31,6 +31,8 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://search
 - [WorldDomination Web Authentication (Manual Setup)](https://github.com/PureKrome/WorldDomination.Web.Authentication/wiki/NancyFX-Manual-Setup)
 - [WorldDomination Web Authentication (Automatic Setup)](https://github.com/PureKrome/WorldDomination.Web.Authentication/wiki/NancyFX-Automatic-Setup)
 
+#####Enhancements
+- [Nancy plugin for ReSharper](https://github.com/hmemcpy/Nancy-ReSharper-Plugin)
 
 ## Media
 
