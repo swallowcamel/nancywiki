@@ -1,6 +1,6 @@
 # Self Hosting Nancy
 
-You can use a console app to host Nancy.  Simply use the code below to host Nancy.
+You can use a console app to host Nancy.  Simply install the [`Nancy.Hosting.Self`](https://nuget.org/packages/Nancy.Hosting.Self) NuGet package and use the code below to host Nancy.
 
     var nancyHost = new Nancy.Hosting.Self.NancyHost(new Uri("http://localhost:1234"));
     nancyHost.Start();
