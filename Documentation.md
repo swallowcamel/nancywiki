@@ -29,6 +29,7 @@
 * [[Hosting Nancy with OWIN]]
 * [[Hosting Nancy with Umbraco]]
 * [[Hosting Nancy with Nginx on Ubuntu]]
+* [[Self Hosting Nancy]]
 * [[Implementing a Host]]
 
 ## View Engines
