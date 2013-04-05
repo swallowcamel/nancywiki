@@ -16,3 +16,5 @@ Note that on Windows hosts a `HttpListenerException` may be thrown with an `Acce
     netsh http add urlacl url=http://+:1234/ user=DOMAIN\username
 
 Replace `DOMAIN\username` with your domain and username or your computer name and username if you are not joined to a domain. See <http://msdn.microsoft.com/en-us/library/ms733768.aspx> for more information.
+
+Also this should be obvious but the port may need to be opened on the machine or corporate firewall to allow access to the service.
