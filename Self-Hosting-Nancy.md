@@ -11,7 +11,9 @@ You can use a console app to host Nancy.  Simply install the [`Nancy.Hosting.Sel
 You can then define your Modules etc and they will get hit as expected.
 
 ## HttpListenerException
-Note that on Windows hosts a `HttpListenerException` may be thrown with an `Access Denied` message. To resolve this the URL has to be added to the ACL. Execute the following in PowerShell or CMD running as administrator:
+Note that on Windows hosts a `HttpListenerException` may be thrown with an `Access Denied` message. To resolve this the URL has to be added to the ACL. 
+
+On Windows Vista/Server 2008 or later, execute the following in PowerShell or CMD running as administrator:
 
     netsh http add urlacl url=http://+:1234/ user=DOMAIN\username
 
