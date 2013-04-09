@@ -59,7 +59,7 @@ This convention looks for the view inside of a folder with the name of the modul
 
 ## Deriving view name from the model type
 
-If you do not provide a view name and only send in the model, then Nancy will derive the view name from the name of the model type. If the name of the model ends with `Module` then it will be stripped of. 
+If you do not provide a view name and only send in the model, then Nancy will derive the view name from the name of the model type. If the name of the model ends with `Model` then it will be stripped off. 
 
 * `Customer` model type name -> `Customer` view name
 * `CustomerModel` model type name -> `Customer` view name
