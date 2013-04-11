@@ -19,7 +19,7 @@ public class CustomRootPathProvider : IRootPathProvider
 
 Once that is done, the next thing you need to do is to let Nancy know that it should be using your own implementation, instead of going of and try to locate one for you (remember there are implementations in each host, so if you provide a second one, the result will be non-deterministic).
 
-To let Nancy know it should use your implementation, you simply create a new bootstrapper (by inheriting from the bootstrapper you are using) and override the _RootPathProivider_ property and return the _type_ of your own root path provider.
+To let Nancy know it should use your implementation, you simply create a new bootstrapper (by inheriting from the bootstrapper you are using) and override the _RootPathProvider_ property and return the _type_ of your own root path provider.
 
 ```c#
 public class CustomBootstrapper : DefaultNancyBootstrapper
