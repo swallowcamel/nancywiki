@@ -6,7 +6,10 @@
 1. [[The before and after module hooks]]
 1. [[Model binding]]
 1. [[Bootstrapper]]
-1. [[View engines]]
+1. **View Engines**
+  - [View engines](View-Engines)
+  - [Super Simple View Engine](The-Super-Simple-View-Engine)
+  - [Razor](Razor-View-Engine)
 1. [[View location conventions]]
 1. [[Testing your application]]
 1. [[The root path]]
@@ -14,12 +17,12 @@
 1. [[Diagnostics]]
 1. [[Adding a custom FavIcon]]
 1. [[The Application Before, After and OnError pipelines]]
-1. [[Authentication overview]]
-1. [[Forms authentication]]
 1. [[The cryptography helpers]]
 1. [[Content negotiation]]
-1. [[The Super Simple View Engine]]
-1. [[Stateless Authentication]]
+1. **Authentication**
+  - [Overview](Authentication-Overview)
+  - [Stateless](Stateless-Authentication)
+  - [Forms](Forms-Authentication)
 1. More to come
 
 ## Hosting
