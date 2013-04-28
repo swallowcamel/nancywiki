@@ -9,9 +9,9 @@
 1. [[Model binding]]
 1. [[Bootstrapper]]
 1. **View Engines**
-  - [View engines](View-Engines)
-  - [Super Simple View Engine](The-Super-Simple-View-Engine)
-  - [Razor](Razor-View-Engine)
+  - [View engines](/NancyFx/Nancy/wiki/View-Engines)
+  - [Super Simple View Engine](/NancyFx/Nancy/wiki/The-Super-Simple-View-Engine)
+  - [Razor](/NancyFx/Nancy/wiki/Razor-View-Engine)
 1. [[View location conventions]]
 1. [[Testing your application]]
 1. [[The root path]]
@@ -22,9 +22,9 @@
 1. [[The cryptography helpers]]
 1. [[Content negotiation]]
 1. **Authentication**
-  - [Overview](Authentication-Overview)
-  - [Stateless](Stateless-Authentication)
-  - [Forms](Forms-Authentication)
+  - [Overview](/NancyFx/Nancy/wiki/Authentication-Overview)
+  - [Stateless](/NancyFx/Nancy/wiki/Stateless-Authentication)
+  - [Forms](/NancyFx/Nancy/wiki/Forms-Authentication)
 1. More to come
 
 ## Hosting
