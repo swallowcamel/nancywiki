@@ -1,4 +1,4 @@
-To authenticate the client the client can send a certificate. To do this in Nancy you need one of three hosting solutions: `Aspnet`, `WCF` or `OWIN`. Here is shown howto configure all three to work with ssl and client certificates.
+To authenticate the client the client can send a certificate. To do this in Nancy you need one of three hosting solutions: `Aspnet`, `WCF` or `OWIN`. Here is shown howto configure all three to work with SSL and client certificates.
 
 ## Configuration of `Aspnet`.
 
@@ -24,7 +24,7 @@ This is solved by editing your applicationhost.config and setting the `overrideM
 <section name="clientCertificateMappingAuthentication" overrideModeDefault="Allow" />
 ```
 
-See [here](http://www.microsoft.com/web/post/securing-web-communications-certificates-ssl-and-https) how to enable ssl for IISexpress.
+See [here](http://www.microsoft.com/web/post/securing-web-communications-certificates-ssl-and-https) how to enable SSL for IISexpress.
 
 See [here](http://www.iis.net/learn/manage/configuring-security/how-to-set-up-ssl-on-iis) how to do it on IIS.
 
