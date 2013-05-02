@@ -22,10 +22,18 @@ All three have the exact same functionality, they just provide different ways of
 Sometimes you want the model binder to ignore certain information when populating the model from all the various sources (to prevent ‘over posting’ attacks for example). To accommodate this, the model binder can be called with an optional list of blacklisted properties on the model:
 
 ```c#
+var f = this.Bind<Foo>(f => f.id, f => f.creator, f => f.createddate);
+```
+
+The blacklist is a “params” array of Expressions on the model type, where the expressions specify the name of the model properties that should be ignored by the model binder.
+
+or:
+```c#
 var f = this.Bind<Foo>("id", "creator", "createddate");
 ```
 
 The blacklist is a “params” array of strings, where the strings represents the name of the model properties that should be ignored by the model binder.
+
 
 ## Deserializing rich request body payloads
 
