@@ -16,6 +16,9 @@
 * [[Lightweight Development in .Net: Nancy|http://theothersideofcode.com/lightweight-development-in-dot-net-nancy]]
 * [[Using Partial Renders with Nancy rather than Render Actions like MVC|http://www.philliphaydon.com/2012/11/using-partial-renders-with-nancy-rather-than-render-actions-like-mvc]]
 * [[OAuth with NancyFX and WorldDomination.Web.Authentication|http://www.philliphaydon.com/2013/01/oauth-with-nancyfx-and-world-domination-authentication]]
+* [[Understanding Nancy - Sinatra for .NET |http://www.picnet.com.au/blogs/guido/post/2011/03/22/understanding-nancy-sinatra-for-net/]]
+* [[Using Nancy to Remotely Control a Desktop Application|http://weblogs.asp.net/rweigelt/archive/2013/04/30/10235654.aspx]]
+* [[An Example for Self-Hosting Nancy in an Application|http://weblogs.asp.net/rweigelt/archive/2013/05/01/10237535.aspx]]
 
 ### Error Handling
 * [[Introducing Raygun.io and Nancy.Raygun|http://www.philliphaydon.com/2013/01/introducing-raygun-and-nancy-raygun]]
