@@ -20,7 +20,6 @@
 1. [[Content negotiation]]
 1. [[The Super Simple View Engine]]
 1. [[Stateless Authentication]]
-1. [[Running Nancy on your Raspberry Pi]]
 1. More to come
 
 ## Hosting
@@ -31,6 +30,7 @@
 * [[Hosting Nancy with Umbraco]]
 * [[Hosting Nancy with Nginx on Ubuntu]]
 * [[Self Hosting Nancy]]
+* [[Running Nancy on your Raspberry Pi]]
 * [[Implementing a Host]]
 
 ## View Engines
