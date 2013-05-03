@@ -133,7 +133,7 @@ public class Bootstrapper : DefaultNancyBootstrapper
     {
         get
         {
-            return NancyInternalConfiguration.WithOverrides(x => x.RoutePatternMatcher(typeof(MyRoutePatternMatcher));
+            return NancyInternalConfiguration.WithOverrides(x => x.RoutePatternMatcher = typeof(MyRoutePatternMatcher));
         }
     }
 }
