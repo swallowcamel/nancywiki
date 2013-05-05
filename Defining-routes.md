@@ -1,4 +1,20 @@
+*Note: This applies to Nancy 0.17.0 onwards, if you're still using a previous version of Nancy please refer to [[Legacy Routing]]*
+
 Routes are defined in the constructor of a module. In order to define a route in Nancy, you need to specify a `Method` + `Pattern` + `Action` + (optional) `Condition`.
+
+i.e
+
+	public class ProductsModule : NancyModule
+	{
+		public ProductsModule
+		{
+			Get["/products/{id}"] =>
+			{
+		  		//do something
+			};
+		}
+	}
+
 
 ## Method
 
@@ -8,11 +24,19 @@ The Method is the [HTTP method](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9
 
 A route also needs a Pattern which declares the application-relative URL that the route answers to. The syntax of the Pattern is customizable but the default implementation that ships with Nancy supports capturing combinations of the following
 
-1. Literal segments `/some/literal/segments` which require an exact match
-2. Capture segments `/{name}` which captures whatever is passed into the given segment of the requested URL and then passes it into the Action of the route. Capture segments can be made optional by adding a question mark at the end of the name `/{name?}`. You can also provide a default value for optional segments, which will be used when the segment could not be matched `/{name?Nancy}`. Furthermore a capture segment can be made greedy by adding an asterisk at the end of the name `/{name*}`. This will catch any input including slashes(/) until the next literal segment. 
-3. Regular expression segments `/(?<age>[\d]{1,2})` which uses [named capture groups](http://www.regular-expressions.info/named.html) to provide the same behavior as capture segments, but with much greater control over what will be matched. Regex segments needs a capturing group to be identified. If you do not need to capture anything, then you can use a non-capturing group `(?:regex-goes-here)` 
+1. **Literal segments** - `/some/literal/segments` which require an exact match.
+2. **Capture segments** - `/{name}` which captures whatever is passed into the given segment of the requested URL and then passes it into the Action of the route. 
+3. **Capture segments *(optional)*** - `/{name?}` by adding the question mark at the end of the segment name the segment can be made optional.
+4. **Capture Segments *(optional/default)*** - `/{name?unnamed}/` by adding a value after the question mark we can turn an optional segment into a segment with a default value, should the pattern be the most suited but the segment missing, the value returned will be what comes after the question mark.
+5. **RegEx Segment** - `/(?<age>[\d]{1,2})` using [Named Capture Grouped](http://www.regular-expressions.info/named.html) Regular Expressions, you can get a little more control out of the segment pattern. If you don't need to capture anything then you can use a non-capturing group like `(?:regex-goes-here)`
+6. **Greedy Segment** - `/{name*}` by adding a star/asterisk to the end of the segment name, the pattern will match any value from the current forward slash onward. 
+7. **Greedy RegEx Segment** - `^(?<name>[a-z]{3,10}(?:/{1})(?<action>[a-z]{5,10}))$` a segment composed of a RegEx and Greedy segment, this captures the entire path after the forward slash, The segment must start with `^` and end with `$` so we know the start/finish of the greedy regular expression segment.
 
-The three kinds of pattern segments can be combined, in any order, to create a complex Pattern for a route. It’s worth noting that capture segments are greedy, meaning they will match anything in the requested URL until another segment matches or until the end of the URL is reached.
+Pattern segments can be combined, in any order, to create a complex Pattern for a route. It’s worth noting that capture segments are greedy, meaning they will match anything in the requested URL until another segment matches or until the end of the URL is reached.
+
+## Pattern Scoring
+
+*to explain*...
 
 ## Action
 
@@ -64,81 +88,3 @@ Post["/users/{id}/add/{category}"] = parameters => {
     return HttpStatusCode.OK;
 };
 ```
-
-## Defining your own route pattern syntax
-
-If you ever find yourself in a place where the default capture functionality does not cover your requirements, or if you just do not like the syntax, then you are in luck! For instance if you wanted your routes to be defined as `/users/@name/:id`, where @ signaled that it has to only contain letters, and : signaled that it had to be numerical, you could do that very easily.
-
-### The IRoutePatternMatcher interface
-
-This interface is responsible for telling Nancy if the incoming request matches the route that is passed in. By providing your own implementation, you can support what ever syntax and/or functionality that you wish.
-
-```c#
-/// <summary>
-/// Defined the functionality that is required by a route pattern matcher.
-/// </summary>
-/// <remarks>Implement this interface if you want to support a custom route syntax.</remarks>
-public interface IRoutePatternMatcher
-{
-    /// <summary>
-    /// Attempts to match a requested path with a route pattern.
-    /// </summary>
-    /// <param name="requestedPath">The path that was requested.</param>
-    /// <param name="routePath">The route pattern that the requested path should be attempted to be matched with.</param>
-    /// <param name="segments"> </param>
-    /// <param name="context">The <see cref="NancyContext"/> instance for the current request.</param>
-    /// <returns>An <see cref="IRoutePatternMatchResult"/> instance, containing the outcome of the match.</returns>
-    IRoutePatternMatchResult Match(string requestedPath, string routePath, IEnumerable<string> segments, NancyContext context);
-}
-```
-
-The following parameters are provided
-
-- `requestedPath` - The application relative path of the incoming request, for example `/users/123`
-- `routePath` - The pattern of the route that Nancy wants to know if the request matches, for example `/users/{id}`
-- `segments` - A split version of the `routePath` value. More about this below
-- `context` - An instance of the `NancyContext` type, for the incoming request
-
-The `Match` method is expected to return a [RoutePatternMatchResult](https://github.com/NancyFx/Nancy/blob/master/src/Nancy/Routing/RoutePatternMatchResult.cs), which indicates if there was a match, or not, and the parameters that were captured.
-
-### The IRouteSegmentExtractor interface
-
-This interface is responsible for breaking a route pattern into parts which can then be passed in to the `IRoutePatternMatcher`. This can simplify working with the route when determining if it is a match.
-
-```c#
-/// <summary>
-/// Defines the functionality for extracting the individual segments from a route path.
-/// </summary>
-public interface IRouteSegmentExtractor
-{
-    /// <summary>
-    /// Extracts the segments from the <paramref name="path"/>;
-    /// </summary>
-    /// <param name="path">The path that the segments should be extracted from.</param>
-    /// <returns>An <see cref="IEnumerable{T}"/>, containing the extracted segments.</returns>
-    IEnumerable<string> Extract(string path);
-}
-```
-
-What a segment means can vary between implementations. For the default implementation, the `DefaultRouteSegmentExtractor`, it will split the route pattern on every occurrence of a forward slash and return the parts as the segments, so `/foo/{bar}/(?<id>[\d]*)` would be split up into `foo`, `{bar}` and `(?<id>[\d]*)`.
-
-### Wiring it all up
-
-Once you have implemented your own route pattern matcher, the last thing you need to do is to tell Nancy to use it. You do this by overriding the `NancyInternalConfiguration` property, on your [[Bootstrapper]] and point the `RoutePatternMatcher` to your implementation.
-
-```c#
-public class Bootstrapper : DefaultNancyBootstrapper
-{
-    protected virtual NancyInternalConfiguration InternalConfiguration
-    {
-        get
-        {
-            return NancyInternalConfiguration.WithOverrides(x => x.RoutePatternMatcher = typeof(MyRoutePatternMatcher));
-        }
-    }
-}
-```
-
-If you are replacing the route segment extractor, then you do the same thing except you provide a new value of the `RouteSegmentExtractor` property on the `NancyInternalConfiguration`.
-
-[<< Part 2. Exploring the Nancy module](Exploring the Nancy module) - [Documentation overview](Documentation) - [Part 4. Taking a look at the DynamicDictionary >>](Taking a look at the DynamicDictionary)
