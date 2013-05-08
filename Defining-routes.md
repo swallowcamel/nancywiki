@@ -8,7 +8,7 @@ i.e
 	{
 		public ProductsModule
 		{
-			Get["/products/{id}"] =>
+			Get["/products/{id}"] = _ =>
 			{
 		  		//do something
 			};
