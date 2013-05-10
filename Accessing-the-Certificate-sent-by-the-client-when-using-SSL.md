@@ -2,7 +2,7 @@ To authenticate the client the client can send a certificate. To do this in Nanc
 
 ## Configuration of `Aspnet`.
 
-If the `web.config` file we need to specify we want to be able to receive a ClientCertificate. Like this:
+If the `web.config` file within the `system.webServer` tag we need to specify we want to be able to receive a ClientCertificate. Like this:
 
 ```xml
 <security>
