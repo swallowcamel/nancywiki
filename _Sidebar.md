@@ -36,6 +36,7 @@
 * [[Hosting Nancy with Nginx on Ubuntu]]
 * [[Self Hosting Nancy]]
 * [[Implementing a Host]]
+* [[Accessing the client certificate when using SSL]]
 
 ## View Engines
 * [[Implementing a View Engine]]
