@@ -32,6 +32,7 @@
 * [[Self Hosting Nancy]]
 * [[Running Nancy on your Raspberry Pi]]
 * [[Implementing a Host]]
+* [[Accessing the client certificate when using SSL]]
 
 ## View Engines
 * [[Implementing a View Engine]]
