@@ -32,7 +32,7 @@
 * [[Hosting Nancy with WCF]]
 * [[Hosting Nancy with Azure]]
 * [[Hosting Nancy with OWIN]]
- - katana---aspnet-host
+  - [[Katana - ASP.NET Host]]
 * [[Hosting Nancy with Umbraco]]
 * [[Hosting Nancy with Nginx on Ubuntu]]
 * [[Self Hosting Nancy]]
