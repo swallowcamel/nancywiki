@@ -10,6 +10,7 @@ OWIN defines a standard interface between .NET web servers and web applications.
 * **Install package using Nuget**
 ```
 Install-Package Microsoft.Owin.Host.SystemWeb
+Install-Package Nancy.Owin
 ```
 
 * **Add the following key in `web.config`**. (This is required for the current v1.0.1 for SystemWeb OWIN host and is likely to be removed in future versions.)
@@ -30,3 +31,43 @@ public class Startup
     }
 }
 ```
+
+## Katana - HttpListener (SelfHost)
+
+* **Install packages using NuGet**
+```
+Install-Package Microsoft.Owin.Hosting - pre
+Install-Package Microsoft.Owin.Host.HttpListener -pre
+Install-Package Nancy.Owin
+```
+*Note: As of this writing `Microsoft.Owin.Hosting` and `Microsoft.Owin.Host.HttpListener` host is in preview and is not recommended to be used in production. Make sure to add `-pre` to install.*
+* **Create an OWIN startup file**
+```c#
+using Owin;
+
+public class Startup
+{
+    public void Configuration(IAppBuilder app)
+    {
+        app.UseNancy();
+    }
+}
+```
+* **Main Entry Point**
+```c#
+class Program
+{
+    static void Main(string[] args)
+    {
+        var url = "http://+:8080";
+
+        using (WebApplication.Start<Startup>(url))
+        {
+            Console.WriteLine("Running on http://localhost:8080", url);
+            Console.WriteLine("Press enter to exit");
+            Console.ReadLine();
+        }
+    }
+}
+```
+* Run Visual Studio or the compiled executable in admin mode.
