@@ -118,7 +118,7 @@ namespace WebApplication6
                 var env = (IDictionary<string, object>)Context.Items[NancyOwinHost.RequestEnvironmentKey];
 
                 object temp;
-                if (env.TryGetValue("websocket.Accept", out temp) && temp != null)
+                if (env.TryGetValue("websocket.Accept", out temp) && temp != null) // check if the owin host supports web sockets
                 {
                     var wsAccept = (WebSocketAccept)temp;
                     var requestHeaders = GetValue<IDictionary<string, string[]>>(env, "owin.RequestHeaders");
