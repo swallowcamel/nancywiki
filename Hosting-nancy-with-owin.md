@@ -73,3 +73,19 @@ class Program
 }
 ```
 * Run Visual Studio or the compiled executable in admin mode.
+
+**Running without Admin mode**
+
+Note that on Windows hosts a `HttpListenerException` may be thrown with an `Access Denied` message. To resolve this the URL has to be added to the ACL. 
+
+On Windows Vista/Server 2008 or later, execute the following in PowerShell or CMD running as administrator:
+
+    netsh http add urlacl url=http://+:8080/ user=DOMAIN\username
+
+Replace `DOMAIN\username` with your domain and username or your computer name and username if you are not joined to a domain. See <http://msdn.microsoft.com/en-us/library/ms733768.aspx> for more information. You can find the user with `whoami` command.
+
+You can remove the urlacl using the following command.
+
+    netsh http delete urlacl url=http://+:8080/
+
+Also but the port may need to be opened on the machine or corporate firewall to allow access to the service.
