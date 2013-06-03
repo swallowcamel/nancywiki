@@ -5,7 +5,7 @@ OWIN defines a standard interface between .NET web servers and web applications.
 [Katana](http://katanaproject.codeplex.com/documentation) is OWIN implementations for Microsoft servers and frameworks.
 
 ## Katana - ASP.NET Host
-*Note: Assumes your project is an ASP.NET project with Nancy referenced and without any Nancy.Hosting.xxxxx.dll referenced.*
+*Note: Assumes your project is an ASP.NET project with Nancy.dll referenced and without any Nancy.Hosting.xxxxx.dll referenced.*
 
 * **Install package using Nuget**
 ```
