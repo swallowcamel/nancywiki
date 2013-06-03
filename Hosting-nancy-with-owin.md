@@ -55,6 +55,8 @@ public class Startup
 ```
 * **Main Entry Point**
 ```c#
+using Microsoft.Owin.Hosting;
+
 class Program
 {
     static void Main(string[] args)
