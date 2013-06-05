@@ -138,6 +138,7 @@ var config =
 
 ##  More Info
 
-[forms authentication with nancyfx](http://www.philliphaydon.com/2012/12/forms-authentication-with-nancyfx/)
+[[Forms authentication with nancyfx|http://www.philliphaydon.com/2012/12/forms-authentication-with-nancyfx/]]
+[[Multiple forms authentication sections|http://www.philliphaydon.com/2012/12/configuring-multiple-forms-authentication-sections-with-nancyfx/]]
 
 [<< Part 16. Authentication overview](Authentication overview) - [Documentation overview](Documentation) - [Part 18. The cryptography helpers >>](The cryptography helpers)
