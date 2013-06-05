@@ -7,6 +7,8 @@
 1. [[Model binding]]
 1. [[Bootstrapper]]
 1. [[View engines]]
+  * [[The Super Simple View Engine]]
+  * [[Razor View Engine]]
 1. [[View location conventions]]
 1. [[Testing your application]]
 1. [[The root path]]
