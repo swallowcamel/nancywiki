@@ -26,7 +26,6 @@
   *  [[Stateless Authentication]]
 1. [[The cryptography helpers]]
 1. [[Content negotiation]]
-
 1. More to come
 
 ## Hosting
