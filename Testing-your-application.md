@@ -92,4 +92,15 @@ In this test we use the browser object to create a request that’s equal to the
 
 This particular sample shows a very simple selector, but you can use the full power of CSS3 selectors ([http://www.w3.org/TR/css3-selectors/](http://www.w3.org/TR/css3-selectors/)) to grab elements from the HTML and run asserts against them.
 
+###  More Info
+
+* [[Nancy and VB.Net: testing your modules.|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-vb-net-testing]]
+* [[Testing Modules in Nancy|http://devghost.com/testing-modules-in-nancy]]
+* [[Intro to testing with Nancy|http://www.marcusoft.net/2013/01/NancyTesting1.html]]
+* [[The Configurable bootstrapper|http://www.marcusoft.net/2013/01/NancyTesting2.html]]
+* [[The Browser and Response objects|http://www.marcusoft.net/2013/01/NancyTesting3.html]]
+* [[Testing (razor) views|http://www.marcusoft.net/2013/02/NancyViewTesting.html]]
+* [[Hat and shoeless testing with Simple.Data|http://www.marcusoft.net/2013/02/NancyTesting4.html]]
+* [[Executable Specifications Through The Full Stack, In Memory|http://www.marcusoft.net/2013/02/NancyTesting5.html]]
+
 [<< Part 9. View location conventions](View location conventions) - [Documentation overview](Documentation) - [Part 11. The root path >>](The root path)
