@@ -11,6 +11,7 @@
 1. [[View Engines]]
   - [Super Simple View Engine](/NancyFx/Nancy/wiki/The-Super-Simple-View-Engine)
   - [Razor](/NancyFx/Nancy/wiki/Razor-View-Engine)
+  - [[Tips for Implementing your own View Engine|Implementing a View Engine]]
 1. [[View location conventions]]
 1. [[Testing your application]]
 1. [[The root path]]
@@ -39,10 +40,6 @@
 * [[Self Hosting Nancy]]
 * [[Implementing a Host]]
 * [[Accessing the client certificate when using SSL]]
-
-## View Engines
-* [[Implementing a View Engine]]
-* [[Razor View Engine]]
 
 ## Bootstrappers / Container Support
 * [[Bootstrapping Nancy]]
