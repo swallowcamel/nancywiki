@@ -18,6 +18,10 @@
 * [[An Example for Self-Hosting Nancy in an Application|http://weblogs.asp.net/rweigelt/archive/2013/05/01/10237535.aspx]]
 *  [[Nancy, a lightweight framework for .NET|http://blog.spinthemoose.com/2011/07/18/nancy-a-micro-web-framework-for-net/]]
 *  [[Frictionless .net web app development with Nancy|http://www.horsdal-consult.dk/2011/10/frictionless-net-web-app-development.html]]
+*  [[Frictionless .net web app development with Nancy part 2|http://www.horsdal-consult.dk/2011/10/frictionless-net-web-app-development_16.html]]
+[[Frictionless .net web app development with Nancy part 3|http://www.horsdal-consult.dk/2011/10/frictionless-net-web-app-development_24.html]]
+[[Frictionless .net web app development with Nancy part 4|http://www.horsdal-consult.dk/2011/11/frictionless-net-web-app-development.html]]
+[[Hello world in Nancy with F#|http://www.horsdal-consult.dk/2013/03/hello-nancy-world-in-f.html]]
 
 
 
@@ -69,9 +73,11 @@
 ## Media
 
 ### Video
+
 * [[NancyFx Tutorial by Dan Swain (Jan 8, 2013)|http://www.youtube.com/watch?v=SJm7chCfaDs]]
 * [[aspConf 2012: Christian Horsdal on The Lightweight Approach to Building Web Based APIs with .Net (July 17, 2012)|http://channel9.msdn.com/Events/aspConf/aspConf/The-Lightweight-Approach-to-Building-Web-Based-APIs-with-Net]]
 * [[Presentation By Nicholas Cloud (May 1, 2011)|http://www.nicholascloud.com/2011/05/nancy-net-micro-web-frameworks-part-1/]]
+*  [[Web European Conference Talk 2011: Chrisian Horsdal on Three Web Frameworks.  All .Net. One Hour.  Go|http://www.horsdal-consult.dk/2012/11/video-of-my-webnetconf-talk.html]]
 * [[Progressive .NET Tutorials 2011: Mark Rendle & Steven Robbins on Introduction to Nancy and Simple.Data (Jul 9, 2011)|http://skillsmatter.com/podcast/open-source-dot-net/introduction-to-nancy-and-simple-data]]
 
 ### Audio
@@ -81,3 +87,7 @@
 * [[Hanselminutes Podcast 270 - Nancy, Sinatra and the Explosion of .NET Micro Web Frameworks with Andreas 
 Håkansson (Jun 9, 2011)|http://www.hanselminutes.com/default.aspx?showID=290]]
 * [[Herding Code Podcast 123 - Andreas Håkansson and Steven Robbins on NancyFx (Oct 17, 2011)|http://herdingcode.com/?p=350]]
+
+### Slides
+* [[http://www.horsdal-consult.dk/2012/05/slides-from-my-community-day-copenhagen.html]]
+*  [[http://www.horsdal-consult.dk/2011/12/slides-from-anug-talk-on-nancy.html]]
