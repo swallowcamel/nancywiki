@@ -5,7 +5,7 @@
 [[Breaking Changes]]
 
 ## Community
-[Google Group | https://groups.google.com/forum/?fromgroups#forum/nancy-web-framework](https://groups.google.com/forum/?fromgroups#forum/nancy-web-framework)
+[[Google Group|https://groups.google.com/forum/?fromgroups#forum/nancy-web-framework]]
 
 [[(Jabbr) For realtime question / answers|https://jabbr.net/#/rooms/nancyfx]]
 
