@@ -75,9 +75,9 @@
 ### Video
 
 * [[NancyFx Tutorial by Dan Swain (Jan 8, 2013)|http://www.youtube.com/watch?v=SJm7chCfaDs]]
+*  [[Web.Net (2012) Talk: Chrisian Horsdal on Three Web Frameworks.  All .Net. One Hour. (Nov 2012)  Go|http://www.horsdal-consult.dk/2012/11/video-of-my-webnetconf-talk.html]]
 * [[aspConf 2012: Christian Horsdal on The Lightweight Approach to Building Web Based APIs with .Net (July 17, 2012)|http://channel9.msdn.com/Events/aspConf/aspConf/The-Lightweight-Approach-to-Building-Web-Based-APIs-with-Net]]
 * [[Presentation By Nicholas Cloud (May 1, 2011)|http://www.nicholascloud.com/2011/05/nancy-net-micro-web-frameworks-part-1/]]
-*  [[Web.Net (2012) Talk: Chrisian Horsdal on Three Web Frameworks.  All .Net. One Hour. (Nov 2012)  Go|http://www.horsdal-consult.dk/2012/11/video-of-my-webnetconf-talk.html]]
 * [[Progressive .NET Tutorials 2011: Mark Rendle & Steven Robbins on Introduction to Nancy and Simple.Data (Jul 9, 2011)|http://skillsmatter.com/podcast/open-source-dot-net/introduction-to-nancy-and-simple-data]]
 
 ### Audio
