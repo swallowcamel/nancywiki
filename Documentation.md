@@ -17,10 +17,11 @@
 1. [[Generating a custom error page]]
 1. [[Authentication overview]]
 1. [[Forms authentication]]
+1. [[Stateless Authentication]]
 1. [[The cryptography helpers]]
 1. [[Content negotiation]]
 1. [[The Super Simple View Engine]]
-1. [[Stateless Authentication]]
+
 1. More to come
 
 ## Hosting
