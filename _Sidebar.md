@@ -21,7 +21,7 @@
 1. [[Generating a custom error page]]
 1. [[The cryptography helpers]]
 1. [[Content negotiation]]
-1. [[Authentication-Overview]]
+1. [[Authentication]](/NancyFx/Nancy/wiki/Authentication-Overview)
   - [Stateless](/NancyFx/Nancy/wiki/Stateless-Authentication)
   - [Forms](/NancyFx/Nancy/wiki/Forms-Authentication)
 1. More to come
