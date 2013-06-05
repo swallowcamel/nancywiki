@@ -50,5 +50,5 @@
 * [[Container Support]]
 
 ## Other Links
-* [[Community-Resources]] (Blog Posts, Articles, etc...)
+* [[ Blog Posts, Video & Audio]]
 * [[Async-Beta]] (Async Beta)
