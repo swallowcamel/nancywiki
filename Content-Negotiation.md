@@ -220,8 +220,8 @@ Nancy will automatically add link and vary headers to negotiated responses. The 
 
 ## More Info
 
-* [[Revisting Content Negotiation and APIs part 1]|http://www.philliphaydon.com/2013/04/nancyfx-revisiting-content-negotiation-and-apis-part-1/]]
-* [[Revisting Content Negotiation and APIs part 2]|http://www.philliphaydon.com/2013/04/nancyfx-revisiting-content-negotiation-and-apis-part-2/]]
-* [[Revisting Content Negotiation and APIs part 3]|http://www.philliphaydon.com/2013/04/nancyfx-revisiting-content-negotiation-and-apis-part-3/]]
+* [[Revisting Content Negotiation and APIs part 1|http://www.philliphaydon.com/2013/04/nancyfx-revisiting-content-negotiation-and-apis-part-1/]]
+* [[Revisting Content Negotiation and APIs part 2|http://www.philliphaydon.com/2013/04/nancyfx-revisiting-content-negotiation-and-apis-part-2/]]
+* [[Revisting Content Negotiation and APIs part 3|http://www.philliphaydon.com/2013/04/nancyfx-revisiting-content-negotiation-and-apis-part-3/]]
 
 [<< Part 18. The cryptography helpers](The cryptography helpers) - [Documentation overview](Documentation) - [Part 20. The Super Simple View Engine >>](The Super Simple View Engine)
