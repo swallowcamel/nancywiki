@@ -219,7 +219,7 @@ Nancy will locate all implementation of the interface and wire up the convention
 Nancy will automatically add link and vary headers to negotiated responses. The link headers link to other representations based on file extension (e.g. .json.xml etc), and the vary header is to let caches know that the contents of the response will vary depending on the accept header the client provides.
 
 ## More Info
-
+* [[Nancy and Content Negotiation|http://www.philliphaydon.com/2012/11/nancy-and-content-negotiation/]]
 * [[Revisting Content Negotiation and APIs part 1|http://www.philliphaydon.com/2013/04/nancyfx-revisiting-content-negotiation-and-apis-part-1/]]
 * [[Revisting Content Negotiation and APIs part 2|http://www.philliphaydon.com/2013/05/nancyfx-revisiting-content-negotiation-and-apis-part-2/]]
 * [[Revisting Content Negotiation and APIs part 3|http://www.philliphaydon.com/2013/05/nancyfx-revisiting-content-negotiation-and-apis-part-3/]]
