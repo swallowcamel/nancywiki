@@ -17,6 +17,7 @@
 * [[Using Nancy to Remotely Control a Desktop Application|http://weblogs.asp.net/rweigelt/archive/2013/04/30/10235654.aspx]]
 * [[An Example for Self-Hosting Nancy in an Application|http://weblogs.asp.net/rweigelt/archive/2013/05/01/10237535.aspx]]
 *  [[Nancy, a lightweight framework for .NET|http://blog.spinthemoose.com/2011/07/18/nancy-a-micro-web-framework-for-net/]]
+*  [[Frictionless .net web app development with Nancy|http://www.horsdal-consult.dk/2011/10/frictionless-net-web-app-development.html]]
 
 
 
