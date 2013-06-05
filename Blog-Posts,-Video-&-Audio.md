@@ -1,6 +1,7 @@
 ### General Blog posts
 
 * [[Why use NancyFX?|http://blog.jonathanchannon.com/2012/12/19/why-use-nancyfx/]]
+* [[Simple Web UIs with the Nancy Framework|http://visualstudiomagazine.com/articles/2013/03/01/simple-web-uis-with-the-nancy-framework.aspx]]
 * [[Building a simple Nancy app from scratch using Mono and MonoDevelop in OSX|http://littlegists.blogspot.co.uk/2012/12/building-simple-nancy-app-from-scratch.html]]
 * [[Nancy and C# uploading and showing an image|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-c-uploading-and]]
 * [[Nancy and returning a pdf|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-returning-a-pdf]]
@@ -15,6 +16,7 @@
 * [[Understanding Nancy - Sinatra for .NET |http://www.picnet.com.au/blogs/guido/post/2011/03/22/understanding-nancy-sinatra-for-net/]]
 * [[Using Nancy to Remotely Control a Desktop Application|http://weblogs.asp.net/rweigelt/archive/2013/04/30/10235654.aspx]]
 * [[An Example for Self-Hosting Nancy in an Application|http://weblogs.asp.net/rweigelt/archive/2013/05/01/10237535.aspx]]
+
 
 
 ### Content Negotiation
