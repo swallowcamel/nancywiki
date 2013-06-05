@@ -19,6 +19,7 @@
 1. [[Diagnostics]]
 1. [[Adding a custom FavIcon]]
 1. [[The Application Before, After and OnError pipelines]]
+1. [[Redirecting to a custom error page]]
 1. [[The cryptography helpers]]
 1. [[Content negotiation]]
 1. **Authentication**
