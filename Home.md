@@ -9,7 +9,7 @@ For discussion about the Nancy project, please use our Google Group at [https://
 
 You can also follow the discussion on Twitter using the [#NancyFx](http://search.twitter.com/search?q=%23Nancyfx) hashtag.
 
-[[Community-Resources]] (Blog Posts, Articles, etc...)
+[[Blog Posts, Video & Audio]]
 
 ### Extensions
 #####Logging 
