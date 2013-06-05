@@ -61,3 +61,19 @@
 * [[Testing (razor) views|http://www.marcusoft.net/2013/02/NancyViewTesting.html]]
 * [[4.  Hat and shoeless testing with Simple.Data|http://www.marcusoft.net/2013/02/NancyTesting4.html]]
 * [[5.  Executable Specifications Through The Full Stack, In Memory|http://www.marcusoft.net/2013/02/NancyTesting5.html]]
+
+## Media
+
+### Video
+* [[NancyFx Tutorial by Dan Swain (Jan 8, 2013)|http://www.youtube.com/watch?v=SJm7chCfaDs]]
+* [[aspConf 2012: Christian Horsdal on The Lightweight Approach to Building Web Based APIs with .Net (July 17, 2012)|http://channel9.msdn.com/Events/aspConf/aspConf/The-Lightweight-Approach-to-Building-Web-Based-APIs-with-Net]]
+* [[Presentation By Nicholas Cloud (May 1, 2011)|http://www.nicholascloud.com/2011/05/nancy-net-micro-web-frameworks-part-1/]]
+* [[Progressive .NET Tutorials 2011: Mark Rendle & Steven Robbins on Introduction to Nancy and Simple.Data (Jul 9, 2011)|http://skillsmatter.com/podcast/open-source-dot-net/introduction-to-nancy-and-simple-data]]
+
+### Audio
+* [[.Net Rocks Podcast 857 - Hakansson and Robbins Talk NancyFX (Mar 26, 2013) | http://www.dotnetrocks.com/default.aspx?showNum=857]]
+* [[Herding Code Podcast 156 - Catching up with Andreas Håkansson and Steven Robbins on NancyFx (Jan 18, 2013)|http://herdingcode.com/?p=505]]
+* [[Hanselminutes Podcast 351 - Understanding NancyFx with Richard Cirerol (Dec 27, 2012)|http://hanselminutes.com/351/understanding-nancyfx-with-richard-cirerol]]
+* [[Hanselminutes Podcast 270 - Nancy, Sinatra and the Explosion of .NET Micro Web Frameworks with Andreas 
+Håkansson (Jun 9, 2011)|http://www.hanselminutes.com/default.aspx?showID=290]]
+* [[Herding Code Podcast 123 - Andreas Håkansson and Steven Robbins on NancyFx (Oct 17, 2011)|http://herdingcode.com/?p=350]]
