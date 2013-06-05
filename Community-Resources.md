@@ -20,8 +20,8 @@
 * [[Using Nancy to Remotely Control a Desktop Application|http://weblogs.asp.net/rweigelt/archive/2013/04/30/10235654.aspx]]
 * [[An Example for Self-Hosting Nancy in an Application|http://weblogs.asp.net/rweigelt/archive/2013/05/01/10237535.aspx]]
 * [[Revisting Content Negotiation and APIs part 1|http://www.philliphaydon.com/2013/04/nancyfx-revisiting-content-negotiation-and-apis-part-1/]]
-* [[Revisting Content Negotiation and APIs part 2|http://www.philliphaydon.com/2013/04/nancyfx-revisiting-content-negotiation-and-apis-part-2/]]
-* [[Revisting Content Negotiation and APIs part 3|http://www.philliphaydon.com/2013/04/nancyfx-revisiting-content-negotiation-and-apis-part-3/]]
+* [[Revisting Content Negotiation and APIs part 2|http://www.philliphaydon.com/2013/05/nancyfx-revisiting-content-negotiation-and-apis-part-2/]]
+* [[Revisting Content Negotiation and APIs part 3|http://www.philliphaydon.com/2013/05/nancyfx-revisiting-content-negotiation-and-apis-part-3/]]
 
 
 ### Error Handling
