@@ -51,4 +51,9 @@ public class HelloModule : NancyModule
     }
 }
 ```
+
+##More Info
+
+* [[Why use NancyFX?|http://blog.jonathanchannon.com/2012/12/19/why-use-nancyfx/]]
+
 [Documentation overview](Documentation) - [Part 2. Exploring the Nancy module >>](Exploring the Nancy module)
