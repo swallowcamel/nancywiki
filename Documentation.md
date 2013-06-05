@@ -12,6 +12,7 @@
 1. [[View engines]]
   * [[The Super Simple View Engine]]
   * [[Razor View Engine]]
+  * [[Tips for Implementing your own View Engine|Implementing a View Engine]]
 1. [[View location conventions]]
 1. [[Testing your application]]
 1. [[The root path]]
@@ -43,9 +44,6 @@
 * [[Implementing a Host]]
 * [[Accessing the client certificate when using SSL]]
 
-## View Engines
-* [[Implementing a View Engine]]
-* [[Razor View Engine]]
 
 ## Bootstrappers / Container Support
 * [[Bootstrapping Nancy]]
