@@ -19,9 +19,9 @@
 *  [[Nancy, a lightweight framework for .NET|http://blog.spinthemoose.com/2011/07/18/nancy-a-micro-web-framework-for-net/]]
 *  [[Frictionless .net web app development with Nancy|http://www.horsdal-consult.dk/2011/10/frictionless-net-web-app-development.html]]
 *  [[Frictionless .net web app development with Nancy part 2|http://www.horsdal-consult.dk/2011/10/frictionless-net-web-app-development_16.html]]
-[[Frictionless .net web app development with Nancy part 3|http://www.horsdal-consult.dk/2011/10/frictionless-net-web-app-development_24.html]]
-[[Frictionless .net web app development with Nancy part 4|http://www.horsdal-consult.dk/2011/11/frictionless-net-web-app-development.html]]
-[[Hello world in Nancy with F#|http://www.horsdal-consult.dk/2013/03/hello-nancy-world-in-f.html]]
+*  [[Frictionless .net web app development with Nancy part 3|http://www.horsdal-consult.dk/2011/10/frictionless-net-web-app-development_24.html]]
+*  [[Frictionless .net web app development with Nancy part 4|http://www.horsdal-consult.dk/2011/11/frictionless-net-web-app-development.html]]
+*  [[Hello world in Nancy with F#|http://www.horsdal-consult.dk/2013/03/hello-nancy-world-in-f.html]]
 
 
 
