@@ -8,8 +8,7 @@
 1. [[The before and after module hooks]]
 1. [[Model binding]]
 1. [[Bootstrapper]]
-1. **View Engines**
-  - [View engines](/NancyFx/Nancy/wiki/View-Engines)
+1. [[View Engines]]
   - [Super Simple View Engine](/NancyFx/Nancy/wiki/The-Super-Simple-View-Engine)
   - [Razor](/NancyFx/Nancy/wiki/Razor-View-Engine)
 1. [[View location conventions]]
