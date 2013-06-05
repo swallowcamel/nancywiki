@@ -33,6 +33,9 @@
 * [[Hosting Nancy with WCF]]
 * [[Hosting Nancy with Azure]]
 * [[Hosting Nancy with OWIN]]
+  - [Web (Katana)](/NancyFx/Nancy/wiki/Hosting-nancy-with-owin#katana---aspnet-host)
+  - [Self Hosting](/NancyFx/Nancy/wiki/Hosting-nancy-with-owin#katana---httplistener-selfhost)
+  - [Environment Variables](/NancyFx/Nancy/wiki/Hosting-nancy-with-owin#accessing-owin-environment-variables)
 * [[Hosting Nancy with Umbraco]]
 * [[Hosting Nancy with Nginx on Ubuntu]]
 * [[Self Hosting Nancy]]
