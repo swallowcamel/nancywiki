@@ -5,7 +5,9 @@
 [[Breaking Changes]]
 
 ## Community
-For discussion about the Nancy project, please use our Google Group at [https://groups.google.com/forum/?fromgroups#forum/nancy-web-framework](https://groups.google.com/forum/?fromgroups#forum/nancy-web-framework "Visit the Nancy Google Group")
+[https://groups.google.com/forum/?fromgroups#forum/nancy-web-framework](https://groups.google.com/forum/?fromgroups#forum/nancy-web-framework "Google Group")
+
+[[https://jabbr.net/#/rooms/nancyfx|(Jabbr)For realtime question / answers]
 
 You can also follow the discussion on Twitter using the [#NancyFx](http://search.twitter.com/search?q=%23Nancyfx) hashtag.
 
