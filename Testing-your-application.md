@@ -92,7 +92,7 @@ In this test we use the browser object to create a request that’s equal to the
 
 This particular sample shows a very simple selector, but you can use the full power of CSS3 selectors ([http://www.w3.org/TR/css3-selectors/](http://www.w3.org/TR/css3-selectors/)) to grab elements from the HTML and run asserts against them.
 
-###  More Info
+##  More Info
 
 * [[Nancy and VB.Net: testing your modules.|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-vb-net-testing]]
 * [[Testing Modules in Nancy|http://devghost.com/testing-modules-in-nancy]]
