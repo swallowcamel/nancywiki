@@ -14,7 +14,7 @@
 1. [[Diagnostics]]
 1. [[Adding a custom FavIcon]]
 1. [[The Application Before, After and OnError pipelines]]
-1. [[Redirecting to a custom error page]]
+1. [[Generating a custom error page]]
 1. [[Authentication overview]]
 1. [[Forms authentication]]
 1. [[The cryptography helpers]]
