@@ -36,7 +36,7 @@ public class Startup
 
 * **Install packages using NuGet**
 ```
-Install-Package Microsoft.Owin.Hosting - pre
+Install-Package Microsoft.Owin.Hosting -pre
 Install-Package Microsoft.Owin.Host.HttpListener -pre
 Install-Package Nancy.Owin
 ```
