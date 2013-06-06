@@ -66,8 +66,8 @@ Nancy comes with a couple of extension methods that encapsulates these tasks and
 The following extension methods are available
 
 - `RequiresAuthentication` - Ensures that an authenticated user is available or it will return `HttpStatusCode.Unauthorized`
-- `RequiresClaims` - Enables you to define the list of claims that the user has to meet in order to be granted access to the secured resources. All listed claims have to be meet for access to be granted
-- `RequiresAnyClaim` - Same as `RequiresClaims` but with the difference that, at least, only one of the listed claims have to be meet in order for access to be granted
+- `RequiresClaims` - Enables you to define the list of claims that the user has to meet in order to be granted access to the secured resources. All listed claims have to be met for access to be granted
+- `RequiresAnyClaim` - Same as `RequiresClaims` but with the difference that, at least, only one of the listed claims have to be met in order for access to be granted
 - `RequiresValidatedClaims` - Gives you full control over the claims validation process, by letting you defines a function, in the format `Func<IEnumerable<string>, bool>` that is invoked to determine if access should be granted or not
 - `RequiresHttps` - While this is not strictly related to authentication, it tells Nancy that the resources are only permitted to be accessed if the request uses https. There is an optional bool parameter that can be used to control if the user should be redirected to the resources, as a https request, if an attempt is made to access it using http. This can be used to ensure that resources are always accessed using a secure request
 
