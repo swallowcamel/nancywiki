@@ -39,7 +39,9 @@ Note that returning `null` will result in requests for `/favicon.ico` being pass
 
 ### Help! I can't see my icon
 
-I bet if you clear your browsers cache you will see it!
+Try:
 
+1. Clearing your browser's cache.
+2. Navigating to `http://site/favicon.ico` and forcing a refresh (usually Ctrl+F5).
 
 [<< Part 13. Diagnostics](Diagnostics) - [Documentation overview](Documentation) - [Part 15. The Application Before, After and OnError pipelines >>](The Application Before, After and OnError pipelines)
