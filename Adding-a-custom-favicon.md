@@ -33,7 +33,9 @@ private static byte[] LoadFavIcon()
 
 ### Removing the icon
 
-If you do not wish to use a favicon, at all, then simply override the `FavIcon` property, on your [[Bootstrapper]] and return `null`
+If you do not wish to use a favicon, at all, then simply override the `FavIcon` property, on your [[Bootstrapper]] and return `null`.
+
+Note that returning `null` will result in requests for `/favicon.ico` being passed along the pipeline, which means (in particular) that your modules may see this request.
 
 ### Help! I can't see my icon
 
