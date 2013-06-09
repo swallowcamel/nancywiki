@@ -6,7 +6,7 @@ Simple place a `.ico` or `.png` file, called _favicon_ anywhere in your applicat
 If you have more then one favicon in your application, the first one it finds will be used.
 
 ### Using an embedded icon
-You can also embed a favicon in your application assembly. To make Nancy use the embedded icon, simply override the `DefaultFavIcon` property, of your bootstrapper, and add the following code 
+You can also embed a favicon in your application assembly. To make Nancy use the embedded icon, simply override the `FavIcon` property of your bootstrapper, and add the following code:
 
 ```c#
 public class Bootstrapper : DefaultNancyBootstrapper
