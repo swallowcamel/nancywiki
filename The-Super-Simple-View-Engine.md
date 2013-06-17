@@ -123,7 +123,7 @@ Syntax
 @Master['<name>']
 
 @Section['<name>']
-[@EndSection]
+@EndSection
 ```
 
 Example
