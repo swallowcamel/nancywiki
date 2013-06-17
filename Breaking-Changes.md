@@ -2,6 +2,7 @@ We try to keep the number of breaking changes down to an absolute minimum, but s
 
 ## 0.18.0 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=24&page=1&state=closed))
 - [Client certificates are always prompted for with SSL on self host.] (https://github.com/NancyFx/Nancy/issues/1121)
+- [Added host configuration to OWIN hosting to control client certificates] (https://github.com/NancyFx/Nancy/pull/1123)
 
 ## 0.17.1 ([View](https://github.com/NancyFx/Nancy/issues?milestone=25&state=closed))
 - None
