@@ -19,7 +19,7 @@ public class Bootstrapper : DefaultNancyBootstrapper
     }
 }
 
-private static byte[] LoadFavIcon()
+private byte[] LoadFavIcon()
 {
     //TODO: remember to replace 'AssemblyName' with the prefix of the resource
     using (var resourceStream = GetType().Assembly.GetManifestResourceStream("AssemblyName.favicon.ico"))
