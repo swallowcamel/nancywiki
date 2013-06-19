@@ -41,7 +41,7 @@ namespace NancyDemo
             //so we need to block another way
             if (args.Any(s => s.Equals("-d", StringComparison.CurrentCultureIgnoreCase)))
             {
-                while (true) Thread.Sleep(10000000);
+                Thread.Sleep(Timeout.Infinite);
             }
             else
             {
