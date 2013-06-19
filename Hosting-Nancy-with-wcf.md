@@ -1,4 +1,11 @@
-Nancy is a great choice for applications that want to run a lightweight HTTP server without the overhead of IIS. To do this, host it with WCF:
+Nancy is a great choice for applications that want to run a lightweight HTTP server without the overhead of IIS. To do this, take the following steps: 
+
+* **Make sure you have the Nancy WCF hosting libary referenced - Install the package using Nuget**
+```
+PM> Install-Package Nancy.Hosting.Wcf
+```
+
+* **Then host it with WCF**
 
 ```c#
 var host = new WebServiceHost(new NancyWcfGenericService(),
