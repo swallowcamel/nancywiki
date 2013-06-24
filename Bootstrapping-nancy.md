@@ -65,6 +65,14 @@ container.Register<IMyInterfaceToo, MyOtherThing>().AsMultiInstance();
 
 For more information on the various registration options available, please take a look at the [TinyIoC Wiki](http://hg.grumpydev.com/tinyioc).
 
+Very useful post from @grumpydev at [stackoverflow](http://stackoverflow.com/a/9572032/196451) about registering stuff into TinyIoC:
+
+* There are two scopes, application scope, configured by overriding ConfigureApplicationContainer, and request scope, configured by overriding ConfigureRequestContainer, you don't call them yourself, you just override them depending on how you want to scope your objects.
+* The default Nancy bootstrapper will "autoregister" everything it can in its default implementation of ConfigureApplicationContainer.
+* By calling "base" *after* you've made a manual registration you are effectively copying over your original registration by autoregister. Either don't call base, or call it before you do your manual registrations.
+* Don't call ConfigureRequestContainer from your ConfigureApplicationContainer.
+* If you don't care about everything being application scoped (so singetons get the same instance for each request) then you don't need to override ConfigureApplicationContainer nor ConfigureRequestContainer, you can just rely on autoregister.
+
 ### Part 3 - Alternative Containers ###
 
 Although they don't form part of the "core" Nancy project, Nancy's Bootstrapper architecture is designed to be easily adapted to other IoC containers. To use an alternative BootStrapper simply derive from the replacement Bootstrapper, rather than the default Nancy one, and Nancy will take care of the rest.
