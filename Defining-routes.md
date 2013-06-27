@@ -85,6 +85,18 @@ The `Response` object declares several implicit cast operators which enables an 
 
 The last part is an optional Condition that can be used to make sure that a route is only matched if certain conditions are met. This could e.g be a check to ensure that the route is only invoked if it was used by a mobile user-agent. A route condition is defined using a lambda expression of type `Func<NancyContext, bool>`.
 
+```
+Post["/login", (ctx) => ctx.Form.remember] = _ => 
+{
+     return "Handling code when remember is true!";
+}
+
+Post["/login", (ctx) => !ctx.Form.remember] = _ => 
+{
+     return "Handling code when remember is false!";
+}
+```
+
 ## The secret for selecting the right route to invoke
 
 There are a couple of gotchas you should be aware of when it comes to the default behavior, in Nancy, for selecting which route to invoke for a request. It sounds easy enough, you pick the one that matches the `Method`, `Pattern` and `Condition` of the request, right? In the simplest case that is true and how it is selected, but what if things are a bit more complicated?
