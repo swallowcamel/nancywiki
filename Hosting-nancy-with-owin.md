@@ -63,7 +63,7 @@ class Program
     {
         var url = "http://+:8080";
 
-        using (WebApplication.Start<Startup>(url))
+        using (WebApp.Start<Startup>(url))
         {
             Console.WriteLine("Running on http://localhost:8080", url);
             Console.WriteLine("Press enter to exit");
