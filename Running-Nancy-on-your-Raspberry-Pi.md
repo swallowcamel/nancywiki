@@ -37,7 +37,7 @@ Set the following settings:
 
 * Memory-split: 16MB
 
-* Overclock: Modest 800 MHz (or just leave it at 700 MHz if your afraid of burning off your Pi)
+* Overclock: Modest 800 MHz (or just leave it at 700 MHz if you're afraid of burning off your Pi)
 
 * Boot to GUI: No (uses extra resources, but might still work if booting to GUI)
 
