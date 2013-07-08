@@ -31,6 +31,7 @@ public class Startup
     }
 }
 ```
+*Note: You must keep the Startup file's namespace the same as your application name or it will return a `403.14 - Forbidden`.*
 
 ## Katana - HttpListener (SelfHost)
 
