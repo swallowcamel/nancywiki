@@ -1,6 +1,6 @@
 This tutorial describes how to install and run a NancyFx powered website on [Ubuntu 12.04][ubuntu]
 
-# Install mono on your ubunu machine
+# Install mono on your ubuntu machine
 Go to the [mono download page][getmono] to retrieve the the latest mono version. In our case, we build the latest source from github:
 
     $ sudo apt-get install git autoconf automake libtool g++ gettext
