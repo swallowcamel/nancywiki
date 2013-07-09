@@ -1,6 +1,8 @@
 We try to keep the number of breaking changes down to an absolute minimum, but sometimes we feel the change is so important that we decide to perform it. Many time these changes will not directly have an effect on users that upgrade their Nancy version, but since they are changes to public types and behaviors, we still list them here in case you should run into issues after an update.
 
 ## 0.18.0 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=24&page=1&state=closed))
+- [Passing binding context to body deserializers] (https://github.com/NancyFx/Nancy/pull/1133)
+- [Adds charset=utf8 to a json response Content-Type] (https://github.com/NancyFx/Nancy/pull/1089)
 - [Client certificates are always prompted for with SSL on self host.] (https://github.com/NancyFx/Nancy/issues/1121)
 - [Added host configuration to OWIN hosting to control client certificates] (https://github.com/NancyFx/Nancy/pull/1123)
 
