@@ -2,7 +2,7 @@ Right smack in the center of Nancy lives this mythical unicorn that we like to c
 
 The bootstrapper is also responsible for some of the magic that you are treated to when working with the framework, such as automatic discovery of modules, custom model binders, dependencies and much more.
 
-In essence the bootstrapper is a friendly syntax, or [Domain Specific Language (DSL)](http://en.wikipedia.org/wiki/Domain-specific_language), on top of a [Inversion of Control Container](http://en.wikipedia.org/wiki/Inversion_of_Control) that helps out with the component discovery and composition of the framework at runtime. Don’t worry if any of these terms sounds new or scary, the super-duper-happy-path ensures that everything “just works” out of the box, without having to worry about the underlying container, and still allows very granular configuration/customisation as and when you require it.
+In essence the bootstrapper is a friendly syntax, or [Domain Specific Language (DSL)](http://en.wikipedia.org/wiki/Domain-specific_language), on top of an [Inversion of Control Container](http://en.wikipedia.org/wiki/Inversion_of_Control) that helps out with the component discovery and composition of the framework at runtime. Don’t worry if any of these terms sound new or scary, the super-duper-happy-path ensures that everything “just works” out of the box, without having to worry about the underlying container, and still allows very granular configuration/customisation as and when you require it.
 
 The default implementation that is shipped with Nancy sits on top of the [TinyIoC](https://github.com/grumpydev/TinyIoC) IoC container; however, just as the bootstrapper lets you swap out pretty much any component in Nancy, the bootstrapper itself can be replaced with an implementation using a container of your choice. We ship implementations for all the major containers, available via [Nuget](https://nuget.org/packages?q=Nancy.Bootstrappers) or [our TeamCity server](http://teamcity.codebetter.com/project.html?projectId=project112&tab=projectOverview&guest=true) (for latest builds), but if there’s a container that’s not currently shipped that you think we should support - feel free to send a pull request :-)
 
@@ -37,7 +37,7 @@ public class Home : NancyModule
 
 ## Ignoring assemblies when using AutoRegister.
 
-Though when applications have many references it will take TinyIoC longer and longer to scan through them to find implementations of the dependencies. To prevent this you can specify which assemblies Nancy can ignore. 
+When applications have many references it will take TinyIoC longer to scan through them to find implementations of the dependencies. To prevent this you can specify which assemblies Nancy can ignore. 
 
 ```c#
 public class CustomBootstrapper : DefaultNancyBootstrapper
