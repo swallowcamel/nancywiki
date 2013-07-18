@@ -32,7 +32,7 @@ Nancy provides two default implementations that you can use
 
 ## The IHmacProvider interface
 
-Defines the functionality for generating Hash-based Message Authentication Codes ([HMACs](http://en.wikipedia.org/wiki/Hash-based_message_authentication_code) digital signature, which can be used to sign encrypted data to ensure it has not been tampered with.
+Defines the functionality for generating Hash-based Message Authentication Codes ([HMACs](http://en.wikipedia.org/wiki/Hash-based_message_authentication_code)) digital signature, which can be used to sign encrypted data to ensure it has not been tampered with.
 
 ```c#
 /// <summary>
