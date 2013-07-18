@@ -17,16 +17,16 @@ public class Bootstrapper : DefaultNancyBootstrapper
     {
         get { return this.favicon?? (this.favicon= LoadFavIcon()); }
     }
-}
 
-private byte[] LoadFavIcon()
-{
-    //TODO: remember to replace 'AssemblyName' with the prefix of the resource
-    using (var resourceStream = GetType().Assembly.GetManifestResourceStream("AssemblyName.favicon.ico"))
+    private byte[] LoadFavIcon()
     {
-        var tempFavicon = new byte[resourceStream.Length];
-        resourceStream.Read(tempFavicon, 0, (int)resourceStream.Length);
-        return tempFavicon;
+        //TODO: remember to replace 'AssemblyName' with the prefix of the resource
+        using (var resourceStream = GetType().Assembly.GetManifestResourceStream("AssemblyName.favicon.ico"))
+        {
+            var tempFavicon = new byte[resourceStream.Length];
+            resourceStream.Read(tempFavicon, 0, (int)resourceStream.Length);
+            return tempFavicon;
+        }
     }
 }
 ```
