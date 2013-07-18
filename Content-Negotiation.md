@@ -1,4 +1,4 @@
-Content negotiation is a way of determining what content type to return to the client based on what the client can handle, and what the server can provide. Whenever you return something from a route, that is not a `Response` object (or anything that can implicitly be cast to a `Response` object) then that will be passed through the content negotiation pipeline before being sent back in the response.
+Content negotiation is a way of determining what content type to return to the client based on what the client can handle, and what the server can provide. Whenever you return something from a route, that is not a `Response` object (or anything that can be implicitly cast to a `Response` object) it will be passed through the content negotiation pipeline before being sent back in the response.
 
 ```c#
 Get["/"] = parameters => {
@@ -40,7 +40,7 @@ The response processors are automatically discovered and wired up at runtime and
 ```c#
 public class Bootstrapper : DefaultNancyBootstrapper
 {
-    protected override NancyInternalConfiguration InternalConfiguration
+    protected override NancyInternalConfiguration InternalConfiguration()
     {
         get
         {
@@ -79,7 +79,7 @@ public class ProcessorMatch
 }
 ```
 
-The `MatchResult` enumeration specified how well of a match the media type and model are. 
+The `MatchResult` enumeration specifies how well of a match the media type and model are. 
 
 ```c#
 public enum MatchResult
@@ -110,7 +110,7 @@ Once it has all the `ProcessorMatch` return values it orders them, in decending 
 
 ### Default response processors
 
-Nancy is shipped with a couple of default response processors that are automatically available to you in your applications
+Nancy ships with a couple of default response processors that are automatically available to you in your applications
 
 - `JsonProcessor` - Converts the return value into json, when the requested media type is `application/json` or any vendor specific json media type `application/vnd.foobar+json`
 - `ViewProcessor` - Renders a view, using the return value as the model, when the requested media type is `text/html`. It uses the normal [[View location conventions]], when choosing which view to render.
@@ -120,11 +120,11 @@ Nancy is shipped with a couple of default response processors that are automatic
 
 By returning a model from your route, you are giving Nancy free reign to negotiate the format of the response using all the available resources. But what if you want a bit more control, on a per-route basis, on how the negotiation process took place?
 
-That is where the `Negotiator` comes into place. The `Negotiator` (you find it in `Nancy.Responses.Negotiation`) is type that you can return, from your route, and which contains instructions for the content negotiation pipeline. 
+That is where the `Negotiator` comes into place. The `Negotiator` (you find it in `Nancy.Responses.Negotiation`) is a type that you can return from your route, which contains instructions for the content negotiation pipeline. 
 
-The `Negotiatior` has a single property on it, `NegotiationContext`, which if of a type with the same name. Using the `NegotiationContext` you can provide the instructions that control the negotiation of the response. 
+The `Negotiatior` has a single property on it, `NegotiationContext`, which is of a type with the same name. Using the `NegotiationContext` you can provide the instructions that control the negotiation of the response. 
 
-However, directly working with the `Negotiator` and `NegotiationContext` can be a bit cumbersome and for that reason the `NancyModule` contains a helper called `Negotiate`, which exposes a bit more user-friendly API for constructing `Negotiator` instance.
+However, directly working with the `Negotiator` and `NegotiationContext` can be a bit cumbersome and for that reason the `NancyModule` contains a helper called `Negotiate`, which exposes a more user-friendly API for constructing a `Negotiator` instance.
 
 This is an example of what it can look like when using the `Negotiator` from a route
 
@@ -138,7 +138,7 @@ Get["/"] = parameters => {
 };
 ```
 
-The `Negotiator` contains several methods that you use to configure the returned `Negotiator` instance.
+The `Negotiator` contains several methods that you can use to configure the returned `Negotiator` instance.
 - `WithHeader` - Adds a header and value which should be attached to the response before being sent back to the client
 - `WithHeaders` - Adds a collection of headers and values which should be attached to the response before being sent back to the client
 - `WithView` - Enables you to be explicit with the name of the view which should be used when the client requests the `text/html` media type
@@ -210,9 +210,9 @@ You could of course inherit the bootstrapper type that you are using in your pro
 
 ## Defining your own conventions using IConventions
 
-You can also create a class that implements the `IConventions` interface and in the `Initialise` method you add you conventions to the `AcceptHeaderCoercionConventions` property of the conventions that are passed in.
+You can also create a class that implements the `IConventions` interface and in the `Initialise` method you add your conventions to the `AcceptHeaderCoercionConventions` property of the conventions that are passed in.
 
-Nancy will locate all implementation of the interface and wire up the conventions, before they are passed onto the `ConfigureConventions` method of the bootstrapper.
+Nancy will locate all implementations of the interface and wire up the conventions, before they are passed onto the `ConfigureConventions` method of the bootstrapper.
 
 ## Automatic negotiation headers
 
