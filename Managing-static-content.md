@@ -28,7 +28,7 @@ If that looks a little icky, don't worry, Nancy has a helper that will take care
 ## Using the StaticContentConventionBuilder
 The `StaticContentConventionBuilder` is a helper class that is shipped with Nancy. It produces static content conventions for file system based files (e.g. files on the file system, if you want to embed files in an assembly then see the previous section). It encapsulates a lot of the leg work that you would have to write yourself if you wanted to provide an efficient and secure way of letting clients request files of the file system.
 
-There are two method that produces static content conventions
+There are two methods that produce static content conventions
 * `AddDirectory` - For mapping directories
 * `AddFile` - For mapping individual files
 
