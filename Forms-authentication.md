@@ -1,6 +1,6 @@
 This document provides an overview on how to enable forms authentication in your Nancy application. For a full working sample, please refer to the `Nancy.Demo.Authentication.Forms` project in the Nancy solution.
 
-To enable forms authentication, in your application, you need to complete the following steps
+To enable forms authentication in your application, you need to complete the following steps
 
 1. Install the `Nancy.Authentication.Forms` package
 1. Implement an `IUserMapper`
@@ -13,9 +13,9 @@ The user mapper is responsible for mapping a user from an identifier. The identi
 
 We have chosen to use a GUID as the identifier. The reason for this is that using something like the username of id is a potential vulnerability, because, if the cookie encryption was somehow compromised,  it would be easy to spoof the identity of another user by guessing their username or id.
 
-The identifier should never be read by a human, so making it a GUID also discourages that it is ever displayed anywhere, and each GUID is both unique and non-sequential, making it a lot harder to spoof the identity of someone else.
+The identifier should never be read by a human, so making it a GUID also discourages that it is ever displayed anywhere, and each GUID is both unique and non-sequential, making it a lot harder to spoof than the identity of someone else.
 
-It is also important to know that the identifier should be treated permanent for the user that it was generated for and will be reused across requests and application sessions. 
+It is also important to know that the identifier should be treated as permanent for the user that it was generated for and will be reused across requests and application sessions. 
 
 The `IUserMapper` interface is defined in the following way
 
@@ -36,9 +36,9 @@ A single method whose sole responsibility is to take the GUID identifier and ret
 
 ## Modifying your application to handle forms authentication
 
-Once you have implemented an `IUserMapper` then it is time to add the resources, to your application, that are responsible for handling the login and logout procedures. These are the implemented using normal routes, and should be placed in a module that does not require the user to be authenticated to access.
+Once you have implemented an `IUserMapper`, it is time to add the resources to your application that are responsible for handling the login and logout procedures. These are implemented using normal routes, and should be placed in a module that does not require the user to be authenticated to access.
 
-Below is an example on the basic structure of such a module. Please note that the paths of the resources, and the name of the module, can be anything; it’s not necessary to follow the naming in this example:
+Below is an example of the basic structure of such a module. Please note that the paths of the resources, and the name of the module, can be anything; it’s not necessary to follow the naming in this example:
 
 ```c#
 public class LoginModule : NancyModule
@@ -47,7 +47,7 @@ public class LoginModule : NancyModule
     {
         Get["/login"] = parameters => {
             // Called when the user visits the login page or is redirected here because
-            // and attempt was made to access a restricted resource. It should return
+            // an attempt was made to access a restricted resource. It should return
             // the view that contains the login form
         };
 
@@ -65,9 +65,9 @@ public class LoginModule : NancyModule
 }
 ```
 
-When the user either login or logout, certain actions needs to be taken, such as creating or removing the authentication cookie and to redirect the user to the appropriate location. To aid with these common tasks, there are several extension methods (located in the `Nancy.Authentication.Forms` namespace) that you can use
+When the user logs in or out, certain actions need to be taken, such as creating or removing the authentication cookie and redirecting the user to the appropriate location. To aid with these common tasks, there are several extension methods (located in the `Nancy.Authentication.Forms` namespace) that you can use
 
-- `LoginAndRedirect` - Logs the user in an redirects the user back to the url that they came from. You can specify a fallback url that will be used if no redirect url was available
+- `LoginAndRedirect` - Logs the user in and redirects the user back to the url that they came from. You can specify a fallback url that will be used if no redirect url was available
 - `LoginWithoutRedirect` - Logs the user in and returns a response with status code 200 (OK)
 - `Login` will call the `IsAjaxRequest` extension method on the current request and perform a `LoginAndRedirect` if it was not an Ajax call, otherwise it will perform `LoginWithoutRedirect` 
 - `LogoutAndRedirect` - Logs the user out and redirects to the provided url
@@ -86,9 +86,9 @@ The only thing left to do now is actually enable Forms Authentication, this is d
 FormsAuthentication.Enable(pipelines, formsAuthConfiguration);
 ```
 
-It can either be added to the `ApplicationStartup` or `RequestStartup`. Which you should choose most often depends on your implementation of the `IUserMapper`, that is, should be user mapper have an application or request lifetime.
+It can either be added to the `ApplicationStartup` or `RequestStartup`. Which you should choose often depends on your implementation of the `IUserMapper`, that is, should the user mapper have an application or request lifetime.
 
-The `formsAuthConfiguration` variable, that is passed into `FormsAuthentication.Enable` method, is an instance of the `FormsAuthenticationConfiguration` type, which enables you to customize the behavior of the forms authentication provider.
+The `formsAuthConfiguration` variable that is passed into the `FormsAuthentication.Enable` method, is an instance of the `FormsAuthenticationConfiguration` type, which enables you to customize the behavior of the forms authentication provider.
 
 For instance, here is a basic configuration
 
@@ -108,7 +108,7 @@ Depending on if this is placed in `ApplicationStartup` or `RequestStartup` the m
 The following configurations can be made
 
 - `RedirectingQuerystringKey` - The name of the querystring parameter that will contain the URL of the secure resource that was being accessed while being unauthorized. This is used to redirect the user back once the login was successful. The default name is `returnUrl`
-- `RedirectingUrl` - The, relative, url that user should be redirected to when trying to access a secure resource when not being authenticated. This is usually your login page and should be in the format `~/login`
+- `RedirectingUrl` - The (relative) url that the user should be redirected to when trying to access a secure resource when not being authenticated. This is usually your login page and should be in the format `~/login`
 - `UserMapper` - The `IUserMapper` that should be used during authentication
 - `RequiresSSL` - Determines if the forms authentication cookie can only be accessed over a secure request or not. The default is false
 - `DisableRedirect` - Determines whether to redirect to the login page during an unauthorized access
@@ -118,9 +118,9 @@ The following configurations can be made
 
 If you do not specify a value for the `CryptographyConfiguration` property on the `FormsAuthenticationConfiguration` object, then it will default to using `CryptographyConfiguration.Default`.
 
-The default behavior uses the `RandomKeyGenerator` which means that a new crypto key is generated each time the application starts, so if your application is restarted, or the appdomain recycled, then user’s authentication cookies will become invalid; this will also be the case between machines in a load balanced environment. Don’t panic though! Changing this configuration is simple to do though, for more in depth information read about the  [Cryptographic configurations].
+The default behavior uses the `RandomKeyGenerator` which means that a new crypto key is generated each time the application starts, so if your application is restarted, or the appdomain recycled, then user’s authentication cookies will become invalid; this will also be the case between machines in a load balanced environment. Don’t panic though! Changing this configuration is simple to do, for more in depth information read about the [Cryptographic configurations].
 
-For this reason you should always use your own `CryptographyConfiguration` and below is an example of what that could look like, when used together with forms authentication.
+For this reason you should always use your own `CryptographyConfiguration`, below is an example of what that could look like when used together with forms authentication.
 
 ```c#
 var cryptographyConfiguration = new CryptographyConfiguration(
