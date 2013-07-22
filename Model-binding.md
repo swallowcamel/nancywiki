@@ -108,7 +108,7 @@ Here's an example form with random dummy data:
       <br />
       <input type="submit" value="Test the binding thingy"/>
 </form>
-``` 
+```
 
 This can then be bound (with ```c#this.Bind<T>();```) to a list of object of this class:
 ```c#
