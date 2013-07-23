@@ -61,7 +61,7 @@ public class LoginModel
 ```
 
 ## Model binding against lists
-Nancy supports posting in lists of things and binding to them, on the server-side, as before with ```c#this.Bind<T>();```.
+Nancy supports posting in lists of things and binding to them, on the server-side, as before with `this.Bind<T>();`.
 
 Nancy supports binding against lists of items (or arrays or anythings else that implements IEnumerable) in two different ways; as a list on the object your binding against or as a list of objects. 
 
