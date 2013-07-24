@@ -74,21 +74,23 @@ If you have a form like this:
   <input type="submit" value="Submit"/>
 </form>
 ```
-
 Then you can bind to this class:
 ```c#
-public class Example
+public class Posts
 {
-  public string Title { get; set; }
-  public DateTime Published { get; set; }
   public string[] Tags { get; set; }
   public int[] Ints { get; set; }
 }
 ```
+with this simple statement:
+```c#
+var listOfPosts = this.Bind<List<Posts>>();
+``` 
+
 ### Binding against lists of objects
 Imagine you have a system to enter who commits the most to a OSS-framework. You allow the users of the site to post a bunch of users-names and their number of commits at once. 
 
-Here's an example form with random dummy data:
+Here's an example form with *random* dummy data:
 ```html
 <form action="/SimpleListDemo" method="post">
       User 1:<input type="text" name="Name[0]" value="thecodejunkie" /> 
@@ -109,8 +111,7 @@ Here's an example form with random dummy data:
       <input type="submit" value="Test the binding thingy"/>
 </form>
 ```
-
-This can then be bound (with ```c#this.Bind<T>();```) to a list of object of this class:
+This can then be bound (with ```c#this.Bind<List<User>>();```) to a list of object of this class:
 ```c#
 public class User
 {
@@ -125,6 +126,5 @@ Nancy supports two kind of list delimiters for the name of the items in the HTML
 * brackets (Name[1], Name[2] etc.)
 
 You can start the numbering on whatever number you fancy and you don't have to keep the series in order. Nancy got you covered. 
-
 
 [<< Part 5. The before and after module hooks](The before and after module hooks) - [Documentation overview](Documentation) - [Part 7. Bootstrapper >>](Bootstrapper)
