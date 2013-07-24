@@ -85,8 +85,7 @@ public class Posts
 with this simple statement:
 ```c#
 var listOfPosts = this.Bind<List<Posts>>();
-``` 
-
+```
 ### Binding against lists of objects
 Imagine you have a system to enter who commits the most to a OSS-framework. You allow the users of the site to post a bunch of users-names and their number of commits at once. 
 
