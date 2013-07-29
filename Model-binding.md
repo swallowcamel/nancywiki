@@ -110,7 +110,7 @@ Here's an example form with *random* dummy data:
       <input type="submit" value="Test the binding thingy"/>
 </form>
 ```
-This can then be bound (with ```c#this.Bind<List<User>>();```) to a list of object of this class:
+This can then be bound (with ```this.Bind<List<User>>();```) to a list of object of this class:
 ```c#
 public class User
 {
