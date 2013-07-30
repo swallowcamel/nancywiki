@@ -45,6 +45,8 @@ By default, the standard JSON deserializer will be used to deserialize any "json
 
 As with the other model binders, you can author your own body deserializers and Nancy will automatically detect them and any user defined binders take priority over the built in ones.
 
+**NOTE:** If you encounter the Nancy.Json.JsonSettings.MaxJsonLength Exceeded error because your payload is too high, change that limit in your Bootstrapper in `ApplicationStartup` to be `Nancy.Json.JsonSettings.MaxJsonLength = int.MaxValue;`
+
 ## Model binding Checkbox
 
 For auto model binding checkbox to boolean value, make sure to set the `value="true"` in the checkbox.
