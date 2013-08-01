@@ -1,5 +1,3 @@
-# Git Workflow
-
 ## Overview
 
 The general process for working with Nancy is:
