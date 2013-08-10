@@ -6,7 +6,7 @@ i.e
 
 	public class ProductsModule : NancyModule
 	{
-		public ProductsModule
+		public ProductsModule()
 		{
 			Get["/products/{id}"] = _ =>
 			{
