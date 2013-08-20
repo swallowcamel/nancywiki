@@ -33,6 +33,18 @@ public class Startup
 ```
 *Note: You must keep the Startup file's namespace the same as your application name or it will return a `403.14 - Forbidden`.*
 
+* **Edit web.config** _Only if you are using PUT, HEAD or DELETE verbs_
+```xml
+<system.webServer>
+<handlers>
+      <remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+      <remove name="OPTIONSVerbHandler" />
+      <remove name="TRACEVerbHandler" />
+      <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+</handlers>
+</system.webServer>
+```
+
 ## Katana - HttpListener (SelfHost)
 
 * **Install packages using NuGet**
