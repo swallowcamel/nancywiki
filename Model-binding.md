@@ -123,9 +123,8 @@ public class User
 
 ### List delimiters in HTML-forms
 Nancy supports two kind of list delimiters for the name of the items in the HTML-form; 
-* underscore (Name_1, Name_2 etc.)
-* brackets (Name[1], Name[2] etc.)
-
-You can start the numbering on whatever number you fancy and you don't have to keep the series in order. Nancy got you covered. 
+* underscores (`Name_1`, `Name_2` etc.)
+* brackets (`Name[1]`, `Name[2]` etc.)
+ 
 
 [<< Part 5. The before and after module hooks](The before and after module hooks) - [Documentation overview](Documentation) - [Part 7. Bootstrapper >>](Bootstrapper)
