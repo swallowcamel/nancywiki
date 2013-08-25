@@ -95,7 +95,6 @@ This particular sample shows a very simple selector, but you can use the full po
 ##  More Info
 
 * [[Nancy and VB.Net: testing your modules.|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-vb-net-testing]]
-* [[Testing Modules in Nancy|http://devghost.com/testing-modules-in-nancy]]
 * [[Intro to testing with Nancy|http://www.marcusoft.net/2013/01/NancyTesting1.html]]
 * [[The Configurable bootstrapper|http://www.marcusoft.net/2013/01/NancyTesting2.html]]
 * [[The Browser and Response objects|http://www.marcusoft.net/2013/01/NancyTesting3.html]]
