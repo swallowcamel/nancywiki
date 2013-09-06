@@ -79,6 +79,17 @@ First we need to install dependencies, restrieve Nancy source and finnaly compil
 
 Note: final step takes a long time. (optionally you might be able to only run 'rake compilemono')
 
+Note: The gem `albacore` version 0.3.5 has a depency bug with `rubyzip` ([Issue #70](https://github.com/Albacore/albacore/issues/70)). Creating the `albacore` gem from the current dev branch (0.4.0) works (takes about 45min on the RPi...):
+
+``` sh
+sudo aptitude install ruby1.9.1-dev
+cd ~/code/
+git clone https://github.com/Albacore/albacore.git
+cd albacore
+gem build albacore.gemspec
+sudo gem install albacore-0.4.0.gem
+```
+
 ## Create Nancy app file using Nancy Selfhosting
 
 Now we are ready to create our first self-hosted Nancy app, so go ahead and save the following code:
@@ -141,7 +152,6 @@ http://andyfelong.com/2013/02/raspberry-pi-meets-mongodb/
 http://stackoverflow.com/questions/7948789/mongodb-mongod-complains-that-there-is-no-data-db-folder
 
 http://sourcecodebean.com/archives/mongodb-c-and-mono/1408
-
 
 
 
