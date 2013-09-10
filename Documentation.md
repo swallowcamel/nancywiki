@@ -1,7 +1,7 @@
 ## Getting Started
 1. [[Introduction]]
 1. [[Exploring the Nancy module]]
-1. [[Routing]]
+1. Routing
   * [[Defining Routes]]
   * [[Custom Routing]]
   * [[Legacy Routing]]
