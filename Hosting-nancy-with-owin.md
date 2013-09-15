@@ -139,3 +139,59 @@ public class HomeModule : NancyModule
     }
 }
 ```
+
+# Conditional pass-through
+
+Nancy in an OWIN pipeline, by default, is terminating. That is, when it fails to resolve a handler or static content, it will complete the request and return a 404, and subsequent middleware will not be invoked. For example, given this Startup...
+```c#
+using Owin;
+
+public class Startup
+{
+    public void Configuration(IAppBuilder app)
+    {
+        app
+          .UseNancy()
+          .UseOtherMiddleware();
+    }
+}
+```
+...the Middleware ```UseOtherMiddleware``` will never be invoked.
+
+In order to configure Nancy to pass-through, you can supply a delegate that is invoked on a per-request basis, after it has been initially handled by Nancy:
+```c#
+using Owin;
+using Nancy;
+
+public class Startup
+{
+    public void Configuration(IAppBuilder app)
+    {
+        app
+          .UseNancy(options =>
+              options.PerformPassThrough = context =>
+                  context.Response.StatusCode == HttpStatusCode.NotFound);
+          .UseOtherMiddleware();
+    }
+}
+```
+Here, when Nancy's is responding with a 404, the request is passed-through to ```UseOtherMiddleware``` and Nancy's response (any headers and body) is discarded.
+
+There is also an extension helper make it more succinct if you are just dealing with StatusCodes for pass-through:
+```c#
+using Owin;
+using Nancy;
+
+public class Startup
+{
+    public void Configuration(IAppBuilder app)
+    {
+        app
+          .UseNancy(options => options.PassThroughWhenStatusCodesAre(
+              HttpStatusCode.NotFound,
+              HttpStuseCode.InternalError);
+          .UseOtherMiddleware();
+    }
+}
+```
+
