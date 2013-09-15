@@ -142,7 +142,7 @@ public class HomeModule : NancyModule
 
 # Conditional pass-through
 
-Nancy in an OWIN pipeline, by default, is terminating. That is, when it fails to resolve a handler or static content, it will complete the request and return a 404, and subsequent middleware will not be invoked. For example, given this Startup...
+Nancy in an OWIN pipeline is, by default, terminating. That is, when it fails to resolve a handler or static content, it will complete the request and return a 404. Subsequent middleware will not be invoked. For example, given this Startup...
 ```c#
 using Owin;
 
