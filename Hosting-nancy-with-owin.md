@@ -175,7 +175,7 @@ public class Startup
     }
 }
 ```
-Here, when Nancy's is responding with a 404, the request is passed-through to ```UseOtherMiddleware``` and Nancy's response (any headers and body) is discarded.
+Here, when Nancy is responding with a 404, the request is passed-through to ```UseOtherMiddleware``` and Nancy's response (any headers and body) is discarded.
 
 There is also an extension helper make it more succinct if you are just dealing with StatusCodes for pass-through:
 ```c#
