@@ -62,7 +62,7 @@
 ### Testing Specific
 
 * [[Nancy and VB.Net: testing your modules.|http://blogs.lessthandot.com/index.php/WebDev/ServerProgramming/nancy-and-vb-net-testing]]
-* [[Testing Modules in Nancy|http://devghost.com/testing-modules-in-nancy]]
+* [[Testing Modules in Nancy|http://blog.robertblixt.com/post/testing-modules-in-nancy]]
 * [[1.  Intro to testing with Nancy|http://www.marcusoft.net/2013/01/NancyTesting1.html]]
 * [[2.  The Configurable bootstrapper|http://www.marcusoft.net/2013/01/NancyTesting2.html]]
 * [[3.  The Browser and Response objects|http://www.marcusoft.net/2013/01/NancyTesting3.html]]
