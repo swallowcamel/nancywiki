@@ -1,4 +1,4 @@
-All paths that are used in Nancy are relative something that is known the _root path_. This is the path that tells Nancy where its resources are stored on the file system. The root path is provided to Nancy through an interface called the _IRootPathProvider_, which defines a single method _GetRootPath_.
+All paths that are used in Nancy are relative to something that is known as the _root path_. This is the path that tells Nancy where its resources are stored on the file system. The root path is provided to Nancy through an interface called the _IRootPathProvider_, which defines a single method _GetRootPath_.
 
 The various hosting options are all shipped with their own implementation of this interface, because the process of figuring out where the application is located on the file system varies from host to host.
 
@@ -16,6 +16,8 @@ public class CustomRootPathProvider : IRootPathProvider
     }
 }
 ```
+
+_Note_: The root path should be an absolute path. While relative paths work when locating views, they will not work for serving static content because they are considered unsafe.
 
 Once that is done, the next thing you need to do is to let Nancy know that it should be using your own implementation, instead of going of and try to locate one for you (remember there are implementations in each host, so if you provide a second one, the result will be non-deterministic).
 
