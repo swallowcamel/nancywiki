@@ -26,6 +26,9 @@ After upgrade you should have something similar to the following:
 
     Linux raspberrypi 3.2.27+ #250 PREEMPT Thu Oct 18 19:03:02 BST 2012 armv6l GNU/Linux
 
+You might also want to update the firmware on your Pi to the latest version:
+
+    sudo rpi-update
 
 # 3. Configure OS to optimize performance
 
@@ -80,6 +83,8 @@ First we need to install dependencies, restrieve Nancy source and finnaly compil
 Note: final step takes a long time. (optionally you might be able to only run 'rake compilemono')
 
 Note: The gem `albacore` version 0.3.5 has a depency bug with `rubyzip` ([Issue #70](https://github.com/Albacore/albacore/issues/70)). Creating the `albacore` gem from the current dev branch (0.4.0) works (takes about 45min on the RPi...):
+
+Alternatively you can install rubyzip 0.9.9 which saves you that time.
 
 ``` sh
 sudo aptitude install ruby1.9.1-dev
