@@ -189,7 +189,7 @@ public class Startup
         app
           .UseNancy(options => options.PassThroughWhenStatusCodesAre(
               HttpStatusCode.NotFound,
-              HttpStatusCode.InternalError);
+              HttpStatusCode.InternalSeverError);
           .UseOtherMiddleware();
     }
 }
