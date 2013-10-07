@@ -1,4 +1,4 @@
-**TL;DR: stick stuff in `/content` done** 
+**TL;DR: stick stuff in `/content` done.** 
 
 In Nancy parlance "Static Content" is things like javascript files, css, images etc, but can actually be anything, and Nancy uses a convention based approach for figuring out what static content it is able to serve at runtime. Nancy supports the notion of having multiple conventions for static content and each convention is represented by a delegate with the signature `Func<NancyContext, string, Response>`.
 
