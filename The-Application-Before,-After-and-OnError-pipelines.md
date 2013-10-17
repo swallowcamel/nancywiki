@@ -42,6 +42,12 @@ pipelines.OnError += (ctx, ex) => {
 };
 ```
 
+**A note on System.AggregateExceptions on the OnError pipeline**
+
+The route execution is handled by a number of nested Tasks (`System.Threading.Tasks.Task`). If anything goes wrong when those Tasks are being invoked, the exceptions are wrapped in a nested hierarchy of `System.AggregateException`. `System.AggregateException` can hold as many exceptions as are thrown. While this is for most cases only one exception, we could potentially see multiple exceptions.
+
+If only one exception is wrapped, then Nancy will unwrap that exception and hand it to the `OnError` pipeline. If a collection of exceptions is wrapped, then Nancy will pass on a flattened `System.AggregateException` in order not to swallow any exceptions.
+
 ##Wiring up your hooks
 
 To create application level hooks you define them in your [Bootstrapper](Bootstrapper). They can be defined either in the `ApplicationStartup` or `RequestStartup` methods. This is because you might need to use something from the container in your hook, and the different methods let you resolve from the right container depending on your scoping requirements.
