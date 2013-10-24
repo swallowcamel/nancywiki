@@ -13,7 +13,7 @@ When you want to change the runtime behavior of Nancy you are going to be doing 
 ```c#
 public class CustomBootstrapper : DefaultNancyBootstrapper
 {
-    protected override void ApplicationStartup(TContainer container, IPipelines pipelines)
+    protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
     {
          // your customization goes here
     }
