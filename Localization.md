@@ -1,6 +1,6 @@
 Nancy has localization built into it.  
 
-There are a set of [conventions][1] on how to determine the current culture and also a set of razor view [conventions][2] based on culture. 
+There are a set of [conventions][1] on how to determine the current culture and also a set of view [conventions][2] based on culture. 
 
 So if culture is de-DE it will look for a view called Home-de-DE.cshtml which you can then add your localized content.  
 
