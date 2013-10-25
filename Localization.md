@@ -6,6 +6,9 @@ So if culture is de-DE it will look for a view called Home-de-DE.cshtml which yo
 
 It will also use resx files eg/Text.resx, Text.de-DE.resx (but can be [overridden][3] to be a database or whatever) to get translations out so you can in your view call @Text.Greeting and it will find the relevant item.
 
+[Here][4] is a Razor demo showing Localization
+
 [1]: https://github.com/NancyFx/Nancy/blob/master/src/Nancy/Conventions/DefaultCultureConventions.cs
 [2]: https://github.com/NancyFx/Nancy/blob/master/src/Nancy/Conventions/DefaultViewLocationConventions.cs
 [3]: https://github.com/NancyFx/Nancy/blob/master/src/Nancy/Localization/ResourceBasedTextResource.cs
+[4]: https://github.com/NancyFx/Nancy/tree/master/src/Nancy.Demo.Razor.Localization
