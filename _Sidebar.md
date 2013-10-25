@@ -14,6 +14,7 @@
   - [Razor](/NancyFx/Nancy/wiki/Razor-View-Engine)
   - [[Tips for Implementing your own View Engine|Implementing a View Engine]]
 1. [[View location conventions]]
+1. [[Localization]]
 1. [[Testing your application]]
 1. [[The root path]]
 1. [[Managing static content]]
