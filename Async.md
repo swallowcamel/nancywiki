@@ -1,15 +1,3 @@
-## Beta Support for Async/Await
-
-Packages for the beta release of async/await support are now available on MyGet:
-
-http://www.myget.org/gallery/nancyasync
-
-_Please note: these releases will be regularly rebased off the current master, so they will sit somewhere between the last stable release, and the next stable release_
-
-## Breaking Changes
-
-Hopefully none :-) All your current code, routes, pipelines etc should work just fine with this release. In fact, even if you don't have any intention of using async, we'd appreciate feedback on whether your existing code base works ok.
-
 ## Syntax
 
 Both the Before/After pipelines, and the main route delegates, can be specified as async. The syntax is *almost* identical to the sync code, but with the following changes:
