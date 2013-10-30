@@ -3,17 +3,33 @@
 Routes are defined in the constructor of a module. In order to define a route in Nancy, you need to specify a `Method` + `Pattern` + `Action` + (optional) `Condition`.
 
 i.e
-
-	public class ProductsModule : NancyModule
+```c#
+public class ProductsModule : NancyModule
+{
+	public ProductsModule()
 	{
-		public ProductsModule()
+		Get["/products/{id}"] = _ =>
 		{
-			Get["/products/{id}"] = _ =>
-			{
-		  		//do something
-			};
-		}
+	  		//do something
+		};
 	}
+}
+```
+
+or async:
+
+```c#
+public class ProductsModule : NancyModule
+{
+    public ProductsModule()
+    {
+        Get["/products/{id}", runAsync: true] = async (_, token) =>
+	{
+	    //do something long and tedious
+        };
+    }
+}
+```
 
 
 ## Method
