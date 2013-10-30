@@ -6,13 +6,13 @@ i.e
 ```c#
 public class ProductsModule : NancyModule
 {
-	public ProductsModule()
-	{
-		Get["/products/{id}"] = _ =>
-		{
-	  		//do something
-		};
-	}
+    public ProductsModule()
+    {
+        Get["/products/{id}"] = _ =>
+        {
+            //do something
+        };
+    }
 }
 ```
 
