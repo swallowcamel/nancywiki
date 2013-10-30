@@ -34,6 +34,7 @@ var f = this.Bind<Foo>("id", "creator", "createddate");
 
 The blacklist is a “params” array of strings, where the strings represents the name of the model properties that should be ignored by the model binder.
 
+When binding to an typed- array, list or ienumerable. The blacklist is maintained for the elements in the sequence.
 
 ## Deserializing rich request body payloads
 
