@@ -62,18 +62,18 @@ For example say we defined the following:
 ```csharp
 public class HomeModule : NancyModule
 {
-  public HomeModule()
-  {
-    Get["/{category}"] = _ =>
+    public HomeModule()
     {
-      return "My category is " + _.category;
-    }
+        Get["/{category}"] = _ =>
+        {
+           return "My category is " + _.category;
+        }
     
-    Get["/sayhello"] = _ =>
-    {
-      return "Hello from Nancy";
+        Get["/sayhello"] = _ =>
+        {
+           return "Hello from Nancy";
+        }
     }
-  }
 }
 ```
 
