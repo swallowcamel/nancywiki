@@ -66,12 +66,12 @@ public class HomeModule : NancyModule
     {
         Get["/{category}"] = _ =>
         {
-           return "My category is " + _.category;
+            return "My category is " + _.category;
         }
     
         Get["/sayhello"] = _ =>
         {
-           return "Hello from Nancy";
+            return "Hello from Nancy";
         }
     }
 }
