@@ -5,6 +5,7 @@
   * [[Defining Routes]]
   * [[Custom Routing]]
   * [[Legacy Routing]]
+1. [[Async]]
 1. [[Taking a look at the DynamicDictionary]]
 1. [[The before and after module hooks]]
 1. [[Model binding]]
