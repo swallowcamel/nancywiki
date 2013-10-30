@@ -33,6 +33,7 @@ A route also needs a Pattern which declares the application-relative URL that th
 5. **RegEx Segment** - (1,000) - `/(?<age>[\d]{1,2})` using [Named Capture Grouped](http://www.regular-expressions.info/named.html) Regular Expressions, you can get a little more control out of the segment pattern. If you don't need to capture anything then you can use a non-capturing group like `(?:regex-goes-here)`
 6. **Greedy Segment** - (0) - `/{name*}` by adding a star/asterisk to the end of the segment name, the pattern will match any value from the current forward slash onward. 
 7. **Greedy RegEx Segment** - (100) - `^(?<name>[a-z]{3,10}(?:/{1})(?<action>[a-z]{5,10}))$` a segment composed of a RegEx and Greedy segment, this captures the entire path after the forward slash, The segment must start with `^` and end with `$` so we know the start/finish of the greedy regular expression segment.
+7. **Multiple Captures Segment** - (100) - `/{file}.{extension}` or `/{file}.ext` a segment containing a mix of captures and literals.
 
 Pattern segments can be combined, in any order, to create a complex Pattern for a route. It’s worth noting that capture segments are greedy, meaning they will match anything in the requested URL until another segment matches or until the end of the URL is reached.
 
