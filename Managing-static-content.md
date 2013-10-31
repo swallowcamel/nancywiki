@@ -1,10 +1,10 @@
-**TL;DR: stick stuff in `/content` .. done.** 
+**TL;DR: stick stuff in `/Content` .. done.** 
 
 In Nancy parlance "Static Content" is things like javascript files, css, images etc, but can actually be anything, and Nancy uses a convention based approach for figuring out what static content it is able to serve at runtime. Nancy supports the notion of having multiple conventions for static content and each convention is represented by a delegate with the signature `Func<NancyContext, string, Response>`.
 
 The delegate accepts two parameters; the context of the current request and the requested path, relative to the application root. The output of the delegate is a standard Nancy `Response` object or `null`. A null response means that the convention had no static content to return given the current content and requested path.
 
-Nancy supports multiple static content conventions at once and is shipped with a default convention that will look for files in the `/content` path of your application. The static content handler in Nancy is executed as a `BeforeRequest` filter in the application pipeline.
+Nancy supports multiple static content conventions at once and is shipped with a default convention that will look for files in the `/Content` path of your application. The static content handler in Nancy is executed as a `BeforeRequest` filter in the application pipeline.
 
 ## Defining your own conventions using the bootstrapper
 
