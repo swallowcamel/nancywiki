@@ -43,7 +43,7 @@ The dashboard presents you with four options when you access it; `Information`, 
 
 ### Information
 
-The information page provides information about the setup of the Nancy environment, such as assembly version, which components are being used by Nancy, what view engines are availalble, what host is being used and so on.
+The information page provides information about the setup of the Nancy environment, such as assembly version, which components are being used by Nancy, what view engines are available, what host is being used and so on.
 
 ### Configuration
 
