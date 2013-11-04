@@ -1,5 +1,11 @@
 We try to keep the number of breaking changes down to an absolute minimum, but sometimes we feel the change is so important that we decide to perform it. Many time these changes will not directly have an effect on users that upgrade their Nancy version, but since they are changes to public types and behaviors, we still list them here in case you should run into issues after an update.
 
+## 0.21.1 ([View](https://github.com/NancyFx/Nancy/issues?milestone=31&state=closed))
+- None
+
+## 0.21.0 ([View](https://github.com/NancyFx/Nancy/issues?milestone=18&state=closed))
+- None
+
 ## 0.20.0 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=26&page=1&state=closed))
 - [Fix JSON response default charset parameter value](https://github.com/NancyFx/Nancy/pull/1153)
 
