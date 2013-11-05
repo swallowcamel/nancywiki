@@ -49,11 +49,11 @@ public class Startup
 
 * **Install packages using NuGet**
 ```
-Install-Package Microsoft.Owin.Hosting -pre
-Install-Package Microsoft.Owin.Host.HttpListener -pre
+Install-Package Microsoft.Owin.Hosting
+Install-Package Microsoft.Owin.Host.HttpListener
 Install-Package Nancy.Owin
 ```
-*Note: As of this writing `Microsoft.Owin.Hosting` and `Microsoft.Owin.Host.HttpListener` host is in preview and is not recommended to be used in production. Make sure to add `-pre` to install.*
+
 * **Create an OWIN startup file**
 ```c#
 using Owin;
