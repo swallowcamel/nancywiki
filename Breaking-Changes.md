@@ -3,8 +3,8 @@ We try to keep the number of breaking changes down to an absolute minimum, but s
 ## 0.21.1 ([View](https://github.com/NancyFx/Nancy/issues?milestone=31&state=closed))
 - None
 
-## 0.21.0 ([View](https://github.com/NancyFx/Nancy/issues?milestone=18&state=closed))
-- None
+## 0.21.0 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=18&state=closed))
+- [Added SSVE support for conditional on @Current inside @Each](https://github.com/NancyFx/Nancy/pull/1162)
 
 ## 0.20.0 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=26&page=1&state=closed))
 - [Fix JSON response default charset parameter value](https://github.com/NancyFx/Nancy/pull/1153)
