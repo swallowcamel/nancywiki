@@ -46,7 +46,7 @@
 
 * [[Introducing Raygun.io and Nancy.Raygun|http://www.philliphaydon.com/2013/01/introducing-raygun-and-nancy-raygun]]
 * [[Custom Error Pages in NancyFx|http://mike-ward.net/blog/post/00824/custom-error-pages-in-nancyfx]]
-
+* [[Consistent Error Handling|http://paulstovell.com/blog/consistent-error-handling-with-nancy]]
 
 ### VB.NET
 
