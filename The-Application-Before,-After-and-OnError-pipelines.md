@@ -34,7 +34,7 @@ The `After` hooks does not have any return value because one has already been pr
 
 The `OnError` interceptor enables you to execute code whenever an exception occurrs in any of the routes that are being invoked. It gives you access to the `NancyContext` and the exception that took place.
 
-An application level after hook is defined by a `Func<NancyContext, Exception, Response>` function and is used in the following way
+An application level `OnError` hook is defined by a `Func<NancyContext, Exception, Response>` function and is used in the following way
 
 ```c#
 pipelines.OnError += (ctx, ex) => {
