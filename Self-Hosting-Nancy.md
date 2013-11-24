@@ -2,8 +2,6 @@ With the [`Nancy.Hosting.Self`](https://nuget.org/packages/Nancy.Hosting.Self) N
 
 After you have installed the package, create an instance of the `NancyHost` class and call the `Start` method.
 
-You can use a console app to host Nancy.  Simply install the [`Nancy.Hosting.Self`](https://nuget.org/packages/Nancy.Hosting.Self) NuGet package.
-
     using (var host = new NancyHost(new Uri("http://localhost:1234"))
     {
        host .Start();
