@@ -4,7 +4,7 @@ After you have installed the package, create an instance of the `NancyHost` clas
 
     using (var host = new NancyHost(new Uri("http://localhost:1234"))
     {
-       host .Start();
+       host.Start();
        Console.ReadLine();
     }
 
