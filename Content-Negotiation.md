@@ -40,7 +40,7 @@ The response processors are automatically discovered and wired up at runtime and
 ```c#
 public class Bootstrapper : DefaultNancyBootstrapper
 {
-    protected override NancyInternalConfiguration InternalConfiguration()
+    protected override NancyInternalConfiguration InternalConfiguration
     {
         get
         {
