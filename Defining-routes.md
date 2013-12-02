@@ -119,7 +119,9 @@ Post["/login", (ctx) => !ctx.Request.Form.remember] = _ =>
 
 Route segment constraints allows you apply certain constraints to your captured route segments. To apply a constraint to a segment, simply add a `:` followed by the name of the constraint to the route segment:
 
-    Get["/intConstraint/{value:int}"] = _ => "Value " + _.value + " is an integer.";
+```csharp
+Get["/intConstraint/{value:int}"] = _ => "Value " + _.value + " is an integer.";
+```
 
 This will result in your route only getting hit if the value of the `value` segment is an integer.
   
@@ -174,7 +176,9 @@ public class EmailRouteSegmentConstraint : RouteSegmentConstraintBase<string>
 
 And usage:
 
-    Get["/profile/{value:email}"] = _ => "Value " + _.value + " is an e-mail address.";
+```csharp
+Get["/profile/{value:email}"] = _ => "Value " + _.value + " is an e-mail address.";
+```
 
 This route will only get hit as long as the `value` segment contains a `@`. The value that's passed to the route is the value returned through the `matchedValue` out parameter.
 
