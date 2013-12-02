@@ -139,7 +139,7 @@ The following constraints are available out of the box:
  - `maxlength(length)` - Allows only values shorter that the maximum `length`.
  - `length(minimum, maximum)` - Allows only values with lengh within the specified range. (Between `minimum` and `maximum`)
 
-### Custom constraints
+### Custom Constraints
 
 You can also implement your own, custom constraints. It's as easy as implementing `IRouteSegmentConstraint` and it will automatically be picked up by Nancy, SDHP-style. You can also derive your constraint from one of these convenience classes:
 
