@@ -114,6 +114,74 @@ Post["/login", (ctx) => !ctx.Request.Form.remember] = _ =>
 }
 ```
 
+## Route Segment Constraints
+*Note: Route segment constraints was introduced in version 0.21*
+
+Route segment constraints allows you apply certain constraints to your captured route segments. To apply a constraint to a segment, simply add a `:` followed by the name of the constraint to the route segment:
+
+    Get["/intConstraint/{value:int}"] = _ => "Value " + _.value + " is an integer.";
+
+This will result in your route only getting hit if the value of the `value` segment is an integer.
+  
+The following constraints are available out of the box:
+
+ - `int` - Allows only integer values.
+ - `decimal` - Allows only decimal values.
+ - `guid` - Allows only GUID values.
+ - `bool` - Allows only boolean values.
+ - `alpha` - Allows only values containing alphabetical character.
+ - `datetime` - Allows only date values, optionally containing time.
+ - `datetime(format)` - Allows only date and/or time values with the specified `format`. For format values, see [Custom Date and Time Format Strings](http://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx)
+ - `min(minimum)` - Allows only integer values with the specified `minimum` value.
+ - `max(maximum)` - Allows only integer values with the specified `maximum` value.
+ - `range(minimum, maximum)` - Allows only integer values within the specified range. (Between `minimum` and `maximum`)
+ - `minlength(length)` - Allows only values longer than the specified minimum `length`.
+ - `maxlength(length)` - Allows only values shorter that the maximum `length`.
+ - `length(minimum, maximum)` - Allows only values with lengh within the specified range. (Between `minimum` and `maximum`)
+
+### Custom constraints
+
+You can also implement your own, custom constraints. It's as easy as implementing `IRouteSegmentConstraint` and it will automatically be picked up by Nancy, SDHP-style. You can also derive your constraint from one of these convenience classes:
+
+ - `RouteSegmentConstrainBase<T>` - Base class for a named constraint.
+ - `ParameterizedRouteSegmentConstraintBase<T>` - Base class for a named constraint that accepts arguments.
+
+#### Example
+
+Here's an example implementation of an e-mail constraint:
+
+```csharp
+public class EmailRouteSegmentConstraint : RouteSegmentConstraintBase<string>
+    {
+        public override string Name
+        {
+            get { return "email"; }
+        }
+
+        protected override bool TryMatch(string constraint, string segment, out string matchedValue)
+        {
+            if (segment.Contains("@"))
+            {
+                matchedValue = segment;
+                return true;
+            }
+
+            matchedValue = null;
+            return false;
+        }
+    }
+```
+
+And usage:
+
+    Get["/profile/{value:email}"] = _ => "Value " + _.value + " is an e-mail address.";
+
+This route will only get hit as long as the `value` segment contains a `@`. The value that's passed to the route is the value returned through the `matchedValue` out parameter.
+
+#### Resources
+
+Head over to the [Constraints Sample Project](https://github.com/NancyFx/Nancy/tree/master/src/Nancy.Demo.ConstraintRouting) to look at some samples or take a look at the [existing constraint implementations](https://github.com/NancyFx/Nancy/tree/master/src/Nancy/Routing/Constraints).
+
 ## The secret for selecting the right route to invoke
 
 There are a couple of gotchas you should be aware of when it comes to the default behavior, in Nancy, for selecting which route to invoke for a request. It sounds easy enough, you pick the one that matches the `Method`, `Pattern` and `Condition` of the request, right? In the simplest case that is true and how it is selected, but what if things are a bit more complicated?
@@ -135,6 +203,11 @@ Below are some samples of what routes in Nancy can look like. They cover some of
 // would capture routes like /hello/nancy sent as a GET request
 Get["/hello/{name}"] = parameters => {
     return "Hello " + parameters.name;
+};
+
+// would capture routes like /hello/1234, but not /hello/asdf as a GET request
+Get["/favoriteNumber/{value:int}"] = parameters => {
+    return "So your favorite number is " + parameters.value + "?";
 };
 
 // would capture routes like /products/1034 sent as a DELETE request
