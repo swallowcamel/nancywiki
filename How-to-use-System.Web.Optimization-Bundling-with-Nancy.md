@@ -19,11 +19,11 @@ protected override void ConfigureConventions(NancyConventions nancyConventions)
 4. Add `System.Web` and `System.Web.Optimization` to your Razor Assemblies:
 ```
 <razor disableAutoIncludeModelNamespace="false">
-        <assemblies>
-            <add assembly="System.Web.Optimization" />
-            <add assembly="System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        </assemblies>
-    </razor>
+    <assemblies>
+        <add assembly="System.Web.Optimization" />
+        <add assembly="System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </assemblies>
+</razor>
 ```
 5. Don't use `@Scripts.Render()` but use `@Html.Raw(Scripts.Render())`
 
