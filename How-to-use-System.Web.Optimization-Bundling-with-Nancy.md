@@ -1,14 +1,14 @@
 (WARNING: This most likely only works in development and with Optimizations turned off!)
 
-1. Install the Microsoft.AspNet.Web.Optimization Nuget Package
-2. Setup your bundles in the ApplicationStartup Method of your Bootstraper!
+1. Install the `Microsoft.AspNet.Web.Optimization` Nuget Package
+2. Setup your bundles in the `ApplicationStartup` Method of your Bootstraper!
 ```
 protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines) 
 {
     BundleTable.Bundles.Add(new ScriptBundle().Add(....));
 }
 ```
-3. Add your respective folders to the StaticContentsConventions in the ConfigureConventions Method of the Bootstraper
+3. Add your respective folders to the `StaticContentsConventions` in the `ConfigureConventions` Method of the Bootstraper
 ```
 protected override void ConfigureConventions(NancyConventions nancyConventions)
 {
@@ -16,7 +16,7 @@ protected override void ConfigureConventions(NancyConventions nancyConventions)
     nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("/Scripts"));
 }
 ```
-4. Add System.Web and System.Web.Optimization to your Razor Assemblies:
+4. Add `System.Web` and `System.Web.Optimization` to your Razor Assemblies:
 ```
 <razor disableAutoIncludeModelNamespace="false">
         <assemblies>
@@ -25,6 +25,6 @@ protected override void ConfigureConventions(NancyConventions nancyConventions)
         </assemblies>
     </razor>
 ```
-5. Don't use @Scripts.Render() but use @Html.Raw(Scripts.Render())
+5. Don't use `@Scripts.Render()` but use `@Html.Raw(Scripts.Render())`
 
-Again, this is not tested with Production(Release), i just use it so i can have a whole directory of my JS files in my Index, and i don't have to add every single js file mannually!
+Again, this is not tested with Production(Release)
