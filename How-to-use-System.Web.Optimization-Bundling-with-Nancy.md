@@ -15,8 +15,9 @@ protected override void ConfigureConventions(NancyConventions nancyConventions)
 ```
 **VERY IMPORTANT**
 Don't forget to add the Urls you provided for the bundles here!
-if you used `bundles.Add(new ScriptBundle("~/js"))`, you have to add `/js` to the  `StaticContentConventions`
-too!
+if you used `bundles.Add(new ScriptBundle("~/js/mycombinedjsfiles").AddDirectory("~/Scripts/myScripts"))`, you have to add `/js` to the  `StaticContentConventions`
+too, else the Optimized versions will not work once you go into Release mode!
+
 4. Add `System.Web` and `System.Web.Optimization` to your Razor Assemblies:
 ```
 <razor disableAutoIncludeModelNamespace="false">
