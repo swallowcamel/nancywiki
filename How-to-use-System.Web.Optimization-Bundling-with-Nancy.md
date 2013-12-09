@@ -10,7 +10,8 @@ protected override void ApplicationStartup(TinyIoCContainer container, IPipeline
 ```
 protected override void ConfigureConventions(NancyConventions nancyConventions)
 {
-    nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("/Scripts"));
+    nancyConventions.StaticContentsConventions
+        .Add(StaticContentConventionBuilder.AddDirectory("/Scripts"));
 }
 ```
 **VERY IMPORTANT**
