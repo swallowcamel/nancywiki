@@ -133,7 +133,7 @@ The following constraints are available out of the box:
  - `bool` - Allows only boolean values.
  - `alpha` - Allows only values containing alphabetical character.
  - `datetime` - Allows only date values, optionally containing time.
- - `datetime(format)` - Allows only date and/or time values with the specified `format`. For format values, see [Custom Date and Time Format Strings](http://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx)
+ - `datetime(format)` (**Added in 0.22**) - Allows only date and/or time values with the specified `format`. For format values, see [Custom Date and Time Format Strings](http://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx)
  - `min(minimum)` - Allows only integer values with the specified `minimum` value.
  - `max(maximum)` - Allows only integer values with the specified `maximum` value.
  - `range(minimum, maximum)` - Allows only integer values within the specified range. (Between `minimum` and `maximum`)
