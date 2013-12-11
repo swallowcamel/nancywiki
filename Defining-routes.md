@@ -209,7 +209,7 @@ Get["/hello/{name}"] = parameters => {
     return "Hello " + parameters.name;
 };
 
-// would capture routes like /hello/1234, but not /hello/asdf as a GET request
+// would capture routes like /favoriteNumber/1234, but not /favoriteNumber/asdf as a GET request
 Get["/favoriteNumber/{value:int}"] = parameters => {
     return "So your favorite number is " + parameters.value + "?";
 };
