@@ -1,6 +1,6 @@
-1. IF you are using Nancy with OWIN, make sure you use
+1. **IF** you are using Nancy with **OWIN**, make sure you use
 ```
-app.app.UseNancy(options => options.PassThroughWhenStatusCodesAre(HttpStatusCode.NotFound));
+app.UseNancy(options => options.PassThroughWhenStatusCodesAre(HttpStatusCode.NotFound));
 ```
 2. Install the `Microsoft.AspNet.Web.Optimization` Nuget Package
 3. Setup your bundles in the `ApplicationStartup` Method of your Bootstraper!
