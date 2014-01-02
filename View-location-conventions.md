@@ -93,7 +93,7 @@ You can also call `.Insert(0, *convention*)` as well so that it is evaluated fir
 
 ## Defining your own conventions using IConventions
 
-You can also create a class that implements the `IConventions` interface and in the `Initialise` method you add you conventions to the `ViewLocationConventions` property of the conventions that are passed in.
+You can also create a class that implements the `IConvention` interface and in the `Initialise` method you add you conventions to the `ViewLocationConventions` property of the conventions that are passed in.
 
 Nancy will locate all implementation of the interface and wire up the conventions, before they are passed onto the `ConfigureConventions` method of the bootstrapper.
 
