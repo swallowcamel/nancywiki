@@ -36,6 +36,20 @@ The blacklist is a “params” array of strings, where the strings represents t
 
 When binding to an typed- array, list or ienumerable. The blacklist is maintained for the elements in the sequence.
 
+## Binding configuration
+
+When using model binding, you can pass in a `BindingConfig` instance to modify the behaviour of the model binder.
+
+Below is a list of available configuration options, provided by the `BindingConfig` type.
+
+Property|Description|Default
+--------|-----------|-------
+BodyOnly|Whether the binder should be happy once it has bound to the request body. In this case, request and context parameters will not be bound to. If there is no body and this option is enabled, no binding will take place at all.|false
+IgnoreErrors|Whether binding error should be ignored and the binder should continue with the next property.|false
+Overwrite|Whether the binder is allowed to overwrite properties that does not have a default value.|true
+
+There is a short-hand version for declaring that no overwrite should take place `BindingConfig.NoOverwrite` will return an instance with the property value set to `false`.
+
 ## Deserializing rich request body payloads
 
 Sometimes you want to send structured data, such as `JSON` and `XML`; in the request body and bind it to your model. The model binder in Nancy supports the notion of body deserializers that provide the functionality required for this.
