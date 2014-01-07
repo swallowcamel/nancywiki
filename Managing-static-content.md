@@ -139,4 +139,34 @@ Sometimes you may want to allow IIS to handle static content for you rather than
 
 You can change the path to be 'images', 'scripts', 'content, or what ever you need, just be sure you don't have any routes defined which need to use this path, they will no longer work since you're basically telling IIS to not pass any of those requests to the Nancy Handler.
 
+## Extra steps required when using Microsoft.Owin.Host.SystemWeb
+
+When you are hosting Nancy using `Microsoft.Owin.Host.SystemWeb` you need some additional configuration to get it working in IIS.
+
+First of all, in your OWIN Startup.cs you will need to add `app.UseStageMarker(PipelineStage.MapHandler)`, for example:
+
+```c#
+using Microsoft.Owin.Extensions;
+using Owin;
+
+public class Startup
+{
+    public void Configuration(IAppBuilder app)
+    {
+        app.UseNancy();
+        app.UseStageMarker(PipelineStage.MapHandler);
+    }
+}
+```
+
+You will also have to add the following to your `Web.config`:
+
+```
+<system.webServer>
+    <modules runAllManagedModulesForAllRequests="true" />
+</system.webServer>
+```
+
+Without this additional configuration, the `StaticFileModule` from OWIN would intercept the request and return a 404.
+
 [<< Part 11. The root path](The root path) - [Documentation overview](Documentation) - [Part 13. Diagnostics](Diagnostics) >>
