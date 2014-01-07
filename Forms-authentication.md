@@ -118,7 +118,7 @@ The following configurations can be made
 
 If you do not specify a value for the `CryptographyConfiguration` property on the `FormsAuthenticationConfiguration` object, then it will default to using `CryptographyConfiguration.Default`.
 
-The default behavior uses the `RandomKeyGenerator` which means that a new crypto key is generated each time the application starts, so if your application is restarted, or the appdomain recycled, then user’s authentication cookies will become invalid; this will also be the case between machines in a load balanced environment. Don’t panic though! Changing this configuration is simple to do, for more in depth information read about the [Cryptographic configurations].
+The default behavior uses the `RandomKeyGenerator` which means that a new crypto key is generated each time the application starts, so if your application is restarted, or the appdomain recycled, then user’s authentication cookies will become invalid; this will also be the case between machines in a load balanced environment. Don’t panic though! Changing this configuration is simple to do, for more in depth information read about the [Cryptographic configurations](The cryptography helpers).
 
 For this reason you should always use your own `CryptographyConfiguration`, below is an example of what that could look like when used together with forms authentication.
 
