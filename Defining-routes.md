@@ -154,24 +154,24 @@ Here's an example implementation of an e-mail constraint:
 
 ```csharp
 public class EmailRouteSegmentConstraint : RouteSegmentConstraintBase<string>
+{
+    public override string Name
     {
-        public override string Name
-        {
-            get { return "email"; }
-        }
-
-        protected override bool TryMatch(string constraint, string segment, out string matchedValue)
-        {
-            if (segment.Contains("@"))
-            {
-                matchedValue = segment;
-                return true;
-            }
-
-            matchedValue = null;
-            return false;
-        }
+        get { return "email"; }
     }
+
+    protected override bool TryMatch(string constraint, string segment, out string matchedValue)
+    {
+        if (segment.Contains("@"))
+        {
+            matchedValue = segment;
+            return true;
+        }
+
+        matchedValue = null;
+        return false;
+    }
+}
 ```
 
 And usage:
