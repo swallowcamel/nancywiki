@@ -45,6 +45,10 @@ public class Startup
 </system.webServer>
 ```
 
+**NOTE!** You might have to perform an extra step to get custom static content conventions and diagnostics to work:
+
+* See [Extra steps required when using Microsoft.Owin.Host.SystemWeb](https://github.com/NancyFx/Nancy/wiki/Managing-static-content#extra-steps-required-when-using-microsoftowinhostsystemweb)
+
 ## Katana - HttpListener (SelfHost)
 
 * **Install packages using NuGet**
