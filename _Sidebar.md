@@ -41,6 +41,7 @@
   - [Conditional Pass-through](/NancyFx/Nancy/wiki/Hosting-nancy-with-owin#conditional-pass-through)
 * [[Hosting Nancy with Umbraco]]
 * [[Hosting Nancy with Nginx on Ubuntu]]
+* [[Hosting Nancy with FastCgi]]
 * [[Self Hosting Nancy]]
 * [[Implementing a Host]]
 * [[Accessing the client certificate when using SSL]]
