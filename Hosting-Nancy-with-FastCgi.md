@@ -21,7 +21,7 @@ server {
 }
 ```
 
-That's it for *nginx*! Now let's create a *Nancy* application to run it with **Fos**. Start a new **console project** and install *Nancy* and *Nancy.Owin* (via NuGet, for example). After that, change your application's *Main* method's code and your main class to something in the lines of:
+That's it for *nginx*! Now let's create a *Nancy* application to run it with **Fos**. Start a new **console project** and install *Nancy*, *Nancy.Owin* and **Fos** - you can find them all on **NuGet**. You will also need [Mono](http://www.mono-project.com) to run your application. After that, change your application's *Main* method's code and your main class to something in the lines of:
 
 ```c#
 using Fos;
