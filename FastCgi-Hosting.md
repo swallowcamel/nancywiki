@@ -1,5 +1,3 @@
-## FastCgi Hosting
-
 In case you want to host your Nancy application while using a web server of your choice, be it IIS, Apache, Nginx, Lighttpd or any other FastCgi enabled web server, there is the option of using [Fos](http://github.com/mzabani/Fos).
 
 **Fos** is a library that allows an Owin console application to receive requests through a FastCgi socket from a web server. **Fos** is also designed to run well with Mono on all platforms.
