@@ -30,15 +30,18 @@ using Nancy;
 using Nancy.Owin;
 
 namespace MyApplication.Startup {
-    private static void ConfigureOwin(IAppBuilder builder) {
-        builder.UseNancy();
-    }
+    public static class OwinAppSetup
+    {
+        private static void ConfigureOwin(IAppBuilder builder) {
+            builder.UseNancy();
+        }
 
-    public static void Main(string[] args) {
-        using (var fosServer = new FosSelfHost(ConfigureOwin))
-        {
-            fosServer.Bind(System.Net.IPAddress.Loopback, 9000);
-            fosServer.Start(false);
+        public static void Main(string[] args) {
+            using (var fosServer = new FosSelfHost(ConfigureOwin))
+            {
+                fosServer.Bind(System.Net.IPAddress.Loopback, 9000);
+                fosServer.Start(false);
+            }
         }
     }
 }
