@@ -1,7 +1,21 @@
 We try to keep the number of breaking changes down to an absolute minimum, but sometimes we feel the change is so important that we decide to perform it. Many time these changes will not directly have an effect on users that upgrade their Nancy version, but since they are changes to public types and behaviors, we still list them here in case you should run into issues after an update.
 
 ## 0.22 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=27&page=1&state=closed))
-- We need to update this :)
+- [Constraint Score matches Normal Capture Node and picks wrong route.](https://github.com/NancyFx/Nancy/pull/1415)
+- [Using AllCultures instead of SpecificCultures ](https://github.com/NancyFx/Nancy/pull/1400)
+- [Support for request cancellation in INancyEngine and owin.CallCancelled (redo) ](https://github.com/NancyFx/Nancy/pull/1386)
+- [Change default json serializer to camelcase by default](https://github.com/NancyFx/Nancy/issues/1362)
+- [Update to AspNet HttpRequestHandler to use Fully Qualified Type Name (include assembly name)](https://github.com/NancyFx/Nancy/pull/1361)
+- [Changed date serialization](https://github.com/NancyFx/Nancy/pull/1358)
+- [Respect case-sensitivity setting when parsing form data](https://github.com/NancyFx/Nancy/pull/1322)
+- [Updated ModelValidationResult and ModelValidationError](https://github.com/NancyFx/Nancy/pull/1318)
+- [Grouped validation rules per property](https://github.com/NancyFx/Nancy/pull/1314)
+- [Passing NancyContext to IModelValidator.Validate ](https://github.com/NancyFx/Nancy/pull/1311)
+- [Removed old code marked with ObsoleteAttribute ](https://github.com/NancyFx/Nancy/pull/1305)
+- [Fluent validation improvements](https://github.com/NancyFx/Nancy/pull/1305)
+- [Data annotations improvements](https://github.com/NancyFx/Nancy/issues/1265)
+- [Model validation overhaul](https://github.com/NancyFx/Nancy/issues/1265)
+- [Remove AsJs and AsCss extension in FormatterExtensions](https://github.com/NancyFx/Nancy/issues/658)
 
 ## 0.21.1 ([View](https://github.com/NancyFx/Nancy/issues?milestone=31&state=closed))
 - None
