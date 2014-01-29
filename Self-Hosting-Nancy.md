@@ -33,7 +33,7 @@ User|Value for the user to use to create the url reservations for|The `Everyone`
 
 ## Namespace Reservations
 
-Windows requires applications to register the part of the HTTP URL namespace, that they will be, listening on, or for the application to run with administrator privileges. This is show the MSDN documentation describes the requirement
+Windows requires applications to register the part of the HTTP URL namespace, that they will be, listening on, or for the application to run with administrator privileges. This is how the MSDN documentation describes the requirement
 
 > Namespace reservation assigns the rights for a portion of the HTTP URL namespace to a particular group of users. A reservation gives those users the right to create services that listen on that portion of the namespace. Reservations are URL prefixes, meaning that the reservation covers all sub-paths of the reservation path.
 
