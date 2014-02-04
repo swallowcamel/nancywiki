@@ -115,7 +115,7 @@ public class HomeModule : NancyModule
     public HomeModule()
     {
       Get["/"] = x => {
-            var env                 = (IDictionary<string, object>)Context.Items[NancyOwinHost.RequestEnvironmentKey];
+            var env                 = this.Context.GetOwinEnvironment();
 
             var requestBody         = (Stream)env["owin.RequestBody"];
             var requestHeaders      = (IDictionary<string, string[]>)env["owin.RequestHeaders"];
