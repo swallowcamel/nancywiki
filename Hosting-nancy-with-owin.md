@@ -82,7 +82,7 @@ class Program
 
         using (WebApp.Start<Startup>(url))
         {
-            Console.WriteLine("Running on http://localhost:8080", url);
+            Console.WriteLine("Running on {0}", url);
             Console.WriteLine("Press enter to exit");
             Console.ReadLine();
         }
