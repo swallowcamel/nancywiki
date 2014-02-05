@@ -30,7 +30,7 @@ This should be pretty self explanatory; Nancy will look for the view in a views 
     return string.Concat("views/", viewLocationContext.ModulePath, "/", viewName);
 }
 ```
-This convention looks a bit more complicated, but it’s really still quite simple. What this is doing is looking for the view, inside a sub-folder of the views folder, where the sub-folder has the same name as the `modulePath` of the module that is being used to execute the current request. So for the view index in a module with a path products it will look for the view in `views/products/index`. Again, if the view name contains a relative path, Nancy will look in the path relative to the `views/modulePath folder`, e.g for view `admin/index`, in a module with a path products, it will look for the view in `views/products/admin/index`.
+This convention looks a bit more complicated, but it’s really still quite simple. What this is doing is looking for the view, inside a sub-folder of the views folder, where the sub-folder has the same name as the `modulePath` of the module that is being used to execute the current request. So for the view `index` in a module with a path products it will look for the view in `views/products/index`. Again, if the view name contains a relative path, Nancy will look in the path relative to the `views/modulePath folder`, e.g for view `admin/index`, in a module with a path products, it will look for the view in `views/products/admin/index`.
 
 ### Module Path Convention
 
