@@ -1,12 +1,13 @@
-All paths that are used in Nancy are relative to something that is known as the _root path_. This is the path that tells Nancy where its resources are stored on the file system. The root path is provided to Nancy through an interface called the _IRootPathProvider_, which defines a single method _GetRootPath_.
+All paths that are used in Nancy are relative to something that is known as the _root path_. This is the path that tells Nancy where its resources are stored on the file system. The root path is provided to Nancy through the `IRootPathProvider` interface, which defines a single method, `GetRootPath`.
 
 The various hosting options are all shipped with their own implementation of this interface, because the process of figuring out where the application is located on the file system varies from host to host.
 
-Nancy will automatically use the first implementation, of the _IRootPathProvider_, that it comes across so if you provide multiple implementations the end result will be non-deterministic. Care should be taken to ensure that only one implementation exists in the application domain of the running Nancy application.
+Nancy will automatically use the first implementation, of the `IRootPathProvider`, that it comes across so if you provide multiple implementations the end result will be non-deterministic. Care should be taken to ensure that only one implementation exists in the application domain of the running Nancy application.
 
 ## Changing the root path
 
 Providing a custom root path is a two part process. First you need to create your own implementation of the `IRootPathProvider` interface.
+
 ```c#
 public class CustomRootPathProvider : IRootPathProvider
 {
@@ -38,25 +39,26 @@ When your application runs, the bootstrapper will register this implementation i
 
 To upload a file in Nancy you need to take the content stream of the uploaded file, create a file on disk and write that stream to disk.
 
-    var uploadDirectory =  Path.Combine(pathProvider.GetRootPath(), "Content", "uploads");
+```c#
+var uploadDirectory =  Path.Combine(pathProvider.GetRootPath(), "Content", "uploads");
     
-    if (!Directory.Exists(uploadDirectory))
-    {
-      Directory.CreateDirectory(uploadDirectory);
-    }
+if (!Directory.Exists(uploadDirectory))
+{
+    Directory.CreateDirectory(uploadDirectory);
+}
     
-    foreach (var file in Request.Files)
+foreach (var file in Request.Files)
+{
+    var filename = Path.Combine(uploadDirectory, file.Name);
+    using (FileStream fileStream = new FileStream(filename, FileMode.Create))
     {
-      var filename = Path.Combine(uploadDirectory, file.Name);
-      using (FileStream fileStream = new FileStream(filename, FileMode.Create))
-      {
-         file.Value.CopyTo(fileStream);
-      }
+        file.Value.CopyTo(fileStream);
     }
+}
+```
 
 However, you may be wondering what is pathProvider. This variable is passed into our module constructor which gives us access to the root path of our application by calling `GetRootPath()` and then you can save to a folder within your application.
 
     public HomeModule(IRootPathProvider pathProvider)
-
 
 [<< Part 10. Testing your application](Testing your application) - [Documentation overview](Documentation) - [Part 12. Managing static content](Managing static content) >>
