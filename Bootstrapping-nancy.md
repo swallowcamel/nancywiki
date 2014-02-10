@@ -39,7 +39,7 @@ We did say it was a Super-Duper-Happy-Path!
 
 Nancy ships with a "default bootstrapper" that takes care of all the magic in the above example. If you add your own Bootstrapper to your project, derived from DefaultNancyBootstrapper, Nancy will automatically detect it and use it in place of the default one. 
 
-_ Note: Depending on your hosting choice you may also be able to override the Bootstrapper in alternative ways such as via the Web.Config in ASP.Net applications. _
+**Note**: Depending on your hosting choice you may also be able to override the Bootstrapper in alternative ways such as via the Web.Config in ASP.Net applications.
 
 Once you have your own Bootstrapper class you can replace some or all of the default behaviour by overriding properties and methods. The following overrides are available:
 
