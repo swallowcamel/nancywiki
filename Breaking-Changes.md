@@ -1,8 +1,12 @@
 We try to keep the number of breaking changes down to an absolute minimum, but sometimes we feel the change is so important that we decide to perform it. Many time these changes will not directly have an effect on users that upgrade their Nancy version, but since they are changes to public types and behaviors, we still list them here in case you should run into issues after an update.
 
-## 0.22 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=27&page=1&state=closed))
+## 0.22.1 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=32&page=1&state=closed))
+- [Removed BuiltInCultureConventions.PathCulture by default](https://github.com/NancyFx/Nancy/pull/1447)
+- [Can't pass "hi" into DynamicDictionary](https://github.com/NancyFx/Nancy/issues/1446)
+
+## 0.22.0 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=27&page=1&state=closed))
 - [Constraint Score matches Normal Capture Node and picks wrong route.](https://github.com/NancyFx/Nancy/pull/1415)
-- [Using AllCultures instead of SpecificCultures ](https://github.com/NancyFx/Nancy/pull/1400)
+- [Using AllCultures instead of SpecificCultures](https://github.com/NancyFx/Nancy/pull/1400)
 - [Support for request cancellation in INancyEngine and owin.CallCancelled (redo) ](https://github.com/NancyFx/Nancy/pull/1386)
 - [Change default json serializer to camelcase by default](https://github.com/NancyFx/Nancy/issues/1362)
 - [Update to AspNet HttpRequestHandler to use Fully Qualified Type Name (include assembly name)](https://github.com/NancyFx/Nancy/pull/1361)
