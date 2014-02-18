@@ -84,8 +84,7 @@
 * [[.Net Rocks Podcast 857 - Hakansson and Robbins Talk NancyFX (Mar 26, 2013) | http://www.dotnetrocks.com/default.aspx?showNum=857]]
 * [[Herding Code Podcast 156 - Catching up with Andreas Håkansson and Steven Robbins on NancyFx (Jan 18, 2013)|http://herdingcode.com/?p=505]]
 * [[Hanselminutes Podcast 351 - Understanding NancyFx with Richard Cirerol (Dec 27, 2012)|http://hanselminutes.com/351/understanding-nancyfx-with-richard-cirerol]]
-* [[Hanselminutes Podcast 270 - Nancy, Sinatra and the Explosion of .NET Micro Web Frameworks with Andreas 
-Håkansson (Jun 9, 2011)|http://www.hanselminutes.com/default.aspx?showID=290]]
+* [[Hanselminutes Podcast 270 - Nancy, Sinatra and the Explosion of .NET Micro Web Frameworks with Andreas Håkansson (Jun 9, 2011)| http://www.hanselminutes.com/default.aspx?showID=290]]
 * [[Herding Code Podcast 123 - Andreas Håkansson and Steven Robbins on NancyFx (Oct 17, 2011)|http://herdingcode.com/?p=350]]
 
 ### Slides
