@@ -8,7 +8,7 @@ Simply reference `Nancy.ViewEngines.Razor.dll` (preferably by installing the `Na
 
 You can specify assemblies and default namespaces that Razor needs to use whilst compiling the views by bootstrapping your own `IRazorConfiguration` implementation, thus removing the need to add the `@using` statements to each view. _This step is totally optional_ if you don't require additional references or namespaces in your view.
 
-The default `IRazorConfiguration` implementation (automatically used by Nancy unless explicitly overridden in the bootstrapper) looks in `app\web.config` in the razor section.
+The default `IRazorConfiguration` implementation (automatically used by Nancy unless explicitly overridden in the bootstrapper) looks in `app\web.config` (respecitvely `app\app.config` for non-web projects) in the razor section.
 
 Step 1: Create a custom configuration section
 
