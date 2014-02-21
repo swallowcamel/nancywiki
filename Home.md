@@ -9,7 +9,7 @@
 
 [[(Jabbr) For realtime question / answers|https://jabbr.net/#/rooms/nancyfx]]
 
-You can also follow the discussion on Twitter using the [#NancyFx](http://search.twitter.com/search?q=%23Nancyfx) hashtag.
+You can also follow the discussion on Twitter using the [#NancyFx](http://twitter.com/search?q=%23Nancyfx) hashtag.
 
 [[Blog Posts, Video & Audio]]
 
