@@ -4,4 +4,4 @@ We rely on 3rd party open-source software while creating Nancy. All of these fal
 
 * [xUnit](http://xunit.codeplex.com); used for unit tests
 * [MSpec](https://github.com/machine/machine.specifications); used for BDD style acceptance tests
-* [FakeItEasy](http://code.google.com/p/fakeiteasy); used for mocking in the unit tests
+* [FakeItEasy](https://github.com/FakeItEasy/FakeItEasy); used for mocking in the unit tests
