@@ -43,7 +43,7 @@ Nancy ships with a "default bootstrapper" that takes care of all the magic in th
 
 Once you have your own Bootstrapper class you can replace some or all of the default behaviour by overriding properties and methods. The following overrides are available:
 
-* Default... Properties - These properties define the implementations of Nancy's internal interfaces that Nancy registeres into the container. There shouldn't be a need to switch any of these out, but the option is there should you want it :-)
+* Default... Properties - These properties define the implementations of Nancy's internal interfaces that Nancy registers into the container. There shouldn't be a need to switch any of these out, but the option is there should you want it :-)
 * GetModuleTypes - The default implementation of this scans the application domain for NancyModules for registration into the container. Each module that is discovered is given a unique "key" so they can be retrieved individually from the container when satisfying a request.
 * ConfigureApplicationContainer / ConfigureRequestContainer - manually register dependencies - see Part 2 below for more details. 
 
