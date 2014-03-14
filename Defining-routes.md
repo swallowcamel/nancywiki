@@ -150,7 +150,7 @@ You can also implement your own, custom constraints. It's as easy as implementin
 
 #### Example
 
-Here's an example implementation of an e-mail constraint:
+Here's an example implementation of an e-mail constraint (_although very simplified_):
 
 ```csharp
 public class EmailRouteSegmentConstraint : RouteSegmentConstraintBase<string>
