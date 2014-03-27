@@ -126,7 +126,7 @@ public class GetModelExtententionsTests
     }
 
     [Fact]
-    public void can_get_the_model_and_read_the_values()
+    public void Can_get_the_model_and_read_the_values()
     {
        var response = this._browser.Get("/testingViewFactory");
        var model = response.GetModel<ViewFactoryTestModel>();
