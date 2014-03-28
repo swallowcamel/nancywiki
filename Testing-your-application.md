@@ -93,14 +93,14 @@ In this test we use the browser object to create a request that’s equal to the
 This particular sample shows a very simple selector, but you can use the full power of CSS3 selectors ([http://www.w3.org/TR/css3-selectors/](http://www.w3.org/TR/css3-selectors/)) to grab elements from the HTML and run asserts against them.
 
 ## Getting more out of your result
-There's a number of extension methods that can prove very handy for the aspiring test-driven-developer. For example, the ```BrowserResult``` mentioned above is great, because it shows everything that is rendered on the browsers. But it doesn't show what created ```BrowserResult```. Luckily the ```GetModel<T>()``` extension is there to help you. 
-Here's a very contrived example, from the unit tests that shows this method off:
+There's a number of extension methods that can prove very handy for the aspiring test-driven-developer. For example, the ```BrowserResult``` object mentioned above is awesome, because it shows everything that is rendered on the browsers. But it doesn't show what created the ```BrowserResult```. Luckily the ```GetModel<T>()``` extension is there to help you. 
+Here's a very contrived example module and model class, from the unit tests, that we will use to show these extension methods:
 ```c#
 public class AModuleToTestExtensionMethodsWith : NancyModule
 {
   private const string VIEW_PATH = "TestingViewExtensions/ViewFactoryTest.sshtml";
 
-  public AModuleToTestExtensionMethodsWith()
+  public AModuleToTestExtensionMethodsWith() : base("/a/long/path")
   {
      this.Get["/testingViewFactory"] = _ => 
            this.View[VIEW_PATH, new ViewFactoryTestModel{ AString = "A value" }];
@@ -134,12 +134,12 @@ public class GetModelExtententionsTests
     }
 }
 ```
-Note that we're using the ```TestingViewFactory``` that we set on our testing ```Browser``` object. It's a wrapper ViewFactory that saves the Model and then exposes it with the extension method. You don't have to think to hard about that, only make sure to set the TestingViewFactory (```with.ViewFactory<TestingViewFactory>();```)
+Note that we're using the ```TestingViewFactory``` that we set on our testing ```Browser``` object. It's a wrapper ViewFactory that saves the Model and then exposes it with the extension method. You don't have to think too hard about that though, only make sure to set the TestingViewFactory (```with.ViewFactory<TestingViewFactory>();```)
 
 There are a couple of other extension methods as well, that can help you in testing your application:
 * ```GetViewName()``` returns the name of the view that is rendered, with extension. For the example we showed above this would return ```"TestingViewExtensions/ViewFactoryTest.sshtml"```
 * ```GetModuleName()``` returns the name of the module that returned the response. In the example above that our return ```"AModuleToTestExtensionMethodsWith"```
-* ```GetModulePath()``` returns the routing path to the Module. For our example: ```"/testingViewFactory"``` would be returned. 
+* ```GetModulePath()``` returns the routing path to the Module. For our example: ```"/a/long/path/testingViewFactory"``` would be returned, since our module uses the base class constructor with those parameters
 
 These methods could prove very helpful to test the inner workings of your applications, that not always is visible in the generated response. 
 
