@@ -28,6 +28,7 @@
 1. [[Authentication|Authentication-Overview]]
   - [Stateless](/NancyFx/Nancy/wiki/Stateless-Authentication)
   - [Forms](/NancyFx/Nancy/wiki/Forms-Authentication)
+  - [Token](/NancyFx/Nancy/wiki/Token-Authentication)
 1. More to come
 
 ## Hosting
