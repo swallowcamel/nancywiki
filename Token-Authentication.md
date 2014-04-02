@@ -79,7 +79,6 @@ The following code shows an example of how you can perform the initial user auth
 
             Get["/admin"] = _ =>
             {
-                this.RequiresAuthentication();
                 this.RequiresClaims(new[] { "admin" });
                 return "Yay! You are authorized!";
             };
