@@ -44,4 +44,4 @@ Try:
 1. Clearing your browser's cache.
 2. Navigating to `http://site/favicon.ico` and forcing a refresh (usually Ctrl+F5).
 
-[<< Part 13. Diagnostics](Diagnostics) - [Documentation overview](Documentation) - [Part 15. The Application Before, After and OnError pipelines >>](The Application Before, After and OnError pipelines)
+[<< Part 16. Diagnostics](Diagnostics) - [Documentation overview](Documentation) - [Part 18. Generating a custom error page >>](Generating a custom error page)
