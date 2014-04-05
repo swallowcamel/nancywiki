@@ -16,4 +16,4 @@ It is worth noting that if you prefer accessing captured properties via a normal
 
 The stored values can explicitly or implicitly be cast to most of the primitive types and a special property, called `HasValue` can be checked to determine if a value has been assigned or not. The values also implement the `IEquatable<>` and `IConvertible` interfaces.
 
-[<< Part 3. Defining routes](Defining routes) - [Documentation overview](Documentation) - [Part 5. The before and after module hooks >>](The before and after module hooks)
+[<< Part 4. Async](Async) - [Documentation overview](Documentation) - [Part 6. The before and after module hooks >>](The before and after module hooks)
