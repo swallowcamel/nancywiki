@@ -20,6 +20,6 @@ The following is called per-request:
 
 ## Child Containers
 
-Most modern containers support ASP.Net per-request lifetimes, which is great, but as Nancy is intended to run on things other than ASP.Net, that can't be the only solution. To this end we have a separate interface, INancyBootStrapperPerRequestRegistration<T> (although it might get renamed ;-)). This interface provides a single method called "ConfigureRequestContainer", which should be implemented as a virtual method in the bootstrapper, that allows the user to register any dependencies that should only live for the lifetime of that request. Now, when GetAllModules or GetModuleByKey is called, the workflow should be:
+Most modern containers support ASP.NET per-request lifetimes, which is great, but as Nancy is intended to run on things other than ASP.NET, that can't be the only solution. To this end we have a separate interface, `INancyBootStrapperPerRequestRegistration<T>` (although it might get renamed ;-)). This interface provides a single method called `ConfigureRequestContainer()`, which should be implemented as a virtual method in the Bootstrapper, that allows the user to register any dependencies that should only live for the lifetime of that request. Now, when `GetAllModules()` or `GetModuleByKey()` is called, the workflow should be:
 
-Get a child container from the main container -> pass child container to ConfigureRequestContainer -> user registers types (usually singletons like UoW) -> bootstrapper uses the child container to resolve the module(s)
+Get a child container from the main container -> pass child container to `ConfigureRequestContainer` -> user registers types (usually singletons like UoW) -> Bootstrapper uses the child container to resolve the module(s)
