@@ -169,4 +169,4 @@ You will also have to add the following to your `Web.config`:
 
 Without this additional configuration, the `StaticFileModule` from OWIN would intercept the request and return a 404.
 
-[<< Part 14. The root path](The root path) - [Documentation overview](Documentation) - [Part 16. Adding a custom FavIcon >>](Adding a custom FavIcon)
+[<< Part 14. The root path](The root path) - [Documentation overview](Documentation) - [Part 16. Diagnostics >>](Diagnostics)
