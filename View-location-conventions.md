@@ -97,4 +97,4 @@ You can also create a class that implements the `IConvention` interface and in t
 
 Nancy will locate all implementation of the interface and wire up the conventions, before they are passed onto the `ConfigureConventions` method of the bootstrapper.
 
-[<< Part 8. View engines](View engines) - [Documentation overview](Documentation) - [Part 10. Testing your application >>](Testing your application)
+[<< Part 10. Tips for Implementing your own View Engine](Implementing a View Engine) - [Documentation overview](Documentation) - [Part 12. Localization >>](Localization)
