@@ -146,4 +146,4 @@ The actual implementation of an authentication provider is going to vary dependi
 Your mileage may vary but that is the basic flow of an authentication provider.
 
 
-[<< Part 15. The Application Before, After and OnError pipelines](The Application Before, After and OnError pipelines) - [Documentation overview](Documentation) - [Part 17. Forms authentication >>](Forms authentication)
+[<< Part 20. Content negotiation](Content negotiation) - [Documentation overview](Documentation) - [Part 20. Stateless >>](Stateless authentication)
