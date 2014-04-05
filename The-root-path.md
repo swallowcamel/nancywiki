@@ -61,4 +61,4 @@ However, you may be wondering what is pathProvider. This variable is passed into
 
     public HomeModule(IRootPathProvider pathProvider)
 
-[<< Part 10. Testing your application](Testing your application) - [Documentation overview](Documentation) - [Part 12. Managing static content >>](Managing static content)
+[<< Part 13. Testing your application](Testing your application) - [Documentation overview](Documentation) - [Part 15. Managing static content >>](Managing static content)
