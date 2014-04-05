@@ -64,4 +64,4 @@ protected override void RequestStartup(TinyIoCContainer requestContainer, IPipel
 
 The hooks are created by accessing the appropriate property on the `pipelines` parameter. The pipelines parameter is of the type `IPipelines` and gives you access to the `BeforeRequest`, `AfterRequest` and `OnError` properties.
 
-[<< Part 6. The Application Before, After and OnError pipelines](The Application Before, After and OnError pipelines) - [Documentation overview](Documentation) - [Part 8. Model binding >>](Model binding)
+[<< Part 6. The before and after module hooks](The before and after module hooks) - [Documentation overview](Documentation) - [Part 8. Model binding >>](Model binding)
