@@ -50,3 +50,5 @@ public MainModule()
 ## Hot Tasks / 4.0 Support
 
 While there is nothing in the async support that *requires* 4.5 async/await (it's not used internally and still targets .net 4), we *do* expect that Tasks returned by routes to be "hot" (already started) If you choose to use this using only the TPL or using RX, please ensure every task that's returned from the delegates is hot, or the request will likely never return.
+
+[<< Part 3. Legacy Routing](Legacy Routing) - [Documentation overview](Documentation) - [Part 5. Taking a look at the DynamicDictionary >>](Taking a look at the DynamicDictionary)
