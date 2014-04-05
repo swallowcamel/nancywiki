@@ -57,7 +57,7 @@ foreach (var file in Request.Files)
 }
 ```
 
-However, you may be wondering what is pathProvider. This variable is passed into our module constructor which gives us access to the root path of our application by calling `GetRootPath()` and then you can save to a folder within your application.
+However, you may be wondering what is `pathProvider`. This variable is passed into our module constructor which gives us access to the root path of our application by calling `GetRootPath()` and then you can save to a folder within your application.
 
     public HomeModule(IRootPathProvider pathProvider)
 
