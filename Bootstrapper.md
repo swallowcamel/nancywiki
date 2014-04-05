@@ -35,4 +35,4 @@ public class Home : NancyModule
     }
 ```
 
-[<< Part 6. Model binding](Model binding) - [Documentation overview](Documentation) - [Part 8. View engines >>](View engines)
+[<< Part 8. Model binding](Model binding) - [Documentation overview](Documentation) - [Part 10. View Engines >>](View Engines)
