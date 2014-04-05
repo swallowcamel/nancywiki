@@ -224,3 +224,5 @@ Post["/users/{id}/add/{category}"] = parameters => {
     return HttpStatusCode.OK;
 };
 ```
+
+[<< Part 2. Exploring the Nancy module](Exploring the Nancy module) - [Documentation overview](Documentation) - [Part 3. Custom routing >>](The cryptography helpers)
