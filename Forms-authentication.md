@@ -142,4 +142,4 @@ var config =
 
 [[Multiple forms authentication sections|http://www.philliphaydon.com/2012/12/configuring-multiple-forms-authentication-sections-with-nancyfx/]]
 
-[<< Part 16. Authentication overview](Authentication overview) - [Documentation overview](Documentation) - [Part 18. The cryptography helpers >>](The cryptography helpers)
+[<< Part 21. Stateless](Stateless Authentication) - [Documentation overview](Documentation) - [Part 21. Token >>](Token Authentication)
