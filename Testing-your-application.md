@@ -153,4 +153,4 @@ These methods could prove very helpful to test the inner workings of your applic
 * [[Hat and shoeless testing with Simple.Data|http://www.marcusoft.net/2013/02/NancyTesting4.html]]
 * [[Executable Specifications Through The Full Stack, In Memory|http://www.marcusoft.net/2013/02/NancyTesting5.html]]
 
-[<< Part 9. View location conventions](View location conventions) - [Documentation overview](Documentation) - [Part 11. The root path >>](The root path)
+[<< Part 12. Localization](Localization) - [Documentation overview](Documentation) - [Part 14. The root path >>](The root path)
