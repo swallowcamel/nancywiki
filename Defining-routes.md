@@ -225,4 +225,4 @@ Post["/users/{id}/add/{category}"] = parameters => {
 };
 ```
 
-[<< Part 2. Exploring the Nancy module](Exploring the Nancy module) - [Documentation overview](Documentation) - [Part 3. Custom routing >>](The cryptography helpers)
+[<< Part 2. Exploring the Nancy module](Exploring the Nancy module) - [Documentation overview](Documentation) - [Part 3. Custom routing >>](Custom Routing)
