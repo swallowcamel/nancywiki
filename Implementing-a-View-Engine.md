@@ -7,3 +7,5 @@ _This page will contain implementation advice for view engines_
 * Make use of the view cache on the render context that is passed into the IViewEngine.RenderView method - **but** make sure that the item you cache does not contain state that could end up being reused between multiple requests
 * The initialize method is called when the view engine is created and all views that the engine can render will be passed in, along with the view cache
 * If possible, integrate support for csrf (cross-site request forgery). Nancy comes with built in support but the engine needs to make use of it
+
+[<< Part 10. Razor](Razor View Engine) - [Documentation overview](Documentation) - [Part 11. View location conventions >>](View location conventions)
