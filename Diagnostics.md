@@ -8,7 +8,7 @@ You reach the dashboard by pointing your browser to `http://<address-of-your-app
 
 The dashboard is automatically available to you, in your application. However in order to gain access, you need to configure a password. Without the password you will be presented with a page telling you that the dashboard needs to be configured in order for you to use it, along with instructions on how to perform the configuration.
 
-To configure a password for your diagnostics dashboard, you need to override the `DiagnosticsConfiguration` property of your [[Bootstrapper]]. Once overriden, you should return an instance of the `DiagnosticsConfiguration` that has had a password assigned to the `Password` property.
+To configure a password for your diagnostics dashboard, you need to override the `DiagnosticsConfiguration` property of your [[Bootstrapper]]. Once overridden, you should return an instance of the `DiagnosticsConfiguration` that has had a password assigned to the `Password` property.
 ```c#
 public class CustomBootstrapper : DefaultNancyBootstrapper
 {
