@@ -142,4 +142,4 @@ Nancy supports two kind of list delimiters for the name of the items in the HTML
 * brackets (`Name[1]`, `Name[2]` etc.)
  
 
-[<< Part 5. The before and after module hooks](The before and after module hooks) - [Documentation overview](Documentation) - [Part 7. Bootstrapper >>](Bootstrapper)
+[<< Part 7. The Application Before, After and OnError pipelines](The Application Before, After and OnError pipelines) - [Documentation overview](Documentation) - [Part 9. Bootstrapper >>](Bootstrapper)
