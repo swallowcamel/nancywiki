@@ -110,4 +110,4 @@ protected virtual CryptographyConfiguration CryptographyConfiguration
 }
 ```
 
-[<< Part 17. Forms authentication](Forms authentication) - [Documentation overview](Documentation) - [Part 19. Content negotiation >>](Content negotiation)
+[<< Part 18. Generating a custom error page](Generating a custom error page) - [Documentation overview](Documentation) - [Part 20. Content negotiation >>](Content negotiation)
