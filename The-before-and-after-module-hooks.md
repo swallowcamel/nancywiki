@@ -26,4 +26,4 @@ If you think about it for a moment, it makes sense. A `Before` interceptor is ca
 
 The interceptors are very useful when you want to perform tasks, per-request, on a module level for things like security, caching and rewriting requests and responses.
 
-[<< Part 4. Taking a look at the DynamicDictionary](Taking a look at the DynamicDictionary) - [Documentation overview](Documentation) - [Part 6. Model binding >>](Model binding)
+[<< Part 5. Taking a look at the DynamicDictionary](Taking a look at the DynamicDictionary) - [Documentation overview](Documentation) - [Part 7. The Application Before, After and OnError pipelines >>](The Application Before, After and OnError pipelines)
