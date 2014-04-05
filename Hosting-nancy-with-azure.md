@@ -11,7 +11,7 @@ These steps should help you set up your project to run locally on your DevFabric
 3. Configure the Nancy to run under ASP.NET hosting exactly as outlined [[here|Hosting nancy with asp.net]]
 4. Profit!!! (Seriously, that's it)
  
-That's all there is to setting up, now first write a little hello world handler and map it to Get\["/"\] (feel free to copy the source code from the sample included with Nancy).  Press F5 and the Azure DevFabric should spin up and should open your web browser to your main page.
+That's all there is to setting up, now first write a little hello world handler and map it to `Get["/"]` (feel free to copy the source code from the sample included with Nancy).  Press F5 and the Azure DevFabric should spin up and should open your web browser to your main page.
 
 If everything is working you should see your Hello World result and we are now ready to deploy.  Again refer to the Windows Azure Training Kit on how to deploy to your Windows Azure account (of course you need to have an account first).
 
