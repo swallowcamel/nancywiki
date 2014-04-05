@@ -89,3 +89,5 @@ The following code shows an example of how you can perform the initial user auth
 ## Contributors
 
 Nancy.Authentication.Token was originally created by the crack development team at [Lotpath](http://lotpath.com) ([Lotpath on github](http://github.com/Lotpath)).
+
+[<< Part 21. Token](Token Authentication) - [Documentation overview](Documentation)
