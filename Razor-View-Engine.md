@@ -59,4 +59,4 @@ To do this you need to add the following to your `app\web.config` file
 </system.web.webPages.razor>
 ```
 
-It is worth noting that the `Version` and `PublicKeyToken`, of the ASP.NET MVC assembly references, will be different depending on which version of ASP.NET MVC you have installed (these are for ASP.NET MVC 3).
+[<< Part 10. Super Simple View Engine](The Super Simple View Engine) - [Documentation overview](Documentation) - [Part 10. Tips for Implementing your own View Engine >>](Implementing a View Engine)
