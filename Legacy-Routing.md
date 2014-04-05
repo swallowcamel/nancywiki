@@ -140,3 +140,5 @@ public class Bootstrapper : DefaultNancyBootstrapper
 ```
 
 If you are replacing the route segment extractor, then you do the same thing except you provide a new value of the `RouteSegmentExtractor` property on the `NancyInternalConfiguration`.
+
+[<< Part 3. Custom Routing](Custom Routing) - [Documentation overview](Documentation) - [Part 4. Async >>](Async)
