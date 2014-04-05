@@ -170,4 +170,4 @@ Example
 ```
 
 
-[<< Part 19. Content Negotiation](Content Negotiation) - [Documentation overview](Documentation) - [Part 21. Stateless Authentication >>](Stateless Authentication)
+[<< Part 10. View Engines](View Engines) - [Documentation overview](Documentation) - [Part 10. Razor >>](Razor)
