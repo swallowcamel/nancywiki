@@ -56,6 +56,6 @@ Get["/products"] = parameters => {
 };
 ```
 
-As part of the new content negotiation features in 0.12, if Nancy could not find your view, the server will return 406 Not Acceptable instead.
+As part of the new [Content Negotiation](Content Negotiation) features in 0.12, if Nancy could not find your view, the server will return 406 Not Acceptable instead.
 
 [<< Part 9. Bootstrapper](Bootstrapper) - [Documentation overview](Documentation) - [Part 10. Super Simple View Engine >>](The Super Simple View Engine)
