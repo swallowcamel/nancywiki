@@ -24,8 +24,8 @@ public class ProductsModule : NancyModule
     public ProductsModule()
     {
         Get["/products/{id}", runAsync: true] = async (_, token) =>
-	{
-	    //do something long and tedious
+        {
+            //do something long and tedious
         };
     }
 }
