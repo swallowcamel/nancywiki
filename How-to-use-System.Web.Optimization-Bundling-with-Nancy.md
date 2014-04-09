@@ -33,3 +33,7 @@ too, else the Optimized versions will not work once you go into Release mode!
 </razor>
 ```
 6. Don't use `@Scripts.Render()` but use `@Html.Raw(Scripts.Render())`
+
+# Example application
+
+https://github.com/stanislavromanov/NancyAspNETWebOptimizationExample
