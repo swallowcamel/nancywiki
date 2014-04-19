@@ -24,7 +24,7 @@ if you used `bundles.Add(new ScriptBundle("~/js/mycombinedjsfiles").AddDirectory
 too, else the Optimized versions will not work once you go into Release mode!
 
 5. Add `System.Web` and `System.Web.Optimization` to your Razor Assemblies:
-```
+```xml
 <razor disableAutoIncludeModelNamespace="false">
     <assemblies>
         <add assembly="System.Web.Optimization" />
@@ -32,7 +32,6 @@ too, else the Optimized versions will not work once you go into Release mode!
     </assemblies>
 </razor>
 ```
-6. Don't use `@Scripts.Render()` but use `@Html.Raw(Scripts.Render())`
 
 # Example application
 
