@@ -24,6 +24,7 @@
 *  [[Hello world in Nancy with F#|http://www.horsdal-consult.dk/2013/03/hello-nancy-world-in-f.html]]
 *  [[HTTP Compression with NancyFx |http://www.simoncropp.com/httpcompressionwithnancyfx]] 
 *  [[Enable CSRF Protection in Nancy |http://www.jhovgaard.com/nancy-csrf/]] 
+*  [[How to use PJAX with Nancy |http://www.jhovgaard.com/nancy-pjax/]] 
 
 ### Content Negotiation
 
