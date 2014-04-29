@@ -90,7 +90,7 @@ Example
 ```
 @!Model.Test
 
-@ForEach
+@Each
    @!Current.Test
 @EndEach
 ```
