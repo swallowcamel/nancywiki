@@ -15,6 +15,10 @@ Token authentication and authorization was built with the following requirements
 * Use server side keys for token hash generation with a configurable key expiration interval
 * Use file system storage of server-side token generation private keys to allow keys to survive an application restart or an app pool recycle. Note: an "in memory" option is available primarily for testing, but could be used in a situation where expiring all user sessions on an application restart is acceptable behavior.
 
+## Usage
+
+### Nancy Configuration
+
 Token Authentication can be wired up in a simliar fashion to other available forms of Nancy authentication.
 
 ```csharp
@@ -84,6 +88,13 @@ The following code shows an example of how you can perform the initial user auth
             };
         }
     }
+```
+### Client Configuration
+
+Once your client has received a token, it must send the token as an HTTP header with each subsequent request.
+
+```
+Authorization: Token {your-token-goes-here}
 ```
 
 ## Contributors
