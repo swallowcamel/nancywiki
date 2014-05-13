@@ -171,6 +171,6 @@ Example
 
 ### Extending the SSVE
 
-It is possible to extend the SSVE to support additional 'matchers' to meet your needs.  [This stackoverflow post](http://stackoverflow.com/a/23614404/350933) gives an example of how to do this by describing how you could extend the SSVE to support text translation substitutions similar to the "@Translate." token support of the Razor View Engine.
+It is possible to extend the SSVE to support additional 'matchers' to meet your needs.  [This stackoverflow post](http://stackoverflow.com/a/23614404/350933) gives an example of how to do this by describing how you could extend the SSVE to support text translation substitutions similar to the "@Text.TranslationKey" token support of the Razor View Engine.
 
 [<< Part 10. View Engines](View Engines) - [Documentation overview](Documentation) - [Part 10. Razor >>](Razor View Engine)
