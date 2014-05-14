@@ -35,7 +35,7 @@ public interface IResponseProcessor
 }
 ```
 
-The response processors are automatically discovered and wired up at runtime and will be invoked in the order of which they were discovered. If you need more explicit control over the order, in which they are invoked, then you should explicitly set the `ResponseProcessors` member of the `NancyInternalConfiguration` in your bootstrapper.
+The response processors are automatically discovered and wired up at runtime and will be invoked in the order of which they were discovered. If you need more explicit control over the order in which they are invoked, then you should explicitly set the `ResponseProcessors` member of the `NancyInternalConfiguration` in your bootstrapper.
 
 ```c#
 public class Bootstrapper : DefaultNancyBootstrapper
