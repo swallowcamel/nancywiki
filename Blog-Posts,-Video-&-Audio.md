@@ -25,6 +25,7 @@
 *  [[HTTP Compression with NancyFx |http://www.simoncropp.com/httpcompressionwithnancyfx]] 
 *  [[Enable CSRF Protection in Nancy |http://www.jhovgaard.com/nancy-csrf/]] 
 *  [[How to use PJAX with Nancy |http://www.jhovgaard.com/nancy-pjax/]] 
+*  [[HTTP API Versioning Using Nancy |http://liddellj.com/http-api-versioning-using-nancy/]]
 
 ### Content Negotiation
 
