@@ -26,6 +26,27 @@ The test will send a `GET` request to your application, running in the configura
 
 You can send all supported request types with the Browser class, and the configuration lets you specify things as request protocol, headers, form values, uploaded files and much more. The configuration can easily be extended with the use of extension methods.
 
+As an alternative to specifying the full configuration when sending the request you can set up configuration defaults when you create the Browser object. Everything you can set up when sending the request, you can set up as defaults. 
+
+For instance this will send a `GET` request over `HTTP` with an accept header set to `application/json`.
+```c#
+[Fact]
+public void Should_return_status_ok_when_route_exists()
+{
+    // Given
+    var bootstrapper = new DefaultNancyBootstrapper();
+    var browser = new Browser(bootstrapper, defaults: to => to.Accept("application/json"));
+     
+    // When
+    var result = browser.Get("/", with => {
+        with.HttpRequest();
+    });
+        
+    // Then
+    Assert.Equal(HttpStatusCode.OK, result.StatusCode);
+}
+```
+
 The `BrowserResult` type will give you full access to the `NancyContext`, that was used during the processing of the request and also give you access to the actual request and response objects as well.
 
 ## Controlling the execution environment
