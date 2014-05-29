@@ -40,7 +40,7 @@ The Method is the [HTTP method](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9
 
 A route also needs a Pattern which declares the application-relative URL that the route answers to. The syntax of the Pattern is customizable but the default implementation that ships with Nancy supports capturing combinations of the following:
 
-***Note:** The # in the parenthesis is the score*
+**Note:** Each pattern has a score, shown in parentheses - see "Pattern Scoring" below for what these mean.
 
 1. **Literal segments** - (10,000) - `/some/literal/segments` which require an exact match.
 2. **Capture segments** - (1,000) - `/{name}` which captures whatever is passed into the given segment of the requested URL and then passes it into the Action of the route. 
