@@ -25,7 +25,6 @@
 *  [[HTTP Compression with NancyFx |http://www.simoncropp.com/httpcompressionwithnancyfx]] 
 *  [[Enable CSRF Protection in Nancy |http://www.jhovgaard.com/nancy-csrf/]] 
 *  [[How to use PJAX with Nancy |http://www.jhovgaard.com/nancy-pjax/]] 
-*  [[HTTP API Versioning Using Nancy |http://liddellj.com/http-api-versioning-using-nancy/]]
 
 ### Content Negotiation
 
@@ -33,6 +32,7 @@
 * [[Revisting Content Negotiation and APIs part 1|http://www.philliphaydon.com/2013/04/nancyfx-revisiting-content-negotiation-and-apis-part-1/]]
 * [[Revisting Content Negotiation and APIs part 2|http://www.philliphaydon.com/2013/05/nancyfx-revisiting-content-negotiation-and-apis-part-2/]]
 * [[Revisting Content Negotiation and APIs part 3|http://www.philliphaydon.com/2013/05/nancyfx-revisiting-content-negotiation-and-apis-part-3/]]
+*  [[HTTP API Versioning Using Nancy |http://liddellj.com/http-api-versioning-using-nancy/]]
 
 ### Authentication
 
@@ -49,6 +49,10 @@
 * [[Introducing Raygun.io and Nancy.Raygun|http://www.philliphaydon.com/2013/01/introducing-raygun-and-nancy-raygun]]
 * [[Custom Error Pages in NancyFx|http://mike-ward.net/blog/post/00824/custom-error-pages-in-nancyfx]]
 * [[Consistent Error Handling|http://paulstovell.com/blog/consistent-error-handling-with-nancy]]
+
+### Metadata
+
+* [[Nancy Metadata Modules|http://liddellj.com/nancy-metadata-modules/]]
 
 ### VB.NET
 
