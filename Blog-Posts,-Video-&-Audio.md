@@ -25,6 +25,7 @@
 *  [[HTTP Compression with NancyFx |http://www.simoncropp.com/httpcompressionwithnancyfx]] 
 *  [[Enable CSRF Protection in Nancy |http://www.jhovgaard.com/nancy-csrf/]] 
 *  [[How to use PJAX with Nancy |http://www.jhovgaard.com/nancy-pjax/]] 
+*  [[Adding an Expires Header to Static Content in NancyFx |http://mike-ward.net/blog/post/00898/adding-an-expires-header-to-static-content-in-nancyfx]] 
 
 ### Content Negotiation
 
