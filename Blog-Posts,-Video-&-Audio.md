@@ -97,3 +97,6 @@
 ### Slides
 * [[http://www.horsdal-consult.dk/2012/05/slides-from-my-community-day-copenhagen.html]]
 *  [[http://www.horsdal-consult.dk/2011/12/slides-from-anug-talk-on-nancy.html]]
+
+### Articles
+* [[MSDN Magazine June 2014 - Topshelf and Katana: A Unified Web and Service Architecture|http://msdn.microsoft.com/en-us/magazine/dn745865.aspx]]
