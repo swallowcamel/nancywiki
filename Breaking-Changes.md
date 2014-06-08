@@ -3,6 +3,9 @@ We try to keep the number of breaking changes down to an absolute minimum, but s
 ## 0.23.0 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=28&page=1&state=closed))
 - ^ Click 'View' for breaking changes... :)
 
+## 0.22.2 ([View](https://github.com/NancyFx/Nancy/issues?milestone=33&state=closed))
+- None
+
 ## 0.22.1 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=32&page=1&state=closed))
 - [Removed BuiltInCultureConventions.PathCulture by default](https://github.com/NancyFx/Nancy/pull/1447)
 - [Can't pass "hi" into DynamicDictionary](https://github.com/NancyFx/Nancy/issues/1446)
