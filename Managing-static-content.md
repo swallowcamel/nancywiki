@@ -6,6 +6,8 @@ The delegate accepts two parameters; the context of the current request and the 
 
 Nancy supports multiple static content conventions at once and is shipped with a default convention that will look for files in the `/Content` path of your application. The static content handler in Nancy is executed as a `BeforeRequest` filter in the application pipeline.
 
+For example, if you put a file called `app.js` in the `Content` folder of your application, it will be accessible at `/Content/app.js`.
+
 ## Defining your own conventions using the bootstrapper
 
 To define your own static content conventions, using the bootstrapper, you simply inherit a new bootstrapper and override the `ConfigureConventions` method.
