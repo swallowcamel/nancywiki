@@ -80,7 +80,7 @@
 ## Media
 
 ### Video
-
+* [[NDCOslo 2014 Talk: An Introduction to Nancy by Mat McLoughlin (June 5 , 2014)|http://vimeo.com/97419157]]
 * [[NancyFx Tutorial by Dan Swain (Jan 8, 2013)|http://www.youtube.com/watch?v=SJm7chCfaDs]]
 *  [[Web.Net (2012) Talk: Chrisian Horsdal on Three Web Frameworks.  All .Net. One Hour. (Nov 2012)  Go|http://www.horsdal-consult.dk/2012/11/video-of-my-webnetconf-talk.html]]
 * [[aspConf 2012: Christian Horsdal on The Lightweight Approach to Building Web Based APIs with .Net (July 17, 2012)|http://channel9.msdn.com/Events/aspConf/aspConf/The-Lightweight-Approach-to-Building-Web-Based-APIs-with-Net]]
