@@ -46,6 +46,7 @@
 * [[Self Hosting Nancy]]
 * [[Implementing a Host]]
 * [[Accessing the client certificate when using SSL]]
+* [[Running Nancy on your Raspberry Pi]]
 
 ## Bootstrappers / Container Support
 * [[Bootstrapping Nancy]]
