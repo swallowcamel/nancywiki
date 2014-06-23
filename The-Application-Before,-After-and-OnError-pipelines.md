@@ -16,6 +16,13 @@ The parameter that is passed into the pipeline is an instance of the current `Na
 
 A return value of `null` means that no action is taken by the hook and that the request should be processed by the matching route. However, if the interceptor returns a `Response` of its own, the request will never be processed by a route and the response will be sent back to the client.
 
+The following is the `async` version of the function.
+
+```c#
+pipelines.BeforeRequest += (ctx, token) => {
+    return Task.FromResult(null or a Response object);
+};
+```
 ## Intercepting the request after the route was invoked
 
 The `After` pipeline is defined using the same syntax as the `Before` pipeline, and the passed in parameter is also the current `NancyContext`. The difference is that the hook does not return a value.
