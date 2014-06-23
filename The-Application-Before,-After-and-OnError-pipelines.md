@@ -19,8 +19,8 @@ A return value of `null` means that no action is taken by the hook and that the 
 The following is the `async` version of the function.
 
 ```c#
-pipelines.BeforeRequest += (ctx, token) => {
-    return Task.FromResult(null or a Response object);
+pipelines.BeforeRequest += async (ctx, token) => {
+    return <null or a Response object>;
 };
 ```
 ## Intercepting the request after the route was invoked
