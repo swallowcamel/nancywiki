@@ -6,9 +6,9 @@ What this means is that if the default implementations we ship in the box do not
 
 Out-of-the-box we ship the following authentication mechanisms, each of which is activated by installing the corresponding (name in the parenthesis) Nuget package.
 
- - Forms (Nancy.Authentication.Forms)
- - Basic (Nancy.Authentication.Basic)
- - Stateless (Nancy.Authentication.Stateless)
+ - Forms (`Nancy.Authentication.Forms`)
+ - Basic (`Nancy.Authentication.Basic`)
+ - Stateless (`Nancy.Authentication.Stateless`)
 
 ## What did you say your name was again?
 
