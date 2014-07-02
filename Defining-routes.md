@@ -145,7 +145,7 @@ The following constraints are available out of the box:
 
 You can also implement your own, custom constraints. It's as easy as implementing `IRouteSegmentConstraint` and it will automatically be picked up by Nancy, SDHP-style. You can also derive your constraint from one of these convenience classes:
 
- - `RouteSegmentConstrainBase<T>` - Base class for a named constraint.
+ - `RouteSegmentConstraintBase<T>` - Base class for a named constraint.
  - `ParameterizedRouteSegmentConstraintBase<T>` - Base class for a named constraint that accepts arguments.
 
 #### Example
