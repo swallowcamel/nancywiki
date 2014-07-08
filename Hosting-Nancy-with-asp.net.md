@@ -123,6 +123,8 @@ public class Home : NancyModule
 
 ## Prevent IIS from taking over errors
 
+This is added by default since 0.22.
+
 ```c#
 <system.webServer>
     <httpErrors existingResponse="PassThrough"/>
