@@ -129,4 +129,4 @@ public class Home : NancyModule
 </system.webServer>
 ```
 
-On IIS7 you aren't allowed to change this value on the website level. You end up with one line errors like __"The page cannot be displayed because an internal server error has occurred."__. You can fix this by running this as administrator: `%windir%\system32\inetsrv\appcmd.exe unlock config -section:system.webServer/httpErrors`. 
+On IIS7 you aren't allowed to change this value on the website level. You end up with one line errors like _"The page cannot be displayed because an internal server error has occurred."_. You can fix this by running this as administrator: `%windir%\system32\inetsrv\appcmd.exe unlock config -section:system.webServer/httpErrors`. 
