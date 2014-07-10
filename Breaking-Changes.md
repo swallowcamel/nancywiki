@@ -1,4 +1,11 @@
-We try to keep the number of breaking changes down to an absolute minimum, but sometimes we feel the change is so important that we decide to perform it. Many time these changes will not directly have an effect on users that upgrade their Nancy version, but since they are changes to public types and behaviors, we still list them here in case you should run into issues after an update.
+We try to keep the number of breaking changes down to an absolute minimum, but sometimes we feel the change is so important that we decide to perform it. Many time these changes will not directly have an effect on users that upgrade their Nancy version, but since they are changes to public types and behaviours, we still list them here in case you should run into issues after an update.
+
+_If you find any breaking changes that are not documented here, please let us know!_
+
+## 0.23.1 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=35&page=1&state=closed))
+- [Adds a string constructor to MediaRange](https://github.com/NancyFx/Nancy/pull/1601)
+- [Update MP3 mime type to be IANA standard "audio/mpeg"](https://github.com/NancyFx/Nancy/pull/1599)
+- [Json empty body behaviour ](https://github.com/NancyFx/Nancy/pull/1597)
 
 ## 0.23.0 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=28&page=1&state=closed))
 - [Improved ISO8601 support](https://github.com/NancyFx/Nancy/pull/1485)
