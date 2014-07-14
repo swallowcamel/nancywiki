@@ -20,7 +20,7 @@ Specific host implementations are not shipped with the core Nancy framework. The
 
 ## The super-duper-happy-path
 
-The “super-duper-happy-path” (or SDHP if you’re ‘down with the kids’ ;-)) is a phrase we coined to describe the ethos of Nancy; and providing the “super-duper-happy-path” experience is something we strive for in all of our APIs.
+The “super-duper-happy-path” (or **SDHP** if you’re ‘down with the kids’ :wink:) is a phrase we coined to describe the ethos of Nancy; and providing the “super-duper-happy-path” experience is something we strive for in all of our APIs.
 
 While it’s hard to pin down exactly what it is, it’s a very emotive term after all, but the basic ideas behind it are:
 
