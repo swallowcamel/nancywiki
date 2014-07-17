@@ -22,9 +22,9 @@ public class CustomBootstrapper : DefaultNancyBootstrapper
 
 ##Finding the right bootstrapper
 
-When the application starts up it looks for a bootstrapper one thats not made by Nancy but by you. If it doesn't find one it uses the `DefaultNancyBootstrapper`. You can only have __one__ bootstrapper per application. But when it finds more then one Nancy tries to be smart, and looks if one inherits from the other. When that is the case Nancy chooses the __most-derived__ bootstrapper.
+When the application starts up, it looks for a custom bootstrapper. If it doesn't find one, it falls back to the `DefaultNancyBootstrapper`. You can only have **one** bootstrapper per application. If there is more than one custom bootstrapper in your application, Nancy tries to be smart and looks if one inherits from the other. When that is the case Nancy chooses the **most derived** bootstrapper.
 
-This can be useful when you have several Nancy application that all use the same base bootstrapper settings. But they have some bootstrapper setting specific for some of the application.
+This can be useful when you have several Nancy applications that all use the same base bootstrapper settings. But they have some bootstrapper setting specific for some of the applications.
 
 ## Using AutoRegister
 
