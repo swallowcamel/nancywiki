@@ -20,6 +20,12 @@ public class CustomBootstrapper : DefaultNancyBootstrapper
 }
 ```
 
+##Finding the right bootstrapper
+
+When the application starts up it looks for a bootstrapper one thats not made by Nancy but by you. If it doesn't find one it uses the `DefaultNancyBootstrapper`. You can only have __one__ bootstrapper per application. But when it finds more then one Nancy tries to be smart, and looks if one inherits from the other. When that is the case Nancy chooses the __most-derived__ bootstrapper.
+
+This can be useful when you have several Nancy application that all use the same base bootstrapper settings. But they have some bootstrapper setting specific for some of the application.
+
 ## Using AutoRegister
 
 Part of the [Super-Duper-Happy-Path](https://github.com/NancyFx/Nancy/wiki/Introduction), when you use TinyIoC, is `AutoRegister`. Which allows you to piggyback on the IoC-Container, letting you define your own dependencies, that live next to Nancy's. For example injecting your own dependencies into a NancyModule.
