@@ -2,6 +2,9 @@ We try to keep the number of breaking changes down to an absolute minimum, but s
 
 _If you find any breaking changes that are not documented here, please let us know!_
 
+## 0.23.2 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=36&page=1&state=closed))
+- None
+
 ## 0.23.1 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=35&page=1&state=closed))
 - [Adds a string constructor to MediaRange](https://github.com/NancyFx/Nancy/pull/1601)
 - [Update MP3 mime type to be IANA standard "audio/mpeg"](https://github.com/NancyFx/Nancy/pull/1599)
