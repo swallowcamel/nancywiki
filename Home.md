@@ -5,9 +5,11 @@
 [[Breaking Changes]]
 
 ## Community
-[[Google Group|https://groups.google.com/forum/?fromgroups#forum/nancy-web-framework]]
-
 [[(Jabbr) For realtime question / answers|https://jabbr.net/#/rooms/nancyfx]]
+
+[[Nancy tag|http://stackoverflow.com/questions/tagged/nancy]] on Stack Overflow for question / answers
+
+[[Nancy Community Blog|http://blog.nancyfx.org/]]
 
 You can also follow the discussion on Twitter using the [#NancyFx](http://twitter.com/search?q=%23Nancyfx) hashtag.
 
