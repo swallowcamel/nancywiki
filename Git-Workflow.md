@@ -16,7 +16,7 @@ You should **never** work on a clone of master, and you should **never** send a 
 
 ## Spiking / Prototyping
 
-It's quite normal, and encouraged, that during design/development of your feature you create several [spikes](http://www.extremeprogramming.org/rules/spike.html)/prototypes, which you share with the other developers (\*cough\* via the [Google Group](https://groups.google.com/forum/?pli=1#!forum/nancy-web-framework) \*cough\*) for feedback. Due to the fact that rebasing public commits is [pure evil](http://progit.org/book/ch3-6.html), and that we require you to rebase any updates from upstream/master, it is recommended that you:
+It's quite normal, and encouraged, that during design/development of your feature you create several [spikes](http://www.extremeprogramming.org/rules/spike.html)/prototypes, which you share with the other developers for feedback. Due to the fact that rebasing public commits is [pure evil](http://progit.org/book/ch3-6.html), and that we require you to rebase any updates from upstream/master, it is recommended that you:
 
 * Create one or more "MyFeatureSpike" branch(es) (or words to that effect) - this makes it quite clear to other developers that this is a temporary spike branch, and if they decide to fork it for their own work they should do so in the knowledge that it will:
 
