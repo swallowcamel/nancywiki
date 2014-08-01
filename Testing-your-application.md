@@ -113,7 +113,7 @@ In this test we use the browser object to create a request that’s equal to the
 
 This particular sample shows a very simple selector, but you can use the full power of CSS3 selectors ([http://www.w3.org/TR/css3-selectors/](http://www.w3.org/TR/css3-selectors/)) to grab elements from the HTML and run asserts against them.
 
-## Getting more out of your result
+## Digging deeper with test extensions
 
 There's a number of extension methods that can prove very handy for the aspiring test-driven-developer. For example, the `BrowserResult` object mentioned above is awesome, because it shows everything that is rendered on the browsers. But it doesn't show what created the `BrowserResult`. Luckily the `GetModel<T>()` extension is there to help you. 
 
