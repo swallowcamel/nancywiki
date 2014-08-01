@@ -165,11 +165,11 @@ public class GetModelExtententionsTests
 
 There are a couple of other extension methods as well, that can help you in testing your application:
 
-* `GetViewName()` returns the name of the view that is rendered, with extension. For the example we showed above this would return `"TestingViewExtensions/ViewFactoryTest.sshtml"`
-* `GetModuleName()` returns the name of the module that returned the response. In the example above that our return `"AModuleToTestExtensionMethodsWith"`
-* `GetModulePath()` returns the routing path to the Module. For our example: `"/a/long/path/testingViewFactory"` would be returned, since our module uses the base class constructor with those parameters
+* `GetViewName()` returns the name of the view that is rendered, with extension. For the example we showed above, this would return `"TestingViewExtensions/ViewFactoryTest.sshtml"`.
+* `GetModuleName()` returns the name of the module that returned the response. In the example above, this call would return `"AModuleToTestExtensionMethodsWith"`.
+* `GetModulePath()` returns the routing path to the Module. For example: `"/a/long/path/testingViewFactory"` would be returned, since our module uses the base class constructor with those parameters.
 
-These methods could helpful while testing the inner workings of your applications, which are not always visible in generated responses.
+These methods could be helpful while testing the inner workings of your applications, which are not always visible in generated responses.
 
 ##  More Info
 
