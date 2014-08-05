@@ -49,7 +49,7 @@ public class SecureModule : NancyModule
     public SecureModule()
     {
         Before += ctx => {
-            return (this.Context.CurrentUser == null) ? HttpStatusCode.Unauthorized : null;
+            return (this.Context.CurrentUser == null) ? new HtmlResponse(HttpStatusCode.Unauthorized) : null;
         };
         
         // Your routes here
