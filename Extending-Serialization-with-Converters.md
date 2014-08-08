@@ -73,6 +73,8 @@ To perform the actual conversion, supply implementations of ```Serialize``` and 
 
 You can choose to do as much or as little conversion as you want. This sample, for instance, is pretty strict about the fields it expects to see; they must be ```int``` values. It is not strict about whether there are other fields present, though. A stricter implementation might refuse to translate a JSON object with extra properties, while a less strict implementation might accept and attempt to convert non-integer values. ```JavaScriptConverter``` allows you to tailor the serialization and deserialization processes to your exact needs.
 
+[[View Complete Sample Class|Sample JavaScriptConverter]]
+
 ## Custom representation of individual values
 
 There are some instances where you might want to control the conversion of an object directly to/from a primitive JSON value, rather than a JSON object. For instance, if your models include byte arrays, you might want to serialize these as Base 64 strings. The default serializer will read and write JSON text like ```[72,101,108,108,111,44,32,119,111,114,108,100]```. The corresponding Base 64 representation of this is ```SGVsbG8sIHdvcmxk```, which is significantly shorter and also faster to parse. You could simply declare the data field as a ```string``` in your model, but it is possible to make this conversion take place seamlessly during the serialization and deserialization processes using a ```JavaScriptPrimitiveConverter```.
@@ -126,6 +128,8 @@ To perform the actual conversion, supply implementations of ```Serialize``` and 
 ```
 
 Another possible use of a ```JavaScriptPrimitiveConverter``` might be to support ```XmlElement``` fields embedded in model types. By default, ```XmlElement``` instances won't produce any output with the JSON serializer, because the data type does not have any data members that can be both read and written to. However, a ```JavaScriptPrimitiveConverter``` could take over handling of ```XmlElement``` values and convert the subtrees they represent into the corresponding XML text, to be output as a JSON string for transport.
+
+[[View Complete Sample Class|Sample JavaScriptPrimitiveConverter]]
 
 ## How do I actually use them?
 
