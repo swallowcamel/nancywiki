@@ -1,6 +1,9 @@
 This page describes how to get up and running with Nancy using Mono and selfhosting on your Raspberry Pi.
 The install/configuration described below was successfully performed on 12th-14th of April 2013.
 
+**Update Aug 8th 2014:**
+Hard float is now supported - which should have a major impact on the performance of running mono apps on the Raspberry Pi. [Click here for details](http://c-mobberley.com/wordpress/2013/12/27/raspberry-pi-mono-3-2-installation-hard-float-compatible/)
+
 # 1. Install OS on your Raspberry Pi
 
 Due to the need for also running Mono, you currently need to install the soft-float Debian “wheezy” (2012-08-08-wheezy-armel.zip) on your Raspberry Pi. This is due to the fact that Mono currently does not work correctly with the hard-float version of the Raspbian OS (which is the default and latest one). Read more on this issue [here](https://bugzilla.xamarin.com/show_bug.cgi?id=7938). The soft-float OS can be downloaded from [here](http://www.raspberrypi.org/downloads).
