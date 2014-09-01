@@ -1,5 +1,7 @@
 The Razor engine in Nancy is a custom implementation built around the Razor syntax parser. Please note that the implementation may have differences to the implementation used by ASP.NET MVC.
 
+Remember that Nancy still binds your model to `@Model` not `@model` like in ASP.NET MVC.
+
 ## Installing Razor
 
 Simply reference `Nancy.ViewEngines.Razor.dll` (preferably by installing the `Nancy.ViewEngines.Razor` nuget) and return views ending in `cshtml` or `vbhtml` it's that simple.
