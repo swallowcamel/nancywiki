@@ -73,7 +73,7 @@ This final section describes how to get up and running with Nancy on your Raspbe
 
 ## Compile Nancy:
 
-First we need to install dependencies, restrieve Nancy source and finnaly compile Nancy in order to get the dll's we are going to reference in our application later on. So in a shell perform the following commands:
+First we need to install dependencies, retrieve Nancy source and finaly compile Nancy in order to get the dll's we are going to reference in our application later on. So in a shell perform the following commands:
 
     mkdir /home/pi/code (or any other directory you prefer)
     cd /home/pi/code
