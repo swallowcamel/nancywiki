@@ -19,20 +19,20 @@ All three have the exact same functionality, they just provide different ways of
 
 ## Keeping unwanted information out by blacklisting it
 
-Sometimes you want the model binder to ignore certain information when populating the model from all the various sources (to prevent ‘over posting’ attacks for example). To accommodate this, the model binder can be called with an optional list of blacklisted properties on the model:
+Sometimes you want the model binder to ignore certain information when populating the model from all the various sources (to prevent ‘over posting’ attacks for example). To accommodate this, the model binder can be called with an optional list of blacklisted properties and fields on the model:
 
 ```c#
 var f = this.Bind<Foo>(f => f.id, f => f.creator, f => f.createddate);
 ```
 
-The blacklist is a “params” array of Expressions on the model type, where the expressions specify the name of the model properties that should be ignored by the model binder.
+The blacklist is a “params” array of Expressions on the model type, where the expressions specify the name of the model properties and fields that should be ignored by the model binder.
 
 or:
 ```c#
 var f = this.Bind<Foo>("id", "creator", "createddate");
 ```
 
-The blacklist is a “params” array of strings, where the strings represents the name of the model properties that should be ignored by the model binder.
+The blacklist is a “params” array of strings, where the strings represents the name of the model properties and fields that should be ignored by the model binder.
 
 When binding to an typed- array, list or ienumerable. The blacklist is maintained for the elements in the sequence.
 
@@ -45,10 +45,10 @@ Below is a list of available configuration options, provided by the `BindingConf
 Property|Description|Default
 --------|-----------|-------
 BodyOnly|Whether the binder should be happy once it has bound to the request body. In this case, request and context parameters will not be bound to. If there is no body and this option is enabled, no binding will take place at all.|false
-IgnoreErrors|Whether binding error should be ignored and the binder should continue with the next property.|false
-Overwrite|Whether the binder is allowed to overwrite properties that does not have a default value.|true
+IgnoreErrors|Whether binding error should be ignored and the binder should continue with the next property or field.|false
+Overwrite|Whether the binder is allowed to overwrite properties and fields that do not have a default value.|true
 
-There is a short-hand version for declaring that no overwrite should take place `BindingConfig.NoOverwrite` will return an instance with the property value set to `false`.
+There is a short-hand version for declaring that no overwrite should take place: `BindingConfig.NoOverwrite` will return an instance with the property or field value set to `false`.
 
 ## Deserializing rich request body payloads
 
@@ -62,9 +62,33 @@ As with the other model binders, you can author your own body deserializers and 
 
 **NOTE:** If you encounter the Nancy.Json.JsonSettings.MaxJsonLength Exceeded error because your payload is too high, change that limit in your Bootstrapper in `ApplicationStartup` to be `Nancy.Json.JsonSettings.MaxJsonLength = int.MaxValue;`
 
+## Properties or Fields
+
+Nancy's model binding supports either fields or properties. For the purpose of model binding, these two classes have essentially identical function:
+
+```c#
+// Properties
+public class Model
+{
+  public int Value { get; set; }
+}
+```
+
+```c#
+// Fields
+public class Model
+{
+  public int Value;
+}
+```
+
+There are arguments for either style of class. Using properties means that if you ever need to enforce structure or validation on a property's value down the road, your code is already calling a method, in the form of the ```get``` accessor, and you can alter its implementation as needed. On the other hand, when implicit properties are used (as shown in the example above -- no actual implementation is provided for the ```get``` and ```set``` accessors), the C# compiler picks a name for a hidden backing field for it automatically. This field's name is chosen specifically to avoid collisions with any member names you might type. To do this, it uses characters that are impossible to use in a C# identifier. In particular, it includes angle brackets. If the data type is also used with a ```DataContractSerializer```, this results in a performance hit, because ```DataContractSerializer``` operates specifically on fields, not properties. It finds that backing field and tries to create an XML element with the same name. Since XML elements may not contain ```<``` and ```>``` characters, an exception results, which it handles internally by escaping the field name. (The exception can be seen in debug output when running a program that uses ```DataContractSerializer```, which is the case for most default WCF binding configurations.) The exception and the escaping are unnecessary hits on performance which can be avoided by using field names that are valid XML identifiers as well.
+
+Unless your project has external components referencing it, it is largely unimportant which style you choose, because the syntax in most .NET languages for accessing properties and for accessing fields is identical. Thus, in most circumstances, you can change your model type to use properties or fields and recompile without any other changes required.
+
 ## Model binding Checkbox
 
-For auto model binding checkbox to boolean value, make sure to set the `value="true"` in the checkbox.
+For automatic model binding checkbox to boolean value, make sure to set the `value="true"` in the checkbox.
 
 ```html
 <input type="checkbox" name="rememberMe" value="true"/>
@@ -73,7 +97,7 @@ For auto model binding checkbox to boolean value, make sure to set the `value="t
 ```c#
 public class LoginModel
 {
-    public bool RememberMe { get; set; }
+    public bool RememberMe;
 }
 ```
 
@@ -95,8 +119,8 @@ Then you can bind to this class:
 ```c#
 public class Posts
 {
-  public string[] Tags { get; set; }
-  public int[] Ints { get; set; }
+  public string[] Tags;
+  public int[] Ints;
 }
 ```
 with this simple statement:
@@ -131,8 +155,8 @@ This can then be bound (with ```this.Bind<List<User>>();```) to a list of object
 ```c#
 public class User
 {
-   public string Name { get; set; }
-   public int Commits { get; set; }
+   public string Name;
+   public int Commits;
 }
 ```
 
