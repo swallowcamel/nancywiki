@@ -8,9 +8,41 @@ Simply reference `Nancy.ViewEngines.Razor.dll` (preferably by installing the `Na
 
 ## Configuring Razor ##
 
-You can specify assemblies and default namespaces that Razor needs to use whilst compiling the views by bootstrapping your own `IRazorConfiguration` implementation, thus removing the need to add the `@using` statements to each view. _This step is totally optional_ if you don't require additional references or namespaces in your view.
+You can specify assemblies and default namespaces that Razor needs to use whilst compiling the views by bootstrapping your own `IRazorConfiguration` implementation, or defining them in your `web.config` or `app.config`, thus removing the need to add the `@using` statements to each view. _This step is totally optional_ if you don't require additional references or namespaces in your view.
+
+## Configuring Razor (using `IRazorConfiguration`) ##
+
+The best approach to configuration is implementing your own `IRazorConfiguration`, this makes it easy to move between self hosting and hosting in IIS, without having to change anything, since the configuration is part of your code. 
+
+Example implementation:
+
+```cs
+public class RazorConfig : IRazorConfiguration
+{
+    public IEnumerable<string> GetAssemblyNames()
+    {
+        yield return "HyRes.Models";
+        yield return "HyRes.Website";
+    }
+
+    public IEnumerable<string> GetDefaultNamespaces()
+    {
+        yield return "HyRes.Models";
+        yield return "HyRes.Website.Infrastructure.Helpers";
+    }
+
+    public bool AutoIncludeModelNamespace
+    {
+        get { return true; }
+    }
+}
+```
+
+## Configuring Razor (using `app.config` or `web.config`) ##
 
 The default `IRazorConfiguration` implementation (automatically used by Nancy unless explicitly overridden in the bootstrapper) looks in `app\web.config` (respecitvely `app\app.config` for non-web projects) in the razor section.
+
+**Note:** _If you're self hosting in a Windows Service, Console, WPF App, etc, then the following should be specified in `app.config`, if you're hosting in IIS then you need to specify in `web.config`_
 
 Step 1: Create a custom configuration section
 
@@ -20,6 +52,8 @@ Step 1: Create a custom configuration section
 </configSections>
 ```
 Step 2: Configure Razor! _(note! this is just a sample configuration)_
+
+**Note:** _When adding a namespace in your own assembly, you need to specify the assembly also._
 
 ```xml
 <razor disableAutoIncludeModelNamespace="false">
