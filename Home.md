@@ -4,6 +4,8 @@
 
 [[Breaking Changes]]
 
+[[Statement on strong naming]]
+
 ## Community
 [[(Jabbr) For realtime question / answers|https://jabbr.net/#/rooms/nancyfx]]
 
