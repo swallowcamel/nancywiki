@@ -56,3 +56,4 @@
 
 ## Other Links
 * [[ Blog Posts, Video & Audio]]
+* [[ Statement on strong naming ]]
