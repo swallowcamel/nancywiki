@@ -1,4 +1,4 @@
-A blog post explaining this in C# is available [here](http://mike-ward.net/blog/post/00824/custom-error-pages-in-nancyfx)
+A blog post explaining this in C# is available [here](http://mike-ward.net/2013/04/11/custom-error-pages-in-nancyfx/)
 
 Additional (more recent) C# post is available [here](https://blog.tommyparnell.com/custom-error-pages-in-nancy/).
 
