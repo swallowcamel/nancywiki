@@ -57,6 +57,10 @@ If only one exception is wrapped, then Nancy will unwrap that exception and hand
 
 ##Wiring up your hooks
 
+There are two ways to wire up these hooks: by overriding methods in the bootstrapper, or by creating classes that extend specific interfaces that are automatically wired in at startup.
+
+### Overriding methods in the Bootstrapper
+
 To create application level hooks you define them in your [Bootstrapper](Bootstrapper). They can be defined either in the `ApplicationStartup` or `RequestStartup` methods. This is because you might need to use something from the container in your hook, and the different methods let you resolve from the right container depending on your scoping requirements.
 
 ```c#
@@ -70,5 +74,25 @@ protected override void RequestStartup(TinyIoCContainer requestContainer, IPipel
 ```
 
 The hooks are created by accessing the appropriate property on the `pipelines` parameter. The pipelines parameter is of the type `IPipelines` and gives you access to the `BeforeRequest`, `AfterRequest` and `OnError` properties.
+
+### Implementing Interfaces
+
+By implementing the interfaces `IApplicationStartup` or `IRequestStartup` you can avoid having to create a bootstrapper.  Nancy will wire them in for you.  The `IApplicationStartup` interface has an abstract method `void Initialize(IPipelines pipelines)` that works the same as overriding `ApplicationStartup` in the bootstrapper. The `IRequestStartup` class has an `Initialize` method as well that takes a `NancyContext` as its second argument: `void Initialize(IPipelinese pipelines, NancyContext context)` and works the same as the `RequestStartup` bootstrapper override.
+
+In both cases your implementing class can manage any dependencies it has the normal Nancy way: by including it in the constructor:
+
+    public class FooBeforeAllRequests : IApplicationStartup {
+        private IFooFactory fooFactory;
+        public FooBeforeAllRequests(IFooFactory fooFactory) {
+            this.fooFactory = fooFactory;
+        }
+
+        public void Initialize(IPipelines pipelines) {
+            pipelines.BeforeRequest.AddItemToStartOfPipeline(ctx => {
+                var foo = fooFactory.Make();
+                foo.Bar(ctx);
+            });
+        }
+    }
 
 [<< Part 6. The before and after module hooks](The before and after module hooks) - [Documentation overview](Documentation) - [Part 8. Model binding >>](Model binding)
