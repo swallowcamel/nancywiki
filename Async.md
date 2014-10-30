@@ -1,3 +1,12 @@
+## .NET 4.5 Targeting
+
+If you're getting the error:
+
+`Operator '+=' cannot be applied to operands of type 'Nancy.BeforePipeline' and 'lambda expression'
+Cannot convert lambda expression to type 'Nancy.BeforePipeline' because it is not a delegate type`
+
+Confirm that your project is targeting .NET 4.5 before starting to use the async/await keywords. 
+
 ## Syntax
 
 Both the Before/After pipelines, and the main route delegates, can be specified as async. The syntax is *almost* identical to the sync code, but with the following changes:
