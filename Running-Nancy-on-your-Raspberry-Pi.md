@@ -78,7 +78,7 @@ First we need to install dependencies, retrieve Nancy source and finaly compile 
     mkdir /home/pi/code (or any other directory you prefer)
     cd /home/pi/code
     sudo apt-get install git ruby rake
-    sudo gem install albacore
+    sudo gem install albacore --version "1.0.0.rc2"
     git clone https://github.com/NancyFx/Nancy.git
     cd Nancy
     rake mono
@@ -160,6 +160,5 @@ http://andyfelong.com/2013/02/raspberry-pi-meets-mongodb/
 http://stackoverflow.com/questions/7948789/mongodb-mongod-complains-that-there-is-no-data-db-folder
 
 http://sourcecodebean.com/archives/mongodb-c-and-mono/1408
-
 
 
