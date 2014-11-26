@@ -114,7 +114,7 @@ Nancy ships with a couple of default response processors that are automatically 
 
 - `JsonProcessor` - Converts the return value into json, when the requested media type is `application/json` or any vendor specific json media type `application/vnd.foobar+json`
 - `ViewProcessor` - Renders a view, using the return value as the model, when the requested media type is `text/html`. It uses the normal [[View location conventions]], when choosing which view to render.
-- `XmlProcessor` - Converts the return value into xml, when the requested media type is `application/xml` or any vendor specific json media type `application/vnd.foobar+xml`
+- `XmlProcessor` - Converts the return value into xml, when the requested media type is `application/xml` or any vendor specific xml media type `application/vnd.foobar+xml`
 
 ## Controlling the negotiation
 
