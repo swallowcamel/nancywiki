@@ -63,7 +63,7 @@ container.Register<IMyInterface, MyImplementation>().AsSingleton();
 container.Register<IMyInterfaceToo, MyOtherThing>().AsMultiInstance();
 ```
 
-For more information on the various registration options available, please take a look at the [TinyIoC Wiki](http://hg.grumpydev.com/tinyioc).
+For more information on the various registration options available, please take a look at the [TinyIoC Wiki](https://github.com/grumpydev/TinyIoC/wiki).
 
 Very useful post from @grumpydev at [stackoverflow](http://stackoverflow.com/a/9572032/196451) about registering stuff into TinyIoC:
 
