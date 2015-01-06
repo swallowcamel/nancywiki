@@ -16,3 +16,14 @@ That's all there is to setting up, now first write a little hello world handler 
 If everything is working you should see your Hello World result and we are now ready to deploy.  Again refer to the Windows Azure Training Kit on how to deploy to your Windows Azure account (of course you need to have an account first).
 
 I apologize, as this may seem that this isn't a step-by-step walkthrough, but I promise there is no tricks or gotchas to look out for (at least that I've seen).
+
+
+## Hosting Nancy on "Azure Websites" 
+
+If you're trying to host it on the Azure Websites (Not Azure Cloud Services), the previous steps aren't necessary. Here are the steps which will deploy it to Azure Websites
+
+1. Right Click on your Nancy Project
+2. Click "Publish"
+3. ??? (VS will do it's magic here)
+4. Profit!! (Seriously, that's it)
+
