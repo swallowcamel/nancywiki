@@ -61,20 +61,15 @@ For example say we defined the following:
 
 ```csharp
 public class HomeModule : NancyModule
-{
-    public HomeModule()
     {
-        Get["/{category}"] = _ =>
+        public HomeModule()
         {
-            return "My category is " + _.category;
-        }
-    
-        Get["/sayhello"] = _ =>
-        {
-            return "Hello from Nancy";
+            Get["/{category}"] = _ => "My category is " + _.category;
+
+            Get["/sayhello"] = _ => "Hello from Nancy";
+
         }
     }
-}
 ```
 
 The first route contains a Captured Segment, while the second route is a Literal Segment.
