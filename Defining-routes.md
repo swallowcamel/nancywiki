@@ -101,12 +101,12 @@ The last part is an optional Condition that can be used to make sure that a rout
 Post["/login", (ctx) => ctx.Request.Form.remember] = _ => 
 {
      return "Handling code when remember is true!";
-}
+};
 
 Post["/login", (ctx) => !ctx.Request.Form.remember] = _ => 
 {
      return "Handling code when remember is false!";
-}
+};
 ```
 
 ## Route Segment Constraints
