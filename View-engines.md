@@ -37,7 +37,7 @@ Get["/products"] = parameters => {
 The view name offers you quite a bit of flexibility in terms of what information it can contain: 
 
 1. Name of the view file with the file extension present (e.g. “products.html”)
-2. Name of the view file without the file extension present (e.g. “products”). If there are two, or more, views with the same name, but with different extensions, you will receive an `AmbigiousViewsException` with details on which conflicting views were located.
+2. Name of the view file without the file extension present (e.g. “products”). If there are two, or more, views with the same name, but with different extensions, you will receive an `AmbiguousViewsException` with details on which conflicting views were located.
 3. A path, relative to the application root, where Nancy will look for the views (e.g. `products/products.html`). 
 
 To learn more on where Nancy looks for views, and how to customize the logic, check out [[View location conventions]]
