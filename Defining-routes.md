@@ -122,7 +122,8 @@ This will result in your route only getting hit if the value of the `value` segm
   
 The following constraints are available out of the box:
 
- - `int` - Allows only integer values.
+ - `int` - Allows only `Int32` (`int`) values.
+ - `long` - Allows only `Int64` (`long`) values.
  - `decimal` - Allows only decimal values.
  - `guid` - Allows only GUID values.
  - `bool` - Allows only boolean values.
