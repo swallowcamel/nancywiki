@@ -2,6 +2,9 @@ We try to keep the number of breaking changes down to an absolute minimum, but s
 
 _If you find any breaking changes that are not documented here, please let us know!_
 
+## 1.0.0 ([View](https://github.com/NancyFx/Nancy/issues?q=is%3Aclosed+label%3A%22Breaking+Change%22+milestone%3A%221.0+Alpha%22))
+- [Pass NancyContext down to DataAnnotations ValidationAdapters](https://github.com/NancyFx/Nancy/pull/1739)
+
 ## 0.23.2 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=36&page=1&state=closed))
 - None
 
