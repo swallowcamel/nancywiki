@@ -80,13 +80,24 @@ Note 2: Please make sure the routes you define for displaying the login page and
 
 ## Enabling forms authentication
 
-The only thing left to do now is actually enable Forms Authentication, this is done by simply adding a line like this to your bootstrapper:
+The only thing left to do now is actually enable Forms Authentication.  
+Forms Authentication can be enabled for:
+- All modules (ie. application wide)
+- Per module (ie. explicitly on a module by module basis).
 
+Most people usually enable it for all modules (or not at all). So why would you enable it on a _per module_ basis only? If you've got some routes that might be using [Stateless Authentication](Stateless Authentication). This means part of your website might be returning json results (so half of the site is an API) where the other half is like a normal website with views returned, etc. Having a _hybrid_ authentication site means you wouldn't want to have forms authentication applied to those API routes, and vice versa.
+
+### All modules (ie application wide)
 ```c#
 FormsAuthentication.Enable(pipelines, formsAuthConfiguration);
 ```
 
-It can either be added to the `ApplicationStartup` or `RequestStartup`. Which you should choose often depends on your implementation of the `IUserMapper`, that is, should the user mapper have an application or request lifetime.
+### Per module
+```c#
+FormsAuthentication.Enable(module, formsAuthConfiguration);
+```
+
+For the _all modules_ way, It can either be added to the `ApplicationStartup` or `RequestStartup` in your `Bootstrapper` class. Which you should choose often depends on your implementation of the `IUserMapper`, that is, should the user mapper have an application or request lifetime.
 
 The `formsAuthConfiguration` variable that is passed into the `FormsAuthentication.Enable` method, is an instance of the `FormsAuthenticationConfiguration` type, which enables you to customize the behavior of the forms authentication provider.
 
