@@ -14,7 +14,7 @@ To enable stateless authentication, in your application, you need to complete th
 
 ## Configure and enable stateless authentication
 
-To enable Stateless Authentication, all you have to do is add a line like this to your bootstrapper:
+Stateless Authentication can be enabled for:
 
 ### All modules (ie. application wide)
 ```c#
