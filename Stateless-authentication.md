@@ -1,6 +1,10 @@
 This document provides an overview on how to enable stateless authentication in your Nancy application. Stateless authentication enables you to inspect each incoming request and, based on information about that request, decide if it should be treated as an authenticated request or not.
 
-For instance you could inspect the request to make sure that a query string parameter was passed in (perhaps an api key), that a certain header is available, or that the request originated from a certain ip-address. The full request is at your disposal!
+For instance, you could inspect the request to make sure that a query string parameter was passed in (perhaps an api key), that a certain header is available, or that the request originated from a certain ip-address. The full request is at your disposal!
+
+Stateless authentication can be setup for requests on a
+- All modules (ie. application wide)
+- Per module (ie. on a specific module only).
 
 To enable stateless authentication, in your application, you need to complete the following steps
 
@@ -12,8 +16,14 @@ To enable stateless authentication, in your application, you need to complete th
 
 To enable Stateless Authentication, all you have to do is add a line like this to your bootstrapper:
 
+### All modules (ie. application wide)
 ```c#
 StatelessAuthentication.Enable(pipelines, statelessAuthConfiguration);
+```
+
+### Per module
+```c#
+StatelessAuthentication.Enable(module, statelessAuthConfiguration);
 ```
 
 The `statelessAuthConfiguration` variable, that is passed into `StatelessAuthentication.Enable` method, is an instance of the `StatelessAuthenticationConfiguration` type, which enables you to customize the behavior of the stateless authentication provider.
