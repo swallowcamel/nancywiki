@@ -35,8 +35,8 @@ You can also follow the discussion on Twitter using the [#NancyFx](http://twitte
 - [System.Web.Optimization with Nancy](https://github.com/NancyFx/Nancy/wiki/How-to-use-System.Web.Optimization-Bundling-with-Nancy)
 
 #####Authentication
-- [WorldDomination Web Authentication (Manual Setup)](https://github.com/PureKrome/WorldDomination.Web.Authentication/wiki/NancyFX-Manual-Setup)
-- [WorldDomination Web Authentication (Automatic Setup)](https://github.com/PureKrome/WorldDomination.Web.Authentication/wiki/NancyFX-Automatic-Setup)
+- [SimpleAuthentication (Manual Setup)](https://github.com/SimpleAuthentication/SimpleAuthentication/wiki/NancyFX-Manual-Setup)
+- [SimpleAuthentication (Automatic Setup)](https://github.com/SimpleAuthentication/SimpleAuthentication/wiki/NancyFX-Automatic-Setup)
 
 #####Serialization
 - [[Extending Serialization with Converters]]
