@@ -1,4 +1,4 @@
-To authenticate the client the client can send a certificate. To do this in Nancy you need one of three hosting solutions: `Aspnet`, `WCF` or `OWIN`. Here is shown howto configure all three to work with SSL and client certificates.
+To authenticate the client the client can send a certificate. To do this in Nancy you need one of three hosting solutions: `Aspnet`, `WCF`, `OWIN` or `Hosting.Self`. Here is shown howto configure all three to work with SSL and client certificates.
 
 ## Configuration of `Aspnet`.
 
