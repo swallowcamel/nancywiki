@@ -39,7 +39,7 @@ The `After` hooks does not have any return value because one has already been pr
 
 ## Intercepting the request when an error occurred
 
-The `OnError` interceptor enables you to execute code whenever an exception occurrs in any of the routes that are being invoked. It gives you access to the `NancyContext` and the exception that took place.
+The `OnError` interceptor enables you to execute code whenever an exception occurs in any of the routes that are being invoked. It gives you access to the `NancyContext` and the exception that took place.
 
 An application level `OnError` hook is defined by a `Func<NancyContext, Exception, Response>` function and is used in the following way
 
