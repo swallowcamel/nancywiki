@@ -2,8 +2,16 @@ We try to keep the number of breaking changes down to an absolute minimum, but s
 
 _If you find any breaking changes that are not documented here, please let us know!_
 
-## 1.0.0 ([View](https://github.com/NancyFx/Nancy/issues?q=is%3Aclosed+label%3A%22Breaking+Change%22+milestone%3A%221.0+Alpha%22))
+## 1.0.0 ([View](https://github.com/NancyFx/Nancy/issues?q=is%3Aclosed+label%3A%22Breaking+Change%22+milestone%3A1.0))
+- [Pass NancyContext to CreateRequestContainer](https://github.com/NancyFx/Nancy/pull/1784)
 - [Pass NancyContext down to DataAnnotations ValidationAdapters](https://github.com/NancyFx/Nancy/pull/1739)
+- [Overwrite Content-Type from headers](https://github.com/NancyFx/Nancy/pull/1723)
+- [Requestscopedtype fix being overwritten](https://github.com/NancyFx/Nancy/pull/1665)
+- [Moved View/Negotiate to INancyModule](https://github.com/NancyFx/Nancy/pull/1653)
+- [Renamed metadata module project and nuspec](https://github.com/NancyFx/Nancy/pull/1650)
+- [Fixed case comparison issue with model binding collections](https://github.com/NancyFx/Nancy/pull/1639)
+- [Model binding support for fields](https://github.com/NancyFx/Nancy/pull/1613)
+- [Added new long route constraint and updated the int route constraint to int](https://github.com/NancyFx/Nancy/pull/1569)
 
 ## 0.23.2 ([View](https://github.com/NancyFx/Nancy/issues?labels=Breaking+Change&milestone=36&page=1&state=closed))
 - None
