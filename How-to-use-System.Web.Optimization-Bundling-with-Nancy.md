@@ -1,3 +1,5 @@
+**Note:** Microsoft.AspNet.Web.Optimization requires HttpContext, which is not available with self hosting.
+ 
 1. **IF** you are using Nancy with **OWIN**, make sure you use
 ```
 app.UseNancy(options => options.PassThroughWhenStatusCodesAre(HttpStatusCode.NotFound));
