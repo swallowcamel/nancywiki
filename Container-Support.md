@@ -21,6 +21,16 @@ First, install the [Nancy.Bootstrappers.Ninject](http://nuget.org/packages/Nancy
         }
     }
 
+##Autofac
+From [stackoverflow](https://stackoverflow.com/questions/17325840/registering-startup-class-in-nancy-using-autofac-bootstrapper/18997394#18997394)    
+
+    protected override void ConfigureRequestContainer(
+    ILifetimeScope container, NancyContext context)
+    {
+        var builder = new ContainerBuilder();
+        builder.RegisterType<MyDependency>();
+        builder.Update(container.ComponentRegistry);
+    }
 ## More to come
 
 ...
