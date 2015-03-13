@@ -32,13 +32,13 @@ Part of the [Super-Duper-Happy-Path](https://github.com/NancyFx/Nancy/wiki/Intro
 
 ```c#
 public class Home : NancyModule
+{
+    public Home(IMessageService service)
     {
-        public Home(IMessageService service)
-        {
-            //If there is only one implementation of IMessageService in the application,
-            // TinyIoC will resolve the dependency on its own and inject it in the module.
-        }
+        //If there is only one implementation of IMessageService in the application,
+        // TinyIoC will resolve the dependency on its own and inject it in the module.
     }
+}
 ```
 
 [<< Part 8. Model binding](Model binding) - [Documentation overview](Documentation) - [Part 10. View Engines >>](View Engines)
