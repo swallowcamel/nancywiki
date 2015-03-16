@@ -27,7 +27,7 @@
 *  [[How to use PJAX with Nancy |http://www.jhovgaard.com/nancy-pjax/]] 
 *  [[Adding an Expires Header to Static Content in NancyFx |http://mike-ward.net/2014/01/13/adding-an-expires-header-to-static-content-in-nancyfx/]] 
 *  [[Nancy from an MVC Developer Point of View |http://endycahyono.com/article/nancy-from-mvc-dev/]] 
-
+*  [[Hosting NancyFx with OWIN on IIS With IIS Static Files Module |https://blog.tommyparnell.com/nancyfx-owin-iis/]] 
 ### Content Negotiation
 
 * [[NancyFX and Content Negotiation|http://www.philliphaydon.com/2012/11/nancy-and-content-negotiation/]]
