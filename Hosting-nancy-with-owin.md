@@ -186,6 +186,9 @@ There is also an extension helper make it more succinct if you are just dealing 
 using Owin;
 using Nancy;
 
+// Needed to use extension helper.
+using Nancy.Owin;
+
 public class Startup
 {
     public void Configuration(IAppBuilder app)
