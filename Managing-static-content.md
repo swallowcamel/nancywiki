@@ -93,6 +93,8 @@ The resulting convention provides the following features:
 Using the `StaticContentConventionBuilder`, to create new conventions is really easy
 
 ```c#
+using Nancy.Conventions;
+
 public class CustomBoostrapper : DefaultNancyBootstrapper
 {
     protected override void ConfigureConventions(NancyConventions conventions)
