@@ -5,14 +5,14 @@
 app.UseNancy(options => options.PassThroughWhenStatusCodesAre(HttpStatusCode.NotFound));
 ```
 2. Install the `Microsoft.AspNet.Web.Optimization` Nuget Package
-3. Setup your bundles in the `ApplicationStartup` Method of your Bootstraper!
+3. Setup your bundles in the `ApplicationStartup` Method of your Bootstrapper!
 ```
 protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines) 
 {
     BundleTable.Bundles.Add(new ScriptBundle().Add(....));
 }
 ```
-4. Add your respective folders to the `StaticContentsConventions` in the `ConfigureConventions` Method of the Bootstraper
+4. Add your respective folders to the `StaticContentsConventions` in the `ConfigureConventions` Method of the Bootstrapper
 ```
 protected override void ConfigureConventions(NancyConventions nancyConventions)
 {
