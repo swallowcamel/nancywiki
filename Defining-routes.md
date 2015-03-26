@@ -135,7 +135,8 @@ The following constraints are available out of the box:
  - `range(minimum, maximum)` - Allows only integer values within the specified range. (Between `minimum` and `maximum`)
  - `minlength(length)` - Allows only values longer than the specified minimum `length`.
  - `maxlength(length)` - Allows only values shorter that the maximum `length`.
- - `length(minimum, maximum)` - Allows only values with lengh within the specified range. (Between `minimum` and `maximum`)
+ - `length(minimum, maximum)` - Allows only values with length within the specified range. (Between `minimum` and `maximum`)
+ - `version` - Allows only [`Version`](https://msdn.microsoft.com/en-us/library/system.version%28v=vs.110%29.aspx) values, e.g. `1.2.0`.
 
 ### Custom Constraints
 
