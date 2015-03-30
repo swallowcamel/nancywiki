@@ -71,7 +71,7 @@ Very useful post from @grumpydev at [stackoverflow](http://stackoverflow.com/a/9
 * The default Nancy bootstrapper will "autoregister" everything it can in its default implementation of ConfigureApplicationContainer.
 * By calling "base" *after* you've made a manual registration you are effectively copying over your original registration by autoregister. Either don't call base, or call it before you do your manual registrations.
 * Don't call ConfigureRequestContainer from your ConfigureApplicationContainer.
-* If you don't care about everything being application scoped (so singetons get the same instance for each request) then you don't need to override ConfigureApplicationContainer nor ConfigureRequestContainer, you can just rely on autoregister.
+* If you don't care about everything being application scoped (so singletons get the same instance for each request) then you don't need to override ConfigureApplicationContainer nor ConfigureRequestContainer, you can just rely on autoregister.
 
 ### Part 3 - Alternative Containers ###
 
