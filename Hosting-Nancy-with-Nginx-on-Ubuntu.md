@@ -19,6 +19,7 @@ Now we are ready to run .NET applications under linux.
 Go to [mono][getmono] to retrieve the the latest mono version for windows. In our case 3.0.2.
 
 # Create nancy website
+If you don't already have the [Nancy Templates for Visual Studio](https://visualstudiogallery.msdn.microsoft.com/f1e29f61-4dff-4b1e-a14b-6bd0d307611a), install them. Create a new Nancy 
 Open VS2012 and start a new console app NancyDemo.sln
 ![nancy nuget](https://dl.dropbox.com/u/19401194/NancyNuget.png "nancy nuget")
 
@@ -64,21 +65,13 @@ namespace NancyDemo
     {
         public HelloModule()
         {
-            Get["/"] = parameters => "Hello World";
+            Get["/"] = parameters => "Hello World!";
         }
     }
 }
 ```
 
-To make sure all code at leasts builds under mono, we build the sln with xbuild.
-    
-    D:\Development\Mono\NancyDemo>"C:\Program Files (x86)\Mono-3.0.2\bin\xbuild.bat" NancyDemo.sln 
-
-Once the build succeeds copy NancyDemo.exe, Nancy.dll and Nancy.Hosting.Self.dll to the linux machine. We can test if it works by running the console app.
-
-    $ mono NancyDemo.exe
-
-Now open a browser and go to http://localhost:8888. We should see "Hello World".
+Make sure it works locally first! Go ahead and start the debugger. You should be able to go to `http://localhost:8888` in your web browser and see the "Hello World!" message.
 
 # Install nginx
 [nginx][nginx] is the webserver we're using. We configure it to forward all requests to the nancy self hosted application. The content folder with static files will be handled by nginx.
