@@ -21,7 +21,6 @@ Go to [mono][getmono] to retrieve the the latest mono version for windows. In ou
 # Create nancy website
 If you don't already have the [Nancy Templates for Visual Studio](https://visualstudiogallery.msdn.microsoft.com/f1e29f61-4dff-4b1e-a14b-6bd0d307611a), install them. Create a new Nancy 
 Open VS2012 and start a new console app NancyDemo.sln
-![nancy nuget](https://dl.dropbox.com/u/19401194/NancyNuget.png "nancy nuget")
 
 Edit the program.cs file and add the following code:
 
