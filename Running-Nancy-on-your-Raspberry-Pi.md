@@ -1,20 +1,9 @@
 This page describes how to get up and running with Nancy using Mono and selfhosting on your Raspberry Pi.
-The install/configuration described below was successfully performed on 12th-14th of April 2013.
-
-**Update Aug 8th 2014:**
-Hard float is now supported - which should have a major impact on the performance of running mono apps on the Raspberry Pi. [Click here for details](http://c-mobberley.com/wordpress/2013/12/27/raspberry-pi-mono-3-2-installation-hard-float-compatible/)
+The install/configuration described below was successfully performed on April 8th 2015.
 
 # 1. Install OS on your Raspberry Pi
 
-Due to the need for also running Mono, you currently need to install the soft-float Debian “wheezy” (2012-08-08-wheezy-armel.zip) on your Raspberry Pi. This is due to the fact that Mono currently does not work correctly with the hard-float version of the Raspbian OS (which is the default and latest one). Read more on this issue [here](https://bugzilla.xamarin.com/show_bug.cgi?id=7938). The soft-float OS can be downloaded from [here](http://www.raspberrypi.org/downloads).
-
-You might also get it up and running with hard-float Raspbian using [these instructions](http://www.raspberrypi.org/phpBB3/viewtopic.php?f=34&t=37174), so if you feel like experimenting, do go ahead and try it out :)
-
-To install the soft-float OS to your SD card, use the instructions on:
-
-http://elinux.org/RPi_Easy_SD_Card_Setup
-
-The "Linux + ImageWriter" way of writing the image to SD card has worked excellent, but any method should work just fine.
+These instructions assume you are using the Raspbian, however they should work with Ubuntu as well, if you have a Raspberry Pi 2. You can check the [Raspberry Pi Downloads[(http://www.raspberrypi.org/downloads/ page for OS images.
 
 # 2. Update OS to latest
 
@@ -27,47 +16,49 @@ After upgrade you should have something similar to the following:
 
     pi@raspberrypi ~ $ uname -a
 
-    Linux raspberrypi 3.2.27+ #250 PREEMPT Thu Oct 18 19:03:02 BST 2012 armv6l GNU/Linux
+    Linux raspberrypi 3.18.7+ #755 PREEMPT Thu Feb 12 17:14:31 GMT 2015 armv6l GNU/Linux
 
 You might also want to update the firmware on your Pi to the latest version:
 
     sudo rpi-update
 
-# 3. Configure OS to optimize performance
-
-In a shell run the command: 
-
-    sudo /usr/bin/raspi-config
-
-Set the following settings:
-
-* Memory-split: 16MB
-
-* Overclock: Modest 800 MHz (or just leave it at 700 MHz if you're afraid of burning off your Pi)
-
-* Boot to GUI: No (uses extra resources, but might still work if booting to GUI)
-
-* Upgrade raspi-config
-
-Then perform a reboot from within raspi-config after setting the above settings.
-
-After reboot verify you have the full 512 MB of RAM available by running the command:
-
-    top
-
-and verify you have almost 500 MB of RAM (on the top left part of page).
-
-
-# 4. Install Mono
+# 3. Install Mono
 
 Mono is required for running Nancy, so go ahead and perform the following commands in a shell in order to get Mono installed:
 
     sudo apt-get update
     sudo apt-get install mono-complete
 
-Note: Last step takes a long time, 25+ min.
+Note: Last step can take a long time.
 
-# 5. Compile Nancy, Create & Run Nancy apps
+After installation, type `mono -V`. You should see a result like 
+
+    Mono JIT compiler version 3.2.8 (Debian 3.2.8+dfsg-4+rpi1)
+    Copyright (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-project.com
+            TLS:           __thread
+            SIGSEGV:       normal
+            Notifications: epoll
+            Architecture:  armel,vfp+hard
+            Disabled:      none
+            Misc:          softdebug
+            LLVM:          supported, not enabled.
+            GC:            sgen
+    
+
+# 4. Create /var/www
+
+Run the following command:
+
+    sudo mkdir /var/www
+    sudo chmod 755 /var/www
+
+#5a Follow These Directions
+
+You should now be able to [follow the directions here](https://github.com/NancyFx/Nancy/wiki/Hosting-Nancy-with-Nginx-on-Ubuntu#create-nancy-website), skipping the step in installing mono (you've already done that).
+
+#5b Compile and Run Nancy Locally
+
+The above instructions will walk you through creating the Nancy app on Windows and deploying to your Pi. However, if you'd rather do everything on the Pi start to finish, you can do the following instead:
 
 This final section describes how to get up and running with Nancy on your Raspberry Pi.
 
@@ -147,6 +138,7 @@ Now run the Nancy application by issuing the following:
 
 And finally your should be able to invoke the service by pointing your favorite browser to the address http://localhost:8282 and you should be greeted by a "Nancy says hello!".
 
+
 # Useful resources
 
 https://docs.google.com/document/d/1bzbRZFmrYOLh-ldUAcd3_3-o5ISAN7GtrLfOhJoj0qI/edit?usp=sharing
@@ -160,5 +152,4 @@ http://andyfelong.com/2013/02/raspberry-pi-meets-mongodb/
 http://stackoverflow.com/questions/7948789/mongodb-mongod-complains-that-there-is-no-data-db-folder
 
 http://sourcecodebean.com/archives/mongodb-c-and-mono/1408
-
 
