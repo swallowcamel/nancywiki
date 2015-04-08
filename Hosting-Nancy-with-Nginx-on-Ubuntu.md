@@ -95,6 +95,8 @@ Create the website configuration file in /etc/nginx/sites-available/nancydemo wi
         }
     }
 
+When testing, instead of `yourdomainname.com`, you can substitute the local IP address, eg `192.168.1.200`.
+
 To enable the website, create a symbolic link from the sites-available to the sites-enabled folder. This will make it easy to temporary disable sites in the future.
 
     $ sudo ln -s /etc/nginx/sites-available/nancydemo /etc/nginx/sites-enabled/nancydemo
@@ -111,7 +113,7 @@ To make sure our nancy self hosted website never stops, we use [supervisor][supe
 Configure supervisor by creating a new file /etc/supervisor/conf.d/nancydemo.conf
 
     [program:nancydemo]
-    command=/usr/local/bin/mono NancyDemo.exe -d
+    command=mono NancyDemo.exe -d
     user=www-data
     stderr_logfile = /var/log/supervisor/nancydemo-err.log
     stdout_logfile = /var/log/supervisor/nancydemo-stdout.log
