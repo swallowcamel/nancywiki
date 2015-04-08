@@ -22,9 +22,6 @@ To compile it yourself, go to the [mono download page][getmono] to retrieve the 
 
 Now we are ready to run .NET applications under linux.
 
-# Install mono on your development machine
-Go to [mono][getmono] to retrieve the the latest mono version for windows. In our case 3.0.2.
-
 # Create nancy website
 Open Visual Studio 2013 (other versions may work, but this tutorial was written using 2013). If you do not already have the [Nancy solution templates](https://visualstudiogallery.msdn.microsoft.com/f1e29f61-4dff-4b1e-a14b-6bd0d307611a) for Visual Studio, get and install them. Open Visual Studio and create a new solution. The Nancy templates will be listed along with ASP.NET Web Applicaiton under `Templates -> Visual C# -> Web`. Choose `Nancy Application with self-hosting.`
 
