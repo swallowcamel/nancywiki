@@ -157,6 +157,7 @@ Example
 ```
 
 ### Path expansion
+
 Expands a relative paths to a fully qualified URL. 
 
 Syntax
@@ -168,6 +169,8 @@ Example
 ```
 @Path['~/relative/url/image.png']
 ```
+
+Starting from v1.2, SSVE performs automatic path expansion in all HTML attributes (more specifically, in all `name="value"` pairs, both with single and double quotes around `value`) where attribute value starts with `~/`. For example, `<a href="@Path['~/relative/path']" ...>` can be significantly shortened to `<a href="~/relative/path" ...>`.
 
 ### Extending the SSVE
 
