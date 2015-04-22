@@ -123,7 +123,7 @@ Configure supervisor by creating a new file /etc/supervisor/conf.d/nancydemo.con
     stdout_logfile = /var/log/supervisor/nancydemo-stdout.log
     directory=/var/www/nancydemo/
 
-<sup>**NOTE** If you compiled Mono yourself in the first step, change the second line to `command=/user/bin/mono NancyDemo.exe -d`</sup>
+<sup>**NOTE** If you compiled Mono yourself in the first step, change the second line to `command=/usr/bin/mono NancyDemo.exe -d`</sup>
 
 Start the control manager of supervisor
 
