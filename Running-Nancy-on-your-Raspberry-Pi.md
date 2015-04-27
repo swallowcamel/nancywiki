@@ -3,7 +3,7 @@ The install/configuration described below was successfully performed on April 8t
 
 # 1. Install OS on your Raspberry Pi
 
-These instructions assume you are using the Raspbian, however they should work with Ubuntu as well, if you have a Raspberry Pi 2. You can check the [Raspberry Pi Downloads[(http://www.raspberrypi.org/downloads/ page for OS images.
+These instructions assume you are using the Raspbian, however they should work with Ubuntu as well, if you have a Raspberry Pi 2. You can check the [Raspberry Pi Downloads](http://www.raspberrypi.org/downloads/ page for OS images.
 
 # 2. Update OS to latest
 
