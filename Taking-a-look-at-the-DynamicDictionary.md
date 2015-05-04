@@ -22,7 +22,7 @@ Get["/hello"] = _ => {
 
 // whereas in this method we're using the DynamicDictionary so we give it a proper name.
 Get["/hello/{name}"] = parameters => {
-    return "Hello" + parameters.name;
+    return "Hello, " + parameters.name;
 };
 ```
 
