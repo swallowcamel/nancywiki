@@ -12,7 +12,19 @@ Get["/goodbye/{name}"] = parameters => {
 };
 ```
 	
-It is worth noting that if you prefer accessing captured properties via a normal property you must assign the capture group a valid C# identifier (i.e.: one that starts with an alphabetic character).
+It is worth noting that if you prefer accessing captured properties via a normal property you must assign the capture group a valid C# identifier (i.e.: one that starts with an alphabetic character). There's no restriction on the name of the DynamicDictionary instance specified in your handler signature, but Nancy borrows a convention from functional programming whereby the underscore (_) indicates the value is not used:
+
+```c#
+// Underscore indicates that our method doesn't use the parameters object. 
+Get["/hello"] = _ => {
+    return "Hello, World!";
+};
+
+// whereas in this method we're using the DynamicDictionary so we give it a proper name.
+Get["/hello/{name}"] = parameters => {
+    return "Hello" + parameters.name;
+};
+```
 
 The stored values can explicitly or implicitly be cast to most of the primitive types and a special property, called `HasValue` can be checked to determine if a value has been assigned or not. The values also implement the `IEquatable<>` and `IConvertible` interfaces.
 
