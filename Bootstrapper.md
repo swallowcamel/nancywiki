@@ -20,11 +20,17 @@ public class CustomBootstrapper : DefaultNancyBootstrapper
 }
 ```
 
-##Finding the right bootstrapper
+## Finding the right bootstrapper
 
-When the application starts up, it looks for a custom bootstrapper. If it doesn't find one, it falls back to the `DefaultNancyBootstrapper`. You can only have **one** bootstrapper per application. If there is more than one custom bootstrapper in your application, Nancy tries to be smart and looks if one inherits from the other. When that is the case Nancy chooses the **most derived** bootstrapper.
+When the application starts up, Nancy looks for a custom bootstrapper. By default, it scans all assemblies with a reference to Nancy. If it doesn't find one, it'll fall back to the `DefaultNancyBootstrapper`. You can only have **one** bootstrapper per application. If more than one custom bootstrapper is found in your application, Nancy tries to be smart and checks if one inherits from the other. When that is the case Nancy chooses the **most derived** bootstrapper.
 
 This can be useful when you have several Nancy applications that all use the same base bootstrapper settings. But they have some bootstrapper setting specific for some of the applications.
+
+**NOTE**: Sometimes, if you have class libraries (even with a reference to Nancy) where none of its types are used in the application, the compiler can be a bit *too* smart and removes the reference. For these scenarios it can be useful to add the `IncludeInNancyAssemblyScanningAttribute` to the class library (typically in `Properties.cs`):
+
+    [assembly: IncludeInNancyAssemblyScanning]
+
+This will make sure you have a *hard* reference to Nancy and the assembly will be included in Nancy scanning mechanism.
 
 ## Using AutoRegister
 
