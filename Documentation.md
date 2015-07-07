@@ -52,4 +52,4 @@
 ## Bootstrappers / Container Support
 * [[Bootstrapping Nancy]]
 * [[Writing a Nancy Bootstrapper]]
-* [[Container Support]] :)
+* [[Container Support]]
