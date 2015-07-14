@@ -111,9 +111,9 @@ public class CustomBoostrapper : DefaultNancyBootstrapper
 
 If, for some reason, you don't want to use the methods above, you can also create conventions using the IConventions interface, or bypass the static content conventions completely and just serve your content from a module.
 
-## Defining your own conventions using IConventions
+## Defining your own conventions using IConvention
 
-You can also create a class that implements the `IConventions` interface and in the `Initialise` method you add your conventions to the `StaticContentsConventions` property of the conventions that are passed in.
+You can also create a class that implements the `IConvention` interface and in the `Initialise` method you add your conventions to the `StaticContentsConventions` property of the conventions that are passed in.
 
 Nancy will locate all implementations of the interface and wire up the conventions, before they are passed onto the `ConfigureConventions` method of the bootstrapper.
 
