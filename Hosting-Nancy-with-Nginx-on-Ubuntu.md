@@ -1,10 +1,12 @@
-This tutorial describes how to install and run a NancyFx powered website on [Ubuntu 12.04][ubuntu]
+This tutorial describes how to install and run a NancyFx powered website on [Ubuntu 14.04][ubuntu], but newer versions will probably work fine.
 
 # Install mono on your ubuntu machine
 
-The version of Mono that comes on Ubuntu is outdated, and not suitable for our purposes as of 2015-04-08. Instead, you have two options.
+> Note: Due to how Ubuntu updates its packages, the version of Mono that comes bundled on Ubuntu will almost always be outdated, and as of April 2015 is not suitable for our purposes.
 
-1. Follow [these directions](http://www.mono-project.com/docs/getting-started/install/linux/) to install an updated Mono from the Mono project's own repositories, or you can build it yourself.
+In order to install Mono, it is highly recommended that you:
+
+1. Follow [these instructions](http://www.mono-project.com/docs/getting-started/install/linux/#debian-ubuntu-and-derivatives) to get the latest version from the official mono repositories; or
 
 2. Compile it yourself (for advanced users familiar with Linux)
 
@@ -22,12 +24,25 @@ To compile it yourself, go to the [mono download page][getmono] to retrieve the 
 
 Now we are ready to run .NET applications under linux.
 
-# Create nancy website
-Open Visual Studio 2013 (other versions may work, but this tutorial was written using 2013). If you do not already have the [Nancy solution templates](https://visualstudiogallery.msdn.microsoft.com/f1e29f61-4dff-4b1e-a14b-6bd0d307611a) for Visual Studio, get and install them. Open Visual Studio and create a new solution. The Nancy templates will be listed along with ASP.NET Web Applicaiton under `Templates -> Visual C# -> Web`. Choose `Nancy Application with self-hosting.`
+# Create a Nancy Website
 
-Edit the program.cs file and add the following code:
+Open Visual Studio (this tutorial was written using VS 2015 Community Edition), and create a new *Console Application*.
 
-```c-sharp 
+Install the following nuget packages:
+
+```
+Install-Package Nancy.Hosting.Self
+Install-Package Mono.Posix
+```
+
+Edit the Program.cs file and add the following code:
+
+```cs
+using Mono.Unix;
+using Mono.Unix.Native;
+using Nancy.Hosting.Self;
+using System;
+
 namespace NancyDemo
 {
     class Program
@@ -35,32 +50,41 @@ namespace NancyDemo
         static void Main(string[] args)
         {
             var uri = "http://localhost:8888";
-            Console.WriteLine(uri);
-            // initialize an instance of NancyHost (found in the Nancy.Hosting.Self package)
+            Console.WriteLine("Starting Nancy on " + uri);
+
+            // initialize an instance of NancyHost
             var host = new NancyHost(new Uri(uri));
             host.Start();  // start hosting
 
-            //Under mono if you daemonize a process a Console.ReadLine will cause an EOF 
-            //so we need to block another way
-            if (args.Any(s => s.Equals("-d", StringComparison.CurrentCultureIgnoreCase)))
+            // check if we're running on mono
+            if (Type.GetType("Mono.Runtime") != null)
             {
-                Thread.Sleep(Timeout.Infinite);
+                // on mono, processes will usually run as daemons - this allows you to listen
+                // for termination signals (ctrl+c, shutdown, etc) and finalize correctly
+                UnixSignal.WaitAny(new[] {
+                    new UnixSignal(Signum.SIGINT),
+                    new UnixSignal(Signum.SIGTERM),
+                    new UnixSignal(Signum.SIGQUIT),
+                    new UnixSignal(Signum.SIGHUP)
+                });
             }
             else
             {
-                Console.ReadKey();
+                Console.ReadLine();
             }
 
+            Console.WriteLine("Stopping Nancy");
             host.Stop();  // stop hosting
         }
     }
 }
-
 ```
 
-Create a new folder Modules and add the class HelloModule.cs
+Create a new file HelloModule.cs with the following code:
 
-```c-sharp
+```cs
+using Nancy;
+
 namespace NancyDemo
 {
     public class HelloModule : NancyModule
