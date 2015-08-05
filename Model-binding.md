@@ -164,6 +164,116 @@ public class User
 Nancy supports two kind of list delimiters for the name of the items in the HTML-form; 
 * underscores (`Name_1`, `Name_2` etc.)
 * brackets (`Name[1]`, `Name[2]` etc.)
- 
+
+
+### A Complete Model-binding Example
+Here's an end-to-end model binding example that shows the full model + view + module.
+
+    /// <summary>
+    /// DTO for creating a new user
+    /// </summary>
+    public class NewUser
+    {
+        public string UserName { get; set; }
+
+        public string Email { get; set; }
+
+        public string Password { get; set; }
+    }
+
+#### View
+```
+    ViewBag.Title = "AkkaChat - Register";
+}
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<AkkaChat.ViewModels.NewUser>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <h1>Register an AkkaChat Account</h1>
+        @if (ViewBag.ValidationError != null)
+        {
+            <div class="alert-error">
+                <p>Error! @ViewBag.ValidationError</p>
+            </div>
+        }
+
+        <form class="form-horizontal" method="POST" action="~/register">
+            <div class="control-group">
+                <label class="control-label" for="UserName">Username</label>
+                <div class="controls">
+                    <input type="text" name="UserName"  id="UserName" placeholder="Username">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="Email">Email</label>
+                <div class="controls">
+                    <input type="text" id="Email" name="Email" placeholder="Email">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="Password">Password</label>
+                <div class="controls">
+                    <input type="password" name="Password" id="Password" placeholder="Password">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn">Register</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+```
+
+#### Module
+```csharp
+/// <summary>
+/// Module responsible for handling authentication and account creation
+/// </summary>
+public class AuthModule : NancyModule
+{
+    private readonly IMembershipService _membership;
+
+    public AuthModule(IMembershipService membership)
+    {
+        _membership = membership;
+
+        Get["/register"] = _ =>
+        {
+            //already logged in
+            if (Context.CurrentUser.IsAuthenticated())
+                return Response.AsRedirect("~/");
+            return View["register"];
+        };
+
+        Post["/register", true] = async (x, ct) =>
+        {
+            NewUser registerAttempt = this.Bind<NewUser>(); //model binding!
+            var validationError = "";
+            var failedValidation = false;
+			
+			// omitted validation code for brevity            
+
+            var registerResult = await _membership.AddUser(registerAttempt.UserName, registerAttempt.Email, registerAttempt.Password);
+
+            //success!
+            if (!(registerResult is MissingUserIdentity))
+            {
+                return this.LoginAndRedirect(registerResult.CookieId, DateTime.Now.AddDays(30), "~/");
+            }
+            else //failure!
+            {
+                ViewBag.ValidationError = string.Format("Unable to register as {0} - server error.", registerAttempt.UserName);
+                return View["register"];
+            }
+
+        };
+
+    }
+}
+```
 
 [<< Part 7. The Application Before, After and OnError pipelines](The Application Before, After and OnError pipelines) - [Documentation overview](Documentation) - [Part 9. Bootstrapper >>](Bootstrapper)
