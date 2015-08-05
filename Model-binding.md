@@ -254,10 +254,45 @@ public class AuthModule : NancyModule
             NewUser registerAttempt = this.Bind<NewUser>(); //model binding!
             var validationError = "";
             var failedValidation = false;
-			
-			// omitted validation code for brevity            
+         
+             if (string.IsNullOrEmpty(registerAttempt.UserName))
+             {
+                 failedValidation = true;
+                 validationError += string.Format("Must provide a username!<br>");
+             }
+             else
+             {
+                 //check to see if a username is available
+                 var userNameAvailable = await _membership.IsUserNameAvailable(registerAttempt.UserName);
+                 if (!userNameAvailable)
+                 {
+                     validationError += string.Format("{0} is already taken. Please pick another username.<br>",
+                         registerAttempt.UserName);
+                     failedValidation = true;
+                 }
+             }
+             if (string.IsNullOrEmpty(registerAttempt.Password))
+             {
+                 failedValidation = true;
+                 validationError += string.Format("Must provide a password!<br>");
+             }
+             if (string.IsNullOrEmpty(registerAttempt.Email))
+             {
+                 failedValidation = true;
+                 validationError += string.Format("Must provide an email!<br>");
+             }
 
-            var registerResult = await _membership.AddUser(registerAttempt.UserName, registerAttempt.Email, registerAttempt.Password);
+             if (failedValidation)
+             {
+                 ViewBag.ValidationError = validationError;
+                 return View["register"];
+             }
+
+            var registerResult = await _membership.AddUser(
+            registerAttempt.UserName, registerAttempt.Email, registerAttempt.Password);
+
+            var registerResult = await _membership.AddUser(
+            registerAttempt.UserName, registerAttempt.Email, registerAttempt.Password);
 
             //success!
             if (!(registerResult is MissingUserIdentity))
@@ -266,7 +301,8 @@ public class AuthModule : NancyModule
             }
             else //failure!
             {
-                ViewBag.ValidationError = string.Format("Unable to register as {0} - server error.", registerAttempt.UserName);
+                ViewBag.ValidationError = string.Format("Unable to register as {0} - server error.",
+                 registerAttempt.UserName);
                 return View["register"];
             }
 
