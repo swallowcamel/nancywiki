@@ -28,7 +28,7 @@
 *  [[Adding an Expires Header to Static Content in NancyFx |http://mike-ward.net/2014/01/13/adding-an-expires-header-to-static-content-in-nancyfx/]] 
 *  [[Nancy from an MVC Developer Point of View |http://endycahyono.com/article/nancy-from-mvc-dev/]] 
 *  [[Hosting NancyFx with OWIN on IIS With IIS Static Files Module |https://blog.tommyparnell.com/nancyfx-owin-iis/]] 
-*  [[Nancy and Hypermedia |http://blog.jonathanchannon.com/2015/08/07/hypermedia-and-nancyfx/]]
+*  [[NancyFX and Hypermedia |http://blog.jonathanchannon.com/2015/08/07/hypermedia-and-nancyfx/]]
 
 ### Content Negotiation
 
