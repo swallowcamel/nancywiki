@@ -94,8 +94,8 @@ The following code shows an example of how you can perform the initial user auth
 Once your client has received a token, it must send the token as an HTTP header with each subsequent request.
 
 ```
-Authorization: Token **your-token-goes-here**
-```
+Authorization: Token [your token goes here] (without square brackets)
+``` 
 
 ## Under the Covers
 
