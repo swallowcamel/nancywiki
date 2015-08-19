@@ -90,7 +90,7 @@ The following code shows an example of how you can perform the initial user auth
     }
 ```
 ### Sensible Defaults
-While you can provide your own implementation of `ITokenizer`, the default implementation is highly configuration, though the default implementation (`Tokenizer`) comes with sensible defaults. For example, by default the items to be included in your generated token are delimited using `Environment.NewLine` by default. This can be configured when you create an instance of a `Tokenizer` by calling the configuration method `ItemDelimiter` and specifying your own delimiter value. See the source code for other configurable options: https://github.com/NancyFx/Nancy/blob/master/src/Nancy.Authentication.Token/Tokenizer.cs
+While you can provide your own implementation of `ITokenizer`, the default implementation is highly configureable, though the default implementation (`Tokenizer`) comes with sensible defaults. For example, by default the items to be included in your generated token are delimited using `Environment.NewLine` by default. This can be configured when you create an instance of a `Tokenizer` by calling the configuration method `ItemDelimiter` and specifying your own delimiter value. See the source code for other configurable options: https://github.com/NancyFx/Nancy/blob/master/src/Nancy.Authentication.Token/Tokenizer.cs
 
 
 ### Client Configuration
