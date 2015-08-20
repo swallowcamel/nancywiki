@@ -29,6 +29,7 @@
 *  [[Nancy from an MVC Developer Point of View |http://endycahyono.com/article/nancy-from-mvc-dev/]] 
 *  [[Hosting NancyFx with OWIN on IIS With IIS Static Files Module |https://blog.tommyparnell.com/nancyfx-owin-iis/]] 
 *  [[NancyFX and Hypermedia |http://blog.jonathanchannon.com/2015/08/07/hypermedia-and-nancyfx/]]
+*  [[File Uploads with Nancy|http://bytefish.de/blog/file_upload_nancy/]]
 
 ### Content Negotiation
 
