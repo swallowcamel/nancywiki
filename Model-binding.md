@@ -8,11 +8,11 @@ It’s as easy as including a namespace.
 Nancy’s model binding is defined as a single extension method on the `NancyModule` type. The extensions are located in the `Nancy.ModelBinding` namespace and adds Bind() and BindTo() methods:
 
 ```c#
-Foo f = this.Bind();
+Foo foo = this.Bind();
     
-var f = this.Bind<Foo>();
+var foo = this.Bind<Foo>();
 
-var f = this.BindTo(instance);
+var foo = this.BindTo(instance);
 
 ```
 All three have the exact same functionality, they just provide different ways of doing the same thing. The first two Bind() overloads will create a new instance of the `Foo` type and bind to that, while BindTo() will bind to an existing instance.
@@ -22,14 +22,14 @@ All three have the exact same functionality, they just provide different ways of
 Sometimes you want the model binder to ignore certain information when populating the model from all the various sources (to prevent ‘over posting’ attacks for example). To accommodate this, the model binder can be called with an optional list of blacklisted properties and fields on the model:
 
 ```c#
-var f = this.Bind<Foo>(f => f.id, f => f.creator, f => f.createddate);
+var foo = this.Bind<Foo>(f => f.id, f => f.creator, f => f.createddate);
 ```
 
 The blacklist is a “params” array of Expressions on the model type, where the expressions specify the name of the model properties and fields that should be ignored by the model binder.
 
 or:
 ```c#
-var f = this.Bind<Foo>("id", "creator", "createddate");
+var foo = this.Bind<Foo>("id", "creator", "createddate");
 ```
 
 The blacklist is a “params” array of strings, where the strings represents the name of the model properties and fields that should be ignored by the model binder.
