@@ -51,6 +51,7 @@ public class HelloModule : NancyModule
     }
 }
 ```
+It is important that you declare your modul public, otherwise NancyFx is not able to discover your modul.
 
 ##More Info
 
