@@ -45,6 +45,7 @@
 * [[Forms Authentication with NancyFX|http://www.philliphaydon.com/2012/12/forms-authentication-with-nancyfx/]]
 * [[OAuth with NancyFX and WorldDomination.Web.Authentication|http://www.philliphaydon.com/2013/01/oauth-with-nancyfx-and-world-domination-authentication]]
 * [[Authenticate against active directory with Forms Authentication |http://stackoverflow.com/a/12644398]]
+* [[Token Authentication with Nancy and Owin|http://bytefish.de/blog/token_authentication_owin_nancy/]]
 
 ### Routing
 
