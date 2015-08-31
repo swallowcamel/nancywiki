@@ -50,5 +50,5 @@ Date: Mon, 31 Aug 2015 08:23:25 GMT
 Content-Type: text/html
 Content-Length: 35
 
-Hello World, from NancyFx on Suave!%
+Hello World, from NancyFx on Suave!
 ```
