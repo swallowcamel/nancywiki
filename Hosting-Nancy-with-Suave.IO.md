@@ -59,20 +59,26 @@ C# Example
 ----------
 
 ``` csharp
-using Suave.Types;
 using Suave;
-using Suave.Owin;
 using Nancy;
 using Nancy.Owin;
 
 namespace Suave.NancyFx
 {
+    public class SampleModule : NancyModule
+    {
+        public SampleModule()
+        {
+            Get["/"] = _ => "Hello World!";
+        }
+    }
+    
     public class Program
     {
-        public static void Main(string[] args)
+        public static int Main(string[] args)
         {
             var opts = new NancyOptions();
-            var app = OwinApp.OfMidFunc(NancyMiddleware.UseNancy(opts));
+            var app = Suave.Owin.OwinAppModule.OfMidFunc(NancyMiddleware.UseNancy(opts));
             Web.startWebServer(Web.defaultConfig, app);
             return 0;
         }
