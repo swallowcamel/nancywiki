@@ -1,13 +1,13 @@
 Nancy is a great choice for applications that want to run a lightweight HTTP server without the overhead of IIS. To do this, take the following steps.
 
-Create your paket.references file for a new F# Console App:
+Create your **paket.references** file for a new F# Console App:
 
 ```
 FSharp.Core
 Nancy.Owin
 ```
 
-Now, add an implementation to your console app:
+Run `paket install` and then; add an implementation to your console app:
 
 ``` fsharp
 namespace Suave.NancyFx
