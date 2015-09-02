@@ -174,7 +174,7 @@ public class Startup
         app
           .UseNancy(options =>
               options.PerformPassThrough = context =>
-                  context.Response.StatusCode == HttpStatusCode.NotFound);
+                  context.Response.StatusCode == HttpStatusCode.NotFound)
           .UseOtherMiddleware();
     }
 }
@@ -196,7 +196,7 @@ public class Startup
         app
           .UseNancy(options => options.PassThroughWhenStatusCodesAre(
               HttpStatusCode.NotFound,
-              HttpStatusCode.InternalServerError);
+              HttpStatusCode.InternalServerError))
           .UseOtherMiddleware();
     }
 }
