@@ -55,7 +55,11 @@ The route execution is handled by a number of nested Tasks (`System.Threading.Ta
 
 If only one exception is wrapped, then Nancy will unwrap that exception and hand it to the `OnError` pipeline. If a collection of exceptions is wrapped, then Nancy will pass on a flattened `System.AggregateException` in order not to swallow any exceptions.
 
-##Wiring up your hooks
+**A note on the OnError pipeline in release mode**
+
+If your app is setup with hooks into the OnError pipeline, and you want to continue capturing view rendering exceptions when compiling for release, you will need to manually set `StaticConfiguration.DisableErrorTraces = false` in your `Bootstrapper.ApplicationStartup` override. For more info on this, see issue [#2052](https://github.com/NancyFx/Nancy/issues/2052).
+
+## Wiring up your hooks
 
 There are two ways to wire up these hooks: by overriding methods in the bootstrapper, or by creating classes that extend specific interfaces that are automatically wired in at startup.
 
