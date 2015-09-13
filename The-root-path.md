@@ -61,6 +61,6 @@ However, you may be wondering what is `pathProvider`. This variable is passed in
 
     public HomeModule(IRootPathProvider pathProvider)
 
-**NOTE** For Mono users less than version 4, there is a `StaticConfiguration. AllowFileStreamUploadAsync` property that should be set to false if you are uploading files over 80mb
+**NOTE : ** For Mono users less than version 4, there is a `StaticConfiguration. AllowFileStreamUploadAsync` property that should be set to false if you are uploading files over 80mb
 
 [<< Part 13. Testing your application](Testing your application) - [Documentation overview](Documentation) - [Part 15. Managing static content >>](Managing static content)
