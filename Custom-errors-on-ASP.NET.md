@@ -48,9 +48,7 @@ protected override NancyInternalConfiguration InternalConfiguration
     get
     {
         return NancyInternalConfiguration.WithOverrides(
-            builder => builder.ErrorHandlers = new List<Type>() {
-                typeof(NullErrorHandler)
-            });
+            builder => builder.StatusCodeHandlers = new List<Type>());
     }
 }
 ```
