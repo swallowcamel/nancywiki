@@ -2,6 +2,16 @@ We try to keep the number of breaking changes down to an absolute minimum, but s
 
 _If you find any breaking changes that are not documented here, please let us know!_
 
+## 1.3.0 ([View](https://github.com/NancyFx/Nancy/issues?q=milestone%3A1.3+is%3Aclosed+label%3A%22Breaking+Change%22))
+- [Break when status code has been handled](https://github.com/NancyFx/Nancy/pull/1668)
+- [Tweaked overloads of Dependency and Dependencies ](https://github.com/NancyFx/Nancy/pull/1910)
+
+## 1.2.0 ([View](https://github.com/NancyFx/Nancy/issues?q=milestone%3A1.2+is%3Aclosed))
+- None
+
+## 1.1.0 ([View](https://github.com/NancyFx/Nancy/issues?q=is%3Aclosed+label%3A%22Breaking+Change%22+milestone%3A1.1))
+- None
+
 ## 1.0.0 ([View](https://github.com/NancyFx/Nancy/issues?q=is%3Aclosed+label%3A%22Breaking+Change%22+milestone%3A1.0))
 - [Pass NancyContext to CreateRequestContainer](https://github.com/NancyFx/Nancy/pull/1784)
 - [Pass NancyContext down to DataAnnotations ValidationAdapters](https://github.com/NancyFx/Nancy/pull/1739)
