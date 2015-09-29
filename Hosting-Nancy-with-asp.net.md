@@ -34,7 +34,7 @@ One way to fix it is to remove the WebDAVModule in the web.config.
   <modules runAllManagedModulesForAllRequests="true">
     <remove name="WebDAVModule" />
   </modules>  
-</system.webserver>
+</system.webServer>
 ```
 ## Bootstrapping
 
