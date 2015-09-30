@@ -291,10 +291,7 @@ public class AuthModule : NancyModule
             var registerResult = await _membership.AddUser(
             registerAttempt.UserName, registerAttempt.Email, registerAttempt.Password);
 
-            var registerResult = await _membership.AddUser(
-            registerAttempt.UserName, registerAttempt.Email, registerAttempt.Password);
-
-            //success!
+           //success!
             if (!(registerResult is MissingUserIdentity))
             {
                 return this.LoginAndRedirect(registerResult.CookieId, DateTime.Now.AddDays(30), "~/");
