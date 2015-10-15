@@ -7,7 +7,7 @@ First, install the [corresponding NuGet package](http://www.nuget.org/packages/N
 ```c#
 using NewRelicAgent = NewRelic.Api.Agent.NewRelic; // protip: don't give class and namespace the same name. it's awkward.
 
-public abstract class WebAPIModule : NancyModule
+public abstract class BaseModule : NancyModule
 {
     public BaseModule()
     {
