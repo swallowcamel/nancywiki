@@ -107,3 +107,7 @@
 
 ### Articles
 * [[MSDN Magazine June 2014 - Topshelf and Katana: A Unified Web and Service Architecture|http://msdn.microsoft.com/en-us/magazine/dn745865.aspx]]
+
+### Books featuring Nancy
+* [[Instant Nancy Web Development|https://www.packtpub.com/web-development/instant-nancy-web-development-instant]]
+* [[Microservices in .NET with C#, the Nancy framework, and OWIN middleware|https://manning.com/books/microservices-in-net]]
