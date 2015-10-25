@@ -52,6 +52,18 @@ Here we define a NancyFx configuration section and a bootstrapper entry that spe
 
 For more information on Nancy Bootstrapping please see [[Bootstrapping-Nancy]].
 
+## Controlling output buffering
+The NancyFX configuration section also enables you to control if output buffering should be disabled or not. This is done with the `DisableOutputBuffering` element, that can have a value of either `true` (output buffering is disabled) or `false` (output buffering will remain enabled - this is the default value).
+
+```xml
+<configSections>
+  <section name="nancyFx" type="Nancy.Hosting.Aspnet.NancyFxSection" />
+</configSections>
+<nancyFx>
+  <disableoutputbuffer value="true/false" />
+</nancyFx>
+```
+
 ## Adding Nancy to an existing site
 
 Sometimes you have an existing ASP.NET site and you want to configure Nancy to handle requests to a particular path. To do this, follow the instructions above but set `path="nancypath/*"` on the `NancyHttpRequestHandler` handlers. You will also need to add a project folder to represent the path, and in that folder you would add the following Web.config:
