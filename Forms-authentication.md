@@ -149,8 +149,8 @@ var config =
 
 ##  More Info
 
-[[Forms authentication with nancyfx|http://www.philliphaydon.com/2012/12/forms-authentication-with-nancyfx/]]
+[[Forms authentication with nancyfx|http://www.philliphaydon.com/2012/12/18/forms-authentication-with-nancyfx/]]
 
-[[Multiple forms authentication sections|http://www.philliphaydon.com/2012/12/configuring-multiple-forms-authentication-sections-with-nancyfx/]]
+[[Multiple forms authentication sections|http://www.philliphaydon.com/2012/12/20/configuring-multiple-forms-authentication-sections-with-nancyfx/]]
 
 [<< Part 21. Stateless](Stateless Authentication) - [Documentation overview](Documentation) - [Part 21. Token >>](Token Authentication)
