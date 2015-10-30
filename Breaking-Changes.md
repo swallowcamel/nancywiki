@@ -3,7 +3,7 @@ We try to keep the number of breaking changes down to an absolute minimum, but s
 _If you find any breaking changes that are not documented here, please let us know!_
 
 ## 1.4.0 ([View](https://github.com/NancyFx/Nancy/issues?q=milestone%3A1.4+is%3Aclosed+label%3A%22Breaking+Change%22))
-- None
+- [Automatically decode cookie values in Cookies dictionary](https://github.com/NancyFx/Nancy/pull/1390)
 
 ## 1.3.0 ([View](https://github.com/NancyFx/Nancy/issues?q=milestone%3A1.3+is%3Aclosed+label%3A%22Breaking+Change%22))
 - [Break when status code has been handled](https://github.com/NancyFx/Nancy/pull/1668)
