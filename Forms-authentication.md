@@ -153,4 +153,4 @@ var config =
 
 [[Multiple forms authentication sections|http://www.philliphaydon.com/2012/12/20/configuring-multiple-forms-authentication-sections-with-nancyfx/]]
 
-[<< Part 21. Stateless](Stateless Authentication) - [Documentation overview](Documentation) - [Part 21. Token >>](Token Authentication)
+[<< Part 22. Stateless](Stateless Authentication) - [Documentation overview](Documentation) - [Part 22. Token >>](Token Authentication)
