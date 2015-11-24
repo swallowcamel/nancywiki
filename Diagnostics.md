@@ -154,7 +154,7 @@ For templates, the attribute that is used is the `Nancy.Diagnostics.TemplateAttr
 
 #### Creating a simple diagnostics provider
 
-Let's create a simple diagnostics provider with a method that will greet someone by their name. Not really a real scenario but it is a basic enough sample to show the anatomy of a diagnostics provider without getting distored by the implementation.
+Let's create a simple diagnostics provider with a method that will greet someone by their name. Not really a real scenario but it is a basic enough sample to show the anatomy of a diagnostics provider without getting distorted by the implementation.
 
 ```c#
 public class CustomDiagnosticsProvider : IDiagnosticsProvider
@@ -187,7 +187,7 @@ The provider exposes a single method, the `Greet`method. The method takes a sing
 
 Instead of using the default output format, the method also provides a custom `Mustache` template that will be used to format the output.
 
-A proper diagnostics provider would probably take a couple of contstructor dependencies in order to be able to access the various pieces of the application.
+A proper diagnostics provider would probably take a couple of constructor dependencies in order to be able to access the various pieces of the application.
 
 
 [<< Part 15. Managing static content](Managing static content) - [Documentation overview](Documentation) - [Part 17. Adding a custom favicon >>](Adding a custom favicon)
