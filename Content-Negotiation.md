@@ -224,4 +224,4 @@ Nancy will automatically add link and vary headers to negotiated responses. The 
 * [[Revisting Content Negotiation and APIs part 2|http://www.philliphaydon.com/2013/05/09/nancyfx-revisiting-content-negotiation-and-apis-part-2/]]
 * [[Revisting Content Negotiation and APIs part 3|http://www.philliphaydon.com/2013/05/20/nancyfx-revisiting-content-negotiation-and-apis-part-3/]]
 
-[<< Part 19. The cryptography helpers](The cryptography helpers) - [Documentation overview](Documentation) - [Part 20. Authentication >>](Authentication overview)
+[<< Part 19. The cryptography helpers](The cryptography helpers) - [Documentation overview](Documentation) - [Part 21. Authentication >>](Authentication overview)
