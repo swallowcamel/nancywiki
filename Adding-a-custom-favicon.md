@@ -15,7 +15,7 @@ public class Bootstrapper : DefaultNancyBootstrapper
 
     protected override byte[] FavIcon
     {
-        get { return this.favicon?? (this.favicon= LoadFavIcon()); }
+        get { return this.favicon?? (this.favicon = LoadFavIcon()); }
     }
 
     private byte[] LoadFavIcon()
