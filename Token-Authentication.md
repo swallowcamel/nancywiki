@@ -115,4 +115,4 @@ If users of this project are interested in an optional server token store, or us
 
 Nancy.Authentication.Token was originally created by the crack development team at [Lotpath](http://lotpath.com) ([Lotpath on github](http://github.com/Lotpath)).
 
-[<< Part 21. Token](Token Authentication) - [Documentation overview](Documentation)
+[<< Part 22. Forms](Forms Authentication) - [Documentation overview](Documentation) - [Part 23. SSL Behind Proxy >>](SSL Behind Proxy)
