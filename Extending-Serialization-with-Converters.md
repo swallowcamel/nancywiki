@@ -150,3 +150,5 @@ It is beyond the scope of this documentation to fully explain how to take contro
 2. For more complicated scenarios, there is an interface that ```XmlSerializer``` checks for. Data types that implement ```IXmlSerializable``` can take complete charge over the translation of XML data to/from C# objects.
 
 More information can be found at MSDN ([here](http://msdn.microsoft.com/en-us/library/2baksw0z(v=vs.110).aspx) and [here](http://msdn.microsoft.com/en-us/library/system.xml.serialization.ixmlserializable(v=vs.110).aspx)), as well as in many tutorials available on the web ([here's one](http://www.codeproject.com/Articles/43237/How-to-Implement-IXmlSerializable-Correctly)).
+
+[<< Part 20. Content negotiation](Content negotiation) - [Documentation overview](Documentation) - [Part 22. Authentication >>](Authentication overview)
