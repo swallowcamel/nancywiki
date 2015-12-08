@@ -34,7 +34,7 @@ public interface IUserMapper
 
 A single method whose sole responsibility is to take the GUID identifier and return the corresponding user. If the identifier could not be mapped to a user then `null` should be returned. For more information about the `IUserIdentity` interface, refer to the [Authentication overview](Authentication overview).
 
-## Modifying your application to handle forms authentication
+## Modifying your application to handle basic authentication
 
 Once you have the required package installed, it is time to enable basic authentication, but hooking it up to the [application pipeline](The Application Before, After and OnError pipelines) in your [bootstrapper](Bootstrapper).
 
