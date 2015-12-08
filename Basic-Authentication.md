@@ -9,9 +9,9 @@ To enable forms authentication in your application, you need to complete the fol
 
 ## The user mapper
 
-The user mapper is responsible for mapping a user from an identifier. The identifier is the token that will be put in the authentication cookie which will be used to re-establish the identity of the user that is performing the request, so that you do not need to enter your credentials for each request.
+The user mapper is responsible for mapping a user from an identifier.
 
-We have chosen to use a GUID as the identifier. The reason for this is that using something like the username or id is a potential vulnerability, because, if the cookie encryption was somehow compromised,  it would be easy to spoof the identity of another user by guessing their username or id.
+We have chosen to use a GUID as the identifier. The reason for this is that using something like the username or id is a potential vulnerability, it would be easy to spoof the identity of another user by guessing their username or id.
 
 The identifier should never be read by a human, so making it a GUID also discourages that it is ever displayed anywhere, and each GUID is both unique and non-sequential, making it a lot harder to spoof than the identity of someone else.
 
