@@ -1,4 +1,4 @@
-This document provides an overview on how to enable forms authentication in your Nancy application. For a full working sample, please refer to the `Nancy.Demo.Authentication.Basic` project in the Nancy solution.
+This document provides an overview on how to enable basic authentication in your Nancy application. For a full working sample, please refer to the `Nancy.Demo.Authentication.Basic` project in the Nancy solution.
 
 To enable forms authentication in your application, you need to complete the following steps
 
