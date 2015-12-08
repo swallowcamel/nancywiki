@@ -57,7 +57,7 @@ public class AuthenticationBootstrapper : DefaultNancyBootstrapper
 The `EnableBasicAuthentication` extension method expects an instance of the `BasicAuthenticationConfiguration` class, which has the following values
 
 - An `IUserValidator` implementation (see above) that is used to resolve the user based on the passed credentials
-- A string representing the name of the authentication `realm``
+- A string representing the name of the authentication `realm`
 - A `UserPromptBehaviour` enum value to control when the browser should prompt the user for credentials, the default value is `NonAjax` (see below for full list of available options)
 
 ## The UserPromptBehaviour enum
