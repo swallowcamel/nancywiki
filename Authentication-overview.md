@@ -39,7 +39,7 @@ The context should be available in most places of Nancy so it should never be an
 
 Establishing the identity of the current user is only half of the equation. You also need to have a way to secure resources in your application, so that they are only permitted to be accessed by authenticated users and perhaps even users that meet certain claims.
 
-Resources are secured at a module level (of course, you could secure all resources by creating an [application pipeline](The Application Before, After and OnError pipelines) if you have the need) by inspecting the `NancyContext.CurrentUser` property and making sure that it is not null.
+Resources are secured at a module or route level (of course, you could secure all resources by creating an [application pipeline](The Application Before, After and OnError pipelines) if you have the need) by inspecting the `NancyContext.CurrentUser` property and making sure that it is not null.
 
 This task can be performed in a `Before` hook on the [module pipeline](The before and after module hooks), which ensures it executed before any route in the module is invoked. The hook also gives us the ability to prematurely terminate the execution of the request and return another response, as is required when an unauthenticated user is trying to access a secure resource.
 
@@ -100,6 +100,22 @@ public class SecureModule : NancyModule
     }
         
     // Your routes here
+}
+```
+
+All of these can also be used on a per-route level
+
+```c#
+public class SecureModule : NancyModule
+{
+   public SecureRoute()
+   {
+      Get["/"] = _ =>
+      {
+         this.RequiresAuthentiction();
+         return 200;
+      };
+   }
 }
 ```
 
