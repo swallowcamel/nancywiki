@@ -27,7 +27,7 @@ It's quite normal, and encouraged, that during design/development of your featur
 * When you're happy with the approach, create your real feature branch and start working on that. It is suggested that you effectively "throw away" your spike branch and start afresh with a test-first approach, but as long as you end up with good quality, well tested code this isn't enforced.
 
 ## Basic Git workflow
-For an introduction to Git and the basic Git commands, please head over to the [Learn.GitHub - Introduction To Git](http://learn.github.com/p/intro.html) tutorial, by the awesome people at GitHub.
+For an introduction to Git, check out [GitHub Guides](https://guides.github.com/). For more information about GitHub Flow, please head over to the [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/index.html) illustrated guide, both by the awesome people at GitHub.
 
 ## Handling Updates from Upstream/Master
 
