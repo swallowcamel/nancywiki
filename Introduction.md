@@ -1,6 +1,6 @@
 First of all, welcome to Nancy! These guides will give you a quick tour of some of the features in Nancy without diving into too many details. There will be more to things than meets the eye so we invite you to explore Nancy on your own as well!
 
-Nancy is a lightweight, low-ceremony, framework for building HTTP based services on .Net and [Mono](http://mono-project.com). The goal of the framework is to stay out of the way as much as possible and provide a super-duper-happy-path to all interactions.
+Nancy is a lightweight, low-ceremony, framework for building HTTP based services on .NET and [Mono](http://mono-project.com). The goal of the framework is to stay out of the way as much as possible and provide a super-duper-happy-path to all interactions.
 
 This means that everything in Nancy is setup to have sensible defaults and conventions, instead of making you jump through hoops and go through configuration hell just to get up and running. With Nancy you can go from zero to website in a matter of minutes. Literally.
 
