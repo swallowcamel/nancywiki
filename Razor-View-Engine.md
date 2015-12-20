@@ -95,4 +95,10 @@ To do this you need to add the following to your `app\web.config` file
 </system.web.webPages.razor>
 ```
 
+## Interaction with Visual Studio 2015
+
+When you add a razor page using Visual Studio 2015's Add New Item (by right clicking or from menu) and selecting the 'Web/Razor/Web Page (Razor v3)' template, VS will automatically add nuget references to Microsoft.AspNet.WebPages and Microsoft.Web.Infrastructure.
+
+They are not actually needed because we already use Nancy.Viewengines.Razor. To prevent VS from automatically adding those references, don't use razor templates when adding the file. Instead add a plain HTML and rename the extension to `.cshtml`.
+
 [<< Part 10. Super Simple View Engine](The Super Simple View Engine) - [Documentation overview](Documentation) - [Part 10. Tips for Implementing your own View Engine >>](Implementing a View Engine)
