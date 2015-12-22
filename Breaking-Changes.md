@@ -2,6 +2,9 @@ We try to keep the number of breaking changes down to an absolute minimum, but s
 
 _If you find any breaking changes that are not documented here, please let us know!_
 
+## 1.4.3 ([View](https://github.com/NancyFx/Nancy/issues?q=milestone%3A1.4.3))
+- None
+
 ## 1.4.2 ([View](https://github.com/NancyFx/Nancy/issues?q=milestone%3A1.4.2))
 - None
 
