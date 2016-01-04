@@ -112,7 +112,7 @@ public class SecureModule : NancyModule
    {
       Get["/"] = _ =>
       {
-         this.RequiresAuthentiction();
+         this.RequiresAuthentication();
          return 200;
       };
    }
