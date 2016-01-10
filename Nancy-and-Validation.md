@@ -87,3 +87,23 @@ private object AddUser(dynamic parameters)
 This will return the error status code and it will return a diagnostic error message to the client that called the service.
 
 For more information on validation rules, you can read about the [FluentValidation library](https://github.com/JeremySkinner/FluentValidation).
+
+Assembly Scanning
+-----------------
+If your validation types are not located in your main web app assembly, you will see that your input data is not validated. You have a couple of options in this case. The easiest way to do this is to. Firstly, you can add this to your Properties.cs file in your validation assembly:
+
+```c#
+[assembly: IncludeInNancyAssemblyScanning]
+```
+
+If you don't want your validation assembly to have a reference to Nancy, you can configure the AppDomainAssemblyTypeScanner in your Bootstrap class to consider it:
+
+```c#
+public class Bootstrap : DefaultNancyBootstrapper
+{
+    public Bootstrap()
+    {
+        AppDomainAssemblyTypeScanner.LoadAssemblies("MyApplication.dll");
+    }
+}
+```
