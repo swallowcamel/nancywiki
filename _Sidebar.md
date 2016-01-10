@@ -32,6 +32,7 @@
   - [Token](/NancyFx/Nancy/wiki/Token-Authentication)
   - [Basic](/NancyFx/Nancy/wiki/Basic-Authentication)
 1. [[SSL Behind Proxy]]
+1. [[Validation|Nancy-and-Validation]]
 1. More to come
 
 ## Hosting
