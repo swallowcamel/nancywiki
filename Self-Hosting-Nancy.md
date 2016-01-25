@@ -44,7 +44,7 @@ Below is the message of the exception that was thrown for an application that tr
 - http://localhost:8799/nancy/
 - http://localhost:9987/nancy/
 
-and with `RewriteLocalhost` setting set to `true` (see __Host Configuration__ for more information about the 
+and with `RewriteLocalhost` setting set to `true` (see __Host Configuration__ section above, for more information about the 
 `RewriteLocalhost` setting)
 
 > The Nancy self host was unable to start, as no namespace reservation existed for the provided url(s).
