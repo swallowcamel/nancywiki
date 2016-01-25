@@ -1,6 +1,12 @@
+# Deprecation Notice
+
+:warning: Token Authentication has been deprecated as of v2.0. (see [`050eca2`](https://github.com/NancyFx/Nancy/commit/050eca2bf95efd32b4d4858900f9f729f520b152)). It's recommended to use middleware to handle token authentication instead. :warning:
+
+----
+
 This document provides an overview on how to enable token authentication in your Nancy application. For a full working sample, please refer to the `Nancy.Demo.Authentication.Token` project in the Nancy solution.
 
-# Meet Nancy Token Authentication
+# # Meet Nancy Token Authentication
 
 The Nancy.Authentication.Token project was built for use by heterogeneous clients (iOS apps, Android apps, Angular SPA apps, etc.) that all communicate with the same back-end Nancy application.
 
