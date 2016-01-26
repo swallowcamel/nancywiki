@@ -1,5 +1,3 @@
-**Preliminary: available when [PR](https://github.com/SuaveIO/suave/pull/142) merges**
-
 Nancy is a great choice for applications that want to run a [lightweight HTTP server](http://suave.io) without the overhead of IIS. To do this, take the following steps.
 
 Create your **paket.references** file for a new F# Console App:
