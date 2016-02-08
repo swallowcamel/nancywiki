@@ -30,6 +30,7 @@
 *  [[Hosting NancyFx with OWIN on IIS With IIS Static Files Module |https://blog.tommyparnell.com/nancyfx-owin-iis/]] 
 *  [[NancyFX and Hypermedia |http://blog.jonathanchannon.com/2015/08/07/hypermedia-and-nancyfx/]]
 *  [[File Uploads with Nancy|http://bytefish.de/blog/file_upload_nancy/]]
+*  [[Gzip Compression with NancyFX |http://codeopinion.com/gzip-compression-nancyfx/]]
 
 ### Content Negotiation
 
