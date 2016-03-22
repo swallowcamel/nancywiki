@@ -183,7 +183,7 @@ This route will only get hit as long as the `value` segment contains a `@`. The 
 
 #### Resources
 
-Head over to the [Constraints Sample Project](https://github.com/NancyFx/Nancy/tree/master/src/Nancy.Demo.ConstraintRouting) to look at some samples or take a look at the [existing constraint implementations](https://github.com/NancyFx/Nancy/tree/master/src/Nancy/Routing/Constraints).
+Head over to the [Constraints Sample Project](https://github.com/NancyFx/Nancy/tree/master/samples/Nancy.Demo.ConstraintRouting) to look at some samples or take a look at the [existing constraint implementations](https://github.com/NancyFx/Nancy/tree/master/src/Nancy/Routing/Constraints).
 
 ## The secret for selecting the right route to invoke
 
