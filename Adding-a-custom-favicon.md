@@ -18,19 +18,23 @@ public class Bootstrapper : DefaultNancyBootstrapper
         get { return this.favicon?? (this.favicon = LoadFavIcon()); }
     }
 
-    private byte[] LoadFavIcon()
-    {
-        //TODO: remember to replace 'AssemblyName' with the prefix of the resource
-        using (var resourceStream = GetType().Assembly.GetManifestResourceStream("AssemblyName.favicon.ico"))
-        {
-            var tempFavicon = new byte[resourceStream.Length];
-            resourceStream.Read(tempFavicon, 0, (int)resourceStream.Length);
-            return tempFavicon;
-        }
-    }
+   private byte[] LoadFavIcon()
+   {
+      //TODO: remember to replace 'AssemblyName' with the prefix of the resource
+      using (var resourceStream = GetType().Assembly.GetManifestResourceStream("AssemblyName.favicon.ico"))
+      {
+         var memoryStream = new MemoryStream();
+         resourceStream.CopyTo(memoryStream);
+         return memoryStream.GetBuffer();
+      }
+   }
 }
 ```
 
+Alternatively, place the favicon file into the assembly's `Resources.resx`. Then use the generated wrapper code like so:
+```
+protected override byte[] FavIcon => YourAssemblyNamespace.Properties.Resources.FavIcon
+```
 ### Removing the icon
 
 If you do not wish to use a favicon at all, then simply override the `FavIcon` property on your [[Bootstrapper]] and return `null`.
